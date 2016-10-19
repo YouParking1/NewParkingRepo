@@ -1,0 +1,7823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<string-array name="universities">
+
+    <item>University of Alabama at Birmingham</item>
+
+
+    <item>University of Alabama in Huntsville</item>
+
+
+    <item>Alabama State University</item>
+
+
+    <item>The University of Alabama</item>
+
+
+    <item>Central Alabama Community College</item>
+
+
+    <item>Athens State University</item>
+
+
+    <item>Auburn University at Montgomery</item>
+
+
+    <item>Auburn University</item>
+
+
+    <item>Birmingham Southern College</item>
+
+
+    <item>Chattahoochee Valley Community College</item>
+
+
+    <item>Enterprise State Community College</item>
+
+
+    <item>James H Faulkner State Community College</item>
+
+
+    <item>Faulkner University</item>
+
+
+    <item>Gadsden State Community College</item>
+
+
+    <item>George C Wallace State Community College-Dothan</item>
+
+
+    <item>George C Wallace State Community College-Hanceville</item>
+
+
+    <item>George C Wallace State Community College-Selma</item>
+
+
+    <item>Huntingdon College</item>
+
+
+    <item>Jacksonville State University</item>
+
+
+    <item>Jefferson Davis Community College</item>
+
+
+    <item>Jefferson State Community College</item>
+
+
+    <item>John C Calhoun State Community College</item>
+
+
+    <item>Lawson State Community College-Birmingham Campus</item>
+
+
+    <item>University of West Alabama</item>
+
+
+    <item>Lurleen B Wallace Community College</item>
+
+
+    <item>Miles College</item>
+
+
+    <item>University of Mobile</item>
+
+
+    <item>University of Montevallo</item>
+
+
+    <item>Northwest-Shoals Community College</item>
+
+
+    <item>University of North Alabama</item>
+
+
+    <item>Northeast Alabama Community College</item>
+
+
+    <item>Oakwood University</item>
+
+
+    <item>Alabama Southern Community College</item>
+
+
+    <item>Bishop State Community College</item>
+
+
+    <item>Samford University</item>
+
+
+    <item>Shelton State Community College</item>
+
+
+    <item>Snead State Community College</item>
+
+
+    <item>University of South Alabama</item>
+
+
+    <item>Spring Hill College</item>
+
+
+    <item>H Councill Trenholm State Community College</item>
+
+
+    <item>Troy University</item>
+
+
+    <item>Tuskegee University</item>
+
+
+    <item>Bevill State Community College</item>
+
+
+    <item>University of Alaska Anchorage</item>
+
+
+    <item>University of Alaska Fairbanks</item>
+
+
+    <item>University of Alaska Southeast</item>
+
+
+    <item>Charter College-Anchorage</item>
+
+
+    <item>Brookline College-Phoenix</item>
+
+
+    <item>Arizona State University-Tempe</item>
+
+
+    <item>Arizona Western College</item>
+
+
+    <item>University of Arizona</item>
+
+
+    <item>Central Arizona College</item>
+
+
+    <item>Cochise County Community College District</item>
+
+
+    <item>Eastern Arizona College</item>
+
+
+    <item>Embry-Riddle Aeronautical University-Prescott</item>
+
+
+    <item>Glendale Community College</item>
+
+
+    <item>Grand Canyon University</item>
+
+
+    <item>GateWay Community College</item>
+
+
+    <item>Mesa Community College</item>
+
+
+    <item>Mohave Community College</item>
+
+
+    <item>Universal Technical Institute of Arizona Inc-Motorcycle Mechanics Institute Division</item>
+
+
+    <item>Dine College</item>
+
+
+    <item>Northern Arizona University</item>
+
+
+    <item>Northland Pioneer College</item>
+
+
+    <item>Phoenix College</item>
+
+
+    <item>Pima Community College</item>
+
+
+    <item>Pima Medical Institute-Tucson</item>
+
+
+    <item>Rio Salado College</item>
+
+
+    <item>Scottsdale Community College</item>
+
+
+    <item>South Mountain Community College</item>
+
+
+    <item>Universal Technical Institute of Arizona Inc</item>
+
+
+    <item>Western International University</item>
+
+
+    <item>Yavapai College</item>
+
+
+    <item>University of Arkansas at Little Rock</item>
+
+
+    <item>University of Arkansas for Medical Sciences</item>
+
+
+    <item>University of Arkansas</item>
+
+
+    <item>University of Arkansas at Pine Bluff</item>
+
+
+    <item>Arkansas State University-Beebe</item>
+
+
+    <item>Arkansas State University-Main Campus</item>
+
+
+    <item>Arkansas Tech University</item>
+
+
+    <item>University of Arkansas at Monticello</item>
+
+
+    <item>Black River Technical College</item>
+
+
+    <item>University of Central Arkansas</item>
+
+
+    <item>Cossatot Community College of the University of Arkansas</item>
+
+
+    <item>East Arkansas Community College</item>
+
+
+    <item>National Park Community College</item>
+
+
+    <item>University of Arkansas Community College-Batesville</item>
+
+
+    <item>Harding University</item>
+
+
+    <item>Henderson State University</item>
+
+
+    <item>Hendrix College</item>
+
+
+    <item>John Brown University</item>
+
+
+    <item>Arkansas State University Mid-South</item>
+
+
+    <item>Arkansas Northeastern College</item>
+
+
+    <item>North Arkansas College</item>
+
+
+    <item>Ouachita Baptist University</item>
+
+
+    <item>College of the Ouachitas</item>
+
+
+    <item>Ozarka College</item>
+
+
+    <item>University of Arkansas Community College-Morrilton</item>
+
+
+    <item>Phillips Community College of the University of Arkansas</item>
+
+
+    <item>Southeast Arkansas College</item>
+
+
+    <item>Pulaski Technical College</item>
+
+
+    <item>University of Arkansas Community College-Hope</item>
+
+
+    <item>South Arkansas Community College</item>
+
+
+    <item>Southern Arkansas University Main Campus</item>
+
+
+    <item>Southern Arkansas University Tech</item>
+
+
+    <item>University of Arkansas-Fort Smith</item>
+
+
+    <item>Academy of Art University</item>
+
+
+    <item>College of Alameda</item>
+
+
+    <item>Allan Hancock College</item>
+
+
+    <item>American Career College-Los Angeles</item>
+
+
+    <item>American River College</item>
+
+
+    <item>Antelope Valley College</item>
+
+
+    <item>Art Center College of Design</item>
+
+
+    <item>Azusa Pacific University</item>
+
+
+    <item>Bakersfield College</item>
+
+
+    <item>Barstow Community College</item>
+
+
+    <item>Biola University</item>
+
+
+    <item>Bryan University</item>
+
+
+    <item>Butte College</item>
+
+
+    <item>California Institute of Integral Studies</item>
+
+
+    <item>Cabrillo College</item>
+
+
+    <item>California Baptist University</item>
+
+
+    <item>California College of the Arts</item>
+
+
+    <item>California Institute of Technology</item>
+
+
+    <item>California Lutheran University</item>
+
+
+    <item>California Polytechnic State University-San Luis Obispo</item>
+
+
+    <item>Alliant International University-San Diego</item>
+
+
+    <item>California State University-Bakersfield</item>
+
+
+    <item>California State University-Stanislaus</item>
+
+
+    <item>California State University-San Bernardino</item>
+
+
+    <item>California State Polytechnic University-Pomona</item>
+
+
+    <item>California State University-Chico</item>
+
+
+    <item>California State University-Dominguez Hills</item>
+
+
+    <item>California State University-Fresno</item>
+
+
+    <item>California State University-Fullerton</item>
+
+
+    <item>California State University-East Bay</item>
+
+
+    <item>California State University-Long Beach</item>
+
+
+    <item>California State University-Los Angeles</item>
+
+
+    <item>California State University-Northridge</item>
+
+
+    <item>California State University-Sacramento</item>
+
+
+    <item>University of California-Berkeley</item>
+
+
+    <item>University of California-Davis</item>
+
+
+    <item>University of California-Irvine</item>
+
+
+    <item>University of California-Los Angeles</item>
+
+
+    <item>University of California-Riverside</item>
+
+
+    <item>University of California-San Diego</item>
+
+
+    <item>University of California-San Francisco</item>
+
+
+    <item>University of California-Santa Barbara</item>
+
+
+    <item>University of California-Santa Cruz</item>
+
+
+    <item>California Institute of the Arts</item>
+
+
+    <item>The California Maritime Academy</item>
+
+
+    <item>Canada College</item>
+
+
+    <item>College of the Canyons</item>
+
+
+    <item>Cerritos College</item>
+
+
+    <item>Cerro Coso Community College</item>
+
+
+    <item>Chabot College</item>
+
+
+    <item>Chaffey College</item>
+
+
+    <item>Chapman University</item>
+
+
+    <item>Concordia University-Irvine</item>
+
+
+    <item>Citrus College</item>
+
+
+    <item>City College of San Francisco</item>
+
+
+    <item>Claremont Graduate University</item>
+
+
+    <item>Claremont McKenna College</item>
+
+
+    <item>Coastline Community College</item>
+
+
+    <item>Western University of Health Sciences</item>
+
+
+    <item>Columbia College</item>
+
+
+    <item>El Camino College-Compton Center</item>
+
+
+    <item>Contra Costa College</item>
+
+
+    <item>Cosumnes River College</item>
+
+
+    <item>Crafton Hills College</item>
+
+
+    <item>Cuesta College</item>
+
+
+    <item>Cuyamaca College</item>
+
+
+    <item>Cypress College</item>
+
+
+    <item>De Anza College</item>
+
+
+    <item>Marinello Schools of Beauty-Hemet</item>
+
+
+    <item>College of the Desert</item>
+
+
+    <item>Diablo Valley College</item>
+
+
+    <item>Dominican University of California</item>
+
+
+    <item>East Los Angeles College</item>
+
+
+    <item>El Camino Community College District</item>
+
+
+    <item>Evergreen Valley College</item>
+
+
+    <item>Fashion Institute of Design &amp; Merchandising-Los Angeles</item>
+
+
+    <item>Feather River Community College District</item>
+
+
+    <item>Fielding Graduate University</item>
+
+
+    <item>Foothill College</item>
+
+
+    <item>Fresno City College</item>
+
+
+    <item>Fresno Pacific University</item>
+
+
+    <item>Fuller Theological Seminary in California</item>
+
+
+    <item>Fullerton College</item>
+
+
+    <item>Gavilan College</item>
+
+
+    <item>Glendale Community College</item>
+
+
+    <item>Golden Gate University-San Francisco</item>
+
+
+    <item>Golden West College</item>
+
+
+    <item>Grossmont College</item>
+
+
+    <item>Hartnell College</item>
+
+
+    <item>Holy Names University</item>
+
+
+    <item>Humboldt State University</item>
+
+
+    <item>Imperial Valley College</item>
+
+
+    <item>Irvine Valley College</item>
+
+
+    <item>John F. Kennedy University</item>
+
+
+    <item>Reedley College</item>
+
+
+    <item>Argosy University-The Art Institute of California-San Diego</item>
+
+
+    <item>University of La Verne</item>
+
+
+    <item>Lake Tahoe Community College</item>
+
+
+    <item>Laney College</item>
+
+
+    <item>Lassen Community College</item>
+
+
+    <item>La Sierra University</item>
+
+
+    <item>Loma Linda University</item>
+
+
+    <item>Long Beach City College</item>
+
+
+    <item>Southern California University of Health Sciences</item>
+
+
+    <item>Los Angeles Harbor College</item>
+
+
+    <item>Los Angeles Pierce College</item>
+
+
+    <item>Los Angeles Southwest College</item>
+
+
+    <item>Los Angeles Trade Technical College</item>
+
+
+    <item>Los Angeles Valley College</item>
+
+
+    <item>The Master&apos;s College and Seminary</item>
+
+
+    <item>Los Angeles City College</item>
+
+
+    <item>Los Angeles Mission College</item>
+
+
+    <item>Los Medanos College</item>
+
+
+    <item>Loyola Marymount University</item>
+
+
+    <item>Brightwood College-San Diego</item>
+
+
+    <item>College of Marin</item>
+
+
+    <item>Marinello Schools of Beauty-Los Angeles</item>
+
+
+    <item>Marymount California University</item>
+
+
+    <item>Mendocino College</item>
+
+
+    <item>Merced College</item>
+
+
+    <item>Merritt College</item>
+
+
+    <item>Mills College</item>
+
+
+    <item>MiraCosta College</item>
+
+
+    <item>Mission College</item>
+
+
+    <item>Modesto Junior College</item>
+
+
+    <item>Monterey Peninsula College</item>
+
+
+    <item>Moorpark College</item>
+
+
+    <item>Mt San Antonio College</item>
+
+
+    <item>Mount Saint Mary&apos;s University</item>
+
+
+    <item>Mt San Jacinto Community College District</item>
+
+
+    <item>Musicians Institute</item>
+
+
+    <item>Napa Valley College</item>
+
+
+    <item>National University</item>
+
+
+    <item>Naval Postgraduate School</item>
+
+
+    <item>Notre Dame de Namur University</item>
+
+
+    <item>Occidental College</item>
+
+
+    <item>Ohlone College</item>
+
+
+    <item>Orange Coast College</item>
+
+
+    <item>Otis College of Art and Design</item>
+
+
+    <item>Oxnard College</item>
+
+
+    <item>Hope International University</item>
+
+
+    <item>Palo Alto University</item>
+
+
+    <item>Pacific Oaks College</item>
+
+
+    <item>Pacific Union College</item>
+
+
+    <item>University of the Pacific</item>
+
+
+    <item>Palo Verde College</item>
+
+
+    <item>Palomar College</item>
+
+
+    <item>Pasadena City College</item>
+
+
+    <item>Pepperdine University</item>
+
+
+    <item>Pitzer College</item>
+
+
+    <item>Point Loma Nazarene University</item>
+
+
+    <item>Pomona College</item>
+
+
+    <item>Porterville College</item>
+
+
+    <item>Santa Ana College</item>
+
+
+    <item>University of Redlands</item>
+
+
+    <item>College of the Redwoods</item>
+
+
+    <item>Rio Hondo College</item>
+
+
+    <item>Riverside City College</item>
+
+
+    <item>Sacramento City College</item>
+
+
+    <item>Saddleback College</item>
+
+
+    <item>Samuel Merritt University</item>
+
+
+    <item>San Diego City College</item>
+
+
+    <item>San Diego Mesa College</item>
+
+
+    <item>San Diego Miramar College</item>
+
+
+    <item>San Diego State University</item>
+
+
+    <item>University of San Diego</item>
+
+
+    <item>San Francisco State University</item>
+
+
+    <item>University of San Francisco</item>
+
+
+    <item>San Joaquin Delta College</item>
+
+
+    <item>San Joaquin Valley College-Visalia</item>
+
+
+    <item>William Jessup University</item>
+
+
+    <item>San Jose City College</item>
+
+
+    <item>San Jose State University</item>
+
+
+    <item>College of San Mateo</item>
+
+
+    <item>Westwood College-Los Angeles</item>
+
+
+    <item>Santa Barbara City College</item>
+
+
+    <item>Santa Clara University</item>
+
+
+    <item>Santa Monica College</item>
+
+
+    <item>Santa Rosa Junior College</item>
+
+
+    <item>College of the Sequoias</item>
+
+
+    <item>Shasta College</item>
+
+
+    <item>Sierra College</item>
+
+
+    <item>Simpson University</item>
+
+
+    <item>College of the Siskiyous</item>
+
+
+    <item>Skyline College</item>
+
+
+    <item>San Bernardino Valley College</item>
+
+
+    <item>Saint Mary&apos;s College of California</item>
+
+
+    <item>Solano Community College</item>
+
+
+    <item>Sonoma State University</item>
+
+
+    <item>Vanguard University of Southern California</item>
+
+
+    <item>Southwestern College</item>
+
+
+    <item>University of Southern California</item>
+
+
+    <item>Southwestern Law School</item>
+
+
+    <item>Taft College</item>
+
+
+    <item>Ventura College</item>
+
+
+    <item>Victor Valley College</item>
+
+
+    <item>Berkeley City College</item>
+
+
+    <item>Walden University</item>
+
+
+    <item>West Hills College-Coalinga</item>
+
+
+    <item>West Los Angeles College</item>
+
+
+    <item>West Valley College</item>
+
+
+    <item>Carrington College-Sacramento</item>
+
+
+    <item>Westmont College</item>
+
+
+    <item>Whittier College</item>
+
+
+    <item>Woodbury University</item>
+
+
+    <item>Yuba College</item>
+
+
+    <item>Adams State University</item>
+
+
+    <item>Aims Community College</item>
+
+
+    <item>Arapahoe Community College</item>
+
+
+    <item>University of Colorado Denver/Anschutz Medical Campus</item>
+
+
+    <item>University of Colorado Colorado Springs</item>
+
+
+    <item>University of Colorado Boulder</item>
+
+
+    <item>Colorado Christian University</item>
+
+
+    <item>Colorado College</item>
+
+
+    <item>The Art Institute of Colorado</item>
+
+
+    <item>Colorado Mountain College</item>
+
+
+    <item>Colorado Northwestern Community College</item>
+
+
+    <item>Colorado School of Mines</item>
+
+
+    <item>Colorado State University-Fort Collins</item>
+
+
+    <item>Colorado Technical University-Colorado Springs</item>
+
+
+    <item>Community College of Aurora</item>
+
+
+    <item>Community College of Denver</item>
+
+
+    <item>Lincoln College of Technology-Denver</item>
+
+
+    <item>University of Denver</item>
+
+
+    <item>Emily Griffith Technical College</item>
+
+
+    <item>Fort Lewis College</item>
+
+
+    <item>Front Range Community College</item>
+
+
+    <item>Colorado Mesa University</item>
+
+
+    <item>Metropolitan State University of Denver</item>
+
+
+    <item>Morgan Community College</item>
+
+
+    <item>Northeastern Junior College</item>
+
+
+    <item>University of Northern Colorado</item>
+
+
+    <item>Otero Junior College</item>
+
+
+    <item>Pikes Peak Community College</item>
+
+
+    <item>Pueblo Community College</item>
+
+
+    <item>Red Rocks Community College</item>
+
+
+    <item>Regis University</item>
+
+
+    <item>Rocky Mountain College of Art and Design</item>
+
+
+    <item>Colorado State University-Pueblo</item>
+
+
+    <item>Pickens Technical College</item>
+
+
+    <item>Trinidad State Junior College</item>
+
+
+    <item>United States Air Force Academy</item>
+
+
+    <item>Western State Colorado University</item>
+
+
+    <item>Albertus Magnus College</item>
+
+
+    <item>Asnuntuck Community College</item>
+
+
+    <item>University of Bridgeport</item>
+
+
+    <item>Central Connecticut State University</item>
+
+
+    <item>Charter Oak State College</item>
+
+
+    <item>Connecticut College</item>
+
+
+    <item>University of Connecticut</item>
+
+
+    <item>Goodwin College</item>
+
+
+    <item>Eastern Connecticut State University</item>
+
+
+    <item>Fairfield University</item>
+
+
+    <item>Capital Community College</item>
+
+
+    <item>University of Hartford</item>
+
+
+    <item>Housatonic Community College</item>
+
+
+    <item>Manchester Community College</item>
+
+
+    <item>Naugatuck Valley Community College</item>
+
+
+    <item>Middlesex Community College</item>
+
+
+    <item>Three Rivers Community College</item>
+
+
+    <item>University of New Haven</item>
+
+
+    <item>Norwalk Community College</item>
+
+
+    <item>Northwestern Connecticut Community College</item>
+
+
+    <item>Porter and Chester Institute of Stratford</item>
+
+
+    <item>Post University</item>
+
+
+    <item>Quinebaug Valley Community College</item>
+
+
+    <item>Quinnipiac University</item>
+
+
+    <item>Sacred Heart University</item>
+
+
+    <item>University of Saint Joseph</item>
+
+
+    <item>Gateway Community College</item>
+
+
+    <item>Southern Connecticut State University</item>
+
+
+    <item>Trinity College</item>
+
+
+    <item>Tunxis Community College</item>
+
+
+    <item>Wesleyan University</item>
+
+
+    <item>Western Connecticut State University</item>
+
+
+    <item>Yale University</item>
+
+
+    <item>Delaware Technical Community College-Terry</item>
+
+
+    <item>Delaware State University</item>
+
+
+    <item>University of Delaware</item>
+
+
+    <item>Goldey-Beacom College</item>
+
+
+    <item>Wesley College</item>
+
+
+    <item>Wilmington University</item>
+
+
+    <item>American University</item>
+
+
+    <item>Catholic University of America</item>
+
+
+    <item>University of the District of Columbia</item>
+
+
+    <item>Gallaudet University</item>
+
+
+    <item>George Washington University</item>
+
+
+    <item>Georgetown University</item>
+
+
+    <item>Howard University</item>
+
+
+    <item>Medtech Institute</item>
+
+
+    <item>Strayer University-District of Columbia</item>
+
+
+    <item>Trinity Washington University</item>
+
+
+    <item>The Art Institute of Fort Lauderdale</item>
+
+
+    <item>Atlantic Technical College</item>
+
+
+    <item>Barry University</item>
+
+
+    <item>Bethune-Cookman University</item>
+
+
+    <item>Lynn University</item>
+
+
+    <item>Eastern Florida State College</item>
+
+
+    <item>Broward College</item>
+
+
+    <item>Carlos Albizu University-Miami</item>
+
+
+    <item>College of Central Florida</item>
+
+
+    <item>University of Central Florida</item>
+
+
+    <item>Chipola College</item>
+
+
+    <item>Daytona State College</item>
+
+
+    <item>South University-West Palm Beach</item>
+
+
+    <item>Eckerd College</item>
+
+
+    <item>Florida SouthWestern State College</item>
+
+
+    <item>Edward Waters College</item>
+
+
+    <item>Embry-Riddle Aeronautical University-Daytona Beach</item>
+
+
+    <item>Florida Agricultural and Mechanical University</item>
+
+
+    <item>Florida Atlantic University</item>
+
+
+    <item>Florida State College at Jacksonville</item>
+
+
+    <item>Flagler College-St Augustine</item>
+
+
+    <item>Adventist University of Health Sciences</item>
+
+
+    <item>Florida Institute of Technology</item>
+
+
+    <item>Florida International University</item>
+
+
+    <item>Florida Keys Community College</item>
+
+
+    <item>Florida Memorial University</item>
+
+
+    <item>Florida Southern College</item>
+
+
+    <item>Florida State University</item>
+
+
+    <item>Florida Technical College</item>
+
+
+    <item>University of Florida</item>
+
+
+    <item>Full Sail University</item>
+
+
+    <item>Gulf Coast State College</item>
+
+
+    <item>Hillsborough Community College</item>
+
+
+    <item>Indian River State College</item>
+
+
+    <item>AI Miami International University of Art and Design</item>
+
+
+    <item>Jacksonville University</item>
+
+
+    <item>Keiser University-Ft Lauderdale</item>
+
+
+    <item>Florida Gateway College</item>
+
+
+    <item>Lake-Sumter State College</item>
+
+
+    <item>Luther Rice University &amp; Seminary</item>
+
+
+    <item>State College of Florida-Manatee-Sarasota</item>
+
+
+    <item>Miami Dade College</item>
+
+
+    <item>University of Miami</item>
+
+
+    <item>Orange Technical College-Mid Florida Campus</item>
+
+
+    <item>North Florida Community College</item>
+
+
+    <item>University of North Florida</item>
+
+
+    <item>Nova Southeastern University</item>
+
+
+    <item>Northwest Florida State College</item>
+
+
+    <item>Orange Technical College-Orlando Campus</item>
+
+
+    <item>Palm Beach Atlantic University</item>
+
+
+    <item>Palm Beach State College</item>
+
+
+    <item>Pasco-Hernando State College</item>
+
+
+    <item>Pensacola State College</item>
+
+
+    <item>Polk State College</item>
+
+
+    <item>Ringling College of Art and Design</item>
+
+
+    <item>Rollins College</item>
+
+
+    <item>Saint Leo University</item>
+
+
+    <item>St Petersburg College</item>
+
+
+    <item>Santa Fe College</item>
+
+
+    <item>Suncoast Technical College</item>
+
+
+    <item>Seminole State College of Florida</item>
+
+
+    <item>Sheridan Technical College</item>
+
+
+    <item>Saint Johns River State College</item>
+
+
+    <item>South Florida State College</item>
+
+
+    <item>University of South Florida-Main Campus</item>
+
+
+    <item>St Thomas University</item>
+
+
+    <item>Stetson University</item>
+
+
+    <item>Southeastern University</item>
+
+
+    <item>Tallahassee Community College</item>
+
+
+    <item>The University of Tampa</item>
+
+
+    <item>Valencia College</item>
+
+
+    <item>Warner University</item>
+
+
+    <item>Rasmussen College-Florida</item>
+
+
+    <item>The University of West Florida</item>
+
+
+    <item>Orange Technical College-Westside Campus</item>
+
+
+    <item>Orange Technical College-Winter Park Campus</item>
+
+
+    <item>Abraham Baldwin Agricultural College</item>
+
+
+    <item>Albany Technical College</item>
+
+
+    <item>Darton State College</item>
+
+
+    <item>Albany State University</item>
+
+
+    <item>Armstrong State University</item>
+
+
+    <item>The Art Institute of Atlanta</item>
+
+
+    <item>Atlanta Technical College</item>
+
+
+    <item>Point University</item>
+
+
+    <item>Atlanta Metropolitan State College</item>
+
+
+    <item>Clark Atlanta University</item>
+
+
+    <item>Augusta Technical College</item>
+
+
+    <item>Bainbridge State College</item>
+
+
+    <item>Berry College</item>
+
+
+    <item>Brenau University</item>
+
+
+    <item>College of Coastal Georgia</item>
+
+
+    <item>West Georgia Technical College</item>
+
+
+    <item>Clayton  State University</item>
+
+
+    <item>Columbus Technical College</item>
+
+
+    <item>Columbus State University</item>
+
+
+    <item>Georgia Northwestern Technical College</item>
+
+
+    <item>Covenant College</item>
+
+
+    <item>Dalton State College</item>
+
+
+    <item>South University-Savannah</item>
+
+
+    <item>East Georgia State College</item>
+
+
+    <item>Emory University</item>
+
+
+    <item>Georgia Highlands College</item>
+
+
+    <item>Fort Valley State University</item>
+
+
+    <item>Georgia Institute of Technology-Main Campus</item>
+
+
+    <item>Georgia Southwestern State University</item>
+
+
+    <item>Georgia College and State University</item>
+
+
+    <item>Georgia Southern University</item>
+
+
+    <item>Georgia State University</item>
+
+
+    <item>University of Georgia</item>
+
+
+    <item>Gordon State College</item>
+
+
+    <item>Southern Crescent Technical College</item>
+
+
+    <item>Gwinnett Technical College</item>
+
+
+    <item>LaGrange College</item>
+
+
+    <item>Lanier Technical College</item>
+
+
+    <item>Life University</item>
+
+
+    <item>Chattahoochee Technical College</item>
+
+
+    <item>Mercer University</item>
+
+
+    <item>Morehouse College</item>
+
+
+    <item>North Georgia Technical College</item>
+
+
+    <item>Oglethorpe University</item>
+
+
+    <item>Piedmont College</item>
+
+
+    <item>Reinhardt University</item>
+
+
+    <item>Savannah Technical College</item>
+
+
+    <item>Savannah College of Art and Design</item>
+
+
+    <item>Savannah State University</item>
+
+
+    <item>Shorter University</item>
+
+
+    <item>South Georgia Technical College</item>
+
+
+    <item>Spelman College</item>
+
+
+    <item>Thomas University</item>
+
+
+    <item>Truett-McConnell College</item>
+
+
+    <item>Wiregrass Georgia Technical College</item>
+
+
+    <item>Valdosta State University</item>
+
+
+    <item>University of West Georgia</item>
+
+
+    <item>Young Harris College</item>
+
+
+    <item>Chaminade University of Honolulu</item>
+
+
+    <item>University of Hawaii at Hilo</item>
+
+
+    <item>University of Hawaii at Manoa</item>
+
+
+    <item>Hawaii Pacific University</item>
+
+
+    <item>Honolulu Community College</item>
+
+
+    <item>Kapiolani Community College</item>
+
+
+    <item>Kauai Community College</item>
+
+
+    <item>Leeward Community College</item>
+
+
+    <item>University of Hawaii Maui College</item>
+
+
+    <item>University of Hawaii-West Oahu</item>
+
+
+    <item>Windward Community College</item>
+
+
+    <item>Boise State University</item>
+
+
+    <item>Idaho State University</item>
+
+
+    <item>University of Idaho</item>
+
+
+    <item>The College of Idaho</item>
+
+
+    <item>Lewis-Clark State College</item>
+
+
+    <item>North Idaho College</item>
+
+
+    <item>Northwest Nazarene University</item>
+
+
+    <item>Brigham Young University-Idaho</item>
+
+
+    <item>College of Southern Idaho</item>
+
+
+    <item>School of the Art Institute of Chicago</item>
+
+
+    <item>Augustana College</item>
+
+
+    <item>Aurora University</item>
+
+
+    <item>Southwestern Illinois College</item>
+
+
+    <item>Black Hawk College</item>
+
+
+    <item>Bradley University</item>
+
+
+    <item>Carl Sandburg College</item>
+
+
+    <item>Midwestern University-Downers Grove</item>
+
+
+    <item>The Chicago School of Professional Psychology at Chicago</item>
+
+
+    <item>Chicago State University</item>
+
+
+    <item>University of Chicago</item>
+
+
+    <item>City Colleges of Chicago-Kennedy-King College</item>
+
+
+    <item>City Colleges of Chicago-Malcolm X College</item>
+
+
+    <item>City Colleges of Chicago-Olive-Harvey College</item>
+
+
+    <item>City Colleges of Chicago-Harry S Truman College</item>
+
+
+    <item>City Colleges of Chicago-Richard J Daley College</item>
+
+
+    <item>City Colleges of Chicago-Harold Washington College</item>
+
+
+    <item>City Colleges of Chicago-Wilbur Wright College</item>
+
+
+    <item>Columbia College-Chicago</item>
+
+
+    <item>Concordia University-Chicago</item>
+
+
+    <item>Le Cordon Bleu College of Culinary Arts-Chicago</item>
+
+
+    <item>Danville Area Community College</item>
+
+
+    <item>DePaul University</item>
+
+
+    <item>College of DuPage</item>
+
+
+    <item>Eastern Illinois University</item>
+
+
+    <item>Elgin Community College</item>
+
+
+    <item>Elmhurst College</item>
+
+
+    <item>Governors State University</item>
+
+
+    <item>Greenville College</item>
+
+
+    <item>Highland Community College</item>
+
+
+    <item>Rosalind Franklin University of Medicine and Science</item>
+
+
+    <item>University of Illinois at Chicago</item>
+
+
+    <item>Benedictine University</item>
+
+
+    <item>University of Illinois at Urbana-Champaign</item>
+
+
+    <item>Illinois Wesleyan University</item>
+
+
+    <item>Illinois Central College</item>
+
+
+    <item>Olney Central College</item>
+
+
+    <item>Illinois Institute of Technology</item>
+
+
+    <item>Illinois State University</item>
+
+
+    <item>Illinois Valley Community College</item>
+
+
+    <item>John A Logan College</item>
+
+
+    <item>The John Marshall Law School</item>
+
+
+    <item>John Wood Community College</item>
+
+
+    <item>Joliet Junior College</item>
+
+
+    <item>Judson University</item>
+
+
+    <item>Kankakee Community College</item>
+
+
+    <item>Kaskaskia College</item>
+
+
+    <item>Kendall College</item>
+
+
+    <item>Kishwaukee College</item>
+
+
+    <item>Knox College</item>
+
+
+    <item>College of Lake County</item>
+
+
+    <item>Lake Forest College</item>
+
+
+    <item>Lake Land College</item>
+
+
+    <item>Lewis and Clark Community College</item>
+
+
+    <item>Lewis University</item>
+
+
+    <item>Lincoln College</item>
+
+
+    <item>Lincoln Land Community College</item>
+
+
+    <item>Loyola University Chicago</item>
+
+
+    <item>McHenry County College</item>
+
+
+    <item>McKendree University</item>
+
+
+    <item>Millikin University</item>
+
+
+    <item>Monmouth College</item>
+
+
+    <item>Moody Bible Institute</item>
+
+
+    <item>Moraine Valley Community College</item>
+
+
+    <item>Morton College</item>
+
+
+    <item>National Louis University</item>
+
+
+    <item>North Central College</item>
+
+
+    <item>North Park University</item>
+
+
+    <item>Northern Illinois University</item>
+
+
+    <item>Northwestern University</item>
+
+
+    <item>Northeastern Illinois University</item>
+
+
+    <item>Oakton Community College</item>
+
+
+    <item>Olivet Nazarene University</item>
+
+
+    <item>Parkland College</item>
+
+
+    <item>Prairie State College</item>
+
+
+    <item>Quincy University</item>
+
+
+    <item>The Illinois Institute of Art-Chicago</item>
+
+
+    <item>Rend Lake College</item>
+
+
+    <item>Richland Community College</item>
+
+
+    <item>Robert Morris University Illinois</item>
+
+
+    <item>Rock Valley College</item>
+
+
+    <item>Rockford University</item>
+
+
+    <item>Roosevelt University</item>
+
+
+    <item>Dominican University</item>
+
+
+    <item>Rush University</item>
+
+
+    <item>University of St Francis</item>
+
+
+    <item>Saint Xavier University</item>
+
+
+    <item>University of Illinois at Springfield</item>
+
+
+    <item>Sauk Valley Community College</item>
+
+
+    <item>Shawnee Community College</item>
+
+
+    <item>Saint Augustine College</item>
+
+
+    <item>Southeastern Illinois College</item>
+
+
+    <item>Spoon River College</item>
+
+
+    <item>Southern Illinois University-Carbondale</item>
+
+
+    <item>Southern Illinois University-Edwardsville</item>
+
+
+    <item>South Suburban College</item>
+
+
+    <item>Trinity Christian College</item>
+
+
+    <item>Trinity International University-Illinois</item>
+
+
+    <item>Triton College</item>
+
+
+    <item>Waubonsee Community College</item>
+
+
+    <item>Western Illinois University</item>
+
+
+    <item>Wheaton College</item>
+
+
+    <item>William Rainey Harper College</item>
+
+
+    <item>Anderson University</item>
+
+
+    <item>Ball State University</item>
+
+
+    <item>Bethel College-Indiana</item>
+
+
+    <item>Butler University</item>
+
+
+    <item>Calumet College of Saint Joseph</item>
+
+
+    <item>DePauw University</item>
+
+
+    <item>Earlham College</item>
+
+
+    <item>University of Evansville</item>
+
+
+    <item>Franklin College</item>
+
+
+    <item>Grace College and Theological Seminary</item>
+
+
+    <item>Hanover College</item>
+
+
+    <item>Huntington University</item>
+
+
+    <item>Ivy Tech Community College</item>
+
+
+    <item>Indiana University-Purdue University-Fort Wayne</item>
+
+
+    <item>Indiana University-Purdue University-Indianapolis</item>
+
+
+    <item>Harrison College-Indianapolis</item>
+
+
+    <item>University of Indianapolis</item>
+
+
+    <item>Indiana Institute of Technology</item>
+
+
+    <item>University of Southern Indiana</item>
+
+
+    <item>Indiana State University</item>
+
+
+    <item>Indiana University-Kokomo</item>
+
+
+    <item>Indiana University-South Bend</item>
+
+
+    <item>Indiana University-Bloomington</item>
+
+
+    <item>Indiana University-Northwest</item>
+
+
+    <item>Indiana University-Southeast</item>
+
+
+    <item>Indiana University-East</item>
+
+
+    <item>ITT Technical Institute-Indianapolis</item>
+
+
+    <item>Lincoln College of Technology-Indianapolis</item>
+
+
+    <item>Manchester University</item>
+
+
+    <item>Marian University</item>
+
+
+    <item>Indiana Wesleyan University-Marion</item>
+
+
+    <item>University of Notre Dame</item>
+
+
+    <item>Oakland City University</item>
+
+
+    <item>Purdue University-Calumet Campus</item>
+
+
+    <item>Purdue University-North Central Campus</item>
+
+
+    <item>Rose-Hulman Institute of Technology</item>
+
+
+    <item>University of Saint Francis-Fort Wayne</item>
+
+
+    <item>Saint Josephs College</item>
+
+
+    <item>Saint Mary&apos;s College</item>
+
+
+    <item>Taylor University</item>
+
+
+    <item>Trine University</item>
+
+
+    <item>Valparaiso University</item>
+
+
+    <item>Vincennes University</item>
+
+
+    <item>Briar Cliff University</item>
+
+
+    <item>Buena Vista University</item>
+
+
+    <item>Central College</item>
+
+
+    <item>Clarke University</item>
+
+
+    <item>Coe College</item>
+
+
+    <item>Cornell College</item>
+
+
+    <item>Des Moines Area Community College</item>
+
+
+    <item>Dordt College</item>
+
+
+    <item>Drake University</item>
+
+
+    <item>University of Dubuque</item>
+
+
+    <item>Eastern Iowa Community College District</item>
+
+
+    <item>Graceland University-Lamoni</item>
+
+
+    <item>Grand View University</item>
+
+
+    <item>Grinnell College</item>
+
+
+    <item>Hawkeye Community College</item>
+
+
+    <item>Indian Hills Community College</item>
+
+
+    <item>Iowa Central Community College</item>
+
+
+    <item>Iowa Lakes Community College</item>
+
+
+    <item>Iowa State University</item>
+
+
+    <item>Iowa Western Community College</item>
+
+
+    <item>University of Iowa</item>
+
+
+    <item>Kirkwood Community College</item>
+
+
+    <item>Loras College</item>
+
+
+    <item>Luther College</item>
+
+
+    <item>Maharishi University of Management</item>
+
+
+    <item>Marshalltown Community College</item>
+
+
+    <item>Morningside College</item>
+
+
+    <item>Mount Mercy University</item>
+
+
+    <item>Ashford University</item>
+
+
+    <item>North Iowa Area Community College</item>
+
+
+    <item>University of Northern Iowa</item>
+
+
+    <item>Northwestern College</item>
+
+
+    <item>Northeast Iowa Community College</item>
+
+
+    <item>Northwest Iowa Community College</item>
+
+
+    <item>Des Moines University-Osteopathic Medical Center</item>
+
+
+    <item>Palmer College of Chiropractic</item>
+
+
+    <item>Saint Ambrose University</item>
+
+
+    <item>Simpson College</item>
+
+
+    <item>Southeastern Community College</item>
+
+
+    <item>Southwestern Community College</item>
+
+
+    <item>Upper Iowa University</item>
+
+
+    <item>Waldorf College</item>
+
+
+    <item>Wartburg College</item>
+
+
+    <item>Western Iowa Tech Community College</item>
+
+
+    <item>William Penn University</item>
+
+
+    <item>Allen County Community College</item>
+
+
+    <item>Baker University</item>
+
+
+    <item>Barton County Community College</item>
+
+
+    <item>Benedictine College</item>
+
+
+    <item>Butler Community College</item>
+
+
+    <item>Central Christian College of Kansas</item>
+
+
+    <item>Cloud County Community College</item>
+
+
+    <item>Coffeyville Community College</item>
+
+
+    <item>Colby Community College</item>
+
+
+    <item>Cowley County Community College</item>
+
+
+    <item>Dodge City Community College</item>
+
+
+    <item>Emporia State University</item>
+
+
+    <item>Fort Hays State University</item>
+
+
+    <item>Friends University</item>
+
+
+    <item>Fort Scott Community College</item>
+
+
+    <item>Garden City Community College</item>
+
+
+    <item>Highland Community College</item>
+
+
+    <item>Hutchinson Community College</item>
+
+
+    <item>Johnson County Community College</item>
+
+
+    <item>Kansas City Kansas Community College</item>
+
+
+    <item>University of Kansas</item>
+
+
+    <item>Newman University</item>
+
+
+    <item>Kansas State University</item>
+
+
+    <item>Washburn Institute of Technology</item>
+
+
+    <item>Labette Community College</item>
+
+
+    <item>MidAmerica Nazarene University</item>
+
+
+    <item>Neosho County Community College</item>
+
+
+    <item>Pittsburg State University</item>
+
+
+    <item>Pratt Community College</item>
+
+
+    <item>University of Saint Mary</item>
+
+
+    <item>Seward County Community College and Area Technical School</item>
+
+
+    <item>Southwestern College</item>
+
+
+    <item>Washburn University</item>
+
+
+    <item>Wichita Area Technical College</item>
+
+
+    <item>Wichita State University</item>
+
+
+    <item>Asbury University</item>
+
+
+    <item>Asbury Theological Seminary</item>
+
+
+    <item>Ashland Community and Technical College</item>
+
+
+    <item>Bellarmine University</item>
+
+
+    <item>Berea College</item>
+
+
+    <item>Southcentral Kentucky Community and Technical College</item>
+
+
+    <item>Brescia University</item>
+
+
+    <item>Campbellsville University</item>
+
+
+    <item>Bluegrass Community and Technical College</item>
+
+
+    <item>Centre College</item>
+
+
+    <item>Galen College of Nursing-Louisville</item>
+
+
+    <item>University of the Cumberlands</item>
+
+
+    <item>Eastern Kentucky University</item>
+
+
+    <item>Elizabethtown Community and Technical College</item>
+
+
+    <item>Frontier Nursing University</item>
+
+
+    <item>Georgetown College</item>
+
+
+    <item>Hazard Community and Technical College</item>
+
+
+    <item>Henderson Community College</item>
+
+
+    <item>Hopkinsville Community College</item>
+
+
+    <item>Jefferson Community and Technical College</item>
+
+
+    <item>Kentucky State University</item>
+
+
+    <item>University of Kentucky</item>
+
+
+    <item>Lindsey Wilson College</item>
+
+
+    <item>University of Louisville</item>
+
+
+    <item>Madisonville Community College</item>
+
+
+    <item>Maysville Community and Technical College</item>
+
+
+    <item>Midway University</item>
+
+
+    <item>Morehead State University</item>
+
+
+    <item>Murray State University</item>
+
+
+    <item>Gateway Community and Technical College</item>
+
+
+    <item>Northern Kentucky University</item>
+
+
+    <item>West Kentucky Community and Technical College</item>
+
+
+    <item>University of Pikeville</item>
+
+
+    <item>Big Sandy Community and Technical College</item>
+
+
+    <item>Somerset Community College</item>
+
+
+    <item>Southeast Kentucky Community and Technical College</item>
+
+
+    <item>The Southern Baptist Theological Seminary</item>
+
+
+    <item>Spalding University</item>
+
+
+    <item>Sullivan University</item>
+
+
+    <item>Thomas More College</item>
+
+
+    <item>Transylvania University</item>
+
+
+    <item>Union College</item>
+
+
+    <item>Western Kentucky University</item>
+
+
+    <item>Central Louisiana Technical Community College</item>
+
+
+    <item>Bossier Parish Community College</item>
+
+
+    <item>Delgado Community College</item>
+
+
+    <item>Dillard University</item>
+
+
+    <item>Nunez Community College</item>
+
+
+    <item>Grambling State University</item>
+
+
+    <item>Louisiana State University Health Sciences Center-New Orleans</item>
+
+
+    <item>Louisiana State University-Alexandria</item>
+
+
+    <item>Louisiana State University and Agricultural &amp; Mechanical College</item>
+
+
+    <item>Louisiana State University-Eunice</item>
+
+
+    <item>Louisiana State University-Shreveport</item>
+
+
+    <item>Louisiana College</item>
+
+
+    <item>Louisiana Tech University</item>
+
+
+    <item>Loyola University New Orleans</item>
+
+
+    <item>McNeese State University</item>
+
+
+    <item>University of New Orleans</item>
+
+
+    <item>New Orleans Baptist Theological Seminary</item>
+
+
+    <item>Nicholls State University</item>
+
+
+    <item>University of Louisiana at Monroe</item>
+
+
+    <item>Northwest Louisiana Technical College</item>
+
+
+    <item>Northwestern State University of Louisiana</item>
+
+
+    <item>University of Holy Cross</item>
+
+
+    <item>Our Lady of the Lake College</item>
+
+
+    <item>Aveda Institute-Covington</item>
+
+
+    <item>Fletcher Technical Community College</item>
+
+
+    <item>SOWELA Technical Community College</item>
+
+
+    <item>Southeastern Louisiana University</item>
+
+
+    <item>Southern University and A &amp; M College</item>
+
+
+    <item>Southern University at New Orleans</item>
+
+
+    <item>Southern University at Shreveport</item>
+
+
+    <item>University of Louisiana at Lafayette</item>
+
+
+    <item>Northshore Technical Community College</item>
+
+
+    <item>Tulane University of Louisiana</item>
+
+
+    <item>Xavier University of Louisiana</item>
+
+
+    <item>South Central Louisiana Technical College</item>
+
+
+    <item>Bates College</item>
+
+
+    <item>Bowdoin College</item>
+
+
+    <item>Central Maine Community College</item>
+
+
+    <item>Colby College</item>
+
+
+    <item>Eastern Maine Community College</item>
+
+
+    <item>Husson University</item>
+
+
+    <item>Kennebec Valley Community College</item>
+
+
+    <item>University of Maine at Augusta</item>
+
+
+    <item>University of Maine at Farmington</item>
+
+
+    <item>University of Maine at Fort Kent</item>
+
+
+    <item>University of Maine</item>
+
+
+    <item>Maine Maritime Academy</item>
+
+
+    <item>University of Maine at Presque Isle</item>
+
+
+    <item>University of New England</item>
+
+
+    <item>Saint Joseph&apos;s College of Maine</item>
+
+
+    <item>Southern Maine Community College</item>
+
+
+    <item>University of Southern Maine</item>
+
+
+    <item>Thomas College</item>
+
+
+    <item>Allegany College of Maryland</item>
+
+
+    <item>Anne Arundel Community College</item>
+
+
+    <item>Baltimore City Community College</item>
+
+
+    <item>University of Baltimore</item>
+
+
+    <item>Bowie State University</item>
+
+
+    <item>Cecil College</item>
+
+
+    <item>College of Southern Maryland</item>
+
+
+    <item>Chesapeake College</item>
+
+
+    <item>Washington Adventist University</item>
+
+
+    <item>Coppin State University</item>
+
+
+    <item>Frederick Community College</item>
+
+
+    <item>Frostburg State University</item>
+
+
+    <item>Goucher College</item>
+
+
+    <item>Hagerstown Community College</item>
+
+
+    <item>Harford Community College</item>
+
+
+    <item>Hood College</item>
+
+
+    <item>Howard Community College</item>
+
+
+    <item>Johns Hopkins University</item>
+
+
+    <item>Loyola University Maryland</item>
+
+
+    <item>University of Maryland-University College</item>
+
+
+    <item>University of Maryland, Baltimore</item>
+
+
+    <item>University of Maryland-Baltimore County</item>
+
+
+    <item>University of Maryland-College Park</item>
+
+
+    <item>Maryland Institute College of Art</item>
+
+
+    <item>University of Maryland Eastern Shore</item>
+
+
+    <item>Montgomery College</item>
+
+
+    <item>Morgan State University</item>
+
+
+    <item>Mount St Mary&apos;s University</item>
+
+
+    <item>Notre Dame of Maryland University</item>
+
+
+    <item>Prince George&apos;s Community College</item>
+
+
+    <item>Salisbury University</item>
+
+
+    <item>St Mary&apos;s College of Maryland</item>
+
+
+    <item>Towson University</item>
+
+
+    <item>Maryland University of Integrative Health</item>
+
+
+    <item>United States Naval Academy</item>
+
+
+    <item>Stevenson University</item>
+
+
+    <item>Washington College</item>
+
+
+    <item>McDaniel College</item>
+
+
+    <item>Wor-Wic Community College</item>
+
+
+    <item>Hult International Business School</item>
+
+
+    <item>New England College of Business and Finance</item>
+
+
+    <item>American International College</item>
+
+
+    <item>Amherst College</item>
+
+
+    <item>Anna Maria College</item>
+
+
+    <item>Assumption College</item>
+
+
+    <item>Babson College</item>
+
+
+    <item>Bay Path University</item>
+
+
+    <item>Bay State College</item>
+
+
+    <item>Becker College</item>
+
+
+    <item>Bentley University</item>
+
+
+    <item>Berklee College of Music</item>
+
+
+    <item>Berkshire Community College</item>
+
+
+    <item>Boston College</item>
+
+
+    <item>Boston University</item>
+
+
+    <item>Brandeis University</item>
+
+
+    <item>Bridgewater State University</item>
+
+
+    <item>Bristol Community College</item>
+
+
+    <item>Bunker Hill Community College</item>
+
+
+    <item>Cambridge College</item>
+
+
+    <item>Cape Cod Community College</item>
+
+
+    <item>Clark University</item>
+
+
+    <item>Curry College</item>
+
+
+    <item>Dean College</item>
+
+
+    <item>Eastern Nazarene College</item>
+
+
+    <item>Emerson College</item>
+
+
+    <item>Emmanuel College</item>
+
+
+    <item>Endicott College</item>
+
+
+    <item>Fisher College</item>
+
+
+    <item>Fitchburg State University</item>
+
+
+    <item>Framingham State University</item>
+
+
+    <item>Gordon College</item>
+
+
+    <item>Gordon-Conwell Theological Seminary</item>
+
+
+    <item>Greenfield Community College</item>
+
+
+    <item>Hampshire College</item>
+
+
+    <item>Harvard University</item>
+
+
+    <item>College of the Holy Cross</item>
+
+
+    <item>Holyoke Community College</item>
+
+
+    <item>Lasell College</item>
+
+
+    <item>Lesley University</item>
+
+
+    <item>University of Massachusetts-Lowell</item>
+
+
+    <item>University of Massachusetts-Amherst</item>
+
+
+    <item>University of Massachusetts-Boston</item>
+
+
+    <item>Massachusetts Bay Community College</item>
+
+
+    <item>MCPHS University</item>
+
+
+    <item>Massachusetts College of Art and Design</item>
+
+
+    <item>Massachusetts Institute of Technology</item>
+
+
+    <item>Massachusetts Maritime Academy</item>
+
+
+    <item>University of Massachusetts Medical School Worcester</item>
+
+
+    <item>Massasoit Community College</item>
+
+
+    <item>Merrimack College</item>
+
+
+    <item>MGH Institute of Health Professions</item>
+
+
+    <item>Middlesex Community College</item>
+
+
+    <item>Mount Holyoke College</item>
+
+
+    <item>Mount Ida College</item>
+
+
+    <item>Mount Wachusett Community College</item>
+
+
+    <item>Nichols College</item>
+
+
+    <item>Massachusetts College of Liberal Arts</item>
+
+
+    <item>North Shore Community College</item>
+
+
+    <item>Northeastern University</item>
+
+
+    <item>Northern Essex Community College</item>
+
+
+    <item>College of Our Lady of the Elms</item>
+
+
+    <item>Quincy College</item>
+
+
+    <item>Quinsigamond Community College</item>
+
+
+    <item>Regis College</item>
+
+
+    <item>Roxbury Community College</item>
+
+
+    <item>Salem State University</item>
+
+
+    <item>Simmons College</item>
+
+
+    <item>Smith College</item>
+
+
+    <item>Springfield College</item>
+
+
+    <item>Springfield Technical Community College</item>
+
+
+    <item>University of Massachusetts-Dartmouth</item>
+
+
+    <item>Stonehill College</item>
+
+
+    <item>Suffolk University</item>
+
+
+    <item>Tufts University</item>
+
+
+    <item>Wellesley College</item>
+
+
+    <item>Wentworth Institute of Technology</item>
+
+
+    <item>Western New England University</item>
+
+
+    <item>Westfield State University</item>
+
+
+    <item>Wheaton College</item>
+
+
+    <item>Wheelock College</item>
+
+
+    <item>Williams College</item>
+
+
+    <item>Worcester Polytechnic Institute</item>
+
+
+    <item>Worcester State University</item>
+
+
+    <item>Adrian College</item>
+
+
+    <item>Albion College</item>
+
+
+    <item>Alma College</item>
+
+
+    <item>Alpena Community College</item>
+
+
+    <item>Andrews University</item>
+
+
+    <item>Aquinas College</item>
+
+
+    <item>Baker College</item>
+
+
+    <item>Bay de Noc Community College</item>
+
+
+    <item>Calvin College</item>
+
+
+    <item>Central Michigan University</item>
+
+
+    <item>Mott Community College</item>
+
+
+    <item>College for Creative Studies</item>
+
+
+    <item>Davenport University</item>
+
+
+    <item>Delta College</item>
+
+
+    <item>University of Detroit Mercy</item>
+
+
+    <item>Eastern Michigan University</item>
+
+
+    <item>Ferris State University</item>
+
+
+    <item>Glen Oaks Community College</item>
+
+
+    <item>Kettering University</item>
+
+
+    <item>Gogebic Community College</item>
+
+
+    <item>Cornerstone University</item>
+
+
+    <item>Grand Rapids Community College</item>
+
+
+    <item>Grand Valley State University</item>
+
+
+    <item>Henry Ford College</item>
+
+
+    <item>Hillsdale College</item>
+
+
+    <item>Hope College</item>
+
+
+    <item>Jackson College</item>
+
+
+    <item>Kalamazoo College</item>
+
+
+    <item>Kalamazoo Valley Community College</item>
+
+
+    <item>Kellogg Community College</item>
+
+
+    <item>Kirtland Community College</item>
+
+
+    <item>Lake Michigan College</item>
+
+
+    <item>Lake Superior State University</item>
+
+
+    <item>Lansing Community College</item>
+
+
+    <item>Lawrence Technological University</item>
+
+
+    <item>Macomb Community College</item>
+
+
+    <item>Madonna University</item>
+
+
+    <item>Marygrove College</item>
+
+
+    <item>Rochester College</item>
+
+
+    <item>University of Michigan-Ann Arbor</item>
+
+
+    <item>Michigan State University</item>
+
+
+    <item>Michigan Technological University</item>
+
+
+    <item>University of Michigan-Dearborn</item>
+
+
+    <item>University of Michigan-Flint</item>
+
+
+    <item>Mid Michigan Community College</item>
+
+
+    <item>Monroe County Community College</item>
+
+
+    <item>Montcalm Community College</item>
+
+
+    <item>Muskegon Community College</item>
+
+
+    <item>North Central Michigan College</item>
+
+
+    <item>Northern Michigan University</item>
+
+
+    <item>Northwestern Michigan College</item>
+
+
+    <item>Northwood University-Michigan</item>
+
+
+    <item>Oakland Community College</item>
+
+
+    <item>Oakland University</item>
+
+
+    <item>Olivet College</item>
+
+
+    <item>Saginaw Valley State University</item>
+
+
+    <item>Schoolcraft College</item>
+
+
+    <item>Siena Heights University</item>
+
+
+    <item>St Clair County Community College</item>
+
+
+    <item>Southwestern Michigan College</item>
+
+
+    <item>Spring Arbor University</item>
+
+
+    <item>Western Michigan University-Thomas M. Cooley Law School</item>
+
+
+    <item>Walsh College of Accountancy and Business Administration</item>
+
+
+    <item>Washtenaw Community College</item>
+
+
+    <item>Wayne County Community College District</item>
+
+
+    <item>Wayne State University</item>
+
+
+    <item>West Shore Community College</item>
+
+
+    <item>Western Michigan University</item>
+
+
+    <item>Alexandria Technical &amp; Community College</item>
+
+
+    <item>Anoka Technical College</item>
+
+
+    <item>Anoka-Ramsey Community College</item>
+
+
+    <item>Augsburg College</item>
+
+
+    <item>Riverland Community College</item>
+
+
+    <item>Northwest Technical College</item>
+
+
+    <item>Bemidji State University</item>
+
+
+    <item>Bethel University</item>
+
+
+    <item>Central Lakes College-Brainerd</item>
+
+
+    <item>Carleton College</item>
+
+
+    <item>Concordia College at Moorhead</item>
+
+
+    <item>Concordia University-Saint Paul</item>
+
+
+    <item>Dakota County Technical College</item>
+
+
+    <item>Lake Superior College</item>
+
+
+    <item>Minnesota State Community and Technical College</item>
+
+
+    <item>Minnesota West Community and Technical College</item>
+
+
+    <item>Gustavus Adolphus College</item>
+
+
+    <item>Hamline University</item>
+
+
+    <item>Hennepin Technical College</item>
+
+
+    <item>Hibbing Community College</item>
+
+
+    <item>Inver Hills Community College</item>
+
+
+    <item>Itasca Community College</item>
+
+
+    <item>Macalester College</item>
+
+
+    <item>South Central College</item>
+
+
+    <item>Minnesota State University-Mankato</item>
+
+
+    <item>Argosy University-Twin Cities</item>
+
+
+    <item>Mesabi Range College</item>
+
+
+    <item>Metropolitan State University</item>
+
+
+    <item>University of Minnesota-Twin Cities</item>
+
+
+    <item>University of Minnesota-Crookston</item>
+
+
+    <item>Minneapolis Community and Technical College</item>
+
+
+    <item>University of Minnesota-Duluth</item>
+
+
+    <item>University of Minnesota-Morris</item>
+
+
+    <item>Minnesota State University Moorhead</item>
+
+
+    <item>North Hennepin Community College</item>
+
+
+    <item>Normandale Community College</item>
+
+
+    <item>North Central University</item>
+
+
+    <item>Northland Community and Technical College</item>
+
+
+    <item>University of Northwestern-St Paul</item>
+
+
+    <item>Pine Technical &amp; Community College</item>
+
+
+    <item>Rochester Community and Technical College</item>
+
+
+    <item>College of Saint Benedict</item>
+
+
+    <item>St Cloud Technical and Community College</item>
+
+
+    <item>Saint Cloud State University</item>
+
+
+    <item>Saint Johns University</item>
+
+
+    <item>Saint Mary&apos;s University of Minnesota</item>
+
+
+    <item>St Olaf College</item>
+
+
+    <item>Crown College</item>
+
+
+    <item>The College of Saint Scholastica</item>
+
+
+    <item>University of St Thomas</item>
+
+
+    <item>St Catherine University</item>
+
+
+    <item>Rasmussen College-Minnesota</item>
+
+
+    <item>Saint Paul College</item>
+
+
+    <item>Southwest Minnesota State University</item>
+
+
+    <item>Dunwoody College of Technology</item>
+
+
+    <item>Ridgewater College</item>
+
+
+    <item>Minnesota State College-Southeast Technical</item>
+
+
+    <item>Winona State University</item>
+
+
+    <item>Century College</item>
+
+
+    <item>Alcorn State University</item>
+
+
+    <item>Belhaven University</item>
+
+
+    <item>Coahoma Community College</item>
+
+
+    <item>Copiah-Lincoln Community College</item>
+
+
+    <item>Delta State University</item>
+
+
+    <item>East Central Community College</item>
+
+
+    <item>East Mississippi Community College</item>
+
+
+    <item>Hinds Community College</item>
+
+
+    <item>Holmes Community College</item>
+
+
+    <item>Itawamba Community College</item>
+
+
+    <item>Jackson State University</item>
+
+
+    <item>Jones County Junior College</item>
+
+
+    <item>Meridian Community College</item>
+
+
+    <item>Mississippi Delta Community College</item>
+
+
+    <item>University of Mississippi</item>
+
+
+    <item>Mississippi University for Women</item>
+
+
+    <item>Mississippi Valley State University</item>
+
+
+    <item>Mississippi College</item>
+
+
+    <item>Mississippi Gulf Coast Community College</item>
+
+
+    <item>Mississippi State University</item>
+
+
+    <item>Northeast Mississippi Community College</item>
+
+
+    <item>Northwest Mississippi Community College</item>
+
+
+    <item>Pearl River Community College</item>
+
+
+    <item>Southwest Mississippi Community College</item>
+
+
+    <item>University of Southern Mississippi</item>
+
+
+    <item>William Carey University</item>
+
+
+    <item>Avila University</item>
+
+
+    <item>Central Methodist University-College of Liberal Arts and Sciences</item>
+
+
+    <item>University of Central Missouri</item>
+
+
+    <item>Columbia College</item>
+
+
+    <item>Crowder College</item>
+
+
+    <item>Culver-Stockton College</item>
+
+
+    <item>Drury University</item>
+
+
+    <item>East Central College</item>
+
+
+    <item>Evangel University</item>
+
+
+    <item>Fontbonne University</item>
+
+
+    <item>Ozarks Technical Community College</item>
+
+
+    <item>Hannibal-LaGrange University</item>
+
+
+    <item>Harris-Stowe State University</item>
+
+
+    <item>Jefferson College</item>
+
+
+    <item>A T Still University of Health Sciences</item>
+
+
+    <item>Lincoln University</item>
+
+
+    <item>Lindenwood University</item>
+
+
+    <item>State Technical College of Missouri</item>
+
+
+    <item>Metropolitan Community College-Kansas City</item>
+
+
+    <item>Maryville University of Saint Louis</item>
+
+
+    <item>Midwestern Baptist Theological Seminary</item>
+
+
+    <item>Mineral Area College</item>
+
+
+    <item>Missouri Baptist University</item>
+
+
+    <item>Missouri Southern State University</item>
+
+
+    <item>Missouri Valley College</item>
+
+
+    <item>Missouri Western State University</item>
+
+
+    <item>University of Missouri-Columbia</item>
+
+
+    <item>University of Missouri-Kansas City</item>
+
+
+    <item>Missouri University of Science and Technology</item>
+
+
+    <item>University of Missouri-St Louis</item>
+
+
+    <item>Moberly Area Community College</item>
+
+
+    <item>Truman State University</item>
+
+
+    <item>Northwest Missouri State University</item>
+
+
+    <item>College of the Ozarks</item>
+
+
+    <item>Park University</item>
+
+
+    <item>Ranken Technical College</item>
+
+
+    <item>Rockhurst University</item>
+
+
+    <item>Saint Louis University</item>
+
+
+    <item>St Louis College of Pharmacy</item>
+
+
+    <item>Saint Louis Community College</item>
+
+
+    <item>Southwest Baptist University</item>
+
+
+    <item>Missouri State University-West Plains</item>
+
+
+    <item>State Fair Community College</item>
+
+
+    <item>Southeast Missouri State University</item>
+
+
+    <item>Missouri State University-Springfield</item>
+
+
+    <item>Three Rivers Community College</item>
+
+
+    <item>North Central Missouri College</item>
+
+
+    <item>Kansas City University of Medicine and Biosciences</item>
+
+
+    <item>Washington University in St Louis</item>
+
+
+    <item>Webster University</item>
+
+
+    <item>William Jewell College</item>
+
+
+    <item>William Woods University</item>
+
+
+    <item>Carroll College</item>
+
+
+    <item>Montana State University-Billings</item>
+
+
+    <item>Flathead Valley Community College</item>
+
+
+    <item>Great Falls College Montana State University</item>
+
+
+    <item>University of Great Falls</item>
+
+
+    <item>Helena College University of Montana</item>
+
+
+    <item>Montana Tech of the University of Montana</item>
+
+
+    <item>Montana State University</item>
+
+
+    <item>The University of Montana</item>
+
+
+    <item>Montana State University-Northern</item>
+
+
+    <item>Rocky Mountain College</item>
+
+
+    <item>The University of Montana-Western</item>
+
+
+    <item>Bellevue University</item>
+
+
+    <item>Clarkson College</item>
+
+
+    <item>Central Community College</item>
+
+
+    <item>Chadron State College</item>
+
+
+    <item>Concordia University-Nebraska</item>
+
+
+    <item>Creighton University</item>
+
+
+    <item>Doane University-Arts &amp; Sciences</item>
+
+
+    <item>Hastings College</item>
+
+
+    <item>University of Nebraska at Kearney</item>
+
+
+    <item>Nebraska Methodist College of Nursing &amp; Allied Health</item>
+
+
+    <item>Metropolitan Community College Area</item>
+
+
+    <item>Mid-Plains Community College</item>
+
+
+    <item>Midland University</item>
+
+
+    <item>University of Nebraska at Omaha</item>
+
+
+    <item>University of Nebraska Medical Center</item>
+
+
+    <item>Nebraska Wesleyan University</item>
+
+
+    <item>University of Nebraska-Lincoln</item>
+
+
+    <item>Northeast Community College</item>
+
+
+    <item>Peru State College</item>
+
+
+    <item>College of Saint Mary</item>
+
+
+    <item>Southeast Community College Area</item>
+
+
+    <item>Wayne State College</item>
+
+
+    <item>Western Nebraska Community College</item>
+
+
+    <item>College of Southern Nevada</item>
+
+
+    <item>University of Nevada-Las Vegas</item>
+
+
+    <item>University of Nevada-Reno</item>
+
+
+    <item>Great Basin College</item>
+
+
+    <item>Sierra Nevada College</item>
+
+
+    <item>Truckee Meadows Community College</item>
+
+
+    <item>Western Nevada College</item>
+
+
+    <item>Colby-Sawyer College</item>
+
+
+    <item>Dartmouth College</item>
+
+
+    <item>Franklin Pierce University</item>
+
+
+    <item>New England College</item>
+
+
+    <item>Southern New Hampshire University</item>
+
+
+    <item>University of New Hampshire-Main Campus</item>
+
+
+    <item>Keene State College</item>
+
+
+    <item>Plymouth State University</item>
+
+
+    <item>NHTI-Concord&apos;s Community College</item>
+
+
+    <item>White Mountains Community College</item>
+
+
+    <item>Lakes Region Community College</item>
+
+
+    <item>Manchester Community College</item>
+
+
+    <item>Nashua Community College</item>
+
+
+    <item>Great Bay Community College</item>
+
+
+    <item>Rivier University</item>
+
+
+    <item>Saint Anselm College</item>
+
+
+    <item>Granite State College</item>
+
+
+    <item>Atlantic Cape Community College</item>
+
+
+    <item>Bergen Community College</item>
+
+
+    <item>Berkeley College-Woodland Park</item>
+
+
+    <item>Beth Medrash Govoha</item>
+
+
+    <item>Bloomfield College</item>
+
+
+    <item>Brookdale Community College</item>
+
+
+    <item>Rowan College at Burlington County</item>
+
+
+    <item>Caldwell University</item>
+
+
+    <item>Camden County College</item>
+
+
+    <item>Centenary College</item>
+
+
+    <item>County College of Morris</item>
+
+
+    <item>Cumberland County College</item>
+
+
+    <item>Drew University</item>
+
+
+    <item>Essex County College</item>
+
+
+    <item>Fairleigh Dickinson University-Metropolitan Campus</item>
+
+
+    <item>Felician University</item>
+
+
+    <item>Fairleigh Dickinson University-College at Florham</item>
+
+
+    <item>Georgian Court University</item>
+
+
+    <item>Rowan University</item>
+
+
+    <item>Rowan College at Gloucester County</item>
+
+
+    <item>Hudson County Community College</item>
+
+
+    <item>New Jersey City University</item>
+
+
+    <item>Kean University</item>
+
+
+    <item>Lincoln Technical Institute-Union</item>
+
+
+    <item>Mercer County Community College</item>
+
+
+    <item>Middlesex County College</item>
+
+
+    <item>Monmouth University</item>
+
+
+    <item>Montclair State University</item>
+
+
+    <item>New Jersey Institute of Technology</item>
+
+
+    <item>Ocean County College</item>
+
+
+    <item>Passaic County Community College</item>
+
+
+    <item>Pennco Tech-Blackwood</item>
+
+
+    <item>Princeton University</item>
+
+
+    <item>Ramapo College of New Jersey</item>
+
+
+    <item>Rider University</item>
+
+
+    <item>Rutgers University-Camden</item>
+
+
+    <item>Rutgers University-New Brunswick</item>
+
+
+    <item>Rutgers University-Newark</item>
+
+
+    <item>Saint Peter&apos;s University</item>
+
+
+    <item>Salem Community College</item>
+
+
+    <item>Seton Hall University</item>
+
+
+    <item>College of Saint Elizabeth</item>
+
+
+    <item>Raritan Valley Community College</item>
+
+
+    <item>Stevens Institute of Technology</item>
+
+
+    <item>Stockton University</item>
+
+
+    <item>Thomas Edison State University</item>
+
+
+    <item>The College of New Jersey</item>
+
+
+    <item>Union County College</item>
+
+
+    <item>William Paterson University of New Jersey</item>
+
+
+    <item>Olympian Academy of Cosmetology</item>
+
+
+    <item>Central New Mexico Community College</item>
+
+
+    <item>Navajo Technical University</item>
+
+
+    <item>New Mexico State University-Dona Ana</item>
+
+
+    <item>Clovis Community College</item>
+
+
+    <item>Eastern New Mexico University-Main Campus</item>
+
+
+    <item>Eastern New Mexico University-Roswell Campus</item>
+
+
+    <item>New Mexico Highlands University</item>
+
+
+    <item>New Mexico Junior College</item>
+
+
+    <item>University of New Mexico-Gallup Campus</item>
+
+
+    <item>New Mexico Institute of Mining and Technology</item>
+
+
+    <item>University of New Mexico-Main Campus</item>
+
+
+    <item>New Mexico State University-Alamogordo</item>
+
+
+    <item>New Mexico State University-Carlsbad</item>
+
+
+    <item>New Mexico State University-Main Campus</item>
+
+
+    <item>University of New Mexico-Valencia County Campus</item>
+
+
+    <item>San Juan College</item>
+
+
+    <item>Santa Fe Community College</item>
+
+
+    <item>University of the Southwest</item>
+
+
+    <item>University of New Mexico-Taos Campus</item>
+
+
+    <item>Western New Mexico University</item>
+
+
+    <item>Vaughn College of Aeronautics and Technology</item>
+
+
+    <item>Adelphi University</item>
+
+
+    <item>Adirondack Community College</item>
+
+
+    <item>Albany College of Pharmacy and Health Sciences</item>
+
+
+    <item>Alfred University</item>
+
+
+    <item>American Musical and Dramatic Academy</item>
+
+
+    <item>Apex Technical School</item>
+
+
+    <item>Bard College</item>
+
+
+    <item>Barnard College</item>
+
+
+    <item>Berkeley College-New York</item>
+
+
+    <item>Briarcliffe College</item>
+
+
+    <item>Brooklyn Law School</item>
+
+
+    <item>SUNY Broome Community College</item>
+
+
+    <item>Canisius College</item>
+
+
+    <item>Cayuga County Community College</item>
+
+
+    <item>Cazenovia College</item>
+
+
+    <item>Clarkson University</item>
+
+
+    <item>Clinton Community College</item>
+
+
+    <item>Colgate University</item>
+
+
+    <item>Metropolitan College of New York</item>
+
+
+    <item>Columbia University in the City of New York</item>
+
+
+    <item>Columbia-Greene Community College</item>
+
+
+    <item>Concordia College-New York</item>
+
+
+    <item>Cornell University</item>
+
+
+    <item>Weill Cornell Medical College</item>
+
+
+    <item>Corning Community College</item>
+
+
+    <item>Culinary Institute of America</item>
+
+
+    <item>CUNY Bernard M Baruch College</item>
+
+
+    <item>CUNY Borough of Manhattan Community College</item>
+
+
+    <item>CUNY Bronx Community College</item>
+
+
+    <item>CUNY Brooklyn College</item>
+
+
+    <item>College of Staten Island CUNY</item>
+
+
+    <item>CUNY City College</item>
+
+
+    <item>CUNY Graduate School and University Center</item>
+
+
+    <item>CUNY Hostos Community College</item>
+
+
+    <item>CUNY Hunter College</item>
+
+
+    <item>CUNY John Jay College of Criminal Justice</item>
+
+
+    <item>CUNY Kingsborough Community College</item>
+
+
+    <item>CUNY LaGuardia Community College</item>
+
+
+    <item>CUNY Lehman College</item>
+
+
+    <item>CUNY Medgar Evers College</item>
+
+
+    <item>CUNY New York City College of Technology</item>
+
+
+    <item>CUNY Queens College</item>
+
+
+    <item>CUNY Queensborough Community College</item>
+
+
+    <item>CUNY York College</item>
+
+
+    <item>D&apos;Youville College</item>
+
+
+    <item>Daemen College</item>
+
+
+    <item>Dominican College of Blauvelt</item>
+
+
+    <item>Dowling College</item>
+
+
+    <item>Dutchess Community College</item>
+
+
+    <item>Elmira College</item>
+
+
+    <item>Erie Community College</item>
+
+
+    <item>Fashion Institute of Technology</item>
+
+
+    <item>Finger Lakes Community College</item>
+
+
+    <item>Fordham University</item>
+
+
+    <item>Fulton-Montgomery Community College</item>
+
+
+    <item>Genesee Community College</item>
+
+
+    <item>Hamilton College</item>
+
+
+    <item>Hartwick College</item>
+
+
+    <item>Herkimer County Community College</item>
+
+
+    <item>Hobart William Smith Colleges</item>
+
+
+    <item>Hofstra University</item>
+
+
+    <item>Houghton College</item>
+
+
+    <item>Hudson Valley Community College</item>
+
+
+    <item>Iona College</item>
+
+
+    <item>Ithaca College</item>
+
+
+    <item>Jamestown Community College</item>
+
+
+    <item>Jefferson Community College</item>
+
+
+    <item>Keuka College</item>
+
+
+    <item>LIM College</item>
+
+
+    <item>Le Moyne College</item>
+
+
+    <item>LIU Brooklyn</item>
+
+
+    <item>LIU Post</item>
+
+
+    <item>Manhattan College</item>
+
+
+    <item>Manhattanville College</item>
+
+
+    <item>Marist College</item>
+
+
+    <item>Marymount Manhattan College</item>
+
+
+    <item>Medaille College</item>
+
+
+    <item>Mercy College</item>
+
+
+    <item>Mohawk Valley Community College</item>
+
+
+    <item>Molloy College</item>
+
+
+    <item>Monroe College</item>
+
+
+    <item>Monroe Community College</item>
+
+
+    <item>Mount Saint Mary College</item>
+
+
+    <item>College of Mount Saint Vincent</item>
+
+
+    <item>Icahn School of Medicine at Mount Sinai</item>
+
+
+    <item>Nassau Community College</item>
+
+
+    <item>Nazareth College</item>
+
+
+    <item>The College of New Rochelle</item>
+
+
+    <item>The New School</item>
+
+
+    <item>New York Medical College</item>
+
+
+    <item>New York University</item>
+
+
+    <item>Niagara County Community College</item>
+
+
+    <item>Niagara University</item>
+
+
+    <item>North Country Community College</item>
+
+
+    <item>New York Institute of Technology</item>
+
+
+    <item>Nyack College</item>
+
+
+    <item>Onondaga Community College</item>
+
+
+    <item>Orange County Community College</item>
+
+
+    <item>Pace University-New York</item>
+
+
+    <item>Pratt Institute-Main</item>
+
+
+    <item>Rensselaer Polytechnic Institute</item>
+
+
+    <item>Roberts Wesleyan College</item>
+
+
+    <item>Rochester Institute of Technology</item>
+
+
+    <item>University of Rochester</item>
+
+
+    <item>Rockland Community College</item>
+
+
+    <item>The Sage Colleges</item>
+
+
+    <item>St Bonaventure University</item>
+
+
+    <item>St Francis College</item>
+
+
+    <item>St Lawrence University</item>
+
+
+    <item>The College of Saint Rose</item>
+
+
+    <item>St. Thomas Aquinas College</item>
+
+
+    <item>Sarah Lawrence College</item>
+
+
+    <item>Schenectady County Community College</item>
+
+
+    <item>Siena College</item>
+
+
+    <item>Skidmore College</item>
+
+
+    <item>Saint Joseph&apos;s College-New York</item>
+
+
+    <item>Saint John Fisher College</item>
+
+
+    <item>St John&apos;s University-New York</item>
+
+
+    <item>Sullivan County Community College</item>
+
+
+    <item>SUNY College of Technology at Alfred</item>
+
+
+    <item>SUNY College of Technology at Canton</item>
+
+
+    <item>SUNY College of Technology at Delhi</item>
+
+
+    <item>SUNY College of Agriculture and Technology at Cobleskill</item>
+
+
+    <item>Farmingdale State College</item>
+
+
+    <item>Morrisville State College</item>
+
+
+    <item>SUNY at Albany</item>
+
+
+    <item>SUNY at Binghamton</item>
+
+
+    <item>University at Buffalo</item>
+
+
+    <item>Stony Brook University</item>
+
+
+    <item>SUNY College of Environmental Science and Forestry</item>
+
+
+    <item>SUNY Polytechnic Institute</item>
+
+
+    <item>SUNY College at Brockport</item>
+
+
+    <item>SUNY Buffalo State</item>
+
+
+    <item>SUNY College at Cortland</item>
+
+
+    <item>SUNY at Fredonia</item>
+
+
+    <item>SUNY College at Geneseo</item>
+
+
+    <item>State University of New York at New Paltz</item>
+
+
+    <item>SUNY Oneonta</item>
+
+
+    <item>SUNY College at Oswego</item>
+
+
+    <item>SUNY College at Potsdam</item>
+
+
+    <item>SUNY at Purchase College</item>
+
+
+    <item>SUNY College at Old Westbury</item>
+
+
+    <item>SUNY College at Plattsburgh</item>
+
+
+    <item>SUNY Downstate Medical Center</item>
+
+
+    <item>SUNY Empire State College</item>
+
+
+    <item>SUNY Maritime College</item>
+
+
+    <item>Upstate Medical University</item>
+
+
+    <item>Syracuse University</item>
+
+
+    <item>Teachers College at Columbia University</item>
+
+
+    <item>Technical Career Institutes</item>
+
+
+    <item>Tompkins Cortland Community College</item>
+
+
+    <item>Touro College</item>
+
+
+    <item>Trocaire College</item>
+
+
+    <item>Excelsior College</item>
+
+
+    <item>Ulster County Community College</item>
+
+
+    <item>Union College</item>
+
+
+    <item>United Talmudical Seminary</item>
+
+
+    <item>United States Military Academy</item>
+
+
+    <item>Utica College</item>
+
+
+    <item>Vassar College</item>
+
+
+    <item>School of Visual Arts</item>
+
+
+    <item>Wagner College</item>
+
+
+    <item>The College of Westchester</item>
+
+
+    <item>SUNY Westchester Community College</item>
+
+
+    <item>Yeshiva University</item>
+
+
+    <item>College of the Albemarle</item>
+
+
+    <item>South Piedmont Community College</item>
+
+
+    <item>Appalachian State University</item>
+
+
+    <item>Asheville-Buncombe Technical Community College</item>
+
+
+    <item>Barton College</item>
+
+
+    <item>Beaufort County Community College</item>
+
+
+    <item>Belmont Abbey College</item>
+
+
+    <item>Bladen Community College</item>
+
+
+    <item>Blue Ridge Community College</item>
+
+
+    <item>Brunswick Community College</item>
+
+
+    <item>Caldwell Community College and Technical Institute</item>
+
+
+    <item>Campbell University</item>
+
+
+    <item>Cape Fear Community College</item>
+
+
+    <item>Carteret Community College</item>
+
+
+    <item>Catawba College</item>
+
+
+    <item>Catawba Valley Community College</item>
+
+
+    <item>Central Carolina Community College</item>
+
+
+    <item>Central Piedmont Community College</item>
+
+
+    <item>Chowan University</item>
+
+
+    <item>Cleveland Community College</item>
+
+
+    <item>Coastal Carolina Community College</item>
+
+
+    <item>Craven Community College</item>
+
+
+    <item>Davidson County Community College</item>
+
+
+    <item>Davidson College</item>
+
+
+    <item>Duke University</item>
+
+
+    <item>Durham Technical Community College</item>
+
+
+    <item>East Carolina University</item>
+
+
+    <item>Edgecombe Community College</item>
+
+
+    <item>Elizabeth City State University</item>
+
+
+    <item>Elon University</item>
+
+
+    <item>Fayetteville Technical Community College</item>
+
+
+    <item>Fayetteville State University</item>
+
+
+    <item>Forsyth Technical Community College</item>
+
+
+    <item>Gardner-Webb University</item>
+
+
+    <item>Gaston College</item>
+
+
+    <item>Guilford College</item>
+
+
+    <item>Guilford Technical Community College</item>
+
+
+    <item>Halifax Community College</item>
+
+
+    <item>Haywood Community College</item>
+
+
+    <item>High Point University</item>
+
+
+    <item>Isothermal Community College</item>
+
+
+    <item>James Sprunt Community College</item>
+
+
+    <item>Johnson C Smith University</item>
+
+
+    <item>Johnston Community College</item>
+
+
+    <item>Lees-McRae College</item>
+
+
+    <item>Lenoir Community College</item>
+
+
+    <item>Lenoir-Rhyne University</item>
+
+
+    <item>Livingstone College</item>
+
+
+    <item>Mars Hill University</item>
+
+
+    <item>Mayland Community College</item>
+
+
+    <item>McDowell Technical Community College</item>
+
+
+    <item>Meredith College</item>
+
+
+    <item>Methodist University</item>
+
+
+    <item>Miller-Motte College-Wilmington</item>
+
+
+    <item>Mitchell Community College</item>
+
+
+    <item>Montreat College</item>
+
+
+    <item>University of Mount Olive</item>
+
+
+    <item>Nash Community College</item>
+
+
+    <item>North Carolina A &amp; T State University</item>
+
+
+    <item>University of North Carolina at Asheville</item>
+
+
+    <item>University of North Carolina at Chapel Hill</item>
+
+
+    <item>University of North Carolina at Charlotte</item>
+
+
+    <item>University of North Carolina at Greensboro</item>
+
+
+    <item>North Carolina Central University</item>
+
+
+    <item>North Carolina State University at Raleigh</item>
+
+
+    <item>North Carolina Wesleyan College</item>
+
+
+    <item>University of North Carolina Wilmington</item>
+
+
+    <item>William Peace University</item>
+
+
+    <item>University of North Carolina at Pembroke</item>
+
+
+    <item>Pfeiffer University</item>
+
+
+    <item>Piedmont Community College</item>
+
+
+    <item>Pitt Community College</item>
+
+
+    <item>Queens University of Charlotte</item>
+
+
+    <item>Randolph Community College</item>
+
+
+    <item>Richmond Community College</item>
+
+
+    <item>Robeson Community College</item>
+
+
+    <item>Rockingham Community College</item>
+
+
+    <item>Rowan-Cabarrus Community College</item>
+
+
+    <item>Salem College</item>
+
+
+    <item>Sampson Community College</item>
+
+
+    <item>Sandhills Community College</item>
+
+
+    <item>Shaw University</item>
+
+
+    <item>Southeastern Community College</item>
+
+
+    <item>Southwestern Community College</item>
+
+
+    <item>Stanly Community College</item>
+
+
+    <item>Southeastern Baptist Theological Seminary</item>
+
+
+    <item>Surry Community College</item>
+
+
+    <item>Alamance Community College</item>
+
+
+    <item>Tri-County Community College</item>
+
+
+    <item>Vance-Granville Community College</item>
+
+
+    <item>Wake Forest University</item>
+
+
+    <item>Wake Technical Community College</item>
+
+
+    <item>Wayne Community College</item>
+
+
+    <item>Western Piedmont Community College</item>
+
+
+    <item>Wilkes Community College</item>
+
+
+    <item>Wilson Community College</item>
+
+
+    <item>Wingate University</item>
+
+
+    <item>Winston-Salem State University</item>
+
+
+    <item>Western Carolina University</item>
+
+
+    <item>Bismarck State College</item>
+
+
+    <item>Dickinson State University</item>
+
+
+    <item>University of Jamestown</item>
+
+
+    <item>Lake Region State College</item>
+
+
+    <item>University of Mary</item>
+
+
+    <item>Mayville State University</item>
+
+
+    <item>Minot State University</item>
+
+
+    <item>University of North Dakota</item>
+
+
+    <item>North Dakota State College of Science</item>
+
+
+    <item>North Dakota State University-Main Campus</item>
+
+
+    <item>Williston State College</item>
+
+
+    <item>Valley City State University</item>
+
+
+    <item>University of Akron Main Campus</item>
+
+
+    <item>University of Akron Wayne College</item>
+
+
+    <item>Ashland University</item>
+
+
+    <item>Baldwin Wallace University</item>
+
+
+    <item>Belmont College</item>
+
+
+    <item>Bluffton University</item>
+
+
+    <item>Bowling Green State University-Firelands</item>
+
+
+    <item>Bowling Green State University-Main Campus</item>
+
+
+    <item>Capital University</item>
+
+
+    <item>Case Western Reserve University</item>
+
+
+    <item>Cedarville University</item>
+
+
+    <item>Central Ohio Technical College</item>
+
+
+    <item>Central State University</item>
+
+
+    <item>University of Cincinnati-Main Campus</item>
+
+
+    <item>Cincinnati State Technical and Community College</item>
+
+
+    <item>University of Cincinnati-Clermont College</item>
+
+
+    <item>University of Cincinnati-Blue Ash College</item>
+
+
+    <item>Ohio Christian University</item>
+
+
+    <item>Clark State Community College</item>
+
+
+    <item>Cleveland State University</item>
+
+
+    <item>Columbus College of Art and Design</item>
+
+
+    <item>Columbus State Community College</item>
+
+
+    <item>Cuyahoga Community College District</item>
+
+
+    <item>University of Dayton</item>
+
+
+    <item>Denison University</item>
+
+
+    <item>Edison State Community College</item>
+
+
+    <item>The University of Findlay</item>
+
+
+    <item>Franklin University</item>
+
+
+    <item>Heidelberg University</item>
+
+
+    <item>Hiram College</item>
+
+
+    <item>Hocking College</item>
+
+
+    <item>Eastern Gateway Community College</item>
+
+
+    <item>John Carroll University</item>
+
+
+    <item>Hondros College</item>
+
+
+    <item>Kent State University at Ashtabula</item>
+
+
+    <item>Kent State University at East Liverpool</item>
+
+
+    <item>Kent State University at Stark</item>
+
+
+    <item>Kent State University at Trumbull</item>
+
+
+    <item>Kent State University at Tuscarawas</item>
+
+
+    <item>Kent State University at Salem</item>
+
+
+    <item>Kent State University at Kent</item>
+
+
+    <item>Kent State University at Geauga</item>
+
+
+    <item>Kenyon College</item>
+
+
+    <item>Lake Erie College</item>
+
+
+    <item>Lakeland Community College</item>
+
+
+    <item>James A Rhodes State College</item>
+
+
+    <item>Lorain County Community College</item>
+
+
+    <item>Lourdes University</item>
+
+
+    <item>Malone University</item>
+
+
+    <item>Marietta College</item>
+
+
+    <item>Marion Technical College</item>
+
+
+    <item>Mercy College of Ohio</item>
+
+
+    <item>Miami University-Hamilton</item>
+
+
+    <item>Miami University-Middletown</item>
+
+
+    <item>Miami University-Oxford</item>
+
+
+    <item>Mount Carmel College of Nursing</item>
+
+
+    <item>University of Mount Union</item>
+
+
+    <item>Mount Vernon Nazarene University</item>
+
+
+    <item>Mount Saint Joseph University</item>
+
+
+    <item>Zane State College</item>
+
+
+    <item>Muskingum University</item>
+
+
+    <item>North Central State College</item>
+
+
+    <item>Northwest State Community College</item>
+
+
+    <item>Notre Dame College</item>
+
+
+    <item>University of Northwestern Ohio</item>
+
+
+    <item>Oberlin College</item>
+
+
+    <item>Ohio Technical College</item>
+
+
+    <item>Ohio Dominican University</item>
+
+
+    <item>Ohio Northern University</item>
+
+
+    <item>Ohio State University-Lima Campus</item>
+
+
+    <item>Ohio State University-Mansfield Campus</item>
+
+
+    <item>Ohio State University-Marion Campus</item>
+
+
+    <item>Ohio State University-Newark Campus</item>
+
+
+    <item>Ohio State University-Main Campus</item>
+
+
+    <item>Ohio University-Eastern Campus</item>
+
+
+    <item>Ohio University-Chillicothe Campus</item>
+
+
+    <item>Ohio University-Southern Campus</item>
+
+
+    <item>Ohio University-Lancaster Campus</item>
+
+
+    <item>Ohio University-Main Campus</item>
+
+
+    <item>Ohio University-Zanesville Campus</item>
+
+
+    <item>Ohio Wesleyan University</item>
+
+
+    <item>Otterbein University</item>
+
+
+    <item>Owens Community College</item>
+
+
+    <item>Fortis College-Centerville</item>
+
+
+    <item>University of Rio Grande</item>
+
+
+    <item>Shawnee State University</item>
+
+
+    <item>Sinclair Community College</item>
+
+
+    <item>Stark State College</item>
+
+
+    <item>Franciscan University of Steubenville</item>
+
+
+    <item>Southern State Community College</item>
+
+
+    <item>Terra State Community College</item>
+
+
+    <item>Tiffin University</item>
+
+
+    <item>University of Toledo</item>
+
+
+    <item>Union Institute &amp; University</item>
+
+
+    <item>Urbana University</item>
+
+
+    <item>Ursuline College</item>
+
+
+    <item>Walsh University</item>
+
+
+    <item>Washington State Community College</item>
+
+
+    <item>Wilmington College</item>
+
+
+    <item>Wittenberg University</item>
+
+
+    <item>The College of Wooster</item>
+
+
+    <item>Wright State University-Main Campus</item>
+
+
+    <item>Wright State University-Lake Campus</item>
+
+
+    <item>Xavier University</item>
+
+
+    <item>Youngstown State University</item>
+
+
+    <item>Oklahoma Wesleyan University</item>
+
+
+    <item>Southern Nazarene University</item>
+
+
+    <item>Cameron University</item>
+
+
+    <item>Carl Albert State College</item>
+
+
+    <item>University of Central Oklahoma</item>
+
+
+    <item>Connors State College</item>
+
+
+    <item>East Central University</item>
+
+
+    <item>Eastern Oklahoma State College</item>
+
+
+    <item>Redlands Community College</item>
+
+
+    <item>Langston University</item>
+
+
+    <item>Murray State College</item>
+
+
+    <item>Northeastern State University</item>
+
+
+    <item>Northern Oklahoma College</item>
+
+
+    <item>Northeastern Oklahoma A&amp;M College</item>
+
+
+    <item>Northwestern Oklahoma State University</item>
+
+
+    <item>Oklahoma Christian University</item>
+
+
+    <item>University of Oklahoma-Health Sciences Center</item>
+
+
+    <item>Oklahoma Panhandle State University</item>
+
+
+    <item>Oklahoma State University-Main Campus</item>
+
+
+    <item>Oklahoma State University-Oklahoma City</item>
+
+
+    <item>Oklahoma Baptist University</item>
+
+
+    <item>Oklahoma City Community College</item>
+
+
+    <item>Oklahoma City University</item>
+
+
+    <item>University of Oklahoma-Norman Campus</item>
+
+
+    <item>Oklahoma State University Institute of Technology</item>
+
+
+    <item>Oral Roberts University</item>
+
+
+    <item>Rogers State University</item>
+
+
+    <item>Rose State College</item>
+
+
+    <item>Seminole State College</item>
+
+
+    <item>Southeastern Oklahoma State University</item>
+
+
+    <item>Southwestern Oklahoma State University</item>
+
+
+    <item>Tulsa Community College</item>
+
+
+    <item>Tulsa Welding School-Tulsa</item>
+
+
+    <item>University of Tulsa</item>
+
+
+    <item>Western Oklahoma State College</item>
+
+
+    <item>Blue Mountain Community College</item>
+
+
+    <item>Central Oregon Community College</item>
+
+
+    <item>Chemeketa Community College</item>
+
+
+    <item>Clackamas Community College</item>
+
+
+    <item>Concordia University-Portland</item>
+
+
+    <item>Eastern Oregon University</item>
+
+
+    <item>George Fox University</item>
+
+
+    <item>Lane Community College</item>
+
+
+    <item>Lewis &amp; Clark College</item>
+
+
+    <item>Linfield College-McMinnville Campus</item>
+
+
+    <item>Linn-Benton Community College</item>
+
+
+    <item>Mt Hood Community College</item>
+
+
+    <item>Oregon Health &amp; Science University</item>
+
+
+    <item>Oregon Institute of Technology</item>
+
+
+    <item>Oregon State University</item>
+
+
+    <item>University of Oregon</item>
+
+
+    <item>Pacific University</item>
+
+
+    <item>Portland Community College</item>
+
+
+    <item>Portland State University</item>
+
+
+    <item>University of Portland</item>
+
+
+    <item>Reed College</item>
+
+
+    <item>Rogue Community College</item>
+
+
+    <item>Pioneer Pacific College</item>
+
+
+    <item>Southern Oregon University</item>
+
+
+    <item>Southwestern Oregon Community College</item>
+
+
+    <item>Treasure Valley Community College</item>
+
+
+    <item>Umpqua Community College</item>
+
+
+    <item>Corban University</item>
+
+
+    <item>Willamette University</item>
+
+
+    <item>Western Oregon University</item>
+
+
+    <item>Albright College</item>
+
+
+    <item>Community College of Allegheny County</item>
+
+
+    <item>Allegheny College</item>
+
+
+    <item>DeSales University</item>
+
+
+    <item>Alvernia University</item>
+
+
+    <item>American College of Financial Services</item>
+
+
+    <item>The Art Institute of Philadelphia</item>
+
+
+    <item>Community College of Beaver County</item>
+
+
+    <item>Arcadia University</item>
+
+
+    <item>Bloomsburg University of Pennsylvania</item>
+
+
+    <item>Bryn Mawr College</item>
+
+
+    <item>Bucknell University</item>
+
+
+    <item>Bucks County Community College</item>
+
+
+    <item>Butler County Community College</item>
+
+
+    <item>Cabrini College</item>
+
+
+    <item>California University of Pennsylvania</item>
+
+
+    <item>Carlow University</item>
+
+
+    <item>Carnegie Mellon University</item>
+
+
+    <item>Cedar Crest College</item>
+
+
+    <item>Central Penn College</item>
+
+
+    <item>Chatham University</item>
+
+
+    <item>Chestnut Hill College</item>
+
+
+    <item>Clarion University of Pennsylvania</item>
+
+
+    <item>Delaware County Community College</item>
+
+
+    <item>Delaware Valley University</item>
+
+
+    <item>Dickinson College</item>
+
+
+    <item>Drexel University</item>
+
+
+    <item>Duquesne University</item>
+
+
+    <item>East Stroudsburg University of Pennsylvania</item>
+
+
+    <item>Eastern University</item>
+
+
+    <item>Edinboro University of Pennsylvania</item>
+
+
+    <item>Elizabethtown College</item>
+
+
+    <item>Franklin and Marshall College</item>
+
+
+    <item>Gannon University</item>
+
+
+    <item>Geneva College</item>
+
+
+    <item>Gettysburg College</item>
+
+
+    <item>Grove City College</item>
+
+
+    <item>Gwynedd Mercy University</item>
+
+
+    <item>Harcum College</item>
+
+
+    <item>Harrisburg Area Community College-Harrisburg</item>
+
+
+    <item>Haverford College</item>
+
+
+    <item>Holy Family University</item>
+
+
+    <item>Immaculata University</item>
+
+
+    <item>Indiana University of Pennsylvania-Main Campus</item>
+
+
+    <item>Juniata College</item>
+
+
+    <item>Keystone College</item>
+
+
+    <item>King&apos;s College</item>
+
+
+    <item>Kutztown University of Pennsylvania</item>
+
+
+    <item>La Roche College</item>
+
+
+    <item>La Salle University</item>
+
+
+    <item>Lackawanna College</item>
+
+
+    <item>Lafayette College</item>
+
+
+    <item>Lancaster Bible College</item>
+
+
+    <item>Lebanon Valley College</item>
+
+
+    <item>Lehigh Carbon Community College</item>
+
+
+    <item>Lehigh University</item>
+
+
+    <item>Lincoln University</item>
+
+
+    <item>Lock Haven University</item>
+
+
+    <item>Luzerne County Community College</item>
+
+
+    <item>Lycoming College</item>
+
+
+    <item>Mansfield University of Pennsylvania</item>
+
+
+    <item>Marywood University</item>
+
+
+    <item>Mercyhurst University</item>
+
+
+    <item>Messiah College</item>
+
+
+    <item>Millersville University of Pennsylvania</item>
+
+
+    <item>Misericordia University</item>
+
+
+    <item>Montgomery County Community College</item>
+
+
+    <item>Moravian College</item>
+
+
+    <item>Mount Aloysius College</item>
+
+
+    <item>Muhlenberg College</item>
+
+
+    <item>Neumann University</item>
+
+
+    <item>Northampton County Area Community College</item>
+
+
+    <item>Salus University</item>
+
+
+    <item>Pennsylvania State University-Penn State Erie-Behrend College</item>
+
+
+    <item>Pennsylvania State University-Penn State Worthington Scranton</item>
+
+
+    <item>Pennsylvania State University-Penn State Altoona</item>
+
+
+    <item>Pennsylvania State University-Penn State Berks</item>
+
+
+    <item>Pennsylvania State University-Penn State Harrisburg</item>
+
+
+    <item>Pennsylvania State University-Penn State Brandywine</item>
+
+
+    <item>Pennsylvania State University-Main Campus</item>
+
+
+    <item>Pennsylvania State University-Penn State Abington</item>
+
+
+    <item>Pennsylvania State University-Penn State York</item>
+
+
+    <item>Peirce College</item>
+
+
+    <item>University of Pennsylvania</item>
+
+
+    <item>Philadelphia University</item>
+
+
+    <item>The University of the Arts</item>
+
+
+    <item>Cairn University-Langhorne</item>
+
+
+    <item>Philadelphia College of Osteopathic Medicine</item>
+
+
+    <item>University of the Sciences</item>
+
+
+    <item>Community College of Philadelphia</item>
+
+
+    <item>University of Pittsburgh-Bradford</item>
+
+
+    <item>University of Pittsburgh-Greensburg</item>
+
+
+    <item>University of Pittsburgh-Johnstown</item>
+
+
+    <item>University of Pittsburgh-Pittsburgh Campus</item>
+
+
+    <item>Pittsburgh Technical Institute</item>
+
+
+    <item>Point Park University</item>
+
+
+    <item>Reading Area Community College</item>
+
+
+    <item>Robert Morris University</item>
+
+
+    <item>Saint Francis University</item>
+
+
+    <item>Saint Joseph&apos;s University</item>
+
+
+    <item>Saint Vincent College</item>
+
+
+    <item>University of Scranton</item>
+
+
+    <item>Seton Hill University</item>
+
+
+    <item>Shippensburg University of Pennsylvania</item>
+
+
+    <item>Slippery Rock University of Pennsylvania</item>
+
+
+    <item>Susquehanna University</item>
+
+
+    <item>Swarthmore College</item>
+
+
+    <item>Thaddeus Stevens College of Technology</item>
+
+
+    <item>Temple University</item>
+
+
+    <item>Thomas Jefferson University</item>
+
+
+    <item>Ursinus College</item>
+
+
+    <item>Villanova University</item>
+
+
+    <item>Washington &amp; Jefferson College</item>
+
+
+    <item>Waynesburg University</item>
+
+
+    <item>West Chester University of Pennsylvania</item>
+
+
+    <item>Westminster College</item>
+
+
+    <item>Westmoreland County Community College</item>
+
+
+    <item>Widener University-Main Campus</item>
+
+
+    <item>Wilkes University</item>
+
+
+    <item>York College Pennsylvania</item>
+
+
+    <item>YTI Career Institute-York</item>
+
+
+    <item>Brown University</item>
+
+
+    <item>Bryant University</item>
+
+
+    <item>Johnson &amp; Wales University-Providence</item>
+
+
+    <item>New England Institute of Technology</item>
+
+
+    <item>Providence College</item>
+
+
+    <item>Rhode Island College</item>
+
+
+    <item>Community College of Rhode Island</item>
+
+
+    <item>University of Rhode Island</item>
+
+
+    <item>Rhode Island School of Design</item>
+
+
+    <item>Roger Williams University</item>
+
+
+    <item>Salve Regina University</item>
+
+
+    <item>Aiken Technical College</item>
+
+
+    <item>Anderson University</item>
+
+
+    <item>Charleston Southern University</item>
+
+
+    <item>Technical College of the Lowcountry</item>
+
+
+    <item>Benedict College</item>
+
+
+    <item>Bob Jones University</item>
+
+
+    <item>Southern Wesleyan University</item>
+
+
+    <item>College of Charleston</item>
+
+
+    <item>Northeastern Technical College</item>
+
+
+    <item>Citadel Military College of South Carolina</item>
+
+
+    <item>Claflin University</item>
+
+
+    <item>Clemson University</item>
+
+
+    <item>Coker College</item>
+
+
+    <item>Columbia International University</item>
+
+
+    <item>Columbia College</item>
+
+
+    <item>Converse College</item>
+
+
+    <item>Denmark Technical College</item>
+
+
+    <item>Florence-Darlington Technical College</item>
+
+
+    <item>Francis Marion University</item>
+
+
+    <item>Furman University</item>
+
+
+    <item>Greenville Technical College</item>
+
+
+    <item>Horry-Georgetown Technical College</item>
+
+
+    <item>Lander University</item>
+
+
+    <item>Limestone College</item>
+
+
+    <item>Medical University of South Carolina</item>
+
+
+    <item>Midlands Technical College</item>
+
+
+    <item>Newberry College</item>
+
+
+    <item>North Greenville University</item>
+
+
+    <item>Orangeburg Calhoun Technical College</item>
+
+
+    <item>Piedmont Technical College</item>
+
+
+    <item>Presbyterian College</item>
+
+
+    <item>University of South Carolina-Aiken</item>
+
+
+    <item>University of South Carolina-Beaufort</item>
+
+
+    <item>University of South Carolina-Columbia</item>
+
+
+    <item>University of South Carolina-Lancaster</item>
+
+
+    <item>University of South Carolina-Salkehatchie</item>
+
+
+    <item>Coastal Carolina University</item>
+
+
+    <item>South Carolina State University</item>
+
+
+    <item>University of South Carolina-Upstate</item>
+
+
+    <item>Spartanburg Community College</item>
+
+
+    <item>Central Carolina Technical College</item>
+
+
+    <item>Tri-County Technical College</item>
+
+
+    <item>Trident Technical College</item>
+
+
+    <item>Winthrop University</item>
+
+
+    <item>Wofford College</item>
+
+
+    <item>York Technical College</item>
+
+
+    <item>Augustana University</item>
+
+
+    <item>Black Hills State University</item>
+
+
+    <item>Dakota State University</item>
+
+
+    <item>Lake Area Technical Institute</item>
+
+
+    <item>Mitchell Technical Institute</item>
+
+
+    <item>Mount Marty College</item>
+
+
+    <item>National American University-Rapid City</item>
+
+
+    <item>Northern State University</item>
+
+
+    <item>Oglala Lakota College</item>
+
+
+    <item>South Dakota School of Mines and Technology</item>
+
+
+    <item>South Dakota State University</item>
+
+
+    <item>University of Sioux Falls</item>
+
+
+    <item>Southeast Technical Institute</item>
+
+
+    <item>University of South Dakota</item>
+
+
+    <item>Austin Peay State University</item>
+
+
+    <item>Baptist Memorial College of Health Sciences</item>
+
+
+    <item>Belmont University</item>
+
+
+    <item>Bethel University</item>
+
+
+    <item>Bryan College-Dayton</item>
+
+
+    <item>Carson-Newman University</item>
+
+
+    <item>Chattanooga State Community College</item>
+
+
+    <item>Christian Brothers University</item>
+
+
+    <item>Cleveland State Community College</item>
+
+
+    <item>Columbia State Community College</item>
+
+
+    <item>Concorde Career College-Memphis</item>
+
+
+    <item>Cumberland University</item>
+
+
+    <item>Lipscomb University</item>
+
+
+    <item>Dyersburg State Community College</item>
+
+
+    <item>East Tennessee State University</item>
+
+
+    <item>Freed-Hardeman University</item>
+
+
+    <item>Jackson State Community College</item>
+
+
+    <item>Johnson University</item>
+
+
+    <item>King University</item>
+
+
+    <item>South College</item>
+
+
+    <item>Lane College</item>
+
+
+    <item>Lee University</item>
+
+
+    <item>Lincoln Memorial University</item>
+
+
+    <item>Martin Methodist College</item>
+
+
+    <item>Maryville College</item>
+
+
+    <item>University of Memphis</item>
+
+
+    <item>Middle Tennessee State University</item>
+
+
+    <item>Motlow College</item>
+
+
+    <item>Lincoln College of Technology-Nashville</item>
+
+
+    <item>Nashville State Community College</item>
+
+
+    <item>Tennessee College of Applied Technology-Pulaski</item>
+
+
+    <item>Rhodes College</item>
+
+
+    <item>Roane State Community College</item>
+
+
+    <item>Southwest Tennessee Community College</item>
+
+
+    <item>Sewanee-The University of the South</item>
+
+
+    <item>Tennessee College of Applied Technology-Knoxville</item>
+
+
+    <item>Pellissippi State Community College</item>
+
+
+    <item>Southern Adventist University</item>
+
+
+    <item>Tennessee Wesleyan College</item>
+
+
+    <item>The University of Tennessee-Chattanooga</item>
+
+
+    <item>The University of Tennessee-Knoxville</item>
+
+
+    <item>The University of Tennessee-Martin</item>
+
+
+    <item>Tennessee State University</item>
+
+
+    <item>Tennessee Technological University</item>
+
+
+    <item>Trevecca Nazarene University</item>
+
+
+    <item>Northeast State Community College</item>
+
+
+    <item>Tusculum College</item>
+
+
+    <item>Union University</item>
+
+
+    <item>Vanderbilt University</item>
+
+
+    <item>Volunteer State Community College</item>
+
+
+    <item>Walters State Community College</item>
+
+
+    <item>Abilene Christian University</item>
+
+
+    <item>Alvin Community College</item>
+
+
+    <item>Amarillo College</item>
+
+
+    <item>Amberton University</item>
+
+
+    <item>Angelina College</item>
+
+
+    <item>Angelo State University</item>
+
+
+    <item>The Art Institute of Houston</item>
+
+
+    <item>Austin College</item>
+
+
+    <item>Austin Community College District</item>
+
+
+    <item>Baylor College of Medicine</item>
+
+
+    <item>Baylor University</item>
+
+
+    <item>Coastal Bend College</item>
+
+
+    <item>Blinn College</item>
+
+
+    <item>Brazosport College</item>
+
+
+    <item>Brookhaven College</item>
+
+
+    <item>Cedar Valley College</item>
+
+
+    <item>Central Texas College</item>
+
+
+    <item>Cisco College</item>
+
+
+    <item>Clarendon College</item>
+
+
+    <item>Concordia University-Texas</item>
+
+
+    <item>North Central Texas College</item>
+
+
+    <item>Texas A &amp; M University-Corpus Christi</item>
+
+
+    <item>Dallas Baptist University</item>
+
+
+    <item>Dallas Theological Seminary</item>
+
+
+    <item>University of Dallas</item>
+
+
+    <item>Del Mar College</item>
+
+
+    <item>Career Point College</item>
+
+
+    <item>East Texas Baptist University</item>
+
+
+    <item>Texas A &amp; M University-Texarkana</item>
+
+
+    <item>Texas A &amp; M University-Commerce</item>
+
+
+    <item>Eastfield College</item>
+
+
+    <item>El Centro College</item>
+
+
+    <item>El Paso Community College</item>
+
+
+    <item>Western Technical College</item>
+
+
+    <item>Frank Phillips College</item>
+
+
+    <item>Galveston College</item>
+
+
+    <item>Grayson College</item>
+
+
+    <item>Hardin-Simmons University</item>
+
+
+    <item>Trinity Valley Community College</item>
+
+
+    <item>Hill College</item>
+
+
+    <item>Houston Baptist University</item>
+
+
+    <item>University of Houston-Clear Lake</item>
+
+
+    <item>Houston Community College</item>
+
+
+    <item>University of Houston-Downtown</item>
+
+
+    <item>University of Houston-Victoria</item>
+
+
+    <item>University of Houston</item>
+
+
+    <item>Howard College</item>
+
+
+    <item>Howard Payne University</item>
+
+
+    <item>Huston-Tillotson University</item>
+
+
+    <item>University of the Incarnate Word</item>
+
+
+    <item>Kilgore College</item>
+
+
+    <item>Lamar University</item>
+
+
+    <item>Lamar State College-Orange</item>
+
+
+    <item>Lamar State College-Port Arthur</item>
+
+
+    <item>Laredo Community College</item>
+
+
+    <item>Texas A &amp; M International University</item>
+
+
+    <item>Lee College</item>
+
+
+    <item>LeTourneau University</item>
+
+
+    <item>Lubbock Christian University</item>
+
+
+    <item>College of the Mainland</item>
+
+
+    <item>University of Mary Hardin-Baylor</item>
+
+
+    <item>McLennan Community College</item>
+
+
+    <item>McMurry University</item>
+
+
+    <item>Midland College</item>
+
+
+    <item>Midwestern State University</item>
+
+
+    <item>Mountain View College</item>
+
+
+    <item>Navarro College</item>
+
+
+    <item>Lone Star College System</item>
+
+
+    <item>North Lake College</item>
+
+
+    <item>University of North Texas</item>
+
+
+    <item>Northeast Texas Community College</item>
+
+
+    <item>Odessa College</item>
+
+
+    <item>Our Lady of the Lake University</item>
+
+
+    <item>The University of Texas Rio Grande Valley</item>
+
+
+    <item>The University of Texas at Brownsville</item>
+
+
+    <item>Panola College</item>
+
+
+    <item>Paris Junior College</item>
+
+
+    <item>Prairie View A &amp; M University</item>
+
+
+    <item>Ranger College</item>
+
+
+    <item>Rice University</item>
+
+
+    <item>Richland College</item>
+
+
+    <item>Saint Edward&apos;s University</item>
+
+
+    <item>St Philip&apos;s College</item>
+
+
+    <item>University of St Thomas</item>
+
+
+    <item>Sam Houston State University</item>
+
+
+    <item>San Antonio College</item>
+
+
+    <item>San Jacinto Community College</item>
+
+
+    <item>Schreiner University</item>
+
+
+    <item>St Mary&apos;s University</item>
+
+
+    <item>South Plains College</item>
+
+
+    <item>South Texas College of Law</item>
+
+
+    <item>Southern Methodist University</item>
+
+
+    <item>Southwest Texas Junior College</item>
+
+
+    <item>Southwestern Assemblies of God University</item>
+
+
+    <item>Southwestern University</item>
+
+
+    <item>Stephen F Austin State University</item>
+
+
+    <item>Texas State University</item>
+
+
+    <item>Sul Ross State University</item>
+
+
+    <item>Tarleton State University</item>
+
+
+    <item>Tarrant County College District</item>
+
+
+    <item>Temple College</item>
+
+
+    <item>University of Texas Southwestern Medical Center</item>
+
+
+    <item>The University of Texas Health Science Center at San Antonio</item>
+
+
+    <item>The University of Texas Medical Branch</item>
+
+
+    <item>Texarkana College</item>
+
+
+    <item>Texas A &amp; M University-Kingsville</item>
+
+
+    <item>Texas A &amp; M University-College Station</item>
+
+
+    <item>The University of Texas at Arlington</item>
+
+
+    <item>The University of Texas at Austin</item>
+
+
+    <item>The University of Texas at Dallas</item>
+
+
+    <item>The University of Texas at El Paso</item>
+
+
+    <item>The University of Texas at Tyler</item>
+
+
+    <item>Texas Christian University</item>
+
+
+    <item>University of North Texas Health Science Center</item>
+
+
+    <item>Texas Lutheran University</item>
+
+
+    <item>The University of Texas of the Permian Basin</item>
+
+
+    <item>The University of Texas at San Antonio</item>
+
+
+    <item>Texas Southern University</item>
+
+
+    <item>Texas Tech University</item>
+
+
+    <item>Texas Wesleyan University</item>
+
+
+    <item>Texas Woman&apos;s University</item>
+
+
+    <item>Trinity University</item>
+
+
+    <item>The University of Texas Health Science Center at Houston</item>
+
+
+    <item>Texas Tech University Health Sciences Center</item>
+
+
+    <item>Tyler Junior College</item>
+
+
+    <item>Universal Technical Institute of Texas Inc.</item>
+
+
+    <item>Vernon College</item>
+
+
+    <item>Victoria College</item>
+
+
+    <item>Wayland Baptist University</item>
+
+
+    <item>Weatherford College</item>
+
+
+    <item>West Texas A &amp; M University</item>
+
+
+    <item>Western Texas College</item>
+
+
+    <item>Wharton County Junior College</item>
+
+
+    <item>Wiley College</item>
+
+
+    <item>Brigham Young University-Provo</item>
+
+
+    <item>Brigham Young University-Hawaii</item>
+
+
+    <item>Davis Applied Technology College</item>
+
+
+    <item>Dixie State University</item>
+
+
+    <item>Latter-day Saints Business College</item>
+
+
+    <item>Ogden-Weber Applied Technology College</item>
+
+
+    <item>Snow College</item>
+
+
+    <item>Southern Utah University</item>
+
+
+    <item>Uintah Basin Applied Technology College</item>
+
+
+    <item>Utah State University</item>
+
+
+    <item>Utah Valley University</item>
+
+
+    <item>Salt Lake Community College</item>
+
+
+    <item>University of Utah</item>
+
+
+    <item>Weber State University</item>
+
+
+    <item>Westminster College</item>
+
+
+    <item>Castleton University</item>
+
+
+    <item>Champlain College</item>
+
+
+    <item>Community College of Vermont</item>
+
+
+    <item>Johnson State College</item>
+
+
+    <item>Lyndon State College</item>
+
+
+    <item>Middlebury College</item>
+
+
+    <item>Norwich University</item>
+
+
+    <item>Saint Michael&apos;s College</item>
+
+
+    <item>Vermont Technical College</item>
+
+
+    <item>University of Vermont</item>
+
+
+    <item>Blue Ridge Community College</item>
+
+
+    <item>Bridgewater College</item>
+
+
+    <item>College of William and Mary</item>
+
+
+    <item>Regent University</item>
+
+
+    <item>Central Virginia Community College</item>
+
+
+    <item>Christopher Newport University</item>
+
+
+    <item>Jefferson College of Health Sciences</item>
+
+
+    <item>Dabney S Lancaster Community College</item>
+
+
+    <item>Danville Community College</item>
+
+
+    <item>Eastern Virginia Medical School</item>
+
+
+    <item>Emory &amp; Henry College</item>
+
+
+    <item>Eastern Mennonite University</item>
+
+
+    <item>Ferrum College</item>
+
+
+    <item>George Mason University</item>
+
+
+    <item>Germanna Community College</item>
+
+
+    <item>Hampden-Sydney College</item>
+
+
+    <item>Hampton University</item>
+
+
+    <item>J Sargeant Reynolds Community College</item>
+
+
+    <item>James Madison University</item>
+
+
+    <item>John Tyler Community College</item>
+
+
+    <item>Liberty University</item>
+
+
+    <item>Longwood University</item>
+
+
+    <item>Lord Fairfax Community College</item>
+
+
+    <item>Lynchburg College</item>
+
+
+    <item>Mary Baldwin College</item>
+
+
+    <item>University of Mary Washington</item>
+
+
+    <item>Marymount University</item>
+
+
+    <item>Mountain Empire Community College</item>
+
+
+    <item>American National University</item>
+
+
+    <item>New River Community College</item>
+
+
+    <item>Norfolk State University</item>
+
+
+    <item>Northern Virginia Community College</item>
+
+
+    <item>Old Dominion University</item>
+
+
+    <item>Patrick Henry Community College</item>
+
+
+    <item>Paul D Camp Community College</item>
+
+
+    <item>Piedmont Virginia Community College</item>
+
+
+    <item>Radford University</item>
+
+
+    <item>Randolph-Macon College</item>
+
+
+    <item>Rappahannock Community College</item>
+
+
+    <item>Richard Bland College of the College of William and Mary</item>
+
+
+    <item>University of Richmond</item>
+
+
+    <item>Roanoke College</item>
+
+
+    <item>Shenandoah University</item>
+
+
+    <item>Southside Virginia Community College</item>
+
+
+    <item>Southwest Virginia Community College</item>
+
+
+    <item>Strayer University-Virginia</item>
+
+
+    <item>Thomas Nelson Community College</item>
+
+
+    <item>Tidewater Community College</item>
+
+
+    <item>The University of Virginia&apos;s College at Wise</item>
+
+
+    <item>Virginia Highlands Community College</item>
+
+
+    <item>Virginia Polytechnic Institute and State University</item>
+
+
+    <item>Virginia Western Community College</item>
+
+
+    <item>Virginia Commonwealth University</item>
+
+
+    <item>University of Virginia-Main Campus</item>
+
+
+    <item>Virginia Military Institute</item>
+
+
+    <item>Virginia State University</item>
+
+
+    <item>Virginia Union University</item>
+
+
+    <item>Virginia Wesleyan College</item>
+
+
+    <item>Washington and Lee University</item>
+
+
+    <item>Wytheville Community College</item>
+
+
+    <item>The Art Institute of Seattle</item>
+
+
+    <item>Bellevue College</item>
+
+
+    <item>Bellingham Technical College</item>
+
+
+    <item>Big Bend Community College</item>
+
+
+    <item>Central Washington University</item>
+
+
+    <item>Centralia College</item>
+
+
+    <item>City University of Seattle</item>
+
+
+    <item>Clark College</item>
+
+
+    <item>Clover Park Technical College</item>
+
+
+    <item>Columbia Basin College</item>
+
+
+    <item>Eastern Washington University</item>
+
+
+    <item>Edmonds Community College</item>
+
+
+    <item>Everett Community College</item>
+
+
+    <item>The Evergreen State College</item>
+
+
+    <item>Pierce College-Fort Steilacoom</item>
+
+
+    <item>Gonzaga University</item>
+
+
+    <item>Grays Harbor College</item>
+
+
+    <item>Green River College</item>
+
+
+    <item>Heritage University</item>
+
+
+    <item>Highline College</item>
+
+
+    <item>Bastyr University</item>
+
+
+    <item>Bates Technical College</item>
+
+
+    <item>Lake Washington Institute of Technology</item>
+
+
+    <item>Lower Columbia College</item>
+
+
+    <item>North Seattle College</item>
+
+
+    <item>Northwest University</item>
+
+
+    <item>Olympic College</item>
+
+
+    <item>Pacific Lutheran University</item>
+
+
+    <item>Peninsula College</item>
+
+
+    <item>University of Puget Sound</item>
+
+
+    <item>Renton Technical College</item>
+
+
+    <item>Saint Martin&apos;s University</item>
+
+
+    <item>South Seattle College</item>
+
+
+    <item>Seattle Central College</item>
+
+
+    <item>Seattle Pacific University</item>
+
+
+    <item>Seattle University</item>
+
+
+    <item>Shoreline Community College</item>
+
+
+    <item>Skagit Valley College</item>
+
+
+    <item>South Puget Sound Community College</item>
+
+
+    <item>Spokane Community College</item>
+
+
+    <item>Spokane Falls Community College</item>
+
+
+    <item>Tacoma Community College</item>
+
+
+    <item>Walla Walla Community College</item>
+
+
+    <item>Walla Walla University</item>
+
+
+    <item>Washington State University</item>
+
+
+    <item>University of Washington-Seattle Campus</item>
+
+
+    <item>Wenatchee Valley College</item>
+
+
+    <item>Western Washington University</item>
+
+
+    <item>Whatcom Community College</item>
+
+
+    <item>Whitman College</item>
+
+
+    <item>Whitworth University</item>
+
+
+    <item>Yakima Valley Community College</item>
+
+
+    <item>Alderson Broaddus University</item>
+
+
+    <item>Bluefield State College</item>
+
+
+    <item>University of Charleston</item>
+
+
+    <item>Concord University</item>
+
+
+    <item>Fairmont State University</item>
+
+
+    <item>Glenville State College</item>
+
+
+    <item>Marshall University</item>
+
+
+    <item>West Virginia University at Parkersburg</item>
+
+
+    <item>Potomac State College of West Virginia University</item>
+
+
+    <item>Shepherd University</item>
+
+
+    <item>Southern West Virginia Community and Technical College</item>
+
+
+    <item>West Virginia State University</item>
+
+
+    <item>West Liberty University</item>
+
+
+    <item>West Virginia University Institute of Technology</item>
+
+
+    <item>West Virginia Wesleyan College</item>
+
+
+    <item>West Virginia Northern Community College</item>
+
+
+    <item>West Virginia University</item>
+
+
+    <item>Wheeling Jesuit University</item>
+
+
+    <item>Alverno College</item>
+
+
+    <item>Madison Area Technical College</item>
+
+
+    <item>Beloit College</item>
+
+
+    <item>Blackhawk Technical College</item>
+
+
+    <item>Cardinal Stritch University</item>
+
+
+    <item>Carroll University</item>
+
+
+    <item>Carthage College</item>
+
+
+    <item>Concordia University-Wisconsin</item>
+
+
+    <item>Edgewood College</item>
+
+
+    <item>Fox Valley Technical College</item>
+
+
+    <item>Gateway Technical College</item>
+
+
+    <item>Lakeland College</item>
+
+
+    <item>Lakeshore Technical College</item>
+
+
+    <item>Lawrence University</item>
+
+
+    <item>Maranatha Baptist University</item>
+
+
+    <item>Marian University</item>
+
+
+    <item>Marquette University</item>
+
+
+    <item>Medical College of Wisconsin</item>
+
+
+    <item>Mid-State Technical College</item>
+
+
+    <item>Milwaukee Area Technical College</item>
+
+
+    <item>Milwaukee School of Engineering</item>
+
+
+    <item>Moraine Park Technical College</item>
+
+
+    <item>Mount Mary University</item>
+
+
+    <item>Nicolet Area Technical College</item>
+
+
+    <item>Northcentral Technical College</item>
+
+
+    <item>Northeast Wisconsin Technical College</item>
+
+
+    <item>Saint Norbert College</item>
+
+
+    <item>Southwest Wisconsin Technical College</item>
+
+
+    <item>University of Wisconsin Colleges</item>
+
+
+    <item>Viterbo University</item>
+
+
+    <item>Chippewa Valley Technical College</item>
+
+
+    <item>Waukesha County Technical College</item>
+
+
+    <item>Western Technical College</item>
+
+
+    <item>University of Wisconsin-Whitewater</item>
+
+
+    <item>Wisconsin Indianhead Technical College</item>
+
+
+    <item>University of Wisconsin-Eau Claire</item>
+
+
+    <item>University of Wisconsin-Green Bay</item>
+
+
+    <item>University of Wisconsin-La Crosse</item>
+
+
+    <item>Wisconsin Lutheran College</item>
+
+
+    <item>University of Wisconsin-Oshkosh</item>
+
+
+    <item>University of Wisconsin-Parkside</item>
+
+
+    <item>Herzing University-Madison</item>
+
+
+    <item>University of Wisconsin-Stout</item>
+
+
+    <item>University of Wisconsin-Superior</item>
+
+
+    <item>University of Wisconsin-Madison</item>
+
+
+    <item>University of Wisconsin-Milwaukee</item>
+
+
+    <item>University of Wisconsin-Platteville</item>
+
+
+    <item>University of Wisconsin-River Falls</item>
+
+
+    <item>University of Wisconsin-Stevens Point</item>
+
+
+    <item>Casper College</item>
+
+
+    <item>Central Wyoming College</item>
+
+
+    <item>Eastern Wyoming College</item>
+
+
+    <item>Laramie County Community College</item>
+
+
+    <item>Northwest College</item>
+
+
+    <item>Sheridan College</item>
+
+
+    <item>Western Wyoming Community College</item>
+
+
+    <item>University of Wyoming</item>
+
+
+    <item>Stanford University</item>
+
+
+    <item>Purdue University-Main Campus</item>
+
+
+    <item>Parker University</item>
+
+
+    <item>Georgia Perimeter College</item>
+
+
+    <item>Georgia Piedmont Technical College</item>
+
+
+    <item>Vatterott College-Berkeley</item>
+
+
+    <item>Warren County Community College</item>
+
+
+    <item>Mid-America Christian University</item>
+
+
+    <item>Francis Tuttle Technology Center</item>
+
+
+    <item>Palo Alto College</item>
+
+
+    <item>Athens Technical College</item>
+
+
+    <item>Sussex County Community College</item>
+
+
+    <item>Collin County Community College District</item>
+
+
+    <item>Owensboro Community and Technical College</item>
+
+
+    <item>Moore Norman Technology Center</item>
+
+
+    <item>ECPI University</item>
+
+
+    <item>Southern Union State Community College</item>
+
+
+    <item>South University-Columbia</item>
+
+
+    <item>Pima Medical Institute-Mesa</item>
+
+
+    <item>Kaplan University-Davenport Campus</item>
+
+
+    <item>St Charles Community College</item>
+
+
+    <item>Brandman University</item>
+
+
+    <item>Le Cordon Bleu College of Culinary Arts-Scottsdale</item>
+
+
+    <item>Metro Technology Centers</item>
+
+
+    <item>Luna Community College</item>
+
+
+    <item>Paradise Valley Community College</item>
+
+
+    <item>Chandler-Gilbert Community College</item>
+
+
+    <item>Vista College</item>
+
+
+    <item>Canadian Valley Technology Center</item>
+
+
+    <item>Universal Technical Institute of Illinois Inc</item>
+
+
+    <item>Pennsylvania College of Technology</item>
+
+
+    <item>Suffolk County Community College</item>
+
+
+    <item>Las Positas College</item>
+
+
+    <item>Ogeechee Technical College</item>
+
+
+    <item>Southern Technical College</item>
+
+
+    <item>California State University-San Marcos</item>
+
+
+    <item>Argosy University-Hawaii</item>
+
+
+    <item>NorthWest Arkansas Community College</item>
+
+
+    <item>Hodges University</item>
+
+
+    <item>Argosy University-Atlanta</item>
+
+
+    <item>University of St Augustine for Health Sciences</item>
+
+
+    <item>Southeastern Technical College</item>
+
+
+    <item>Universal Technical Institute-Auto Motorcycle &amp; Marine Mechanics Institute Division-Orlando</item>
+
+
+    <item>Downey Adult School</item>
+
+
+    <item>University of Washington-Bothell Campus</item>
+
+
+    <item>University of Washington-Tacoma Campus</item>
+
+
+    <item>Fond du Lac Tribal and Community College</item>
+
+
+    <item>Hacienda La Puente Adult Education</item>
+
+
+    <item>Hawaii Community College</item>
+
+
+    <item>Estrella Mountain Community College</item>
+
+
+    <item>Heartland Community College</item>
+
+
+    <item>Everglades University</item>
+
+
+    <item>Everest University-South Orlando</item>
+
+
+    <item>College of Health Care Professions-Northwest</item>
+
+
+    <item>Copper Mountain Community College</item>
+
+
+    <item>Santiago Canyon College</item>
+
+
+    <item>Frontier Community College</item>
+
+
+    <item>Lincoln Trail College</item>
+
+
+    <item>Wabash Valley College</item>
+
+
+    <item>Coconino Community College</item>
+
+
+    <item>ASA College</item>
+
+
+    <item>Carroll Community College</item>
+
+
+    <item>Galen College of Nursing-San Antonio</item>
+
+
+    <item>Wright Career College</item>
+
+
+    <item>Arizona State University-West</item>
+
+
+    <item>Lake Erie College of Osteopathic Medicine</item>
+
+
+    <item>Florida National University-Main Campus</item>
+
+
+    <item>South Texas College</item>
+
+
+    <item>California State University-Monterey Bay</item>
+
+
+    <item>Argosy University-The Art Institute of California-Hollywood</item>
+
+
+    <item>Capella University</item>
+
+
+    <item>Johnson &amp; Wales University-North Miami</item>
+
+
+    <item>Pennsylvania Highlands Community College</item>
+
+
+    <item>University of Phoenix-Hawaii</item>
+
+
+    <item>Virginia College-Birmingham</item>
+
+
+    <item>Northwest Vista College</item>
+
+
+    <item>Oconee Fall Line Technical College</item>
+
+
+    <item>York County Community College</item>
+
+
+    <item>Arkansas State University-Mountain Home</item>
+
+
+    <item>Arizona State University-Polytechnic</item>
+
+
+    <item>Midwestern University-Glendale</item>
+
+
+    <item>Le Cordon Bleu College of Culinary Arts-Pasadena</item>
+
+
+    <item>Embry-Riddle Aeronautical University-Worldwide</item>
+
+
+    <item>Computer Systems Institute</item>
+
+
+    <item>Klamath Community College</item>
+
+
+    <item>Strayer University-Maryland</item>
+
+
+    <item>BIR Training Center</item>
+
+
+    <item>Institute of Technology Inc</item>
+
+
+    <item>American Beauty Academy</item>
+
+
+    <item>Argosy University-The Art Institute of California-Los Angeles</item>
+
+
+    <item>Western Governors University</item>
+
+
+    <item>Florida Gulf Coast University</item>
+
+
+    <item>South Louisiana Community College</item>
+
+
+    <item>The Community College of Baltimore County</item>
+
+
+    <item>River Parishes Community College</item>
+
+
+    <item>Los Angeles Film School</item>
+
+
+    <item>University of Connecticut-Tri-Campus</item>
+
+
+    <item>University of Connecticut-Stamford</item>
+
+
+    <item>University of Management and Technology</item>
+
+
+    <item>Baton Rouge Community College</item>
+
+
+    <item>ICDC College</item>
+
+
+    <item>Stevens-Henager College</item>
+
+
+    <item>McCann School of Business &amp; Technology</item>
+
+
+    <item>Stratford University</item>
+
+
+    <item>Universal Technical Institute of California Inc</item>
+
+
+    <item>Pierce College-Puyallup</item>
+
+
+    <item>Cascadia College</item>
+
+
+    <item>Johnson &amp; Wales University-Denver</item>
+
+
+    <item>Arkansas State University-Newport</item>
+
+
+    <item>Oregon State University-Cascades Campus</item>
+
+
+    <item>American Career College-Anaheim</item>
+
+
+    <item>University of the Rockies</item>
+
+
+    <item>Apex School of Theology</item>
+
+
+    <item>Lamar Institute of Technology</item>
+
+
+    <item>Nevada State College</item>
+
+
+    <item>California State University-Channel Islands</item>
+
+
+    <item>Argosy University-The Art Institute of California-Orange County</item>
+
+
+    <item>Pennsylvania College of Health Sciences</item>
+
+
+    <item>Grantham University</item>
+
+
+    <item>NASCAR Technical Institute</item>
+
+
+    <item>Edward Via College of Osteopathic Medicine</item>
+
+
+    <item>International Technological University</item>
+
+
+    <item>South Florida Institute of Technology</item>
+
+
+    <item>West Coast University-Los Angeles</item>
+
+
+    <item>DigiPen Institute of Technology</item>
+
+
+    <item>Pierpont Community and Technical College</item>
+
+
+    <item>Le Cordon Bleu College of Culinary Arts-Atlanta</item>
+
+
+    <item>Strayer University-Tennessee</item>
+
+
+    <item>Strayer University-Pennsylvania</item>
+
+
+    <item>Northcentral University</item>
+
+
+    <item>Colorado Technical University-Online</item>
+
+
+    <item>Folsom Lake College</item>
+
+
+    <item>Dade Medical College-Miami</item>
+
+
+    <item>Jones International University</item>
+
+
+    <item>Mountwest Community and Technical College</item>
+
+
+    <item>American InterContinental University-Online</item>
+
+
+    <item>University of California-Merced</item>
+
+
+    <item>Central Methodist University-College of Graduate and Extended Studies</item>
+
+
+    <item>Johnson &amp; Wales University-Charlotte</item>
+
+
+    <item>Roseman University of Health Sciences</item>
+
+
+    <item>Universal Technical Institute of Pennsylvania Inc</item>
+
+
+    <item>Ave Maria University</item>
+
+
+    <item>Southern Technical College</item>
+
+
+    <item>Stanbridge College</item>
+
+
+    <item>Uta Mesivta of Kiryas Joel</item>
+
+
+    <item>Harrisburg University of Science and Technology</item>
+
+
+    <item>Blue Ridge Community and Technical College</item>
+
+
+    <item>New River Community and Technical College</item>
+
+
+    <item>Georgia Gwinnett College</item>
+
+
+    <item>American Career College-Ontario</item>
+
+
+    <item>Mountainland Applied Technology College</item>
+
+
+    <item>Doane University-Graduate and Professional Studies</item>
+
+
+    <item>Universal Technical Institute of Northern California Inc</item>
+
+
+    <item>Argosy University-The Art Institute of California-Inland Empire</item>
+
+
+    <item>West Hills College-Lemoore</item>
+
+
+    <item>Rasmussen College-Illinois</item>
+
+
+    <item>University of South Florida-St Petersburg</item>
+
+
+    <item>Arizona State University-Downtown Phoenix</item>
+
+
+    <item>Strayer University-Florida</item>
+
+
+    <item>American Public University System</item>
+
+
+    <item>American College of Education</item>
+
+
+    <item>Ultimate Medical Academy-Tampa</item>
+
+
+    <item>Columbia Southern University</item>
+
+
+    <item>Trident University International</item>
+
+
+    <item>Southwest University at El Paso</item>
+
+
+    <item>The Art Institute of Pittsburgh-Online Division</item>
+
+
+    <item>University of South Florida-Sarasota-Manatee</item>
+
+
+    <item>The Art Institute of Austin</item>
+
+
+    <item>Strayer University-North Carolina</item>
+
+
+    <item>Chamberlain College of Nursing-Illinois</item>
+
+
+    <item>Aspen University</item>
+
+
+    <item>College of Western Idaho</item>
+
+
+    <item>Jersey College</item>
+
+
+    <item>Woodland Community College</item>
+
+
+    <item>The Chicago School of Professional Psychology at Los Angeles</item>
+
+
+    <item>Argosy University-Phoenix Online Division</item>
+
+
+    <item>West Coast University-Orange County</item>
+
+
+    <item>West Coast University-Ontario</item>
+
+
+    <item>Strayer University-Georgia</item>
+
+
+    <item>Strayer University-South Carolina</item>
+
+
+    <item>Strayer University-Texas</item>
+
+
+    <item>The Art Institute of San Antonio</item>
+
+
+    <item>Touro University California</item>
+
+
+    <item>Touro University Nevada</item>
+
+
+    <item>Texas A&amp;M University-San Antonio</item>
+
+
+    <item>Strayer University-Global Region</item>
+
+
+    <item>Moreno Valley College</item>
+
+
+    <item>Norco College</item>
+
+
+    <item>Universal Technical Institute - Dallas Fort Worth</item>
+
+
+    <item>Allied American University</item>
+
+
+    <item>American Sentinel University</item>
+
+
+    <item>National Paralegal College</item>
+
+
+    <item>New York Film Academy</item>
+
+
+    <item>Independence University</item>
+
+
+    <item>Azusa Pacific University College</item>
+
+
+    <item>Relay Graduate School of Education</item>
+
+
+    <item>South UniversityÃ¢â‚¬â€œSavannah Online</item>
+
+
+    <item>Springfield College-School of Professional and Continuing Studies</item>
+
+
+    <item>Chamberlain College of Nursing-Georgia</item>
+
+
+    <item>Colorado State University-Global Campus</item>
+
+
+    <item>Pennsylvania State University-World Campus</item>
+
+
+    <item>Bryant &amp; Stratton College-Online</item>
+
+
+    <item>Florida Institute of Technology-Online</item>
+
+
+    <item>Augusta University</item>
+
+
+    <item>Middle Georgia State University</item>
+
+
+    <item>DeVry College of New York</item>
+
+
+    <item>DeVry University-Arizona</item>
+
+
+    <item>DeVry University-California</item>
+
+
+    <item>DeVry University-Florida</item>
+
+
+    <item>DeVry University-Georgia</item>
+
+
+    <item>DeVry University-Illinois</item>
+
+
+    <item>DeVry University-New Jersey</item>
+
+
+    <item>DeVry University-Ohio</item>
+
+
+    <item>DeVry University-Texas</item>
+
+
+    <item>University of North Georgia</item>
+
+
+    <item>South Georgia State College</item>
+
+
+    <item>Northeastern University Global Network</item>
+
+
+    <item>Texas A &amp; M University-Central Texas</item>
+
+
+    <item>Central Georgia Technical College</item>
+
+
+    <item>Arizona State University-Skysong</item>
+
+
+    <item>Louisiana Delta Community College</item>
+
+
+    <item>University of Florida-Online</item>
+
+
+    <item>University of Phoenix-Arizona</item>
+
+
+    <item>University of Phoenix-California</item>
+
+
+    <item>University of Phoenix-Colorado</item>
+
+
+    <item>University of Phoenix-Florida</item>
+
+
+    <item>University of Phoenix-Georgia</item>
+
+
+    <item>University of Phoenix-Nevada</item>
+
+
+    <item>University of Phoenix-Tennessee</item>
+
+
+    <item>University of Phoenix-Texas</item>
+
+
+    <item>University of North Texas at Dallas</item>
+
+
+    <item>BridgeValley Community &amp; Technical College</item>
+
+
+    <item>Georgia Military College</item>
+
+
+    <item>Coastal Pines Technical College</item>
+
+
+    <item>Kennesaw State University</item>
+
+
+    <item>Milligan College</item>
+
+
+    <item>The University of Tennessee-Health Science Center</item>
+
+
+    <item>Southern Regional Technical College</item>
+
+
+    <item>Texas State Technical College</item>
+
+
+    <item>Husson University</item>
+</string-array>

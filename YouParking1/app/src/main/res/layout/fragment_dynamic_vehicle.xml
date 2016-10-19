@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vehiclesLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="clink.youparking.DynamicVehicle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Vehicle"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:id="@+id/vehicle1Text"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Make: "
+            android:layout_marginTop="30dp"
+            android:id="@+id/makeText"
+            android:textSize="22sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicleMake"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="30dp"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Model: "
+            android:layout_marginTop="30dp"
+            android:id="@+id/modelText"
+            android:textSize="22sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicleModel"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="30dp"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+
+            android:text="Year: "
+            android:id="@+id/yearText"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="30dp"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="30dp"
+            android:id="@+id/vehicleYear"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Color: "
+            android:layout_marginTop="30dp"
+            android:id="@+id/colorText"
+            android:textSize="22sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicleColor"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="30dp"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Picture: "
+            android:layout_marginTop="30dp"
+            android:id="@+id/pictureText"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="100dp"
+        android:id="@+id/vehicleImage"/>
+
+    <Button
+        android:id="@+id/deleteVehicleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:text="Delete Vehicle"
+        android:onClick="deleteVehicle"/>
+
+</LinearLayout>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:id="@+id/achievement2layout"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    android:layout_marginTop="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Hold 10 Spots"
+        android:id="@+id/textView8"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#000" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/knownAchievement3"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_hold_spot"
+        android:onClick="goToAchievements"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/unknownAchievement3"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_unknown"
+        android:onClick="goToAchievements" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/achievement3_progress"
+            android:textColor="#000"
+            android:text="0" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text=" / "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/achievement3_goal"
+            android:textColor="#000"
+            android:text="10" />
+
+    </LinearLayout>
+
+</LinearLayout>

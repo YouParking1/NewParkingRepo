@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="clink.youparking.HoldLaterFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Hold Later"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textView2"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Departure Time:"
+                android:id="@+id/textView3"
+                android:layout_marginTop="39dp" />
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+            <Button
+                android:id="@+id/timeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onSetTimeButtonClicked"
+                android:text="Set Time" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Minimum tickets you'll accept for this spot"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="5dp"/>
+            <Spinner
+                android:id="@+id/holdPointsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:prompt="@string/points_prompt"
+                android:background="@android:drawable/btn_dropdown"
+                android:entries="@array/points_array"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+            </Spinner>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add any additional comments that pertain to the spot.\nI.E. Faculty, Freshmen, Dorm Parking, etc..."
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="10dp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:id="@+id/holdSpotLaterComments"
+                android:layout_gravity="center_horizontal"
+                android:hint="Additional Comments"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/holdSpotLaterBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hold Spot Later"
+        android:onClick="onHoldLater"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
