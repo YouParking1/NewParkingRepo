@@ -26,6 +26,11 @@ public class VehicleDetailsDialog extends DialogFragment implements AsyncRespons
 
     AlertDialog dialog;
     ImageView vehicleImage3;
+    int id;
+    String make;
+    String model;
+    int year;
+    String color;
 
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
@@ -35,8 +40,15 @@ public class VehicleDetailsDialog extends DialogFragment implements AsyncRespons
 //        backgroundWorker.delegate = this;
 //        backgroundWorker.execute("getVehicles");
 
+        id = getArguments().getInt("id");
+        make = getArguments().getString("make");
+        model = getArguments().getString("model");
+        year = getArguments().getInt("year");
+        color = getArguments().getString("color");
+
         builder.setTitle("Holder Vehicle Details");
-        builder.setMessage("The holder's vehicle is the " + User.holderVehicle);
+        builder.setMessage("The holder's vehicle is the \n" + "Make: " + make + "\nModel: " + model
+            + "\nYear: " + year + "\nColor: " + color);
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
         builder.setView(inflater.inflate(R.layout.vehicle_detail_dialog, null));

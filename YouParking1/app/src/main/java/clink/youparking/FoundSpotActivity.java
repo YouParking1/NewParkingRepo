@@ -12,12 +12,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFragment.OnFragmentInteractionListener,
         GMapFragment.OnFragmentInteractionListener, AsyncResponse{
     int spotID = -1;
     String role = "";
     String transactionID = "";
+
+    Vehicles otherVehicle;
+
+    boolean foundVehicle = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +36,17 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
 
         super.onCreate(savedInstanceState);
 
-        if (role.equals("Buyer"))
+        if (role.equals("Buyer")) {
             setContentView(R.layout.activity_found_spot);
+
+            int carID = User.spots.get(spotID).getHolder_car();
+
+            BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+            backgroundWorker.delegate = this;
+            backgroundWorker.execute("getVehicleByID", Integer.toString(carID));
+
+            //TODO: MAKE THIS BACKGROUND WORKER
+        }
         else if (role.equals("Holder"))
             setContentView(R.layout.activity_holding_spot);
 
@@ -96,5 +110,31 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
     @Override
     public void processFinish(String output) throws JSONException {
 
+        System.out.println("WE ARE IN HERE!!! ()()()()()()()()()()()()");
+        JSONObject jsonObject = new JSONObject(output);
+        int id = jsonObject.getInt("id");
+        String make = jsonObject.getString("Make");
+        String model = jsonObject.getString("Model");
+        int year = jsonObject.getInt("Year");
+        String color = jsonObject.getString("Color");
+
+        otherVehicle = new Vehicles(id, make, model, year, color);
+        foundVehicle = true;
+
+
+    }
+
+    public void getVehicleDetails(View view) {
+        if (foundVehicle) {
+            Bundle bundle = new Bundle();
+            bundle.putInt("id", otherVehicle.getId());
+            bundle.putString("make", otherVehicle.getMake());
+            bundle.putString("model", otherVehicle.getModel());
+            bundle.putInt("year", otherVehicle.getYear());
+            bundle.putString("color", otherVehicle.getColor());
+            VehicleDetailsDialog dialog = new VehicleDetailsDialog();
+            dialog.setArguments(bundle);
+            dialog.show(getFragmentManager(), "tag");
+        }
     }
 }
