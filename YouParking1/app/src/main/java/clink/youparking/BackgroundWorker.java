@@ -387,7 +387,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
         else if(type.equals("home")) {
             String login_url = "http://www.troyparking.com/home.php";
             try {
-                String school = params[1];
+                String school = User.school;
                 String email = User.email;
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();

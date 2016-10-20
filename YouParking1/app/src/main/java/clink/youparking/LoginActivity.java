@@ -24,25 +24,25 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
         emailEt = (EditText) findViewById(R.id.email);
         passwordEt = (EditText) findViewById(R.id.pass);
 
-        SharedPreferences preferences = getPreferences(Context.MODE_PRIVATE);
-        String Username = preferences.getString("Username", "");
-        String fName = preferences.getString("first_name", "");
-        String lName = preferences.getString("last_name", "");
-        String school = preferences.getString("University", "");
-        String pass = preferences.getString("Password", "");
-
-
+//        SharedPreferences preferences = getSharedPreferences("PREF_NAME", Context.MODE_PRIVATE);
+//        String Username = preferences.getString("Username", "");
+//        String fName = preferences.getString("first_name", "");
+//        String lName = preferences.getString("last_name", "");
+//        String school = preferences.getString("University", "");
+//        String pass = preferences.getString("Password", "");
+//
+//
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
         TextView text = (TextView) findViewById(R.id.tvLogo);
         text.setTypeface(font);
-
-
-        if(Username.length() != 0)
-        {
-            BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-            backgroundWorker.delegate = this;
-            backgroundWorker.execute("login", Username, pass);
-        }
+//
+//
+//        if(Username.length() != 0)
+//        {
+//            BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+//            backgroundWorker.delegate = this;
+//            backgroundWorker.execute("login", Username, pass);
+//        }
     }
 
     public void goToRegistration(View view)

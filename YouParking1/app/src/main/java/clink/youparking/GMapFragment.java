@@ -519,6 +519,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                         if (mapType.equals("HOLDING") && !sentId)
                             transId = data.getString("ID");
 
+
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
                     }

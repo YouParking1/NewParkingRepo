@@ -59,7 +59,7 @@ public class SignOutFragment extends Fragment {
 
         User.isLoggedIn = false;
 
-        SharedPreferences preferences = this.getActivity().getSharedPreferences("PREF_NAME", Context.MODE_PRIVATE);
+        SharedPreferences preferences = getContext().getSharedPreferences("PREF_NAME", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.clear();
         editor.apply();

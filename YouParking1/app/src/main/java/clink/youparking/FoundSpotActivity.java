@@ -62,6 +62,8 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
     }
 
     public void endTransaction(View view) {
+        User.holdingSpot = false;
+
         if (User.mSocket != null) {
             if (User.mGoogleApiClient != null && User.mGoogleApiClient.isConnected()) {
                 User.mGoogleApiClient.disconnect();
