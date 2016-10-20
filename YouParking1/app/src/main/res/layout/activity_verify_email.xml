@@ -37,6 +37,9 @@
         android:id="@+id/verifyCode"
         android:layout_below="@+id/textView6"
         android:layout_marginTop="38dp"
+        android:digits="@string/allow_alpha_and_numbers"
+        android:maxLines="1"
+        android:hint="Verification Code"
         android:layout_alignEnd="@+id/textView5"
         android:layout_alignStart="@+id/textView5" />
 

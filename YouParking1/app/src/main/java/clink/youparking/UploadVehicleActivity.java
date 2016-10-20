@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.MediaStore;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,16 +22,15 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 
+// TODO: Travis Clinkscales - NEED TO ADD ALERT DIALOG TO NEWLY REGISTERED IN BACKGROUND
+
 public class UploadVehicleActivity extends AppCompatActivity implements AsyncResponse {
     public static final String UPLOAD_URL = "http://www.troyparking.com/uploads.php";
     public static final String UPLOAD_KEY = "image";
 
     private int REQUEST_LOAD_IMAGE = 1;
-
     private ImageView imageToUpload;
-
     private Bitmap bitmap;
-
     private Uri filePath;
 
     @Override
@@ -93,11 +93,17 @@ public class UploadVehicleActivity extends AppCompatActivity implements AsyncRes
     }
 
     public String getStringImage(Bitmap bmp){
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bmp.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
-        byte[] imageBytes = byteArrayOutputStream.toByteArray();
-        String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
-        return encodedImage;
+        if(bmp == null)
+        {
+            return null;
+        }
+        else {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            bmp.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+            byte[] imageBytes = byteArrayOutputStream.toByteArray();
+            String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+            return encodedImage;
+        }
     }
 
     private void uploadImage(){
@@ -129,31 +135,45 @@ public class UploadVehicleActivity extends AppCompatActivity implements AsyncRes
                     loading.dismiss();
                     Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
 
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
+                    if(!User.isLoggedIn)
+                    {
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                    }
                 }
             }
 
             @Override
             protected String doInBackground(Bitmap... params) {
 
-                System.out.println("&&&&&&&&&&&&&&&&&&&");
-                System.out.println("ID IN DO IN BACKGROUND: " + id);
+                if(params[0] == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    Bitmap bitmap = params[0];
+                    String uploadImage = getStringImage(bitmap);
 
-                Bitmap bitmap = params[0];
-                String uploadImage = getStringImage(bitmap);
+                    HashMap<String,String> data = new HashMap<>();
+                    data.put(UPLOAD_KEY, uploadImage);
 
-                HashMap<String,String> data = new HashMap<>();
-                data.put(UPLOAD_KEY, uploadImage);
+                    String result = rh.sendPostRequest(UPLOAD_URL,data);
 
-                String result = rh.sendPostRequest(UPLOAD_URL,data);
-
-                return result;
+                    return result;
+                }
             }
         }
-
-        UploadImage ui = new UploadImage();
-        ui.execute(bitmap);
+        if(bitmap != null)
+        {
+            UploadImage ui = new UploadImage();
+            ui.execute(bitmap);
+        }
     }
 
     @Override

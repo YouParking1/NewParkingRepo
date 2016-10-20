@@ -3,6 +3,8 @@ package clink.youparking;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -186,10 +188,15 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
         syear = (Spinner) findViewById(R.id.sYear);
         scolor = (Spinner)findViewById(R.id.sColor);
 
+        String[] colors = getResources().getStringArray(R.array.vehicleColor);
+
         //TODO : Travis Clinkscales - make if/else if statement for each case and have alert for each
-        if(smake != null && smake.getSelectedItem() != null && smodel != null && smodel.getSelectedItem() != null
-                && syear != null && syear.getSelectedItem() != null && scolor != null && scolor.getSelectedItem() != null)
+        if(smake != null && smake.getSelectedItem() != "Please Select a Make" && smodel != null &&
+                smodel.getSelectedItem() != "Please Select a Model" && syear != null && syear.getSelectedItem() != "Please Select a Year"
+                && scolor != null)
         {
+            //TODO : Travis Clinkscales - PLEASE SELECT A COLOR STILL IS ALLOWED SO FIX IT
+
             String selectedMake = smake.getSelectedItem().toString();
             String selectedModel = smodel.getSelectedItem().toString();
             String selectedYear = syear.getSelectedItem().toString();

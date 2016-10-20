@@ -45,7 +45,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:singleLine="true"
+                android:maxLines="1"
                 android:digits="@string/allow_only_alpha" />
             <!-- Last Name Label -->
             <TextView android:layout_width="fill_parent"
@@ -56,7 +56,7 @@
             <EditText android:id="@+id/reg_last_name"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"
+                android:maxLines="1"
                 android:inputType="textPersonName"
                 android:digits="@string/allow_only_alpha"/>
             <!-- School Label -->
@@ -69,6 +69,7 @@
             <AutoCompleteTextView android:id="@+id/reg_university"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:maxLines="1"
                 android:inputType="text"
                 android:digits="@string/allow_alpha_and_special_characters"/>
             <!--  Email Label -->
@@ -83,7 +84,7 @@
                 android:inputType="textEmailAddress"
                 android:digits="@string/allow_characters_for_email"
                 android:layout_marginTop="5dip"
-                android:singleLine="true"
+                android:maxLines="1"
                 android:layout_marginBottom="20dip"
                 android:hint="@string/reg_hint" />
             <!-- Password Label -->
@@ -95,7 +96,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:singleLine="true"
+                android:maxLines="1"
                 android:layout_marginTop="5dip"
                 android:layout_marginBottom="20dip" />
             <!-- Confirm Password Label -->
@@ -107,7 +108,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:singleLine="true"
+                android:maxLines="1"
                 android:layout_marginTop="5dip" />
             <!-- Register Button -->
             <Button android:id="@+id/btnRegister"

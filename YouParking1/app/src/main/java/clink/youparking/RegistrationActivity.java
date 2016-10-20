@@ -46,7 +46,12 @@ public class RegistrationActivity extends AppCompatActivity implements AsyncResp
         String university = University.getText().toString();
         String[] universities = getResources().getStringArray(R.array.universities);
 
-        if (!password.equals(confirmpassword))
+        if(firstName.equals("") || lastName.equals("") || email.equals("")
+                || password.equals("") || confirmpassword.equals(""))
+        {
+            Toast.makeText(this, "Please fill in all blanks.", Toast.LENGTH_SHORT).show();
+        }
+        else if (!password.equals(confirmpassword))
         {
             Toast.makeText(this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
         }
@@ -55,7 +60,7 @@ public class RegistrationActivity extends AppCompatActivity implements AsyncResp
         }
         else if(!Arrays.asList(universities).contains(university))
         {
-            Toast.makeText(this, "Please choose a university in our list. BITCH!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please choose a university in our list.", Toast.LENGTH_SHORT).show();
         }
         else {
             String type = "register";
