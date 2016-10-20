@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -36,10 +37,6 @@ public class VehicleDetailsDialog extends DialogFragment implements AsyncRespons
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-//        BackgroundWorker backgroundWorker = new BackgroundWorker(getActivity());
-//        backgroundWorker.delegate = this;
-//        backgroundWorker.execute("getVehicles");
-
         id = getArguments().getInt("id");
         make = getArguments().getString("make");
         model = getArguments().getString("model");
@@ -52,11 +49,19 @@ public class VehicleDetailsDialog extends DialogFragment implements AsyncRespons
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
         builder.setView(inflater.inflate(R.layout.vehicle_detail_dialog, null));
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialog.dismiss();
+            }
+        });
+
         dialog = builder.create();
         dialog.show();
 
         vehicleImage3 = (ImageView)dialog.findViewById(R.id.vehicleImage3);
-        getImage(User.holderVehicleID);
+        getImage(id);
         vehicleImage3.setVisibility(View.VISIBLE);
 
         return dialog;

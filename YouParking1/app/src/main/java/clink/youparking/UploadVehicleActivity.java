@@ -1,11 +1,13 @@
 package clink.youparking;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -65,6 +67,29 @@ public class UploadVehicleActivity extends AppCompatActivity implements AsyncRes
     public void uploadPhoto(View view)
     {
         uploadImage();
+    }
+
+    public void noImage(View view)
+    {
+        if(!User.isLoggedIn)
+        {
+            AlertDialog alertDialog = new AlertDialog.Builder(this)
+                    .setTitle("Thanks for Registering!")
+                    .setMessage("Please login and enjoy our app!")
+                    .setPositiveButton("OK",new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .show();
+        }
+        else
+        {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+        }
     }
 
     public String getStringImage(Bitmap bmp){

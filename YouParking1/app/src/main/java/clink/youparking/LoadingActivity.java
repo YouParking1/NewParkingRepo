@@ -49,6 +49,13 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
 
     @Override
     public void processFinish(String output) throws JSONException {
+
+        if(output.contains("0"))
+        {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
+
         if(operation == Operation.LOGIN)
         {
             JSONObject jsonObject = new JSONObject(output);
