@@ -234,6 +234,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
     private void cancelHold() {
 
+        User.holdingSpot = false;
 
         operation = Operation.CANCEL;
 

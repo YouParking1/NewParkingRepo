@@ -3,21 +3,19 @@ package clink.youparking;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity implements AsyncResponse {
     EditText emailEt, passwordEt;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +30,18 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
         String lName = preferences.getString("last_name", "");
         String school = preferences.getString("University", "");
         String pass = preferences.getString("Password", "");
+
+
+        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        TextView text = (TextView) findViewById(R.id.tvLogo);
+        text.setTypeface(font);
+
+
         if(Username.length() != 0)
         {
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
             backgroundWorker.delegate = this;
             backgroundWorker.execute("login", Username, pass);
-
-////            User.email = Username;
-////            User.fName = fName;
-////            User.lName = lName; //DELETE THIS COMMENT
-////            User.school = school;
-//            Intent intent = new Intent(this, MainActivity.class);
-//            startActivity(intent);
         }
     }
 
@@ -54,7 +52,7 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
     }
 
     public void OnLogin(View view) {
-        String email = emailEt.getText().toString();
+        String email = emailEt.getText().toString().toUpperCase();
         String password = passwordEt.getText().toString();
         String type = "login";
 
@@ -83,7 +81,7 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
         User.lName = strLName;
         String active = jsonObject.optString("Active");
 
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = getSharedPreferences("PREF_NAME", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("Username", User.email);
         editor.putString("first_name", User.fName);
@@ -111,6 +109,7 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
         }
         else
         {
+            User.isLoggedIn = true;
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }

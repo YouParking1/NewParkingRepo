@@ -99,6 +99,11 @@ public class MainActivity extends AppCompatActivity
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION},
                     MY_PERMISSION_ACCESS_COARSE_LOCATION);
         }
+
+        if(User.holdingSpot)
+        {
+            isHolding();
+        }
     }
 
     @Override
@@ -202,6 +207,15 @@ public class MainActivity extends AppCompatActivity
     public void finishHoldLater(View view) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.flContent, new HoldLaterFragment()).commit();
+    }
+
+    public void isHolding()
+    {
+        Intent intent = new  Intent(this, FoundSpotActivity.class);
+        intent.putExtra("SpotID", -1);
+        intent.putExtra("Role", "Holder");
+        intent.putExtra("TransID", "-1");
+        startActivity(intent);
     }
 
     public void deleteVehicle(View view)

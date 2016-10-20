@@ -86,6 +86,10 @@ public class FindLaterFragment extends Fragment implements AsyncResponse {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        ChooseVehicleDialog dialog = new ChooseVehicleDialog();
+        dialog.show(getActivity().getFragmentManager(), "TAG");
+
         BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
         backgroundWorker.delegate = this;
         backgroundWorker.execute("findLater");

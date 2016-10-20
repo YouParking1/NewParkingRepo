@@ -32,6 +32,7 @@
 
     <!-- Restrictions for text inputs -->
     <string name="allow_only_alpha">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-</string>
+    <string name="allow_alpha_and_numbers">abcdefghijklmnopqrstuvwxyz0123456789</string>
     <string name="allow_alpha_and_special_characters">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-\'</string>
     <string name="allow_characters_for_email">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@.!#$%&amp;\'*+-/=?^_`{|}~</string>
 

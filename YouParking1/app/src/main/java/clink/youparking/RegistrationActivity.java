@@ -1,6 +1,5 @@
 package clink.youparking;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +9,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Arrays;
 
 public class RegistrationActivity extends AppCompatActivity implements AsyncResponse {
 
@@ -39,27 +40,22 @@ public class RegistrationActivity extends AppCompatActivity implements AsyncResp
     {
         String firstName = FName.getText().toString();
         String lastName = LName.getText().toString();
-        String email = Email.getText().toString();
+        String email = Email.getText().toString().toUpperCase();
         String password = Password.getText().toString();
         String confirmpassword = ConfirmPass.getText().toString();
         String university = University.getText().toString();
+        String[] universities = getResources().getStringArray(R.array.universities);
 
         if (!password.equals(confirmpassword))
         {
-            Context context = getApplicationContext();
-            CharSequence text = "Passwords do not match!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
+            Toast.makeText(this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
         }
-        else if (!(email.toUpperCase().contains(".EDU") && email.contains("@"))){
-            Context context = getApplicationContext();
-            CharSequence text = "Invalid Email format!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
+        else if (!(email.contains(".EDU") && email.contains("@"))){
+            Toast.makeText(this, "Invalid Email format!", Toast.LENGTH_SHORT).show();
+        }
+        else if(!Arrays.asList(universities).contains(university))
+        {
+            Toast.makeText(this, "Please choose a university in our list. BITCH!", Toast.LENGTH_SHORT).show();
         }
         else {
             String type = "register";
@@ -81,15 +77,13 @@ public class RegistrationActivity extends AppCompatActivity implements AsyncResp
             TextView lname = (TextView)findViewById(R.id.reg_last_name);
             AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView)findViewById(R.id.reg_university);
 
-            User.email = email.getText().toString();
+            User.email = email.getText().toString().toUpperCase();
             User.fName = fname.getText().toString();
             User.lName = lname.getText().toString();
-            User.school = autoCompleteTextView.getText().toString();
+            User.school = autoCompleteTextView.getText().toString().toUpperCase();
 
             Intent intent = new Intent(this, VerifyEmail.class);
             startActivity(intent);
         }
     }
 }
-
-

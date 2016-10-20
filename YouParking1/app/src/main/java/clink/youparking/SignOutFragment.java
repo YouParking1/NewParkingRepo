@@ -57,9 +57,12 @@ public class SignOutFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        SharedPreferences preferences = this.getActivity().getSharedPreferences("LoginActivity", Context.MODE_PRIVATE);
+        User.isLoggedIn = false;
+
+        SharedPreferences preferences = this.getActivity().getSharedPreferences("PREF_NAME", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
-        editor.clear().commit();
+        editor.clear();
+        editor.apply();
         Intent intent = new Intent(getActivity(), LoginActivity.class);
         startActivity(intent);
 

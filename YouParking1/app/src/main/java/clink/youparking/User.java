@@ -18,6 +18,11 @@ public class User {
     public static String fName = null;
     public static String lName = null;
     public static int numCars = 0;
+    public static boolean isLoggedIn = false;
+    public static String finderVehicle = null;
+    public static int finderVehicleID = 0;
+    public static String holderVehicle = null;
+    public static int holderVehicleID = 0;
 
     public static int percentage = 0;
     public static int spotsHeld = 0;
@@ -33,7 +38,6 @@ public class User {
 
     public static ArrayList<Spot> spots = new ArrayList<>();
     public static ArrayList<Vehicles> vehicles = new ArrayList<>();
-
     public static int id = 0;
 
     public static boolean holdingSpot = false;

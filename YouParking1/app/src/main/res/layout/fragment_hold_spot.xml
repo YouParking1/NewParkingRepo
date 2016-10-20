@@ -76,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:id="@+id/populate_vehicle_choices"
+            android:id="@+id/populate_vehicle_choices_hold"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp" />

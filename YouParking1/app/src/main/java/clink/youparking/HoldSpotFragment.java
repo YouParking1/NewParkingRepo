@@ -105,7 +105,7 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
         vehicleImage = (ImageView)getView().findViewById(R.id.imageVehicleChoice);
         holdBtn = (Button)getView().findViewById(R.id.holdBtn);
 
-        radioGroup = (RadioGroup)getView().findViewById(R.id.populate_vehicle_choices);
+        radioGroup = (RadioGroup)getView().findViewById(R.id.populate_vehicle_choices_hold);
         radioGroup.clearCheck();
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -113,9 +113,15 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton rb = (RadioButton) group.findViewById(checkedId);
                 if(rb != null && checkedId > -1){
+                    User.holderVehicleID = User.vehicles.get(checkedId).getId();
                     getImage(User.vehicles.get(checkedId).getId());
                     vehicleImage.setVisibility(View.VISIBLE);
+                    String make = User.vehicles.get(checkedId).getMake();
+                    String model = User.vehicles.get(checkedId).getModel();
+                    String year = Integer.toString(User.vehicles.get(checkedId).getYear());
+                    User.holderVehicle = make + " " + model + " " + year;
                     holdBtn.setId(User.vehicles.get(checkedId).getId());
+                    System.out.println("HOLDER VEHICLE: " + User.holderVehicle);
                 }
             }
         });
@@ -219,7 +225,7 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
                     jsonObject.getString("Model"), jsonObject.getInt("Year"), jsonObject.getString("Color")));
         }
 
-        RadioGroup radioGroup = (RadioGroup) getActivity().findViewById(R.id.populate_vehicle_choices);
+        RadioGroup radioGroup = (RadioGroup) getActivity().findViewById(R.id.populate_vehicle_choices_hold);
         radioGroup.setOrientation(LinearLayout.VERTICAL);
 
         if (User.vehicles.size() > 0) {
