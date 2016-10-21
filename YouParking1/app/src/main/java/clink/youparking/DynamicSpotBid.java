@@ -121,7 +121,12 @@ public class DynamicSpotBid extends Fragment {
 
         LinearLayout linearLayout3 = (LinearLayout) getView().findViewById(R.id.layout_bid_uno);
         int id3 = getArguments().getInt("ID");
-        linearLayout2.setId(id2);
+        linearLayout3.setId(id2);
+
+        if (!((SpotLater)User.spots.get(id)).getBuyer().equals("NONE")) {
+            TextView textView = (TextView) getView().findViewById(R.id.topbidder_text);
+            textView.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override

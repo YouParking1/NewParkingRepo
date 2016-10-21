@@ -41,6 +41,7 @@ public class User {
     public static int id = 0;
 
     public static boolean holdingSpot = false;
+    public static boolean bidOpen = false;
 
     public static Socket mSocket;
 

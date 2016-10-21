@@ -147,12 +147,14 @@ public class FindLaterFragment extends Fragment implements AsyncResponse {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
 
                 int bidPoints = 0;
+                String buyer = "NONE";
 
                 if (jsonObject.getString("Points").equals("null")) {
                     System.out.println("&*&(&(*&(*&(*&(*&(*&(* " + jsonObject.get("Points").getClass());
                 }
                 else {
                     bidPoints = jsonObject.getInt("Points");
+                    buyer = jsonObject.getString("Buyer");
                     System.out.println("*(*()*)*)(*)(*)(*)(*)  THAT WORKED!!!!!");
                 }
 
@@ -160,7 +162,7 @@ public class FindLaterFragment extends Fragment implements AsyncResponse {
                         jsonObject.getInt("StartPoints"), jsonObject.getInt("CurrentCar"), jsonObject.getString("Email"),
                         jsonObject.getString("Comments"), jsonObject.getInt("Holder_Percentage"),
                         jsonObject.getInt("Holder_Spots"), jsonObject.getInt("DepartTime"), jsonObject.getInt("Spot_ID"),
-                        bidPoints));
+                        bidPoints, buyer));
 
                 lats[i] = jsonObject.getDouble("Latitude");
                 longs[i] = jsonObject.getDouble("Longitude");

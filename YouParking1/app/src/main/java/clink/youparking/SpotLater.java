@@ -7,9 +7,10 @@ public class SpotLater extends Spot{
 
     private int spotId;
     private int currentBid;
+    private String buyer;
 
     public SpotLater(double slat, double slong, int point, int hc, String email, String comment, int percent, int spots,
-                int time, int spotId, int currentBid) {
+                int time, int spotId, int currentBid, String buyer) {
 
         this.latitude = slat;
         this.longitude = slong;
@@ -22,6 +23,7 @@ public class SpotLater extends Spot{
         this.time = time;
         this.spotId = spotId;
         this.currentBid = currentBid;
+        this.buyer = buyer;
     }
 
     public int getSpotId() {
@@ -30,5 +32,9 @@ public class SpotLater extends Spot{
 
     public int getCurrentBid() {
         return currentBid;
+    }
+
+    public String getBuyer() {
+        return buyer;
     }
 }

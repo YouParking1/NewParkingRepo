@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity
 
     int bought_spot_id = -1;
 
-    public enum Operation { DELETE, HOLDSPOT, BUY, NUMVEHICLES, NONE }
+    public enum Operation { DELETE, HOLDSPOT, BUY, NUMVEHICLES, BID, NONE }
 
     Operation operation = Operation.NONE;
 
@@ -104,6 +104,10 @@ public class MainActivity extends AppCompatActivity
         {
             isHolding();
         }
+        else if(User.bidOpen) {
+            //TODO: PERFORM SOME ACTION FOR USERS WHO HAVE BIDS OPEN
+
+        }
     }
 
     @Override
@@ -147,31 +151,40 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
         Class fragmentClass = null;
 
-        if (id == R.id.nav_home) {
-            fragmentClass = HomeFragment.class;
-        } else if (id == R.id.nav_vehicles) {
-            fragmentClass = VehiclesFragment.class;
-        } else if (id == R.id.nav_my_bids) {
-            fragmentClass = MyBidsFragment.class;
-        } else if (id == R.id.nav_find_now) {
-            fragmentClass = FindNowFragment.class;
-        } else if (id == R.id.nav_hold_spot) {
-            fragmentClass = HoldSpotMapFragment.class;
-        } else if (id == R.id.nav_find_later) {
-            fragmentClass = FindLaterFragment.class;
-        } else if (id == R.id.nav_hold_later) {
-            fragmentClass = HoldLaterMapFragment.class;
-        } else if (id == R.id.nav_sign_out) {
-            fragmentClass = SignOutFragment.class;
-        }
-        try {
-            fragment = (Fragment) fragmentClass.newInstance();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        if (User.bidOpen || User.holdingSpot) {
+            int duration = Toast.LENGTH_LONG;
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+            Toast toast = Toast.makeText(this, "You're currently holding a spot open. Cancel" +
+                    " the spot to reopen full access!", duration);
+            toast.show();
+        }
+        else {
+            if (id == R.id.nav_home) {
+                fragmentClass = HomeFragment.class;
+            } else if (id == R.id.nav_vehicles) {
+                fragmentClass = VehiclesFragment.class;
+            } else if (id == R.id.nav_my_bids) {
+                fragmentClass = MyBidsFragment.class;
+            } else if (id == R.id.nav_find_now) {
+                fragmentClass = FindNowFragment.class;
+            } else if (id == R.id.nav_hold_spot) {
+                fragmentClass = HoldSpotMapFragment.class;
+            } else if (id == R.id.nav_find_later) {
+                fragmentClass = FindLaterFragment.class;
+            } else if (id == R.id.nav_hold_later) {
+                fragmentClass = HoldLaterMapFragment.class;
+            } else if (id == R.id.nav_sign_out) {
+                fragmentClass = SignOutFragment.class;
+            }
+            try {
+                fragment = (Fragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+        }
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -374,6 +387,16 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(getApplicationContext(), "You have too many vehicles. Please delete one vehicle first.", Toast.LENGTH_LONG).show();
             }
         }
+        else if (operation == Operation.BID) {
+            if (output.equals("200")) {
+                System.out.println("EVERYTHING IS OKAY!");
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
+            }
+            else if (output.equals("-1")) {
+                System.out.println("SOMETHING WENT WRONG");
+            }
+        }
     }
 
     /**
@@ -433,11 +456,48 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void bidOne(View view) {
+        operation = Operation.BID;
+
+        int currentBid = ((SpotLater) User.spots.get(view.getId())).getCurrentBid();
+        int startPoints = ((SpotLater) User.spots.get(view.getId())).getPoints() + 1;
+        String spotId= Integer.toString(((SpotLater)User.spots.get(view.getId())).getSpotId());
+        String sPoints = "";
+
+        if (currentBid != 0) {
+            currentBid++;
+            sPoints = Integer.toString(currentBid);
+        }
+        else {
+            sPoints = Integer.toString(startPoints);
+        }
+
+        System.out.println("YOU WILL BE BIDDING " + sPoints + " *(*(*(*()*(*)*()*)(*)(*)(*)&*^*&^*&");
+
+        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+        backgroundWorker.delegate = this;
+        backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
 
     }
 
     public void bidFive(View view) {
+        operation = Operation.BID;
 
+        int currentBid = ((SpotLater) User.spots.get(view.getId())).getCurrentBid();
+        int startPoints = ((SpotLater) User.spots.get(view.getId())).getPoints() + 1;
+        String spotId= Integer.toString(((SpotLater)User.spots.get(view.getId())).getSpotId());
+        String sPoints = "";
+
+        if (currentBid != 0) {
+            currentBid += 5;
+            sPoints = Integer.toString(currentBid);
+        }
+        else {
+            sPoints = Integer.toString(startPoints);
+        }
+
+        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+        backgroundWorker.delegate = this;
+        backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
     }
 
     public void setValidTime(Boolean bool) {

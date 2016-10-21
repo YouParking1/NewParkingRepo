@@ -14,7 +14,7 @@ import org.json.JSONObject;
 
 public class LoadingActivity extends AppCompatActivity implements AsyncResponse {
 
-    public enum Operation { LOGIN, HOLDINGSPOT, NONE }
+    public enum Operation { LOGIN, HOLDINGSPOT, BIDOPEN, NONE }
     Operation operation = Operation.NONE;
 
     @Override
@@ -50,13 +50,15 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
     @Override
     public void processFinish(String output) throws JSONException {
 
-        if(output.contains("0"))
+        boolean failed = false;
+        if(output.equals("0"))
         {
+            failed = true;
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }
 
-        if(operation == Operation.LOGIN)
+        if(operation == Operation.LOGIN && !failed)
         {
             JSONObject jsonObject = new JSONObject(output);
             String strLoginID = jsonObject.optString("Email");
@@ -98,8 +100,38 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
 
             if(output.contains("nospots"))
             {
-                User.isLoggedIn = true;
+                //User.isLoggedIn = true;
                 User.holdingSpot = false;
+                operation = Operation.BIDOPEN;
+                BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+                backgroundWorker.delegate = this;
+                backgroundWorker.execute("bidOpen");
+            }
+            else
+            {
+                JSONObject jsonObject = new JSONObject(output);
+
+                try
+                {
+                    User.myLocation = new LatLng(jsonObject.getDouble("Latitude"), jsonObject.getDouble("Longitude"));
+                }
+                catch (JSONException e)
+                {
+                    throw new RuntimeException(e);
+                }
+
+                User.isLoggedIn = true;
+                User.holdingSpot = true;
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+            }
+        }
+        else if(operation == Operation.BIDOPEN) {
+            if(output.contains("nospots"))
+            {
+                System.out.println("NO SPOTS FOUND YO! *)(*()*()*)(*)(*)(*)(");
+                User.isLoggedIn = true;
+                User.bidOpen = false;
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
             }
@@ -117,7 +149,7 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
                 }
 
                 User.isLoggedIn = true;
-                User.holdingSpot = true;
+                User.bidOpen = true;
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
             }
