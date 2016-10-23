@@ -1,8 +1,8 @@
 package clink.youparking;
 
 import android.Manifest;
+import android.app.ActionBar;
 import android.app.DialogFragment;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -20,7 +20,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.AttributeSet;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.TypefaceSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,16 +41,12 @@ public class MainActivity extends AppCompatActivity
         MapInteraction, HoldLaterMapFragment.OnFragmentInteractionListener, DynamicSpot.OnFragmentInteractionListener, AchievementFragment.OnFragmentInteractionListener,
         DynamicVehicle.OnFragmentInteractionListener, DynamicSpotBid.OnFragmentInteractionListener, AsyncResponse {
 
-    String outputFromProcess = null;
-
     int bought_spot_id = -1;
 
     public enum Operation { DELETE, HOLDSPOT, BUY, NUMVEHICLES, BID, NONE }
-
     Operation operation = Operation.NONE;
 
     private boolean validHoldLaterTime = false;
-
     private static final int MY_PERMISSION_ACCESS_COARSE_LOCATION = 1;
 
     @Override
@@ -56,8 +54,12 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.app_name);
+        Typeface titleFont = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        SpannableString s = new SpannableString("YOUPARKING");
+        s.setSpan(new CustomTypefaceSpan("", titleFont), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar.setTitle(s);
         setSupportActionBar(toolbar);
 
 
@@ -83,15 +85,23 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        Menu menu = navigationView.getMenu();
+        for(int i = 0; i < menu.size(); i++)
+        {
+            MenuItem menuItem = menu.getItem(i);
+            applyFontToMenuItem(menuItem);
+        }
 
         //This bit of code is for setting ticket icon in nav header.
         View hView = navigationView.getHeaderView(0);
-        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/fontawesome-webfont.ttf");
+        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/fontawesome-webfont.ttf");
         TextView text = (TextView) hView.findViewById(R.id.inMenu);
         text.setTypeface(font);
 
+        Typeface font2 = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
         TextView numTickets = (TextView)hView.findViewById(R.id.numTickets);
         numTickets.setText(Integer.toString(User.points));
+        numTickets.setTypeface(font2);
 
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
@@ -108,6 +118,13 @@ public class MainActivity extends AppCompatActivity
             //TODO: PERFORM SOME ACTION FOR USERS WHO HAVE BIDS OPEN
 
         }
+    }
+
+    private void applyFontToMenuItem(MenuItem mi) {
+        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        SpannableString mNewTitle = new SpannableString(mi.getTitle());
+        mNewTitle.setSpan(new CustomTypefaceSpan("" , font), 0 , mNewTitle.length(),  Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        mi.setTitle(mNewTitle);
     }
 
     @Override

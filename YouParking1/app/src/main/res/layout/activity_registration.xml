@@ -12,12 +12,9 @@
         <!--  Header  Starts-->
         <LinearLayout android:id="@+id/header"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@xml/header_gradient"
-            android:paddingTop="5dip"
-            android:paddingBottom="5dip">
+            android:layout_height="wrap_content">
             <!-- Logo Start-->
-            <ImageView android:src="@mipmap/ic_parking_logo"
+            <ImageView android:src="@mipmap/ic_youparking_launcher"
                 android:contentDescription="@string/reg_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

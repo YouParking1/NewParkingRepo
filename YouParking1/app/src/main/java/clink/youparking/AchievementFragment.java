@@ -1,6 +1,7 @@
 package clink.youparking;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -81,6 +82,10 @@ public class AchievementFragment extends Fragment implements AsyncResponse {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/college.ttf");
+        TextView title = (TextView)getView().findViewById(R.id.achievementsTitle);
+        title.setTypeface(font);
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(getActivity());
         backgroundWorker.delegate = this;

@@ -5,34 +5,34 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="Home" />
+            android:title="HOME" />
         <item
             android:id="@+id/nav_vehicles"
             android:icon="@drawable/ic_vehicles"
-            android:title="Vehicles" />
+            android:title="VEHICLES" />
         <item
             android:id="@+id/nav_my_bids"
             android:icon="@drawable/ic_my_bids"
-            android:title="My Bids" />
+            android:title="MY BIDS" />
         <item
             android:id="@+id/nav_find_now"
             android:icon="@drawable/ic_find_now"
-            android:title="Find Now" />
+            android:title="FIND SPOT" />
         <item
             android:id="@+id/nav_hold_spot"
             android:icon="@drawable/ic_hold_spot"
-            android:title="Hold Spot" />
+            android:title="SELL NOW" />
         <item
             android:id="@+id/nav_find_later"
             android:icon="@drawable/ic_find_later"
-            android:title="Find Later" />
+            android:title="BID ON SPOT" />
         <item
             android:id="@+id/nav_hold_later"
             android:icon="@drawable/ic_hold_later"
-            android:title="Hold Later" />
+            android:title="AUCTION SPOT" />
         <item
             android:id="@+id/nav_sign_out"
             android:icon="@drawable/ic_sign_out"
-            android:title="Sign Out" />
+            android:title="SIGN OUT" />
     </group>
 </menu>

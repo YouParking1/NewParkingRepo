@@ -31,16 +31,18 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Upload Image"
-            android:id="@+id/bUploadImage"
-            android:onClick="uploadPhoto"/>
+            android:text="No Image"
+            android:onClick="noImage"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="No Image"
-            android:onClick="noImage"/>
+            android:text="Upload Image"
+            android:id="@+id/bUploadImage"
+            android:onClick="uploadPhoto"/>
+
+
 
     </LinearLayout>
 </LinearLayout>

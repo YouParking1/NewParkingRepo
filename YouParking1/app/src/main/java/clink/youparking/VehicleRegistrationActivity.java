@@ -181,14 +181,17 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     public void saveVehicle(View view)
     {
         smake = (Spinner)findViewById(R.id.sMake);
         smodel = (Spinner)findViewById(R.id.sModel);
         syear = (Spinner) findViewById(R.id.sYear);
         scolor = (Spinner)findViewById(R.id.sColor);
-
-        String[] colors = getResources().getStringArray(R.array.vehicleColor);
 
         //TODO : Travis Clinkscales - make if/else if statement for each case and have alert for each
         if(smake != null && smake.getSelectedItem() != "Please Select a Make" && smodel != null &&

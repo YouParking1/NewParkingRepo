@@ -178,6 +178,11 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     public void saveVehicle(View view)
     {
         smake = (Spinner)findViewById(R.id.sMake);
@@ -186,8 +191,9 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
         scolor = (Spinner)findViewById(R.id.sColor);
 
         //TODO : Travis Clinkscales - make if/else if statement for each case and have alert for each
-        if(smake != null && smake.getSelectedItem() != null && smodel != null && smodel.getSelectedItem() != null
-                && syear != null && syear.getSelectedItem() != null && scolor != null && scolor.getSelectedItem() != null)
+        if(smake != null && smake.getSelectedItem() != "Please Select a Make" && smodel != null &&
+                smodel.getSelectedItem() != "Please Select a Model" && syear != null && syear.getSelectedItem() != "Please Select a Year"
+                && scolor != null)
         {
             String selectedMake = smake.getSelectedItem().toString();
             String selectedModel = smodel.getSelectedItem().toString();

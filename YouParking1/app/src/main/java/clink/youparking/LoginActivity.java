@@ -32,9 +32,9 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
 //        String pass = preferences.getString("Password", "");
 //
 //
-        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
-        TextView text = (TextView) findViewById(R.id.tvLogo);
-        text.setTypeface(font);
+//        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+//        TextView text = (TextView) findViewById(R.id.tvLogo);
+//        text.setTypeface(font);
 //
 //
 //        if(Username.length() != 0)

@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -44,8 +41,6 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
             backgroundWorker.delegate = this;
             backgroundWorker.execute("getVehicleByID", Integer.toString(carID));
-
-            //TODO: MAKE THIS BACKGROUND WORKER
         }
         else if (role.equals("Holder"))
             setContentView(R.layout.activity_holding_spot);
@@ -94,9 +89,25 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
         backgroundWorker.delegate = this;
         backgroundWorker.execute("BuyNowComplete", transactionID);
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+//        Intent intent = new Intent(this, MainActivity.class);
+//        startActivity(intent);
+//        finish();
+
+        if(role.equals("Holder") && transactionID.length() > 0)
+        {
+            Intent intent = new Intent(this, HoldSpotProblemActivity.class);
+            intent.putExtra("transID", transactionID);
+            startActivity(intent);
+        }
+//        else if(role.equals("Buyer"))
+//        {
+//            FragmentManager fragmentManager = getSupportFragmentManager();
+//            fragmentManager.beginTransaction().replace(R.id.flContent, new FindSpotProblemFragment()).commit();
+//        }
+        else
+        {
+
+        }
     }
 
     public void setTransactionID(String transactionID) {

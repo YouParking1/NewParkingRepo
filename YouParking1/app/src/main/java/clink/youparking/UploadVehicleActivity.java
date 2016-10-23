@@ -64,6 +64,11 @@ public class UploadVehicleActivity extends AppCompatActivity implements AsyncRes
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     public void uploadPhoto(View view)
     {
         uploadImage();
@@ -99,7 +104,7 @@ public class UploadVehicleActivity extends AppCompatActivity implements AsyncRes
         }
         else {
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            bmp.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+            bmp.compress(Bitmap.CompressFormat.JPEG, 70, byteArrayOutputStream);
             byte[] imageBytes = byteArrayOutputStream.toByteArray();
             String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
             return encodedImage;
