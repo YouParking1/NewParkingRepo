@@ -3,10 +3,17 @@ package clink.youparking;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 /**
@@ -17,11 +24,14 @@ import android.view.ViewGroup;
  * Use the {@link MyBidsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyBidsFragment extends Fragment {
+public class MyBidsFragment extends Fragment implements AsyncResponse {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+
+    LinearLayout linearLayout;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -58,6 +68,8 @@ public class MyBidsFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
@@ -65,6 +77,15 @@ public class MyBidsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_my_bids, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        linearLayout = (LinearLayout) getView().findViewById(R.id.active_bids);
+        BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
+        backgroundWorker.delegate = this;
+        backgroundWorker.execute("findbids");
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -89,6 +110,23 @@ public class MyBidsFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void processFinish(String output) throws JSONException {
+        JSONArray jsonArray = new JSONArray(output);
+        int winningBids = jsonArray.length();
+        int [] pointArr = new int[winningBids];
+        long [] departs = new long[winningBids];
+
+
+        for (int i = 0; i < winningBids; i++) {
+            JSONObject jsonObject = jsonArray.getJSONObject(i);
+            TextView textView = new TextView(getContext());
+            String desc = ("" + jsonObject.getLong("DepartTime") + " Points: " + jsonObject.getInt("Points"));
+            textView.setText(desc);
+            linearLayout.addView(textView);
+        }
     }
 
     /**

@@ -16,6 +16,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 
 /**
@@ -181,6 +183,8 @@ public class FindLaterFragment extends Fragment implements AsyncResponse {
             bundle.putStringArray("COMMENTS", comments);
             bundle.putIntArray("POINTS", points);
         }
+
+
 
         mapFrag = new GMapFragment();
         mapFrag.setArguments(bundle);

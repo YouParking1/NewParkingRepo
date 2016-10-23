@@ -34,6 +34,12 @@ public class HomeFragment extends Fragment implements AsyncResponse {
     private String mParam1;
     private String mParam2;
 
+    enum Operation {
+        ACHIEVEMENT, BIDS, NONE
+    }
+
+    private Operation operation = Operation.NONE;
+
     TextView findNowSpotsAvailable, findLaterSpotsAvailable, welcomeMessage, statSpotsHeld,
             statPercentage, statsSpotsFound, achievement1Progress, achievement2Progress,
             achievement3Progress, achievement1Goal, achievement2Goal, achievement3Goal;
@@ -100,6 +106,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
         TextView achievementsText = (TextView)getView().findViewById(R.id.achievementText);
         achievementsText.setTypeface(font);
 
+        operation = Operation.ACHIEVEMENT;
         BackgroundWorker backgroundWorker = new BackgroundWorker(getActivity());
         backgroundWorker.delegate = this;
         backgroundWorker.execute("home", User.school);
@@ -132,62 +139,65 @@ public class HomeFragment extends Fragment implements AsyncResponse {
     @Override
     public void processFinish(String output) throws JSONException {
 
-        findNowSpotsAvailable = (TextView)getView().findViewById(R.id.find_now_spots_available);
-        findLaterSpotsAvailable = (TextView)getView().findViewById(R.id.find_later_spots_available);
-        statSpotsHeld = (TextView)getView().findViewById(R.id.stat_spots_held);
-        statsSpotsFound = (TextView)getView().findViewById(R.id.stat_spots_found);
-        statPercentage = (TextView)getView().findViewById(R.id.stat_percentage);
-        achievement1Progress = (TextView)getView().findViewById(R.id.achievement1_progress);
-        achievement2Progress = (TextView)getView().findViewById(R.id.achievement2_progress);
-        achievement3Progress = (TextView)getView().findViewById(R.id.achievement3_progress);
-        achievement1Goal = (TextView)getView().findViewById(R.id.achievement1_goal);
-        achievement2Goal = (TextView)getView().findViewById(R.id.achievement2_goal);
-        achievement3Goal = (TextView)getView().findViewById(R.id.achievement3_goal);
-        unknownAchievement1 = (ImageButton)getView().findViewById(R.id.unknownAchievement1);
-        unknownAchievement2 = (ImageButton)getView().findViewById(R.id.unknownAchievement2);
-        unknownAchievement3 = (ImageButton)getView().findViewById(R.id.unknownAchievement3);
-        knownAchievement1 = (ImageButton)getView().findViewById(R.id.knownAchievement1);
-        knownAchievement2 = (ImageButton)getView().findViewById(R.id.knownAchievement2);
-        knownAchievement3 = (ImageButton)getView().findViewById(R.id.knownAchievement3);
+        if (operation == Operation.ACHIEVEMENT) {
+            findNowSpotsAvailable = (TextView) getView().findViewById(R.id.find_now_spots_available);
+            findLaterSpotsAvailable = (TextView) getView().findViewById(R.id.find_later_spots_available);
+            statSpotsHeld = (TextView) getView().findViewById(R.id.stat_spots_held);
+            statsSpotsFound = (TextView) getView().findViewById(R.id.stat_spots_found);
+            statPercentage = (TextView) getView().findViewById(R.id.stat_percentage);
+            achievement1Progress = (TextView) getView().findViewById(R.id.achievement1_progress);
+            achievement2Progress = (TextView) getView().findViewById(R.id.achievement2_progress);
+            achievement3Progress = (TextView) getView().findViewById(R.id.achievement3_progress);
+            achievement1Goal = (TextView) getView().findViewById(R.id.achievement1_goal);
+            achievement2Goal = (TextView) getView().findViewById(R.id.achievement2_goal);
+            achievement3Goal = (TextView) getView().findViewById(R.id.achievement3_goal);
+            unknownAchievement1 = (ImageButton) getView().findViewById(R.id.unknownAchievement1);
+            unknownAchievement2 = (ImageButton) getView().findViewById(R.id.unknownAchievement2);
+            unknownAchievement3 = (ImageButton) getView().findViewById(R.id.unknownAchievement3);
+            knownAchievement1 = (ImageButton) getView().findViewById(R.id.knownAchievement1);
+            knownAchievement2 = (ImageButton) getView().findViewById(R.id.knownAchievement2);
+            knownAchievement3 = (ImageButton) getView().findViewById(R.id.knownAchievement3);
 
-        JSONObject jsonObject = new JSONObject(output);
-        int findNow = jsonObject.getInt("FindNow");
-        int findLater = jsonObject.getInt("FindLater");
-        int spotsHeld = jsonObject.getInt("SpotsHeld");
-        int spotsFound = jsonObject.getInt("SpotsFound");
-        int percent = jsonObject.getInt("Percentage");
+            JSONObject jsonObject = new JSONObject(output);
+            int findNow = jsonObject.getInt("FindNow");
+            int findLater = jsonObject.getInt("FindLater");
+            int spotsHeld = jsonObject.getInt("SpotsHeld");
+            int spotsFound = jsonObject.getInt("SpotsFound");
+            int percent = jsonObject.getInt("Percentage");
 
-        System.out.println("FindNow: " + findNow);
-        System.out.println("FindLater: " + findLater);
-        System.out.println("SpotsHeld: " + spotsHeld);
-        System.out.println("SpotsFound: " + spotsFound);
-        System.out.println("Percentage: " + percent);
+            System.out.println("FindNow: " + findNow);
+            System.out.println("FindLater: " + findLater);
+            System.out.println("SpotsHeld: " + spotsHeld);
+            System.out.println("SpotsFound: " + spotsFound);
+            System.out.println("Percentage: " + percent);
 
-        findNowSpotsAvailable.setText(Integer.toString(findNow));
-        findLaterSpotsAvailable.setText(Integer.toString(findLater));
-        statSpotsHeld.setText(Integer.toString(spotsHeld));
-        statsSpotsFound.setText(Integer.toString(spotsFound));
-        statPercentage.setText(Integer.toString(percent));
-        achievement1Progress.setText(Integer.toString(spotsHeld));
-        achievement2Progress.setText(Integer.toString(spotsFound));
-        achievement3Progress.setText(Integer.toString(spotsHeld));
+            findNowSpotsAvailable.setText(Integer.toString(findNow));
+            findLaterSpotsAvailable.setText(Integer.toString(findLater));
+            statSpotsHeld.setText(Integer.toString(spotsHeld));
+            statsSpotsFound.setText(Integer.toString(spotsFound));
+            statPercentage.setText(Integer.toString(percent));
+            achievement1Progress.setText(Integer.toString(spotsHeld));
+            achievement2Progress.setText(Integer.toString(spotsFound));
+            achievement3Progress.setText(Integer.toString(spotsHeld));
 
-        if(Integer.valueOf(achievement1Progress.getText().toString()) >= 5)
-        {
-            unknownAchievement1.setVisibility(View.GONE);
-            knownAchievement1.setVisibility(View.VISIBLE);
-            achievement1Progress.setText("5");
+            if (Integer.valueOf(achievement1Progress.getText().toString()) >= 5) {
+                unknownAchievement1.setVisibility(View.GONE);
+                knownAchievement1.setVisibility(View.VISIBLE);
+                achievement1Progress.setText("5");
+            }
+            if (Integer.valueOf(achievement2Progress.getText().toString()) >= 5) {
+                unknownAchievement2.setVisibility(View.GONE);
+                knownAchievement2.setVisibility(View.VISIBLE);
+                achievement2Progress.setText("5");
+            }
+            if (Integer.valueOf(achievement3Progress.getText().toString()) >= 10) {
+                unknownAchievement3.setVisibility(View.GONE);
+                knownAchievement3.setVisibility(View.VISIBLE);
+                achievement3Progress.setText("10");
+            }
         }
-        if(Integer.valueOf(achievement2Progress.getText().toString()) >= 5)
-        {
-            unknownAchievement2.setVisibility(View.GONE);
-            knownAchievement2.setVisibility(View.VISIBLE);
-            achievement2Progress.setText("5");
-        }
-        if(Integer.valueOf(achievement3Progress.getText().toString()) >= 10) {
-            unknownAchievement3.setVisibility(View.GONE);
-            knownAchievement3.setVisibility(View.VISIBLE);
-            achievement3Progress.setText("10");
+        else if (operation == Operation.BIDS) {
+
         }
     }
 
