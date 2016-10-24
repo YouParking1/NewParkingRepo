@@ -11,10 +11,14 @@ import org.json.JSONObject;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -41,6 +45,7 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_registration);
+
         smake = (Spinner)findViewById(R.id.sMake);
         smodel = (Spinner)findViewById(R.id.sModel);
         syear = (Spinner) findViewById(R.id.sYear);
@@ -182,9 +187,7 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
+    public void onBackPressed() {}
 
     public void saveVehicle(View view)
     {
@@ -193,13 +196,10 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
         syear = (Spinner) findViewById(R.id.sYear);
         scolor = (Spinner)findViewById(R.id.sColor);
 
-        //TODO : Travis Clinkscales - make if/else if statement for each case and have alert for each
         if(smake != null && smake.getSelectedItem() != "Please Select a Make" && smodel != null &&
                 smodel.getSelectedItem() != "Please Select a Model" && syear != null && syear.getSelectedItem() != "Please Select a Year"
                 && scolor != null)
         {
-            //TODO : Travis Clinkscales - PLEASE SELECT A COLOR STILL IS ALLOWED SO FIX IT
-
             String selectedMake = smake.getSelectedItem().toString();
             String selectedModel = smodel.getSelectedItem().toString();
             String selectedYear = syear.getSelectedItem().toString();

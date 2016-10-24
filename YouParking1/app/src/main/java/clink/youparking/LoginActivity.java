@@ -66,7 +66,10 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
     @Override
     public void processFinish(String output) throws JSONException {
 
-        System.out.println("OUTPUT FROM PROCESS LOGIN: " + output);
+        if(output.equals("0"))
+        {
+            Toast.makeText(this, "Wrong email. Please try again.", Toast.LENGTH_SHORT).show();
+        }
 
         JSONObject jsonObject = new JSONObject(output);
         String strLoginID = jsonObject.optString("Email");

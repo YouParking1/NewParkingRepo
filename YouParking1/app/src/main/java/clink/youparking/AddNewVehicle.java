@@ -179,9 +179,7 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
+    public void onBackPressed() {}
 
     public void saveVehicle(View view)
     {
@@ -190,7 +188,6 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
         syear = (Spinner) findViewById(R.id.sYear);
         scolor = (Spinner)findViewById(R.id.sColor);
 
-        //TODO : Travis Clinkscales - make if/else if statement for each case and have alert for each
         if(smake != null && smake.getSelectedItem() != "Please Select a Make" && smodel != null &&
                 smodel.getSelectedItem() != "Please Select a Model" && syear != null && syear.getSelectedItem() != "Please Select a Year"
                 && scolor != null)
@@ -208,12 +205,7 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
         }
         else
         {
-            Context context = getApplicationContext();
-            CharSequence text = "Must select a choice for all fields!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
+            Toast.makeText(getApplicationContext(), "Must select a choice for all fields!", Toast.LENGTH_SHORT).show();
         }
     }
 

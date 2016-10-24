@@ -1,11 +1,14 @@
 package clink.youparking;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.view.View;
 import android.widget.Toast;
 
@@ -37,17 +40,31 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
         if (role.equals("Buyer")) {
             setContentView(R.layout.activity_found_spot);
 
+            Typeface titleFont = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+            SpannableString s = new SpannableString("YOUPARKING");
+            s.setSpan(new CustomTypefaceSpan("", titleFont), 0, s.length(),
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+            toolbar.setTitle(s);
+            setSupportActionBar(toolbar);
+
             int carID = User.spots.get(spotID).getHolder_car();
 
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
             backgroundWorker.delegate = this;
             backgroundWorker.execute("getVehicleByID", Integer.toString(carID));
         }
-        else if (role.equals("Holder"))
+        else if (role.equals("Holder")) {
             setContentView(R.layout.activity_holding_spot);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+            Typeface titleFont = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+            SpannableString s = new SpannableString("YOUPARKING");
+            s.setSpan(new CustomTypefaceSpan("", titleFont), 0, s.length(),
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+            toolbar.setTitle(s);
+            setSupportActionBar(toolbar);
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_confirm);
 
@@ -94,23 +111,6 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
         intent.putExtra("transID", transactionID);
         intent.putExtra("role", role);
         startActivity(intent);
-
-//        if(role.equals("Holder") && transactionID.length() > 0)
-//        {
-//            Intent intent = new Intent(this, HoldSpotProblemActivity.class);
-//            intent.putExtra("transID", transactionID);
-//            startActivity(intent);
-//        }
-//        else if(role.equals("Buyer"))
-//        {
-//            Intent intent = new Intent(this, FindNowProblemActivity.class);
-//            intent.putExtra("transID", transactionID);
-//            startActivity(intent);
-//        }
-//        else
-//        {
-//            Toast.makeText(this, "Nope", Toast.LENGTH_SHORT).show();
-//        }
     }
 
     public void setTransactionID(String transactionID) {
@@ -139,8 +139,6 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
 
         otherVehicle = new Vehicles(id, make, model, year, color);
         foundVehicle = true;
-
-
     }
 
     public void getVehicleDetails(View view) {

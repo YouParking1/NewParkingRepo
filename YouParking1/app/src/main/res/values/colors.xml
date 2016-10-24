@@ -12,7 +12,6 @@
     <color name="colorAccent">#3F51B5</color>
 
     <string-array name="vehicleColor">
-        <item>Please Select a Color</item>
         <item>White</item>
         <item>Black</item>
         <item>Silver</item>

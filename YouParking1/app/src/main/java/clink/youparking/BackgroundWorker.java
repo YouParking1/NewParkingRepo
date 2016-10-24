@@ -947,14 +947,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
     protected void onPreExecute() {
         super.onPreExecute();
 
-        alertDialog = new AlertDialog.Builder(context).create();
-        alertDialog.setTitle("Status");
+//        alertDialog = new AlertDialog.Builder(context).create();
+//        alertDialog.setTitle("Status");
     }
 
     @Override
     protected void onPostExecute(String result) {
-        alertDialog.setMessage(result);
-        alertDialog.show();
+//        alertDialog.setMessage(result);
+//        alertDialog.show();
         try {
             delegate.processFinish(result);
 

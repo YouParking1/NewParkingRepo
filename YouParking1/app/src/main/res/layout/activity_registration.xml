@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fillViewport="true">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -12,14 +14,18 @@
         <!--  Header  Starts-->
         <LinearLayout android:id="@+id/header"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-            <!-- Logo Start-->
-            <ImageView android:src="@mipmap/ic_youparking_launcher"
-                android:contentDescription="@string/reg_logo"
-                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="150dip" />
-            <!-- Logo Ends -->
+                android:layout_width="match_parent"
+                android:background="?attr/colorPrimary"
+                app:titleTextColor="@color/white">
+
+            </android.support.v7.widget.Toolbar>
+
         </LinearLayout>
 
         <!-- Registration Form -->

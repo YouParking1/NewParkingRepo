@@ -65,9 +65,7 @@ public class UploadVehicleActivity extends AppCompatActivity implements AsyncRes
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
+    public void onBackPressed() {}
 
     public void uploadPhoto(View view)
     {
