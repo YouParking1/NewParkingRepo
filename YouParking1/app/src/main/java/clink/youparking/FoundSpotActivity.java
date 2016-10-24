@@ -120,6 +120,12 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
         this.transactionID = transactionID;
     }
 
+    public void setBuyerVehicle(int vehicleID) {
+        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+        backgroundWorker.delegate = this;
+        backgroundWorker.execute("getVehicleByID", Integer.toString(vehicleID));
+    }
+
     public String getTransactionID() {
         return transactionID;
     }

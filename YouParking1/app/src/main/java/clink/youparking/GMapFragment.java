@@ -78,6 +78,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
     private String transId = "";
     private boolean sentId = false;
+    private int bVehicle = 0;
 
     private int spotID = -1;
 
@@ -501,6 +502,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                 jsonSend.put("LONG", newLong);
                 if (mapType.equals("BOUGHT")) {
                     jsonSend.put("ID", transId);
+                    jsonSend.put("V", User.finderVehicleID);
                 }
             } catch (JSONException e) {
                 throw new RuntimeException(e);
@@ -558,8 +560,10 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                     try {
                         newLat = data.getDouble("LAT");
                         newLong = data.getDouble("LONG");
-                        if (mapType.equals("HOLDING") && !sentId)
+                        if (mapType.equals("HOLDING") && !sentId) {
                             transId = data.getString("ID");
+                            bVehicle = data.getInt("V");
+                        }
 
 
                     } catch (JSONException e) {
@@ -571,6 +575,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
                         if (waiting != null && waiting.isShowing() && mapType.equals("HOLDING")) {
                             ((FoundSpotActivity)getActivity()).setTransactionID(transId);
+                            ((FoundSpotActivity)getActivity()).setBuyerVehicle(bVehicle);
                             waiting.dismiss();
                         }
                         else if (waiting != null && waiting.isShowing() && mapType.equals("BIDCLAIM")) {
