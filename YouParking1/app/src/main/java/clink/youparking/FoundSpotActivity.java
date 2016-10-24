@@ -37,9 +37,6 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
         if (role.equals("Buyer")) {
             setContentView(R.layout.activity_found_spot);
 
-            ChooseVehicleDialog dialog = new ChooseVehicleDialog();
-            dialog.show(this.getFragmentManager(), "TAG");
-
             int carID = User.spots.get(spotID).getHolder_car();
 
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
@@ -93,7 +90,7 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
         backgroundWorker.delegate = this;
         backgroundWorker.execute("BuyNowComplete", transactionID);
 
-        Intent intent = new Intent(this, HoldSpotProblemActivity.class);
+        Intent intent = new Intent(this, ProblemActivity.class);
         intent.putExtra("transID", transactionID);
         intent.putExtra("role", role);
         startActivity(intent);

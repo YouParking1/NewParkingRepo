@@ -100,8 +100,8 @@ public class FindNowFragment extends Fragment implements AsyncResponse {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        ChooseVehicleDialog dialog = new ChooseVehicleDialog();
-//        dialog.show(getActivity().getFragmentManager(), "TAG");
+        ChooseVehicleDialog dialog = new ChooseVehicleDialog();
+        dialog.show(getActivity().getFragmentManager(), "TAG");
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
         backgroundWorker.delegate = this;

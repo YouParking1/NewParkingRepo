@@ -409,7 +409,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
     public void processFinish(String output) throws JSONException {
 
         if (operation == Operation.CANCEL) {
-            if (output.contains("0")) {
+            if (output.equals("0")) {
 
             } else {
                 if (User.mSocket != null) {
@@ -575,6 +575,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
                         if (waiting != null && waiting.isShowing() && mapType.equals("HOLDING")) {
                             ((FoundSpotActivity)getActivity()).setTransactionID(transId);
+                            System.out.println(transId + " (*)(*()*)(*)(*)*)(*)");
                             ((FoundSpotActivity)getActivity()).setBuyerVehicle(bVehicle);
                             waiting.dismiss();
                         }
