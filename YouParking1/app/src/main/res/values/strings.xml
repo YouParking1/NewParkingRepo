@@ -38,10 +38,10 @@
 
     <!-- Home Page -->
     <string name="home_welcome"><u>Welcome, User User</u></string>
-    <string name="home_spots_text"><u>Spots</u></string>
+    <string name="home_spots_text"><u>Spots On Campus:</u></string>
     <string name="home_spots_number">0</string>
-    <string name="home_stats_text"><u>Statistics</u></string>
-    <string name="home_achievements_text"><u>Achievements</u></string>
+    <string name="home_stats_text"><u>Statistics:</u></string>
+    <string name="home_achievements_text"><u>Achievements:</u></string>
 
     <!-- Map Strings -->
     <string name="title_activity_general_map">Map Location</string>

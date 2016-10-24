@@ -4,10 +4,11 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="colorPrimary">#3F51B5</color>
+    <color name="darkblue">#1F2440</color>
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
     <!--<color name="colorAccent">#800080</color>-->
 
-    <color name="colorPrimaryDark">#5C6BC0</color>
+    <color name="colorPrimaryDark">#1F2440</color>
     <color name="colorAccent">#3F51B5</color>
 
     <string-array name="vehicleColor">

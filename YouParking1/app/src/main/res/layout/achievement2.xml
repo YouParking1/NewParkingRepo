@@ -16,7 +16,7 @@
         android:text="Find 5 Spots"
         android:id="@+id/textView8"
         android:layout_gravity="center_horizontal"
-        android:textColor="#000" />
+        android:textColor="#fff" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -45,18 +45,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/achievement2_progress"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:text="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:text=" / "/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/achievement2_goal"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:text="5" />
 
     </LinearLayout>
