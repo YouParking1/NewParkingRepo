@@ -114,7 +114,6 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
                 RadioButton rb = (RadioButton) group.findViewById(checkedId);
                 if(rb != null && checkedId > -1){
                     getImage(User.vehicles.get(checkedId).getId());
-                    vehicleImage.setVisibility(View.VISIBLE);
                     holdBtn.setId(User.vehicles.get(checkedId).getId());
                 }
             }
@@ -144,7 +143,15 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
             protected void onPostExecute(Bitmap b) {
                 super.onPostExecute(b);
                 loading.dismiss();
-                vehicleImage.setImageBitmap(b);
+                if(b == null)
+                {
+                    vehicleImage.setVisibility(View.GONE);
+                }
+                else
+                {
+                    vehicleImage.setImageBitmap(b);
+                    vehicleImage.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override

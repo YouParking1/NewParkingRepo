@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     tools:context="clink.youparking.HoldLaterFragment">
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,15 +86,39 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp" />
 
-        </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:textSize="16dp"
+                android:text="Please select your current vehicle:" />
 
-    <Button
-        android:id="@+id/holdSpotLaterBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hold Spot Later"
-        android:onClick="onHoldLater"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/populate_vehicle_choices_hold_later"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/imageVehicleChoice"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/holdSpotLaterBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hold For Later"
+                android:onClick="onHoldLater"
+                android:layout_marginTop="35dp"/>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

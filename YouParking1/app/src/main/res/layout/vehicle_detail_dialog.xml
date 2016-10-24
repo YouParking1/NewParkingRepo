@@ -11,5 +11,4 @@
         android:id="@+id/vehicleImage3"
         android:visibility="gone"/>
 
-
 </LinearLayout>

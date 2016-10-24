@@ -133,15 +133,22 @@ public class DynamicVehicle extends Fragment {
             protected void onPostExecute(Bitmap b) {
                 super.onPostExecute(b);
                 loading.dismiss();
-                vehicleImage.setImageBitmap(b);
+
+                if(b == null)
+                {
+                    vehicleImage.setVisibility(View.GONE);
+                }
+                else
+                {
+                    vehicleImage.setImageBitmap(b);
+                    vehicleImage.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
             protected Bitmap doInBackground(String... params) {
                 String id = params[0];
                 String add = "http://www.troyparking.com/getImage.php?id="+id;
-
-                System.out.println("Link with id:" + add);
 
                 URL url = null;
                 Bitmap image = null;

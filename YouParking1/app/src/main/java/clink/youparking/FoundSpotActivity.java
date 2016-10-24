@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,6 +36,9 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
 
         if (role.equals("Buyer")) {
             setContentView(R.layout.activity_found_spot);
+
+            ChooseVehicleDialog dialog = new ChooseVehicleDialog();
+            dialog.show(this.getFragmentManager(), "TAG");
 
             int carID = User.spots.get(spotID).getHolder_car();
 
@@ -89,25 +93,27 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
         backgroundWorker.delegate = this;
         backgroundWorker.execute("BuyNowComplete", transactionID);
 
-//        Intent intent = new Intent(this, MainActivity.class);
-//        startActivity(intent);
-//        finish();
+        Intent intent = new Intent(this, HoldSpotProblemActivity.class);
+        intent.putExtra("transID", transactionID);
+        intent.putExtra("role", role);
+        startActivity(intent);
 
-        if(role.equals("Holder") && transactionID.length() > 0)
-        {
-            Intent intent = new Intent(this, HoldSpotProblemActivity.class);
-            intent.putExtra("transID", transactionID);
-            startActivity(intent);
-        }
+//        if(role.equals("Holder") && transactionID.length() > 0)
+//        {
+//            Intent intent = new Intent(this, HoldSpotProblemActivity.class);
+//            intent.putExtra("transID", transactionID);
+//            startActivity(intent);
+//        }
 //        else if(role.equals("Buyer"))
 //        {
-//            FragmentManager fragmentManager = getSupportFragmentManager();
-//            fragmentManager.beginTransaction().replace(R.id.flContent, new FindSpotProblemFragment()).commit();
+//            Intent intent = new Intent(this, FindNowProblemActivity.class);
+//            intent.putExtra("transID", transactionID);
+//            startActivity(intent);
 //        }
-        else
-        {
-
-        }
+//        else
+//        {
+//            Toast.makeText(this, "Nope", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     public void setTransactionID(String transactionID) {

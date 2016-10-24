@@ -1,8 +1,8 @@
 package clink.youparking;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -11,21 +11,24 @@ import android.widget.Toast;
 
 import org.json.JSONException;
 
-public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncResponse {
+public class FindNowProblemActivity extends AppCompatActivity implements AsyncResponse {
 
     RadioGroup radioGroup1, radioGroup2;
     RadioButton rb1, rb2;
     String transactionID;
+    EditText commentsField;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hold_spot_problem);
+        setContentView(R.layout.activity_find_now_problem);
+
+        commentsField = (EditText)findViewById(R.id.findProblemComments);
 
         Bundle extras = getIntent().getExtras();
         transactionID = extras.getString("transID");
 
-        radioGroup1 = (RadioGroup)findViewById(R.id.question1Holdgroup);
+        radioGroup1 = (RadioGroup)findViewById(R.id.question1Findgroup);
         radioGroup1.clearCheck();
         radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -37,7 +40,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
             }
         });
 
-        radioGroup2 = (RadioGroup)findViewById(R.id.question2Holdgroup);
+        radioGroup2 = (RadioGroup)findViewById(R.id.question2Findgroup);
         radioGroup2.clearCheck();
         radioGroup2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -50,9 +53,9 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
         });
     }
 
-    public void goToMainFromHold(View view)
+    public void goToMainFromFind(View view)
     {
-        EditText commentsField = (EditText)findViewById(R.id.holdProblemComments);
+        EditText commentsField = (EditText)findViewById(R.id.findProblemComments);
         String comments = commentsField.getText().toString();
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);

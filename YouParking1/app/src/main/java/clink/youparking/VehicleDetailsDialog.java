@@ -81,7 +81,16 @@ public class VehicleDetailsDialog extends DialogFragment implements AsyncRespons
             protected void onPostExecute(Bitmap b) {
                 super.onPostExecute(b);
                 loading.dismiss();
-                vehicleImage3.setImageBitmap(b);
+
+                if(b == null)
+                {
+                    vehicleImage3.setVisibility(View.GONE);
+                }
+                else
+                {
+                    vehicleImage3.setImageBitmap(b);
+                    vehicleImage3.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override

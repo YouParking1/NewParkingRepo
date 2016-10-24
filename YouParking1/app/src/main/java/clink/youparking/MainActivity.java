@@ -287,7 +287,6 @@ public class MainActivity extends AppCompatActivity
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.delegate = this;
-
         backgroundWorker.execute("hold", choice, Integer.toString(view.getId()), Double.toString(User.myLocation.latitude),
                 Double.toString(User.myLocation.longitude), holdComments);
     }
@@ -304,9 +303,7 @@ public class MainActivity extends AppCompatActivity
 
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
             backgroundWorker.delegate = this;
-
-            //TODO: Travis Clinkscales - Change the second argument to something else
-            backgroundWorker.execute("hold_later", points, Long.toString(User.time), "1", Double.toString(User.myLocation.latitude),
+            backgroundWorker.execute("hold_later", points, Long.toString(User.time), Integer.toString(User.holderVehicleID), Double.toString(User.myLocation.latitude),
                     Double.toString(User.myLocation.longitude), holdLaterComments);
 
             User.time = 0;
@@ -425,6 +422,7 @@ public class MainActivity extends AppCompatActivity
         operation = Operation.BUY;
 
         if (User.points >= User.spots.get(view.getId()).getPoints()) {
+
             bought_spot_id = view.getId();
 
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);

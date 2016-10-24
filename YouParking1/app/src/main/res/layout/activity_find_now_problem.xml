@@ -1,8 +1,15 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_find_now_problem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="clink.youparking.HoldSpotProblemActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="clink.youparking.FindNowProblemActivity">
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -20,10 +27,10 @@
                 android:layout_marginTop="20sp">
 
                 <TextView
-                    android:id="@+id/problemHoldTitle"
+                    android:id="@+id/problemFindTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Problems while Holding?"
+                    android:text="Problems while Finding?"
                     android:textSize="30sp"
                     android:textColor="@color/black"
                     android:textAlignment="center"/>
@@ -39,27 +46,27 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Did the finder arrive?"
+                    android:text="Was the holder at the specified location?"
                     android:textSize="20sp"
                     android:layout_marginBottom="10sp"
                     android:textAlignment="center"
                     android:textColor="@color/black"/>
 
                 <RadioGroup
-                    android:id="@+id/question1Holdgroup"
+                    android:id="@+id/question1Findgroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <RadioButton
-                        android:id="@+id/holdRadioBtn1Yes"
+                        android:id="@+id/findRadioBtn1Yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Yes"
                         android:layout_marginRight="20sp"/>
 
                     <RadioButton
-                        android:id="@+id/holdRadioBtn1No"
+                        android:id="@+id/findRadioBtn1No"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="No"
@@ -86,20 +93,20 @@
                     android:textColor="@color/black"/>
 
                 <RadioGroup
-                    android:id="@+id/question2Holdgroup"
+                    android:id="@+id/question2Findgroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <RadioButton
-                        android:id="@+id/holdRadioBtn2Yes"
+                        android:id="@+id/findRadioBtn2Yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Yes"
                         android:layout_marginRight="20sp"/>
 
                     <RadioButton
-                        android:id="@+id/holdRadioBtn2No"
+                        android:id="@+id/findRadioBtn2No"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="No"
@@ -118,7 +125,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add any additional comments that pertain to the problem you had with the finder."
+                    android:text="Add any additional comments that pertain to the problem you had with the holder."
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
                     android:paddingTop="16dp"/>
@@ -126,7 +133,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:id="@+id/holdProblemComments"
+                    android:id="@+id/findProblemComments"
                     android:layout_gravity="center_horizontal"
                     android:hint="Additional Comments"
                     android:layout_marginLeft="16dp"
@@ -141,11 +148,11 @@
                 android:layout_marginTop="50sp">
 
                 <Button
-                    android:id="@+id/holdThanksBtn"
+                    android:id="@+id/findThanksBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Thank you!"
-                    android:onClick="goToMainFromHold"/>
+                    android:onClick="goToMainFromFind"/>
 
             </LinearLayout>
 
@@ -153,4 +160,4 @@
 
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>

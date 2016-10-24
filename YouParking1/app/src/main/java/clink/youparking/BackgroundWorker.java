@@ -358,9 +358,9 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 String post_data = URLEncoder.encode("email", "UTF-8")+"="+URLEncoder.encode(email, "UTF-8")+"&"
                         +URLEncoder.encode("points", "UTF-8")+"="+URLEncoder.encode(points, "UTF-8")+"&"
                         +URLEncoder.encode("car", "UTF-8")+"="+URLEncoder.encode(car, "UTF-8")+"&"
-                        +URLEncoder.encode("comments", "UTF-8")+"="+URLEncoder.encode(comments, "UTF-8")+"&"
                         +URLEncoder.encode("latitude", "UTF-8")+"="+URLEncoder.encode(latitude, "UTF-8")+"&"
                         +URLEncoder.encode("longitude", "UTF-8")+"="+URLEncoder.encode(longitude, "UTF-8")+"&"
+                        +URLEncoder.encode("comments", "UTF-8")+"="+URLEncoder.encode(comments, "UTF-8")+"&"
                         +URLEncoder.encode("school", "UTF-8")+"="+URLEncoder.encode(school, "UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
@@ -651,8 +651,9 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-                String post_data = URLEncoder.encode("transactionID", "UTF-8")+"="+URLEncoder.encode(transactionID, "UTF-8")
-                        +URLEncoder.encode("comments", "UTF-8")+"="+URLEncoder.encode(comments, "UTF-8");                bufferedWriter.write(post_data);
+                String post_data = URLEncoder.encode("transactionID", "UTF-8")+"="+URLEncoder.encode(transactionID, "UTF-8")+"&"
+                        +URLEncoder.encode("comments", "UTF-8")+"="+URLEncoder.encode(comments, "UTF-8");
+                bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
                 outputStream.close();

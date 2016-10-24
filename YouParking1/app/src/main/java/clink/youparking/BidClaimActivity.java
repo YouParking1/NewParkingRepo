@@ -18,7 +18,7 @@ public class BidClaimActivity extends AppCompatActivity implements AsyncResponse
     private String role = "NONE";
 
     Vehicles otherVehicle;
-    boolean foundVehicle;
+    boolean foundVehicle = false;
 
     enum Operation {
         GETVEHICLE, GETVEHICLEID, ENDTRANS, NONE
@@ -28,6 +28,8 @@ public class BidClaimActivity extends AppCompatActivity implements AsyncResponse
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        System.out.println("HELD LATER: " + User.heldLater.getHolder_car());
 
         if (User.heldLater.getHolder_email().equals(User.email)) {
             role = "HOLDER";
