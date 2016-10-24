@@ -12,7 +12,8 @@ import android.view.View;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class BidClaimActivity extends AppCompatActivity implements AsyncResponse, BidClaimFragment.OnFragmentInteractionListener{
+public class BidClaimActivity extends AppCompatActivity implements AsyncResponse, BidClaimFragment.OnFragmentInteractionListener,
+    GMapFragment.OnFragmentInteractionListener{
 
     private String role = "NONE";
 

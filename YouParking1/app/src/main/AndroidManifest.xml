@@ -86,7 +86,9 @@
         <activity
             android:name=".BidClaimActivity"
             android:label="@string/title_activity_bid_claim"
-            android:theme="@style/AppBaseTheme"></activity>
+            android:theme="@style/AppBaseTheme"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -243,7 +243,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
             User.mSocket.connect();
             User.mSocket.on("message", onNewMessage);
             User.mSocket.emit("login", User.email);
-            User.mSocket.emit("joinRoom", getArguments().getString("HOLDER"));
+            User.mSocket.emit("joinRoom", User.heldLater.getHolder_email());
 
             waiting = new ProgressDialog(getContext());
             waiting.setTitle("Waiting...");
@@ -492,7 +492,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
     public void onLocationChanged(Location location) {
         jsonSend = new JSONObject();
 
-        if (mapType.equals("BOUGHT") || mapType.equals("HOLDING")) {
+        if (mapType.equals("BOUGHT") || mapType.equals("HOLDING") || mapType.equals("BIDCLAIM")) {
             double newLat = location.getLatitude();
             double newLong = location.getLongitude();
 
