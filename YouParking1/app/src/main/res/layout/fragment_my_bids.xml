@@ -1,8 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="clink.youparking.MyBidsFragment">
+    tools:context="clink.youparking.MyBidsFragment"
+    android:orientation="vertical">
 
 
     <LinearLayout
@@ -20,6 +21,23 @@
             android:layout_gravity="center"/>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bidding closes on a spot 1 hour before departure time. If a spot shows up and states it has less than one hours, you won the bid."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Any points bid will be returned if you are out bid during the bidding process."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="If you win a bid, a link to claim your spot will become available on your homepage 5 minutes before depart time."/>
+    </LinearLayout>
 
 
-</RelativeLayout>
+</LinearLayout>

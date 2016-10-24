@@ -83,6 +83,10 @@
         <activity android:name=".UploadVehicleActivity" />
         <activity android:name=".AddNewVehicle" />
         <activity android:name=".HoldSpotProblemActivity" />
+        <activity
+            android:name=".BidClaimActivity"
+            android:label="@string/title_activity_bid_claim"
+            android:theme="@style/AppBaseTheme"></activity>
     </application>
 
 </manifest>

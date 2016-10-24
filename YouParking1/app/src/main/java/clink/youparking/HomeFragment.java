@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -34,6 +35,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
     private String mParam1;
     private String mParam2;
 
+    LinearLayout auctionend;
     enum Operation {
         ACHIEVEMENT, BIDS, NONE
     }
@@ -90,6 +92,8 @@ public class HomeFragment extends Fragment implements AsyncResponse {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        auctionend = (LinearLayout) getView().findViewById(R.id.auction_hide_layout);
 
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/college.ttf");
 
@@ -195,9 +199,25 @@ public class HomeFragment extends Fragment implements AsyncResponse {
                 knownAchievement3.setVisibility(View.VISIBLE);
                 achievement3Progress.setText("10");
             }
+
+            operation = Operation.BIDS;
+            BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
+            backgroundWorker.delegate = this;
+            backgroundWorker.execute("findclosingbids");
         }
         else if (operation == Operation.BIDS) {
+            if (output.equals("-1")) {
 
+            }
+            else {
+                JSONObject jsonObject = new JSONObject(output);
+                User.heldLater = new SpotLater(jsonObject.getDouble("Latitude"), jsonObject.getDouble("Longitude"),
+                        jsonObject.getInt("StartPoints"), jsonObject.getInt("CurrentCar"), jsonObject.getString("Email"),
+                        jsonObject.getString("Comments"), jsonObject.getInt("Holder_Percentage"),
+                        jsonObject.getInt("Holder_Spots"), jsonObject.getInt("DepartTime"), jsonObject.getInt("Spot_ID"),
+                        0, jsonObject.getString("Buyer"));
+                auctionend.setVisibility(View.VISIBLE);
+            }
         }
     }
 

@@ -1,6 +1,7 @@
 package clink.youparking;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -114,18 +115,40 @@ public class MyBidsFragment extends Fragment implements AsyncResponse {
 
     @Override
     public void processFinish(String output) throws JSONException {
-        JSONArray jsonArray = new JSONArray(output);
-        int winningBids = jsonArray.length();
-        int [] pointArr = new int[winningBids];
-        long [] departs = new long[winningBids];
-
-
-        for (int i = 0; i < winningBids; i++) {
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
+        if (output.equals("-1")) {
             TextView textView = new TextView(getContext());
-            String desc = ("" + jsonObject.getLong("DepartTime") + " Points: " + jsonObject.getInt("Points"));
-            textView.setText(desc);
+            textView.setText("You have no active bids!");
+            textView.setTextColor(Color.BLACK);
             linearLayout.addView(textView);
+        }
+        else {
+            JSONArray jsonArray = new JSONArray(output);
+            int winningBids = jsonArray.length();
+            int[] pointArr = new int[winningBids];
+            long[] departs = new long[winningBids];
+
+
+            for (int i = 0; i < winningBids; i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                TextView textView = new TextView(getContext());
+                textView.setTextColor(Color.BLACK);
+
+                long now = System.currentTimeMillis() / 1000;
+                long departtime = jsonObject.getLong("DepartTime");
+                long diff = departtime - now;
+                long hours = diff / 3600;
+                long minutes = (diff - (hours * 3600)) / 60;
+
+                String desc = ("Departs in " + hours + "Hours and " + minutes + " Minutes");
+                textView.setText(desc);
+
+                TextView points = new TextView(getContext());
+                points.setText("Your Bid: " + jsonObject.getInt("Points"));
+                points.setTextColor(Color.BLACK);
+
+                linearLayout.addView(textView);
+                linearLayout.addView(points);
+            }
         }
     }
 

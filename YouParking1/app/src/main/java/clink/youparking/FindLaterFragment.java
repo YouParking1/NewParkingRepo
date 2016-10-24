@@ -157,7 +157,6 @@ public class FindLaterFragment extends Fragment implements AsyncResponse {
                 else {
                     bidPoints = jsonObject.getInt("Points");
                     buyer = jsonObject.getString("Buyer");
-                    System.out.println("*(*()*)*)(*)(*)(*)(*)  THAT WORKED!!!!!");
                 }
 
                 User.spots.add(new SpotLater(jsonObject.getDouble("Latitude"), jsonObject.getDouble("Longitude"),

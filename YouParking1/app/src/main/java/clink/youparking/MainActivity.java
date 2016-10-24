@@ -406,12 +406,12 @@ public class MainActivity extends AppCompatActivity
         }
         else if (operation == Operation.BID) {
             if (output.equals("200")) {
-                System.out.println("EVERYTHING IS OKAY!");
+
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
             }
             else if (output.equals("-1")) {
-                System.out.println("SOMETHING WENT WRONG");
+
             }
         }
     }
@@ -519,6 +519,11 @@ public class MainActivity extends AppCompatActivity
 
     public void setValidTime(Boolean bool) {
         validHoldLaterTime = bool;
+    }
+
+    public void joinHeldSpot(View view) {
+        Intent intent = new Intent(this, BidClaimActivity.class);
+        startActivity(intent);
     }
 
 

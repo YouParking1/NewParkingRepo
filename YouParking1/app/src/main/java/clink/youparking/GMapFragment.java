@@ -226,6 +226,37 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
 
         }
+        else if (mapType.equals("BIDCLAIM")) {
+            User.mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+
+            mLocationRequest = LocationRequest.create()
+                    .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                    .setInterval(10 * 1000)
+                    .setFastestInterval(1 * 1000);
+
+            currentLoc = new LatLng(User.heldLater.getLatitude(), User.heldLater.getLongitude());
+
+            User.mSocket.connect();
+            User.mSocket.on("message", onNewMessage);
+            User.mSocket.emit("login", User.email);
+            User.mSocket.emit("joinRoom", getArguments().getString("HOLDER"));
+
+            waiting = new ProgressDialog(getContext());
+            waiting.setTitle("Waiting...");
+            waiting.setMessage("Waiting For Other Party To Join");
+            waiting.setCanceledOnTouchOutside(false);
+            waiting.setButton(DialogInterface.BUTTON_NEGATIVE, "Close", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    waiting.dismiss();
+                }
+            });
+            waiting.show();
+        }
         else {
             // TODO: ADD CODE FOR FINDING SCHOOLS LOCATION AND SETTING CENTRAL VIEW TO THOSE COORDINATES
         }
@@ -297,7 +328,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(User.mGoogleApiClient);
         myLat = mLastLocation.getLatitude();
         myLong = mLastLocation.getLongitude();
-        if (mapType.equals("BOUGHT") || mapType.equals("HOLDING")) {
+        if (mapType.equals("BOUGHT") || mapType.equals("HOLDING") || mapType.equals("BIDCLAIM")) {
             //IF BOUGHT OR HOLDING, DON'T DISABLE LOCATION UPDATES
         }
         else {
@@ -360,6 +391,17 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
             mMap.animateCamera(CameraUpdateFactory.zoomTo(16.0f));
             initializeMap();
         }
+        else if (mapType.equals("BIDCLAIM")) {
+            holdLat = User.heldLater.getLatitude();
+            holdLong = User.heldLater.getLongitude();
+
+            LatLng loc = new LatLng(holdLat, holdLong);
+
+            mMap.addMarker(new MarkerOptions().position(loc).title("SPOT LOCATION"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(16.0f));
+            initializeMap();
+        }
     }
 
     @Override
@@ -413,7 +455,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
     @Override
     public void onStart() {
-        if (mapType.equals("HOLD") || mapType.equals("BOUGHT") || mapType.equals("HOLDING"))
+        if (mapType.equals("HOLD") || mapType.equals("BOUGHT") || mapType.equals("HOLDING") || mapType.equals("BIDCLAIM"))
             User.mGoogleApiClient.connect();
         super.onStart();
     }
@@ -527,8 +569,11 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                     if (!sentId) {
                         sentId = true;
 
-                        if (waiting != null && waiting.isShowing()) {
+                        if (waiting != null && waiting.isShowing() && mapType.equals("HOLDING")) {
                             ((FoundSpotActivity)getActivity()).setTransactionID(transId);
+                            waiting.dismiss();
+                        }
+                        else if (waiting != null && waiting.isShowing() && mapType.equals("BIDCLAIM")) {
                             waiting.dismiss();
                         }
                     }

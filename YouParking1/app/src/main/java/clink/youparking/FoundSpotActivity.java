@@ -121,7 +121,6 @@ public class FoundSpotActivity extends AppCompatActivity implements HoldingMapFr
     @Override
     public void processFinish(String output) throws JSONException {
 
-        System.out.println("WE ARE IN HERE!!! ()()()()()()()()()()()()");
         JSONObject jsonObject = new JSONObject(output);
         int id = jsonObject.getInt("id");
         String make = jsonObject.getString("Make");
