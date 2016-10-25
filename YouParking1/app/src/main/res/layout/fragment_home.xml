@@ -8,7 +8,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/notebackground">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -56,7 +57,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
-                                android:textSize="20dp"
+                                android:textSize="30dp"
+                                android:id="@+id/open_spots_text"
                                 android:text="Open Spots:"
                                 android:fontFamily="casual"/>
 
@@ -71,7 +73,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
-                                android:textSize="20dp"
+                                android:id="@+id/open_bids_text"
+                                android:textSize="30dp"
                                 android:text="Open Bids:"
                                 android:fontFamily="casual"/>
                         </LinearLayout>
@@ -93,7 +96,7 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/find_now_spots_available"
                                 android:textColor="@color/white"
-                                android:textSize="20dp"
+                                android:textSize="30dp"
                                 android:fontFamily="casual"
                                 android:text="0"/>
 
@@ -110,7 +113,7 @@
                                 android:id="@+id/find_later_spots_available"
                                 android:textColor="@color/white"
                                 android:fontFamily="casual"
-                                android:textSize="20dp"
+                                android:textSize="30dp"
                                 android:text="0"/>
                         </LinearLayout>
 
@@ -121,7 +124,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:background="@drawable/notebackground">
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -139,7 +142,7 @@
                             android:fontFamily="casual"
                             android:layout_gravity="center"
                             android:textStyle="bold"
-                            android:textSize="20dp"
+                            android:textSize="30dp"
                             android:textColor="@color/colorPrimary"/>
 
 
@@ -159,7 +162,7 @@
                             android:id="@+id/spotsHeldText"
                             android:fontFamily="casual"
                             android:textStyle="bold"
-                            android:textSize="15dp"
+                            android:textSize="25dp"
                             android:textColor="@color/colorPrimary"/>
                         <TextView
                             android:layout_width="0dp"
@@ -169,7 +172,7 @@
                             android:text="1"
                             android:fontFamily="casual"
                             android:textStyle="bold"
-                            android:textSize="15dp"
+                            android:textSize="25dp"
                             android:textColor="@color/colorPrimary"/>
 
 
@@ -189,7 +192,7 @@
                             android:id="@+id/spotsFoundText"
                             android:fontFamily="casual"
                             android:textStyle="bold"
-                            android:textSize="15dp"
+                            android:textSize="25dp"
                             android:textColor="@color/colorPrimary"/>
                         <TextView
                             android:layout_width="0dp"
@@ -199,67 +202,7 @@
                             android:text="1"
                             android:fontFamily="casual"
                             android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:paddingLeft="30dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Problems Against:"
-                            android:id="@+id/problemsAgainstText"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/stat_problems_against"
-                            android:text="1"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:paddingLeft="30dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Problems Filed:"
-                            android:id="@+id/problemsFiledText"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/stat_problems_filed"
-                            android:text="1"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
+                            android:textSize="25dp"
                             android:textColor="@color/colorPrimary"/>
 
 
@@ -279,7 +222,7 @@
                             android:id="@+id/percentageText"
                             android:fontFamily="casual"
                             android:textStyle="bold"
-                            android:textSize="15dp"
+                            android:textSize="25dp"
                             android:textColor="@color/colorPrimary"/>
                         <TextView
                             android:layout_width="0dp"
@@ -289,7 +232,7 @@
                             android:fontFamily="casual"
                             android:id="@+id/stat_percentage"
                             android:textStyle="bold"
-                            android:textSize="15dp"
+                            android:textSize="25dp"
                             android:textColor="@color/colorPrimary"/>
                         <TextView
                             android:layout_gravity="center"
@@ -300,7 +243,7 @@
                             android:id="@+id/percentSign"
                             android:fontFamily="casual"
                             android:textStyle="bold"
-                            android:textSize="20dp"
+                            android:textSize="25dp"
                             android:textColor="#ff0000"/>
 
 
@@ -308,185 +251,7 @@
 
 
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:background="@drawable/notebackground">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="10dp">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Achievements:"
-                            android:fontFamily="casual"
-                            android:layout_gravity="center"
-                            android:textStyle="bold"
-                            android:textSize="20dp"
-                            android:textColor="@color/colorPrimary"/>
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:paddingLeft="30dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Spots Held:"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="1"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:paddingLeft="30dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Spots Found:"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="1"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:paddingLeft="30dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Problems Against:"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="1"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:paddingLeft="30dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Problems Filed:"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="1"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginBottom="10dp"
-                        android:paddingLeft="30dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="2"
-                            android:layout_height="wrap_content"
-                            android:text="Percentage:"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="100%"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_gravity="center"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="A+"
-                            android:fontFamily="casual"
-                            android:textStyle="bold"
-                            android:textSize="15dp"
-                            android:textColor="#ff0000"/>
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
 
             </LinearLayout>
 

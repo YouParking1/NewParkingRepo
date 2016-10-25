@@ -97,7 +97,8 @@ public class HomeFragment extends Fragment implements AsyncResponse {
 
         //auctionend = (LinearLayout) getView().findViewById(R.id.auction_hide_layout);
 
-        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/college.ttf");
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Writing_Stuff.ttf");
+
 
 //        welcomeMessage = (TextView) getView().findViewById(R.id.welcomeText);
 //        welcomeMessage.setText("Welcome, " + User.fName + " " + User.lName);
@@ -148,12 +149,35 @@ public class HomeFragment extends Fragment implements AsyncResponse {
         //TODO: UNCOMMENT ALL OF THIS TOO!!!!!!!!!!!!!!!!!!!!!!!
 
         if (operation == Operation.ACHIEVEMENT) {
+            Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+
             findNowSpotsAvailable = (TextView) getView().findViewById(R.id.find_now_spots_available);
             findLaterSpotsAvailable = (TextView) getView().findViewById(R.id.find_later_spots_available);
             statSpotsHeld = (TextView) getView().findViewById(R.id.stat_spots_held);
             statsSpotsFound = (TextView) getView().findViewById(R.id.stat_spots_found);
             statPercentage = (TextView) getView().findViewById(R.id.stat_percentage);
             TextView gradeText = (TextView) getView().findViewById(R.id.percentSign);
+            TextView openSpotsText = (TextView) getView().findViewById(R.id.open_spots_text);
+            TextView openBidsText= (TextView) getView().findViewById(R.id.open_bids_text);
+            TextView statText = (TextView) getView().findViewById(R.id.statsText);
+            TextView spotHeldText = (TextView) getView().findViewById(R.id.spotsHeldText);
+            TextView spotFoundText = (TextView) getView().findViewById(R.id.spotsFoundText);
+            TextView percentText = (TextView) getView().findViewById(R.id.percentageText);
+
+            findNowSpotsAvailable.setTypeface(font,Typeface.BOLD);
+            findLaterSpotsAvailable.setTypeface(font,Typeface.BOLD);
+            statSpotsHeld.setTypeface(font,Typeface.BOLD);
+            statsSpotsFound.setTypeface(font,Typeface.BOLD);
+            statPercentage.setTypeface(font,Typeface.BOLD);
+            gradeText.setTypeface(font,Typeface.BOLD);
+            openSpotsText.setTypeface(font,Typeface.BOLD);
+            openBidsText.setTypeface(font,Typeface.BOLD);
+            statText.setTypeface(font,Typeface.BOLD);
+            spotHeldText.setTypeface(font,Typeface.BOLD);
+            spotFoundText.setTypeface(font,Typeface.BOLD);
+            percentText.setTypeface(font,Typeface.BOLD);
+
+
 //            achievement1Progress = (TextView) getView().findViewById(R.id.achievement1_progress);
 //            achievement2Progress = (TextView) getView().findViewById(R.id.achievement2_progress);
 //            achievement3Progress = (TextView) getView().findViewById(R.id.achievement3_progress);
@@ -201,6 +225,8 @@ public class HomeFragment extends Fragment implements AsyncResponse {
             statSpotsHeld.setText(Integer.toString(spotsHeld));
             statsSpotsFound.setText(Integer.toString(spotsFound));
             statPercentage.setText(Integer.toString(percent) + "%");
+
+
 //            achievement1Progress.setText(Integer.toString(spotsHeld));
 //            achievement2Progress.setText(Integer.toString(spotsFound));
 //            achievement3Progress.setText(Integer.toString(spotsHeld));
