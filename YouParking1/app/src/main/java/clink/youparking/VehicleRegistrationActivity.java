@@ -24,6 +24,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class VehicleRegistrationActivity extends AppCompatActivity implements AsyncResponse {
@@ -45,6 +46,18 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_registration);
+
+        Typeface titleFont = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        SpannableString s = new SpannableString("YOUPARKING");
+        s.setSpan(new CustomTypefaceSpan("", titleFont), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar.setTitle(s);
+        setSupportActionBar(toolbar);
+
+        TextView title = (TextView)findViewById(R.id.vehicleRegisterTitle);
+        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        title.setTypeface(font);
 
         smake = (Spinner)findViewById(R.id.sMake);
         smodel = (Spinner)findViewById(R.id.sModel);

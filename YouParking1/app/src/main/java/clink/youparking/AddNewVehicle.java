@@ -2,13 +2,18 @@ package clink.youparking;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -38,6 +43,19 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_registration);
+
+        Typeface titleFont = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        SpannableString s = new SpannableString("YOUPARKING");
+        s.setSpan(new CustomTypefaceSpan("", titleFont), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar.setTitle(s);
+        setSupportActionBar(toolbar);
+
+        TextView title = (TextView)findViewById(R.id.newVehicleTitle);
+        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        title.setTypeface(font);
+
         smake = (Spinner)findViewById(R.id.sMake);
         smodel = (Spinner)findViewById(R.id.sModel);
         syear = (Spinner) findViewById(R.id.sYear);
