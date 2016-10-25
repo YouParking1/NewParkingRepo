@@ -6,321 +6,803 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            tools:context=".MainActivity"
-            android:layout_gravity="start"
-            android:orientation="vertical"
-            android:padding="5dp"
-            android:background="@color/white">
-
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/auction_hide_layout"
-                android:visibility="gone">
-                <TextView
-                    android:id="@+id/auction_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textSize="20dp"
-                    android:text="Your auction win is available!"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <Button
-                    android:layout_width="wrap_content"
+
+
+                <LinearLayout
+                    android:id="@+id/logo_main"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="GET YOUR SPOT"
-                    android:layout_gravity="center"
-                    android:onClick="joinHeldSpot"/>
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/loading_image"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="30dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/shadeLightestBlue">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:text="Open Spots:"
+                                android:fontFamily="casual"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/shadeLighterBlue">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:text="Open Bids:"
+                                android:fontFamily="casual"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/shadeLightestBlue">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/find_now_spots_available"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:fontFamily="casual"
+                                android:text="0"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/shadeLighterBlue">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/find_later_spots_available"
+                                android:textColor="@color/white"
+                                android:fontFamily="casual"
+                                android:textSize="20dp"
+                                android:text="0"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/notebackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/statsText"
+                            android:text="Statistics:"
+                            android:fontFamily="casual"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Spots Held:"
+                            android:id="@+id/spotsHeldText"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stat_spots_held"
+                            android:text="1"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Spots Found:"
+                            android:id="@+id/spotsFoundText"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stat_spots_found"
+                            android:text="1"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Problems Against:"
+                            android:id="@+id/problemsAgainstText"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stat_problems_against"
+                            android:text="1"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Problems Filed:"
+                            android:id="@+id/problemsFiledText"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stat_problems_filed"
+                            android:text="1"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:text="Percentage:"
+                            android:id="@+id/percentageText"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="100%"
+                            android:fontFamily="casual"
+                            android:id="@+id/stat_percentage"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="A+"
+                            android:id="@+id/percentSign"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:textColor="#ff0000"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/notebackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Achievements:"
+                            android:fontFamily="casual"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Spots Held:"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Spots Found:"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Problems Against:"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Problems Filed:"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:text="Percentage:"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="100%"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="A+"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="#ff0000"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/welcomeText"
-                android:text="Welcome, User User"
-                android:textSize="25sp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_marginBottom="5dp"
-                android:layout_gravity="center_horizontal"
-                android:textStyle="bold"/>
+            <!-- BELOW IS OLD STUFF -->
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shape"
+                tools:context=".MainActivity"
+                android:layout_gravity="start"
                 android:orientation="vertical"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:layout_marginBottom="5dp">
+                android:padding="5dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/auction_hide_layout"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/auction_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textSize="20dp"
+                        android:text="Your auction win is available!"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GET YOUR SPOT"
+                        android:layout_gravity="center"
+                        android:onClick="joinHeldSpot"/>
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/home_spots_text"
-                    android:id="@+id/spotsText"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/welcomeText"
+                    android:text="Welcome, User User"
                     android:textSize="25sp"
-                    android:textColor="#FFF"
-                    android:layout_gravity="center_horizontal" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Find Now: "
-                        android:id="@+id/findNowText"
-                        android:textColor="#fff"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/find_now_spots_available"
-                        android:gravity="center_horizontal"
-                        android:textColor="#fff"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Find Later: "
-                        android:id="@+id/findLaterText"
-                        android:textColor="@color/white"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/find_later_spots_available"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/white"/>
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/shape"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:layout_marginBottom="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/home_stats_text"
-                    android:id="@+id/statsText"
-                    android:textSize="25sp"
-                    android:textColor="@color/white"
-                    android:layout_gravity="center_horizontal" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="10dp">
+                    android:background="@drawable/shape"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Spots Held: "
-                        android:id="@+id/spotsHeldText"
-                        android:textColor="@color/white"/>
-                    <TextView
-                        android:layout_width="wrap_content"
+                        android:text="@string/home_spots_text"
+                        android:id="@+id/spotsText"
+                        android:textSize="25sp"
+                        android:textColor="#FFF"
+                        android:layout_gravity="center_horizontal" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/stat_spots_held"
+                        android:orientation="horizontal"
                         android:gravity="center_horizontal"
-                        android:textColor="@color/white"/>
+                        android:layout_marginTop="10dp">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Find Now: "
+                            android:id="@+id/findNowText"
+                            android:textColor="#fff"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:id="@+id/find_now_spots_available"
+                            android:gravity="center_horizontal"
+                            android:textColor="#fff"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Find Later: "
+                            android:id="@+id/findLaterText"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:id="@+id/find_later_spots_available"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Spots Found: "
-                        android:id="@+id/spotsFoundText"
-                        android:textColor="@color/white"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/stat_spots_found"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/white"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Problems Against: "
-                        android:id="@+id/problemsAgainstText"
-                        android:textColor="@color/white"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/stat_problems_against"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/white"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Problems Filed: "
-                        android:id="@+id/problemsFiledText"
-                        android:textColor="@color/white"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/stat_problems_filed"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/white"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Percentage: "
-                        android:id="@+id/percentageText"
-                        android:textColor="@color/white"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/stat_percentage"
-                        android:gravity="center_horizontal"
-                        android:textColor="#fff"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text=" %"
-                        android:id="@+id/percentSign"
-                        android:gravity="center_horizontal"
-                        android:textColor="#fff"/>
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/shape"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:layout_marginBottom="5dp">
-                <TextView
-                    android:id="@+id/achievementText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/home_achievements_text"
-                    android:textColor="#fff"
-                    android:textSize="25sp"
-                    android:layout_gravity="center_horizontal|bottom"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:visibility="visible">
+                    android:orientation="vertical"
+                    android:background="@drawable/shape"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/home_stats_text"
+                        android:id="@+id/statsText"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center_horizontal" />
 
-                    <include layout="@layout/achievement1" />
-                    <include layout="@layout/achievement2" />
-                    <include layout="@layout/achievement3" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Spots Held: "
+                            android:id="@+id/spotsHeldText"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:id="@+id/stat_spots_held"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Spots Found: "
+                            android:id="@+id/spotsFoundText"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:id="@+id/stat_spots_found"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Problems Against: "
+                            android:id="@+id/problemsAgainstText"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:id="@+id/stat_problems_against"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Problems Filed: "
+                            android:id="@+id/problemsFiledText"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:id="@+id/stat_problems_filed"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Percentage: "
+                            android:id="@+id/percentageText"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:id="@+id/stat_percentage"
+                            android:gravity="center_horizontal"
+                            android:textColor="#fff"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text=" %"
+                            android:id="@+id/percentSign"
+                            android:gravity="center_horizontal"
+                            android:textColor="#fff"/>
+
+
+                    </LinearLayout>
                 </LinearLayout>
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:gravity="center_horizontal"-->
-                    <!--android:layout_marginTop="10dp"-->
-                    <!--android:visibility="visible">-->
 
-                    <!--<include layout="@layout/achievement4" />-->
-                <!--</LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:id="@+id/achievementText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/home_achievements_text"
+                        android:textColor="#fff"
+                        android:textSize="25sp"
+                        android:layout_gravity="center_horizontal|bottom"/>
 
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible">
+
+                        <include layout="@layout/achievement1" />
+                        <include layout="@layout/achievement2" />
+                        <include layout="@layout/achievement3" />
+
+                    </LinearLayout>
+                    <!-<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:gravity="center_horizontal"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:visibility="visible">-->
+
+                        <!--<include layout="@layout/achievement4" />-->
+                    <!--</LinearLayout>-->
+
+               <!-- </LinearLayout>
+            </LinearLayout> -->
+        </ScrollView>
+    </LinearLayout>
 
 </android.support.v4.widget.DrawerLayout>

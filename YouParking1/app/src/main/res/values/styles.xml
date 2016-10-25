@@ -4,6 +4,7 @@
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
 
         <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -11,12 +12,16 @@
     </style>
 
     <style name="AppTheme" parent="AppBaseTheme">
-
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="AppBaseTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppBaseTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
 
-    <style name="AppBaseTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppBaseTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
 
     <style name="NavDrawerTextStyle" parent="Base.TextAppearance.AppCompat">
         <item name="android:textSize">20sp</item>

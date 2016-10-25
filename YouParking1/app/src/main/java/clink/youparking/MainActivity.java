@@ -60,7 +60,9 @@ public class MainActivity extends AppCompatActivity
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         toolbar.setTitle(s);
+        //getSupportActionBar().setElevation(0);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setElevation(0);
 
 
         if (savedInstanceState == null) {
