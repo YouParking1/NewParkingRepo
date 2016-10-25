@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity
 
     int bought_spot_id = -1;
 
-    public enum Operation { DELETE, HOLDSPOT, BUY, NUMVEHICLES, BID, NONE }
+    public enum Operation { DELETE, HOLDSPOT, HOLDLATER, BUY, NUMVEHICLES, BID, NONE }
     Operation operation = Operation.NONE;
 
     private boolean validHoldLaterTime = false;
@@ -295,6 +295,7 @@ public class MainActivity extends AppCompatActivity
     {
         if (User.time != 0 && validHoldLaterTime) {
 
+            operation = Operation.HOLDLATER;
             Spinner spinner = (Spinner) findViewById(R.id.holdPointsSpinner);
             String points = spinner.getSelectedItem().toString();
 
@@ -411,6 +412,17 @@ public class MainActivity extends AppCompatActivity
 
             }
         }
+        else if (operation == Operation.HOLDLATER) {
+            if (!output.equals("200")) {
+                Toast toast = Toast.makeText(this, "Spot failed... Try again or check your connection", Toast.LENGTH_LONG);
+                toast.show();
+            }
+            else {
+                User.bidOpen = true;
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+            }
+        }
     }
 
     /**
@@ -491,6 +503,8 @@ public class MainActivity extends AppCompatActivity
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.delegate = this;
         backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
+        Toast toast = Toast.makeText(this, "You bid " + sPoints + "!", Toast.LENGTH_LONG);
+        toast.show();
 
     }
 
@@ -513,6 +527,8 @@ public class MainActivity extends AppCompatActivity
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.delegate = this;
         backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
+        Toast toast = Toast.makeText(this, "You bid " + sPoints + "!", Toast.LENGTH_LONG);
+        toast.show();
     }
 
     public void setValidTime(Boolean bool) {

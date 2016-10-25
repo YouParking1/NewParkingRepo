@@ -39,7 +39,6 @@ public class FindNowFragment extends Fragment implements AsyncResponse {
 
     private OnFragmentInteractionListener mListener;
 
-    //private ScrollView scrollView = (ScrollView) getActivity().findViewById(R.id.scroll_find_now);
 
     public ArrayList<com.daimajia.swipe.SwipeLayout> swipeLayouts = new ArrayList<>();
     public ArrayList<LinearLayout> linearLayouts = new ArrayList<>();
@@ -78,15 +77,6 @@ public class FindNowFragment extends Fragment implements AsyncResponse {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-//        Bundle bundle = new Bundle();
-//        String type = "FIND";
-//        bundle.putString("TYPE", type);
-
-//        mapFrag = new GMapFragment();
-//        //mapFrag.setArguments(bundle);
-//
-//        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-//        transaction.add(R.id.find_now_map, mapFrag).commit();
     }
 
     @Override
