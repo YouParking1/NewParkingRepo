@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Hold 5 Spots"
-        android:id="@+id/textView8"
+        android:id="@+id/hold5SpotsText"
         android:layout_gravity="center_horizontal"
         android:textColor="#fff" />
 

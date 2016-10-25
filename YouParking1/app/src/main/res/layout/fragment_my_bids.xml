@@ -12,10 +12,10 @@
         android:orientation="vertical"
         android:id="@+id/active_bids">
         <TextView
+            android:id="@+id/activeBidsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Active Bids: "
-            android:textStyle="bold"
             android:textSize="25dp"
             android:textColor="@color/black"
             android:layout_gravity="center"/>

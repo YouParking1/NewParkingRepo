@@ -64,6 +64,9 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
     }
 
     @Override
+    public void onBackPressed() {}
+
+    @Override
     public void processFinish(String output) throws JSONException {
 
         if(output.equals("0"))

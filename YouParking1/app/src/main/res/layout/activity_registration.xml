@@ -6,10 +6,10 @@
     android:fillViewport="true"
     android:scrollbars="none">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#fff">
+        android:orientation="vertical">
 
         <!--  Header  Starts-->
         <LinearLayout android:id="@+id/header"
@@ -21,7 +21,7 @@
                 android:id="@+id/toolbar"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:background="?attr/colorPrimary"
+                android:background="?attr/colorPrimaryDark"
                 app:titleTextColor="@color/white">
 
             </android.support.v7.widget.Toolbar>
@@ -34,24 +34,25 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dip"
-            android:layout_below="@id/header">
+            android:padding="16dp">
 
             <!-- Sign Up Logo -->
             <!-- First Name Label -->
-            <TextView android:layout_width="fill_parent"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
                 android:layout_marginTop="20dip"
                 android:text="@string/reg_first_name" />
             <EditText android:id="@+id/reg_first_name"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 android:digits="@string/allow_only_alpha" />
             <!-- Last Name Label -->
-            <TextView android:layout_width="fill_parent"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
                 android:layout_marginTop="20dip"
@@ -121,5 +122,5 @@
                 android:text="@string/reg_btn"
                 android:onClick="goToEmailVerification" />
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 </ScrollView>

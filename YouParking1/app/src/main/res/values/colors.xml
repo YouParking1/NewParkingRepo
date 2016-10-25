@@ -8,9 +8,23 @@
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
     <!--<color name="colorAccent">#800080</color>-->
 
+    <!-- Original Colors -->
     <color name="colorPrimaryDark">#1F2440</color>
     <color name="colorAccent">#3F51B5</color>
 
+    <!-- Compound Color Wheel -->
+    <color name="colorYellow">#f29f38</color>
+    <color name="colorTan">#c7ab73</color>
+    <color name="colorPurple">#8238f2</color>
+    <color name="colorDark">#4b4159</color>
+
+    <!-- Other Color Wheel -->
+    <color name="colorDarkBlue">#f29f38</color>
+    <color name="colorLighterBlue">#c7ab73</color>
+    <color name="colorLightestBlue">#4b4159</color>
+    <color name="colorPurple2">#8238f2</color>
+
+    <!-- Vehicle Colors -->
     <string-array name="vehicleColor">
         <item>White</item>
         <item>Black</item>

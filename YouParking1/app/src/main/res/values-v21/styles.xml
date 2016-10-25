@@ -7,6 +7,7 @@
         <item name="android:windowBackground">@color/white</item>
         <item name="android:statusBarColor">@color/colorAccent</item>
 
+        <!-- Status Bar Color -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -15,5 +16,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
 
     </style>
+
+
 
 </resources>

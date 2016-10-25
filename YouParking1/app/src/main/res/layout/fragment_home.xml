@@ -90,7 +90,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Find Now: "
-                        android:id="@+id/textView10"
+                        android:id="@+id/findNowText"
                         android:textColor="#fff"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -114,7 +114,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Find Later: "
-                        android:id="@+id/textView11"
+                        android:id="@+id/findLaterText"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -158,7 +158,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Spots Held: "
-                        android:id="@+id/textView12"
+                        android:id="@+id/spotsHeldText"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -182,7 +182,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Spots Found: "
-                        android:id="@+id/textView13"
+                        android:id="@+id/spotsFoundText"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -206,7 +206,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Problems Against: "
-                        android:id="@+id/textView16"
+                        android:id="@+id/problemsAgainstText"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -230,7 +230,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Problems Filed: "
-                        android:id="@+id/textView14"
+                        android:id="@+id/problemsFiledText"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -254,7 +254,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Percentage: "
-                        android:id="@+id/textView15"
+                        android:id="@+id/percentageText"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -269,7 +269,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text=" %"
-                        android:id="@+id/textView17"
+                        android:id="@+id/percentSign"
                         android:gravity="center_horizontal"
                         android:textColor="#fff"/>
 

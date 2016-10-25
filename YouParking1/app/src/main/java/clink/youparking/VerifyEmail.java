@@ -22,6 +22,14 @@ public class VerifyEmail extends AppCompatActivity implements AsyncResponse {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_email);
 
+        Typeface titleFont = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        SpannableString s = new SpannableString("YOUPARKING");
+        s.setSpan(new CustomTypefaceSpan("", titleFont), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar.setTitle(s);
+        setSupportActionBar(toolbar);
+
         TextView verifyTitle = (TextView)findViewById(R.id.verifyTitle);
 
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Find 5 Spots"
-        android:id="@+id/textView8"
+        android:id="@+id/find5SpotsText"
         android:layout_gravity="center_horizontal"
         android:textColor="#fff" />
 

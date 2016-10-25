@@ -2,6 +2,7 @@ package clink.youparking;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -87,6 +88,10 @@ public class MyBidsFragment extends Fragment implements AsyncResponse {
         BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
         backgroundWorker.delegate = this;
         backgroundWorker.execute("findbids");
+
+        TextView title = (TextView)getView().findViewById(R.id.activeBidsTitle);
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/college.ttf");
+        title.setTypeface(font);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
