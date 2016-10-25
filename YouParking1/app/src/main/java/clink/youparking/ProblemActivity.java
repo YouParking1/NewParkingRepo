@@ -35,6 +35,9 @@ public class ProblemActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {}
+
     public void goToMainFromProblem(View view)
     {
         Intent intent = new Intent(this, MainActivity.class);

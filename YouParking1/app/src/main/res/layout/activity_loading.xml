@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:src="@drawable/loading_image"
         android:layout_gravity="center"
-        android:id="@+id/imageView"
+        android:id="@+id/openingLogo"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

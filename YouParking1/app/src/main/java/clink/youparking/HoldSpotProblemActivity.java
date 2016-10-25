@@ -1,8 +1,12 @@
 package clink.youparking;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -15,12 +19,23 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
 
     RadioGroup radioGroup1, radioGroup2;
     RadioButton rb1, rb2;
+    EditText commentsField;
     String transactionID;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hold_spot_problem);
+
+        Typeface titleFont = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        SpannableString s = new SpannableString("YOUPARKING");
+        s.setSpan(new CustomTypefaceSpan("", titleFont), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar.setTitle(s);
+        setSupportActionBar(toolbar);
+
+        commentsField = (EditText)findViewById(R.id.holdProblemComments);
 
         Bundle extras = getIntent().getExtras();
         transactionID = extras.getString("transID");
@@ -32,7 +47,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb1 = (RadioButton) group.findViewById(checkedId);
                 if(rb1 != null && checkedId > -1){
-                    Toast.makeText(getApplicationContext(), "You clicked " + rb1.getText(), Toast.LENGTH_SHORT).show();
+                    //DO SOMETHING WITH THE GRADING
                 }
             }
         });
@@ -44,7 +59,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb2 = (RadioButton) group.findViewById(checkedId);
                 if(rb2 != null && checkedId > -1){
-                    Toast.makeText(getApplicationContext(), "You clicked " + rb2.getText(), Toast.LENGTH_SHORT).show();
+                    //DO SOMETHING WITH THE GRADING
                 }
             }
         });
@@ -52,17 +67,24 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
 
     public void goToMainFromHold(View view)
     {
-        EditText commentsField = (EditText)findViewById(R.id.holdProblemComments);
+        commentsField = (EditText)findViewById(R.id.holdProblemComments);
         String comments = commentsField.getText().toString();
 
-        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-        backgroundWorker.delegate = this;
-        backgroundWorker.execute("saveProblems", transactionID, comments);
+        if(comments.equals("") || radioGroup1.getCheckedRadioButtonId() == -1 | radioGroup2.getCheckedRadioButtonId() == -1)
+        {
+            Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+            backgroundWorker.delegate = this;
+            backgroundWorker.execute("saveProblems", transactionID, comments);
 
-        Toast.makeText(this, "Thank you for your input!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Thank you for your input!", Toast.LENGTH_LONG).show();
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -73,7 +95,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
     @Override
     public void processFinish(String output) throws JSONException {
         if (output.contains("Error")) {
-            Toast.makeText(this, output, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Sorry there was a problem.", Toast.LENGTH_LONG).show();
         }
     }
 }

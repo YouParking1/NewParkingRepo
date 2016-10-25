@@ -13,16 +13,16 @@
     <color name="colorAccent">#3F51B5</color>
 
     <!-- Compound Color Wheel -->
-    <color name="colorYellow">#f29f38</color>
-    <color name="colorTan">#c7ab73</color>
-    <color name="colorPurple">#8238f2</color>
-    <color name="colorDark">#4b4159</color>
+    <color name="compYellow">#f29f38</color>
+    <color name="compTan">#c7ab73</color>
+    <color name="compPurple">#8238f2</color>
+    <color name="compDark">#4b4159</color>
 
     <!-- Other Color Wheel -->
-    <color name="colorDarkBlue">#f29f38</color>
-    <color name="colorLighterBlue">#c7ab73</color>
-    <color name="colorLightestBlue">#4b4159</color>
-    <color name="colorPurple2">#8238f2</color>
+    <color name="shadeDarkBlue">#4d3dcc</color>
+    <color name="shadeLighterBlue">#3d78cc</color>
+    <color name="shadeLightestBlue">#3a96c2</color>
+    <color name="shadePurple">#6e3ac2</color>
 
     <!-- Vehicle Colors -->
     <string-array name="vehicleColor">

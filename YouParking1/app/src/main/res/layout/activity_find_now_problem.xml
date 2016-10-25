@@ -1,163 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_find_now_problem"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
     tools:context="clink.youparking.FindNowProblemActivity">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimaryDark"
+                app:titleTextColor="@color/white">
+
+            </android.support.v7.widget.Toolbar>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20sp">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/problemFindTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20sp">
+                android:text="Problems while Finding?"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/problemFindTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Problems while Finding?"
-                    android:textSize="30sp"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"/>
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
+                android:text="Was the holder at the specified location?"
+                android:textSize="20sp"
+                android:layout_marginBottom="10sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Was the holder at the specified location?"
-                    android:textSize="20sp"
-                    android:layout_marginBottom="10sp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"/>
-
-                <RadioGroup
-                    android:id="@+id/question1Findgroup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/findRadioBtn1Yes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yes"
-                        android:layout_marginRight="20sp"/>
-
-                    <RadioButton
-                        android:id="@+id/findRadioBtn1No"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No"
-                        android:layout_marginLeft="20sp"/>
-
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Was he/she in the specified vehicle?"
-                    android:textSize="20sp"
-                    android:layout_marginBottom="10sp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"/>
-
-                <RadioGroup
-                    android:id="@+id/question2Findgroup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/findRadioBtn2Yes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yes"
-                        android:layout_marginRight="20sp"/>
-
-                    <RadioButton
-                        android:id="@+id/findRadioBtn2No"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No"
-                        android:layout_marginLeft="20sp"/>
-
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <LinearLayout
+            <RadioGroup
+                android:id="@+id/question1Findgroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Add any additional comments that pertain to the problem you had with the holder."
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:paddingTop="16dp"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:id="@+id/findProblemComments"
-                    android:layout_gravity="center_horizontal"
-                    android:hint="Additional Comments"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="50sp">
-
-                <Button
-                    android:id="@+id/findThanksBtn"
+                <RadioButton
+                    android:id="@+id/findRadioBtn1Yes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thank you!"
-                    android:onClick="goToMainFromFind"/>
+                    android:text="Yes"
+                    android:layout_marginRight="20sp"/>
 
-            </LinearLayout>
+                <RadioButton
+                    android:id="@+id/findRadioBtn1No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:layout_marginLeft="20sp"/>
+
+            </RadioGroup>
 
         </LinearLayout>
 
-    </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Was he/she in the specified vehicle?"
+                android:textSize="20sp"
+                android:layout_marginBottom="10sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:id="@+id/question2Findgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/findRadioBtn2Yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:layout_marginRight="20sp"/>
+
+                <RadioButton
+                    android:id="@+id/findRadioBtn2No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:layout_marginLeft="20sp"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add any additional comments that pertain to the problem you had with the holder."
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:id="@+id/findProblemComments"
+                android:layout_gravity="center_horizontal"
+                android:hint="Additional Comments"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50sp">
+
+            <Button
+                android:id="@+id/findThanksBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thank you!"
+                android:onClick="goToMainFromFind"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+

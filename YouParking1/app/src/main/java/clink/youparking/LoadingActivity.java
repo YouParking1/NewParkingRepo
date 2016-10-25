@@ -4,7 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
@@ -14,6 +19,8 @@ import org.json.JSONObject;
 
 public class LoadingActivity extends AppCompatActivity implements AsyncResponse {
 
+    ImageView logo;
+
     public enum Operation { LOGIN, HOLDINGSPOT, BIDOPEN, NONE }
     Operation operation = Operation.NONE;
 
@@ -22,26 +29,26 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
 
+        logo = (ImageView) findViewById(R.id.openingLogo);
+        Animation animationFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadein);
+        logo.startAnimation(animationFadeIn);
+
         SharedPreferences preferences = getSharedPreferences("PREF_NAME", Context.MODE_PRIVATE);
         String Username = preferences.getString("Username", "");
-
-        System.out.println("USERNAME: " + Username);
-        System.out.println(preferences.contains("Username"));
 
         String fName = preferences.getString("first_name", "");
         String lName = preferences.getString("last_name", "");
         String school = preferences.getString("University", "");
         String pass = preferences.getString("Password", "");
-        if(Username.length() != 0)
-        {
+
+        if (Username.length() != 0) {
             operation = Operation.LOGIN;
 
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
             backgroundWorker.delegate = this;
             backgroundWorker.execute("login", Username, pass);
-        }
-        else
-        {
+        } else {
+
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }

@@ -1,156 +1,168 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
     tools:context="clink.youparking.HoldSpotProblemActivity">
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimaryDark"
+                app:titleTextColor="@color/white">
+
+            </android.support.v7.widget.Toolbar>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20sp">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/problemHoldTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20sp">
+                android:text="Problems while Holding?"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/problemHoldTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Problems while Holding?"
-                    android:textSize="30sp"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"/>
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
+                android:text="Did the finder arrive?"
+                android:textSize="20sp"
+                android:layout_marginBottom="10sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Did the finder arrive?"
-                    android:textSize="20sp"
-                    android:layout_marginBottom="10sp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"/>
-
-                <RadioGroup
-                    android:id="@+id/question1Holdgroup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/holdRadioBtn1Yes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yes"
-                        android:layout_marginRight="20sp"/>
-
-                    <RadioButton
-                        android:id="@+id/holdRadioBtn1No"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No"
-                        android:layout_marginLeft="20sp"/>
-
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Was he/she in the specified vehicle?"
-                    android:textSize="20sp"
-                    android:layout_marginBottom="10sp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"/>
-
-                <RadioGroup
-                    android:id="@+id/question2Holdgroup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/holdRadioBtn2Yes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yes"
-                        android:layout_marginRight="20sp"/>
-
-                    <RadioButton
-                        android:id="@+id/holdRadioBtn2No"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No"
-                        android:layout_marginLeft="20sp"/>
-
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <LinearLayout
+            <RadioGroup
+                android:id="@+id/question1Holdgroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Add any additional comments that pertain to the problem you had with the finder."
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:paddingTop="16dp"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:id="@+id/holdProblemComments"
-                    android:layout_gravity="center_horizontal"
-                    android:hint="Additional Comments"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="50sp">
-
-                <Button
-                    android:id="@+id/holdThanksBtn"
+                <RadioButton
+                    android:id="@+id/holdRadioBtn1Yes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thank you!"
-                    android:onClick="goToMainFromHold"/>
+                    android:text="Yes"
+                    android:layout_marginRight="20sp"/>
 
-            </LinearLayout>
+                <RadioButton
+                    android:id="@+id/holdRadioBtn1No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:layout_marginLeft="20sp"/>
+
+            </RadioGroup>
 
         </LinearLayout>
 
-    </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-</LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Was he/she in the specified vehicle?"
+                android:textSize="20sp"
+                android:layout_marginBottom="10sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:id="@+id/question2Holdgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/holdRadioBtn2Yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:layout_marginRight="20sp"/>
+
+                <RadioButton
+                    android:id="@+id/holdRadioBtn2No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:layout_marginLeft="20sp"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add any additional comments that pertain to the problem you had with the finder."
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:id="@+id/holdProblemComments"
+                android:layout_gravity="center_horizontal"
+                android:hint="Additional Comments"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50sp">
+
+            <Button
+                android:id="@+id/holdThanksBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thank you!"
+                android:onClick="goToMainFromHold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
