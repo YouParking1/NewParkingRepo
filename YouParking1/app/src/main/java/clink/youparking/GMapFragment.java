@@ -103,7 +103,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
     {
         try {
-            User.mSocket = IO.socket("http://108.167.99.14:88");
+            User.mSocket = IO.socket("http://216.93.132.163:88");
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
