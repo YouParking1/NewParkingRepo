@@ -30,11 +30,17 @@ public class VerifyEmail extends AppCompatActivity implements AsyncResponse {
         toolbar.setTitle(s);
         setSupportActionBar(toolbar);
 
-        TextView verifyTitle = (TextView)findViewById(R.id.verifyTitle);
-
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        TextView verifyTitle = (TextView)findViewById(R.id.verifyTitle);
         verifyTitle.setTypeface(font);
+
+        Typeface sFont = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
+        EditText verifyCode = (EditText)findViewById(R.id.verifyCode);
+        verifyCode.setTypeface(sFont);
     }
+
+    @Override
+    public void onBackPressed() {}
 
     public void registerVehicle(View view)
     {

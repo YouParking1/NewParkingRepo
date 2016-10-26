@@ -78,7 +78,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
         {
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
             backgroundWorker.delegate = this;
-            backgroundWorker.execute("saveProblems", transactionID, comments);
+            backgroundWorker.execute("saveHolderProblems", transactionID, comments);
 
             Toast.makeText(this, "Thank you for your input!", Toast.LENGTH_LONG).show();
 

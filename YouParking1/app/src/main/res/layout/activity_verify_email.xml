@@ -30,38 +30,39 @@
         android:padding="16dp">
 
         <TextView
+            android:id="@+id/verifyTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Email Verification"
-            android:id="@+id/verifyTitle"
             android:textSize="30dp" />
 
         <TextView
+            android:id="@+id/verifyText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Please enter your verification code you will recieve in the email you entered:"
-            android:id="@+id/verifyText"
             android:layout_marginTop="64dp"
             android:textAlignment="center" />
 
         <EditText
-            android:layout_width="250dp"
+            android:id="@+id/verifyCode"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:id="@+id/verifyCode"
             android:layout_marginTop="40dp"
+            android:textSize="30dp"
             android:digits="@string/allow_alpha_and_numbers"
             android:maxLines="1"
             android:hint="Verification Code" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/continueToVehicleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
             android:text="Register Vehicle"

@@ -78,7 +78,7 @@ public class FindNowProblemActivity extends AppCompatActivity implements AsyncRe
         {
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
             backgroundWorker.delegate = this;
-            backgroundWorker.execute("saveProblems", transactionID, comments);
+            backgroundWorker.execute("saveFinderProblems", transactionID, comments);
 
             Toast.makeText(this, "Thank you for your input!", Toast.LENGTH_LONG).show();
 

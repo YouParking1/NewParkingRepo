@@ -21,8 +21,12 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
         emailEt = (EditText) findViewById(R.id.email);
         passwordEt = (EditText) findViewById(R.id.pass);
+        emailEt.setTypeface(font);
+        passwordEt.setTypeface(font);
 
 //        SharedPreferences preferences = getSharedPreferences("PREF_NAME", Context.MODE_PRIVATE);
 //        String Username = preferences.getString("Username", "");

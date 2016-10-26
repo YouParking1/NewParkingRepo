@@ -18,6 +18,7 @@ import java.util.Arrays;
 
 public class RegistrationActivity extends AppCompatActivity implements AsyncResponse {
 
+    TextView FNameText, LNameText, UniversityText, EmailText, PasswordText, ConfirmText;
     EditText FName, LName, Email, Password, ConfirmPass;
     AutoCompleteTextView University;
 
@@ -34,16 +35,36 @@ public class RegistrationActivity extends AppCompatActivity implements AsyncResp
         toolbar.setTitle(s);
         setSupportActionBar(toolbar);
 
+        Typeface sFont = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
+
+        FNameText = (TextView) findViewById(R.id.firstNameText);
+        FNameText.setTypeface(sFont);
+        LNameText = (TextView) findViewById(R.id.lastNameText);
+        LNameText.setTypeface(sFont);
+        EmailText = (TextView) findViewById(R.id.emailText);
+        EmailText.setTypeface(sFont);
+        UniversityText = (TextView) findViewById(R.id.universityText);
+        UniversityText.setTypeface(sFont);
+        PasswordText = (TextView) findViewById(R.id.passwordText);
+        PasswordText.setTypeface(sFont);
+        ConfirmText = (TextView) findViewById(R.id.confirmText);
+        ConfirmText.setTypeface(sFont);
+
         FName = (EditText) findViewById(R.id.reg_first_name);
+        FName.setTypeface(sFont);
         LName = (EditText) findViewById(R.id.reg_last_name);
+        LName.setTypeface(sFont);
         Email = (EditText) findViewById(R.id.reg_email);
+        Email.setTypeface(sFont);
         Password = (EditText) findViewById(R.id.reg_password);
+        Password.setTypeface(sFont);
         ConfirmPass = (EditText) findViewById(R.id.reg_confirm_password);
+        ConfirmPass.setTypeface(sFont);
         University = (AutoCompleteTextView) findViewById(R.id.reg_university);
+        University.setTypeface(sFont);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.universities, R.layout.dropdown_list);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         University.setAdapter(adapter);
 
     }
@@ -85,9 +106,6 @@ public class RegistrationActivity extends AppCompatActivity implements AsyncResp
 
     @Override
     public void processFinish(String output) {
-
-        System.out.println("OUTPUT PROCESS FOR REGISTRATION: " + output);
-
         if (output.contains("success")) {
             TextView email = (TextView)findViewById(R.id.reg_email);
             TextView fname = (TextView)findViewById(R.id.reg_first_name);
@@ -101,6 +119,10 @@ public class RegistrationActivity extends AppCompatActivity implements AsyncResp
 
             Intent intent = new Intent(this, VerifyEmail.class);
             startActivity(intent);
+        }
+        else
+        {
+            Toast.makeText(this, "This email has already been registered! Please try another one.", Toast.LENGTH_SHORT).show();
         }
     }
 }

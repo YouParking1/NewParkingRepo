@@ -32,6 +32,7 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
     Spinner smake, smodel, syear, scolor;
     Button scar;
     String MakeTxt, ModelTxt;
+    TextView titleText, makeText, modelText, yearText, colorText;
     public String AssetJSONFile(String filename, Context context) throws IOException {
         //AssetManager manager = context.getAssets();
         InputStream file = getAssets().open(filename);
@@ -55,9 +56,19 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
         toolbar.setTitle(s);
         setSupportActionBar(toolbar);
 
-        TextView title = (TextView)findViewById(R.id.vehicleRegisterTitle);
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
-        title.setTypeface(font);
+        titleText = (TextView)findViewById(R.id.vehicleRegisterTitle);
+        titleText.setTypeface(font);
+
+        Typeface sfont = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
+        makeText = (TextView)findViewById(R.id.registerMakeText);
+        makeText.setTypeface(sfont);
+        modelText = (TextView)findViewById(R.id.registerModelText);
+        modelText.setTypeface(sfont);
+        yearText = (TextView)findViewById(R.id.registerYearText);
+        yearText.setTypeface(sfont);
+        colorText = (TextView)findViewById(R.id.registerColorText);
+        colorText.setTypeface(sfont);
 
         smake = (Spinner)findViewById(R.id.sMake);
         smodel = (Spinner)findViewById(R.id.sModel);
