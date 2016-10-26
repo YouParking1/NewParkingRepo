@@ -119,6 +119,48 @@
 
                     </LinearLayout>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:onClick="joinHeldSpot"
+                    android:visibility="gone"
+                    android:id="@+id/auction_hide_layout">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#ff0000"
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/alert_text"
+                            android:textSize="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:text="Your auctioned spot is available to exchange!"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#ff0000"
+                        android:gravity="center"
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/goto_held"
+                            android:textSize="25dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Click Here to Continue" />
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"

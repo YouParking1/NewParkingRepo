@@ -55,6 +55,8 @@ public class BidClaimActivity extends AppCompatActivity implements AsyncResponse
     }
 
     public void endTransaction(View view) {
+        User.bidOpen = false;
+
         if (User.mSocket != null) {
             if (User.mGoogleApiClient != null && User.mGoogleApiClient.isConnected()) {
                 User.mGoogleApiClient.disconnect();

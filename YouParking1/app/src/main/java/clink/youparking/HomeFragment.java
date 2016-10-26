@@ -95,7 +95,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
         //TODO:FIX THIS ASAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         super.onViewCreated(view, savedInstanceState);
 
-        //auctionend = (LinearLayout) getView().findViewById(R.id.auction_hide_layout);
+        auctionend = (LinearLayout) getView().findViewById(R.id.auction_hide_layout);
 
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Writing_Stuff.ttf");
 
@@ -163,6 +163,8 @@ public class HomeFragment extends Fragment implements AsyncResponse {
             TextView spotHeldText = (TextView) getView().findViewById(R.id.spotsHeldText);
             TextView spotFoundText = (TextView) getView().findViewById(R.id.spotsFoundText);
             TextView percentText = (TextView) getView().findViewById(R.id.percentageText);
+            TextView alertText = (TextView) getView().findViewById(R.id.alert_text);
+            TextView continueHeld = (TextView) getView().findViewById(R.id.goto_held);
 
             findNowSpotsAvailable.setTypeface(font,Typeface.BOLD);
             findLaterSpotsAvailable.setTypeface(font,Typeface.BOLD);
@@ -176,7 +178,8 @@ public class HomeFragment extends Fragment implements AsyncResponse {
             spotHeldText.setTypeface(font,Typeface.BOLD);
             spotFoundText.setTypeface(font,Typeface.BOLD);
             percentText.setTypeface(font,Typeface.BOLD);
-
+            alertText.setTypeface(font,Typeface.BOLD);
+            continueHeld.setTypeface(font,Typeface.BOLD);
 
 //            achievement1Progress = (TextView) getView().findViewById(R.id.achievement1_progress);
 //            achievement2Progress = (TextView) getView().findViewById(R.id.achievement2_progress);
@@ -247,10 +250,10 @@ public class HomeFragment extends Fragment implements AsyncResponse {
 //                achievement3Progress.setText("10");
 //            }
 //
-//            operation = Operation.BIDS;
-//            BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
-//            backgroundWorker.delegate = this;
-//            backgroundWorker.execute("findclosingbids");
+            operation = Operation.BIDS;
+            BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
+            backgroundWorker.delegate = this;
+            backgroundWorker.execute("findclosingbids");
         }
         else if (operation == Operation.BIDS) {
             if (output.equals("-1")) {
