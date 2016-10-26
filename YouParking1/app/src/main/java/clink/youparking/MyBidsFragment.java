@@ -84,13 +84,13 @@ public class MyBidsFragment extends Fragment implements AsyncResponse {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        linearLayout = (LinearLayout) getView().findViewById(R.id.active_bids);
+        linearLayout = (LinearLayout) getView().findViewById(R.id.add_bids_layout);
         BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
         backgroundWorker.delegate = this;
         backgroundWorker.execute("findbids");
 
         TextView title = (TextView)getView().findViewById(R.id.activeBidsTitle);
-        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/college.ttf");
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
         title.setTypeface(font);
     }
 
@@ -120,10 +120,14 @@ public class MyBidsFragment extends Fragment implements AsyncResponse {
 
     @Override
     public void processFinish(String output) throws JSONException {
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+
         if (output.equals("-1")) {
             TextView textView = new TextView(getContext());
             textView.setText("You have no active bids!");
-            textView.setTextColor(Color.BLACK);
+            textView.setTextColor(Color.parseColor("#3F51B5"));
+            textView.setTypeface(font, Typeface.BOLD);
+            textView.setTextSize(25);
             linearLayout.addView(textView);
         }
         else {
@@ -144,12 +148,19 @@ public class MyBidsFragment extends Fragment implements AsyncResponse {
                 long hours = diff / 3600;
                 long minutes = (diff - (hours * 3600)) / 60;
 
+
+
                 String desc = ("Departs in " + hours + "Hours and " + minutes + " Minutes");
                 textView.setText(desc);
+                textView.setTypeface(font, Typeface.BOLD);
+                textView.setTextColor(Color.parseColor("#3F51B5"));
+                textView.setTextSize(25);
 
                 TextView points = new TextView(getContext());
                 points.setText("Your Bid: " + jsonObject.getInt("Points"));
-                points.setTextColor(Color.BLACK);
+                points.setTextColor(Color.parseColor("#3F51B5"));
+                points.setTypeface(font, Typeface.BOLD);
+                points.setTextSize(25);
 
                 linearLayout.addView(textView);
                 linearLayout.addView(points);

@@ -75,6 +75,8 @@
     <string name="title_activity_find_now">Map</string>
     <string name="title_activity_maps">Map</string>
 
+    <string name="bids_title"><u>Active Bids:</u></string>
+
 
     <!-- Register University API -->
     <string-array name="universities">
