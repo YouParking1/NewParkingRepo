@@ -14,10 +14,8 @@
         android:layout_height="wrap_content"
         android:text="Hold 10 Spots"
         android:textSize="17dp"
-        android:textStyle="bold"
         android:id="@+id/hold10SpotsText"
         android:textAlignment="center"
-        android:fontFamily="casual"
         android:layout_gravity="center"
         android:textColor="@color/colorPrimary" />
 

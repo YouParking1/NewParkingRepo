@@ -15,8 +15,6 @@
         android:textSize="17dp"
         android:text="Hold 5 Spots"
         android:id="@+id/hold5SpotsText"
-        android:fontFamily="casual"
-        android:textStyle="bold"
         android:textAlignment="center"
         android:layout_gravity="center"
         android:textColor="@color/colorPrimary" />

@@ -44,25 +44,25 @@ public class FindNowProblemActivity extends AppCompatActivity implements AsyncRe
 
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
         problemFindTitle = (TextView)findViewById(R.id.problemFindTitle);
-        problemFindTitle.setTypeface(font);
+        problemFindTitle.setTypeface(font, Typeface.BOLD);
         question1FindText = (TextView)findViewById(R.id.question1FindText);
-        question1FindText.setTypeface(font);
+        question1FindText.setTypeface(font, Typeface.BOLD);
         question2FindText = (TextView)findViewById(R.id.question2FindText);
-        question2FindText.setTypeface(font);
+        question2FindText.setTypeface(font, Typeface.BOLD);
         findRadioBtn1Yes = (TextView)findViewById(R.id.findRadioBtn1Yes);
-        findRadioBtn1Yes.setTypeface(font);
+        findRadioBtn1Yes.setTypeface(font, Typeface.BOLD);
         findRadioBtn1No = (TextView)findViewById(R.id.findRadioBtn1No);
-        findRadioBtn1No.setTypeface(font);
+        findRadioBtn1No.setTypeface(font, Typeface.BOLD);
         findRadioBtn2Yes = (TextView)findViewById(R.id.findRadioBtn2Yes);
-        findRadioBtn2Yes.setTypeface(font);
+        findRadioBtn2Yes.setTypeface(font, Typeface.BOLD);
         findRadioBtn2No = (TextView)findViewById(R.id.findRadioBtn2No);
-        findRadioBtn2No.setTypeface(font);
+        findRadioBtn2No.setTypeface(font, Typeface.BOLD);
         findProblemCommentsText = (TextView)findViewById(R.id.findProblemCommentsText);
-        findProblemCommentsText.setTypeface(font);
+        findProblemCommentsText.setTypeface(font, Typeface.BOLD);
         commentsField = (EditText)findViewById(R.id.findProblemComments);
-        commentsField.setTypeface(font);
+        commentsField.setTypeface(font, Typeface.BOLD);
         findThanksBtn = (Button) findViewById(R.id.findThanksBtn);
-        findThanksBtn.setTypeface(font);
+        findThanksBtn.setTypeface(font, Typeface.BOLD);
 
         Bundle extras = getIntent().getExtras();
         transactionID = extras.getString("transID");

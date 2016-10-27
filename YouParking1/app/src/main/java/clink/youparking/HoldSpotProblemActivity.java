@@ -42,25 +42,25 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
 
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
         problemHoldTitle = (TextView)findViewById(R.id.problemHoldTitle);
-        problemHoldTitle.setTypeface(font);
+        problemHoldTitle.setTypeface(font, Typeface.BOLD);
         question1HoldText = (TextView)findViewById(R.id.question1HoldText);
-        question1HoldText.setTypeface(font);
+        question1HoldText.setTypeface(font, Typeface.BOLD);
         question2HoldText = (TextView)findViewById(R.id.question2HoldText);
-        question2HoldText.setTypeface(font);
+        question2HoldText.setTypeface(font, Typeface.BOLD);
         holdRadioBtn1Yes = (TextView)findViewById(R.id.holdRadioBtn1Yes);
-        holdRadioBtn1Yes.setTypeface(font);
+        holdRadioBtn1Yes.setTypeface(font, Typeface.BOLD);
         holdRadioBtn1No = (TextView)findViewById(R.id.holdRadioBtn1No);
-        holdRadioBtn1No.setTypeface(font);
+        holdRadioBtn1No.setTypeface(font, Typeface.BOLD);
         holdRadioBtn2Yes = (TextView)findViewById(R.id.holdRadioBtn2Yes);
-        holdRadioBtn2Yes.setTypeface(font);
+        holdRadioBtn2Yes.setTypeface(font, Typeface.BOLD);
         holdRadioBtn2No = (TextView)findViewById(R.id.holdRadioBtn2No);
-        holdRadioBtn2No.setTypeface(font);
+        holdRadioBtn2No.setTypeface(font, Typeface.BOLD);
         holdProblemCommentsText = (TextView)findViewById(R.id.holdProblemCommentsText);
-        holdProblemCommentsText.setTypeface(font);
+        holdProblemCommentsText.setTypeface(font, Typeface.BOLD);
         commentsField = (EditText)findViewById(R.id.holdProblemComments);
-        commentsField.setTypeface(font);
+        commentsField.setTypeface(font, Typeface.BOLD);
         holdThanksBtn = (Button)findViewById(R.id.holdThanksBtn);
-        holdThanksBtn.setTypeface(font);
+        holdThanksBtn.setTypeface(font, Typeface.BOLD);
 
         Bundle extras = getIntent().getExtras();
         transactionID = extras.getString("transID");

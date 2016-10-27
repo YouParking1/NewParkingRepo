@@ -10,6 +10,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,7 +54,7 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
     private String mParam2;
 
     TextView holdLaterTitle, holdLaterDepartTime, timeText, additionalCommentsText,
-            selectVehicleText;
+            selectVehicleText, minTicketsText;
     EditText holdSpotLaterComments;
     Button holdSpotLaterBtn, timeBtn;
     ImageView vehicleImage;
@@ -110,23 +111,25 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
         super.onViewCreated(view, savedInstanceState);
 
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
-        selectVehicleText = (TextView)getView().findViewById(R.id.selectVehicleText);
-        selectVehicleText.setTypeface(font);
-        additionalCommentsText = (TextView)getView().findViewById(R.id.additionalCommentsText);
-        additionalCommentsText.setTypeface(font);
-        timeText = (TextView)getView().findViewById(R.id.timeText);
-        timeText.setText("12:00 AM"); //TODO: Travis Clinkscales - SET DEFAULT TIME 2 HOURS EXACTLY
-        timeText.setTypeface(font);
-        holdLaterDepartTime = (TextView)getView().findViewById(R.id.holdLaterDepartTime);
-        holdLaterDepartTime.setTypeface(font);
         holdLaterTitle = (TextView)getView().findViewById(R.id.holdLaterTitle);
         holdLaterTitle.setTypeface(font, Typeface.BOLD);
+        selectVehicleText = (TextView)getView().findViewById(R.id.selectVehicleText);
+        selectVehicleText.setTypeface(font, Typeface.BOLD);
+        additionalCommentsText = (TextView)getView().findViewById(R.id.additionalCommentsText);
+        additionalCommentsText.setTypeface(font, Typeface.BOLD);
+        timeText = (TextView)getView().findViewById(R.id.timeText);
+        timeText.setText("12:00 AM"); //TODO: Travis Clinkscales - SET DEFAULT TIME 2 HOURS EXACTLY
+        timeText.setTypeface(font, Typeface.BOLD);
+        holdLaterDepartTime = (TextView)getView().findViewById(R.id.holdLaterDepartTime);
+        holdLaterDepartTime.setTypeface(font, Typeface.BOLD);
+        minTicketsText = (TextView)getView().findViewById(R.id.minTicketsText);
+        minTicketsText.setTypeface(font, Typeface.BOLD);
         holdSpotLaterComments = (EditText)getView().findViewById(R.id.holdSpotLaterComments);
-        holdSpotLaterComments.setTypeface(font);
+        holdSpotLaterComments.setTypeface(font, Typeface.BOLD);
         timeBtn = (Button)getView().findViewById(R.id.timeBtn);
-        timeBtn.setTypeface(font);
+        timeBtn.setTypeface(font, Typeface.BOLD);
         holdSpotLaterBtn = (Button)getView().findViewById(R.id.holdSpotLaterBtn);
-        holdSpotLaterBtn.setTypeface(font);
+        holdSpotLaterBtn.setTypeface(font, Typeface.BOLD);
         vehicleImage = (ImageView)getView().findViewById(R.id.imageVehicleChoice);
 
         tickets = (Spinner)getView().findViewById(R.id.holdLaterPointsSpinner);
@@ -140,7 +143,7 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
                 View v = super.getView(position, convertView, parent);
 
                 Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
-                ((TextView) v).setTypeface(font);
+                ((TextView) v).setTypeface(font, Typeface.BOLD);
                 ((TextView) v).setTextSize(20);
                 return v;
             }
@@ -164,8 +167,10 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton rb = (RadioButton) group.findViewById(checkedId);
                 if(rb != null && checkedId > -1){
+                    Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+                    rb.setTypeface(font, Typeface.BOLD);
+                    rb.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.colorPrimary));
                     getImage(User.vehicles.get(checkedId).getId());
-//                    holdSpotLaterBtn.setId(User.vehicles.get(checkedId).getId());
                     User.holderVehicleID = User.vehicles.get(checkedId).getId();
                 }
             }
@@ -249,6 +254,7 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
 
     @Override
     public void processFinish(String output) throws JSONException {
+
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
         JSONArray jsonArray = new JSONArray(output);
 
@@ -286,7 +292,8 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
                 RadioButton rb = new RadioButton(getContext());
                 rb.setId(i);
                 rb.setText(User.vehicles.get(i).getMake() + " " + User.vehicles.get(i).getModel() + " " + User.vehicles.get(i).getYear());
-                rb.setTypeface(font);
+                rb.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.colorPrimary));
+                rb.setTypeface(font, Typeface.BOLD);
                 radioGroup.addView(rb);
             }
         }

@@ -47,7 +47,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
     TextView findNowSpotsAvailable, findLaterSpotsAvailable, welcomeMessage, statSpotsHeld,
             statPercentage, statsSpotsFound, achievement1Progress, achievement2Progress,
             achievement3Progress, slash1, slash2, slash3, achievement1Goal, achievement2Goal,
-            achievement3Goal;
+            achievement3Goal, hold5SpotsText, hold10SpotsText, find5SpotsText;
     ImageButton unknownAchievement1, unknownAchievement2, unknownAchievement3, knownAchievement1,
             knownAchievement2, knownAchievement3;
 
@@ -199,16 +199,21 @@ public class HomeFragment extends Fragment implements AsyncResponse {
             knownAchievement1 = (ImageButton)getView().findViewById(R.id.knownAchievement1);
             knownAchievement2 = (ImageButton)getView().findViewById(R.id.knownAchievement2);
             knownAchievement3 = (ImageButton)getView().findViewById(R.id.knownAchievement3);
-
-            achievement1Progress.setTypeface(font);
-            achievement2Progress.setTypeface(font);
-            achievement3Progress.setTypeface(font);
-            slash1.setTypeface(font);
-            slash2.setTypeface(font);
-            slash3.setTypeface(font);
-            achievement1Goal.setTypeface(font);
-            achievement2Goal.setTypeface(font);
-            achievement3Goal.setTypeface(font);
+            hold5SpotsText = (TextView)getView().findViewById(R.id.hold5SpotsText);
+            hold10SpotsText = (TextView)getView().findViewById(R.id.hold10SpotsText);
+            find5SpotsText = (TextView)getView().findViewById(R.id.find5SpotsText);
+            achievement1Progress.setTypeface(font, Typeface.BOLD);
+            achievement2Progress.setTypeface(font, Typeface.BOLD);
+            achievement3Progress.setTypeface(font, Typeface.BOLD);
+            slash1.setTypeface(font, Typeface.BOLD);
+            slash2.setTypeface(font, Typeface.BOLD);
+            slash3.setTypeface(font, Typeface.BOLD);
+            achievement1Goal.setTypeface(font, Typeface.BOLD);
+            achievement2Goal.setTypeface(font, Typeface.BOLD);
+            achievement3Goal.setTypeface(font, Typeface.BOLD);
+            hold5SpotsText.setTypeface(font, Typeface.BOLD);
+            hold10SpotsText.setTypeface(font, Typeface.BOLD);
+            find5SpotsText.setTypeface(font, Typeface.BOLD);
 
             JSONObject jsonObject = new JSONObject(output);
             int findNow = jsonObject.getInt("FindNow");

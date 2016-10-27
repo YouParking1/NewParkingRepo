@@ -55,6 +55,12 @@
     <!-- Achievements Fragment -->
     <string name="achievements_title"><u>Achievements</u></string>
 
+    <!-- Find Problem Activity -->
+    <string name="problemFinding"><u>Problems while Finding?</u></string>
+
+    <!-- Hold Problem Activity -->
+    <string name="problemHolding"><u>Problems while Holding?</u></string>
+
     <!-- Map Strings -->
     <string name="title_activity_general_map">Map Location</string>
     <string name="question_current_location">Is this your current location?</string>

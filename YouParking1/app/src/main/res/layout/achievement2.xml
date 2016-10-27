@@ -14,10 +14,8 @@
         android:layout_height="wrap_content"
         android:textSize="17dp"
         android:text="Find 5 Spots"
-        android:textStyle="bold"
         android:id="@+id/find5SpotsText"
         android:textAlignment="center"
-        android:fontFamily="casual"
         android:layout_gravity="center"
         android:textColor="@color/colorPrimary" />
 
