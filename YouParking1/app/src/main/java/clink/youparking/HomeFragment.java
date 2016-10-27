@@ -238,12 +238,6 @@ public class HomeFragment extends Fragment implements AsyncResponse {
                 gradeText.setText("F");
             }
 
-            System.out.println("FindNow: " + findNow);
-            System.out.println("FindLater: " + findLater);
-            System.out.println("SpotsHeld: " + spotsHeld);
-            System.out.println("SpotsFound: " + spotsFound);
-            System.out.println("Percentage: " + percent);
-
             findNowSpotsAvailable.setText(Integer.toString(findNow));
             findLaterSpotsAvailable.setText(Integer.toString(findLater));
             statSpotsHeld.setText(Integer.toString(spotsHeld));

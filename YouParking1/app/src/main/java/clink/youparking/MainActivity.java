@@ -45,13 +45,14 @@ public class MainActivity extends AppCompatActivity
 
     int bought_spot_id = -1;
 
-    public enum Operation { DELETE, HOLDSPOT, HOLDLATER, BUY, NUMVEHICLES, CANCEL, BID, NONE }
+    public enum Operation { DELETE, HOLDSPOT, HOLDLATER, BUY, NUMVEHICLES, CANCEL, BID, SETBID, NONE }
     Operation operation = Operation.NONE;
 
     private boolean validHoldLaterTime = false;
     private static final int MY_PERMISSION_ACCESS_COARSE_LOCATION = 1;
 
     private int auctionSpotId = 0;
+    private String sPoints = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -435,6 +436,16 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
+        if (operation == Operation.SETBID) {
+            if (output.equals(200)) {
+                Toast toast = Toast.makeText(this, "You bid " + sPoints + "!", Toast.LENGTH_LONG);
+                toast.show();
+            }
+            else {
+                Toast toast = Toast.makeText(this, "Something went wrong. You may not have had enough points for this bid!", Toast.LENGTH_LONG);
+                toast.show();
+            }
+        }
     }
 
     /**
@@ -500,23 +511,23 @@ public class MainActivity extends AppCompatActivity
         int currentBid = ((SpotLater) User.spots.get(view.getId())).getCurrentBid();
         int startPoints = ((SpotLater) User.spots.get(view.getId())).getPoints() + 1;
         String spotId= Integer.toString(((SpotLater)User.spots.get(view.getId())).getSpotId());
-        String sPoints = "";
+        sPoints = "";
 
         if (currentBid != 0) {
             currentBid++;
             sPoints = Integer.toString(currentBid);
         }
-        else {
+        else if (startPoints <= 1){
             sPoints = Integer.toString(startPoints);
         }
 
         System.out.println("YOU WILL BE BIDDING " + sPoints + " *(*(*(*()*(*)*()*)(*)(*)(*)&*^*&^*&");
 
+        operation = Operation.SETBID;
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.delegate = this;
         backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
-        Toast toast = Toast.makeText(this, "You bid " + sPoints + "!", Toast.LENGTH_LONG);
-        toast.show();
+
 
     }
 
@@ -526,21 +537,20 @@ public class MainActivity extends AppCompatActivity
         int currentBid = ((SpotLater) User.spots.get(view.getId())).getCurrentBid();
         int startPoints = ((SpotLater) User.spots.get(view.getId())).getPoints() + 1;
         String spotId= Integer.toString(((SpotLater)User.spots.get(view.getId())).getSpotId());
-        String sPoints = "";
+        sPoints = "";
 
         if (currentBid != 0) {
             currentBid += 5;
             sPoints = Integer.toString(currentBid);
         }
         else {
-            sPoints = Integer.toString(startPoints);
+            sPoints = Integer.toString(4 + startPoints);
         }
 
+        operation = Operation.SETBID;
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.delegate = this;
         backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
-        Toast toast = Toast.makeText(this, "You bid " + sPoints + "!", Toast.LENGTH_LONG);
-        toast.show();
     }
 
     public void setValidTime(Boolean bool) {
