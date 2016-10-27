@@ -3,13 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="clink.youparking.AchievementFragment">
+    tools:context="clink.youparking.AchievementFragment"
+    android:padding="16dp"
+    android:background="@drawable/notebackground">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Achievements"
+        android:text="@string/achievements_title"
+        android:textSize="30dp"
+        android:fontFamily="casual"
+        android:textColor="@color/colorPrimary"
         android:id="@+id/achievementsTitle"
         android:layout_gravity="center_horizontal" />
 

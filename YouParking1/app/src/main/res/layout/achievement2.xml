@@ -7,29 +7,38 @@
     android:id="@+id/achievement2layout"
     android:paddingRight="5dp"
     android:paddingLeft="5dp"
-    android:layout_marginTop="20dp">
+    android:paddingBottom="10dp">
 
-<TextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="17dp"
         android:text="Find 5 Spots"
+        android:textStyle="bold"
         android:id="@+id/find5SpotsText"
-        android:layout_gravity="center_horizontal"
-        android:textColor="#fff" />
+        android:textAlignment="center"
+        android:fontFamily="casual"
+        android:layout_gravity="center"
+        android:textColor="@color/colorPrimary" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"
         android:id="@+id/knownAchievement2"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_find_later"
+        android:src="@mipmap/ic_hold_10"
         android:onClick="goToAchievements"
         android:visibility="gone"/>
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"
         android:id="@+id/unknownAchievement2"
         android:layout_gravity="center_horizontal"
         android:src="@mipmap/ic_unknown"
@@ -45,18 +54,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/achievement2_progress"
-            android:textColor="#fff"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17dp"
             android:text="0" />
         <TextView
+            android:id="@+id/achievement2_slash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#fff"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17dp"
             android:text=" / "/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/achievement2_goal"
-            android:textColor="#fff"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17dp"
             android:text="5" />
 
     </LinearLayout>

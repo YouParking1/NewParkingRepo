@@ -32,6 +32,7 @@
         </activity>
         <activity
             android:name=".LoginActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
@@ -70,8 +71,14 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".VehicleRegistrationActivity" />
-        <activity android:name=".RegistrationActivity" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VehicleRegistrationActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".FoundSpotActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -79,11 +86,23 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppBaseTheme" />
         <activity android:name=".AaronTestActivity" />
-        <activity android:name=".VerifyEmail" />
+        <activity
+            android:name=".VerifyEmail"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait" />
         <activity android:name=".UploadVehicleActivity" />
-        <activity android:name=".AddNewVehicle" />
-        <activity android:name=".HoldSpotProblemActivity" />
-        <activity android:name=".FindNowProblemActivity" />
+        <activity
+            android:name=".AddNewVehicle"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HoldSpotProblemActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FindNowProblemActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait" />
         <activity android:name=".ProblemActivity" />
         <activity
             android:name=".BidClaimActivity"

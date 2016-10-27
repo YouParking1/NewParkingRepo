@@ -30,8 +30,8 @@ public class AchievementFragment extends Fragment implements AsyncResponse {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    TextView achievement1Progress, achievement2Progress, achievement3Progress, achievement1Goal,
-            achievement2Goal, achievement3Goal;
+    TextView achievement1Progress, achievement2Progress, achievement3Progress, slash1, slash2, slash3,
+            achievement1Goal, achievement2Goal, achievement3Goal;
     ImageButton unknownAchievement1, unknownAchievement2, unknownAchievement3, knownAchievement1,
             knownAchievement2, knownAchievement3;
 
@@ -83,9 +83,9 @@ public class AchievementFragment extends Fragment implements AsyncResponse {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/college.ttf");
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
         TextView title = (TextView)getView().findViewById(R.id.achievementsTitle);
-        title.setTypeface(font);
+        title.setTypeface(font, Typeface.BOLD);
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(getActivity());
         backgroundWorker.delegate = this;
@@ -119,9 +119,14 @@ public class AchievementFragment extends Fragment implements AsyncResponse {
     @Override
     public void processFinish(String output) throws JSONException {
 
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+
         achievement1Progress = (TextView)getView().findViewById(R.id.achievement1_progress);
         achievement2Progress = (TextView)getView().findViewById(R.id.achievement2_progress);
         achievement3Progress = (TextView)getView().findViewById(R.id.achievement3_progress);
+        slash1 = (TextView)getView().findViewById(R.id.achievement1_slash);
+        slash2 = (TextView)getView().findViewById(R.id.achievement2_slash);
+        slash3 = (TextView)getView().findViewById(R.id.achievement3_slash);
         achievement1Goal = (TextView)getView().findViewById(R.id.achievement1_goal);
         achievement2Goal = (TextView)getView().findViewById(R.id.achievement2_goal);
         achievement3Goal = (TextView)getView().findViewById(R.id.achievement3_goal);
@@ -131,6 +136,16 @@ public class AchievementFragment extends Fragment implements AsyncResponse {
         knownAchievement1 = (ImageButton)getView().findViewById(R.id.knownAchievement1);
         knownAchievement2 = (ImageButton)getView().findViewById(R.id.knownAchievement2);
         knownAchievement3 = (ImageButton)getView().findViewById(R.id.knownAchievement3);
+        achievement1Progress.setTypeface(font);
+        achievement2Progress.setTypeface(font);
+        achievement3Progress.setTypeface(font);
+        slash1.setTypeface(font);
+        slash2.setTypeface(font);
+        slash3.setTypeface(font);
+        achievement1Goal.setTypeface(font);
+        achievement2Goal.setTypeface(font);
+        achievement3Goal.setTypeface(font);
+
 
         JSONObject jsonObject = new JSONObject(output);
         int spotsHeld = jsonObject.getInt("SpotsHeld");

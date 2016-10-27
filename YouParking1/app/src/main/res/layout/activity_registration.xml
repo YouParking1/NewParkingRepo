@@ -46,7 +46,7 @@
                 android:id="@+id/firstNameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#372c24"
+                android:textColor="@color/colorPrimary"
                 android:layout_marginTop="20dip"
                 android:textSize="30dp"
                 android:text="@string/reg_first_name" />
@@ -56,14 +56,14 @@
                 android:layout_height="wrap_content"
                 android:textSize="30dp"
                 android:inputType="textPersonName"
-                android:maxLines="1"
+                android:maxLines="2"
                 android:digits="@string/allow_only_alpha" />
             <!-- Last Name Label -->
             <TextView
                 android:id="@+id/lastNameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#372c24"
+                android:textColor="@color/colorPrimary"
                 android:textSize="30dp"
                 android:layout_marginTop="20dip"
                 android:text="@string/reg_last_name" />
@@ -72,7 +72,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="30dp"
-                android:maxLines="1"
+                android:maxLines="2"
                 android:inputType="textPersonName"
                 android:digits="@string/allow_only_alpha"/>
             <!-- School Label -->
@@ -80,7 +80,7 @@
                 android:id="@+id/universityText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#372c24"
+                android:textColor="@color/colorPrimary"
                 android:textSize="30dp"
                 android:layout_marginTop="20dip"
                 android:text="@string/reg_university" />
@@ -96,7 +96,7 @@
                 android:id="@+id/emailText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#372c24"
+                android:textColor="@color/colorPrimary"
                 android:textSize="30dp"
                 android:layout_marginTop="20dip"
                 android:text="@string/reg_email" />
@@ -108,7 +108,7 @@
                 android:digits="@string/allow_characters_for_email"
                 android:layout_marginTop="5dip"
                 android:textSize="30dp"
-                android:maxLines="1"
+                android:maxLines="2"
                 android:layout_marginBottom="20dip"
                 android:hint="@string/reg_hint" />
             <!-- Password Label -->
@@ -116,7 +116,7 @@
                 android:id="@+id/passwordText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#372c24"
+                android:textColor="@color/colorPrimary"
                 android:textSize="30dp"
                 android:text="@string/reg_password" />
             <EditText
@@ -125,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:textSize="30dp"
-                android:maxLines="1"
+                android:maxLines="2"
                 android:layout_marginTop="5dip"
                 android:layout_marginBottom="20dip" />
             <!-- Confirm Password Label -->
@@ -133,7 +133,7 @@
                 android:id="@+id/confirmText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#372c24"
+                android:textColor="@color/colorPrimary"
                 android:textSize="30dp"
                 android:text="@string/reg_confirm_password" />
             <EditText
@@ -142,17 +142,47 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:textSize="30dp"
-                android:maxLines="1"
+                android:maxLines="2"
                 android:layout_marginTop="5dip" />
             <!-- Register Button -->
             <Button
                 android:id="@+id/btnRegister"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
-                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="40dp"
+                android:paddingLeft="40dp"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
                 android:text="@string/reg_btn"
-                android:onClick="goToEmailVerification" />
+                android:onClick="goToEmailVerification"
+                android:background="@drawable/button_round2"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="casual"/>
+            <!--<FrameLayout-->
+                <!--android:layout_width="115dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:onClick="goToEmailVerification">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:src="@drawable/scribble2"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:adjustViewBounds="true" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Continue"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:fontFamily="casual"-->
+                    <!--android:textColor="@color/colorPrimary"-->
+                    <!--android:layout_gravity="center"/>-->
+
+            <!--</FrameLayout>-->
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

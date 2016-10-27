@@ -48,7 +48,6 @@
 
                 <LinearLayout
                     android:id="@+id/show_available_layout"
-                    android:id="@+id/show_available_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -189,7 +188,6 @@
                         android:layout_marginBottom="10dp">
 
                         <TextView
-
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/statsText"
@@ -301,6 +299,39 @@
                             android:textSize="25dp"
                             android:textColor="#ff0000"/>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/achievementText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_achievements_text"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="30dp"
+                            android:fontFamily="casual"
+                            android:layout_gravity="center"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:visibility="visible">
+
+                            <include layout="@layout/achievement1" />
+                            <include layout="@layout/achievement2" />
+                            <include layout="@layout/achievement3" />
+
+                        </LinearLayout>
                     </LinearLayout>
 
                 </LinearLayout>

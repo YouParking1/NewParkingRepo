@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -30,6 +32,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
@@ -51,7 +55,7 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
     private String mParam2;
 
     ImageView vehicleImage;
-    TextView coords;
+    TextView coords, additionalHoldCommentsText, ticketsForSpotText, currentVehicleText;
     RadioGroup radioGroup;
     double mLat, mLong;
     EditText comments;
@@ -102,8 +106,45 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+        currentVehicleText = (TextView)getView().findViewById(R.id.currentVehicleText);
+        currentVehicleText.setTypeface(font);
+        ticketsForSpotText = (TextView)getView().findViewById(R.id.ticketsForSpotText);
+        ticketsForSpotText.setTypeface(font);
+        additionalHoldCommentsText = (TextView)getView().findViewById(R.id.additionalHoldCommentsText);
+        additionalHoldCommentsText.setTypeface(font);
+        comments = (EditText)getView().findViewById(R.id.holdSpotComments);
+        comments.setTypeface(font);
         vehicleImage = (ImageView)getView().findViewById(R.id.imageVehicleChoice);
         holdBtn = (Button)getView().findViewById(R.id.holdBtn);
+        holdBtn.setTypeface(font);
+
+        tickets = (Spinner)getView().findViewById(R.id.holdPointsSpinner);
+        List<String> points = Arrays.asList(getResources().getStringArray(R.array.points_array));
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_spinner_dropdown_item, points)
+        {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent)
+            {
+                View v = super.getView(position, convertView, parent);
+
+                Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+                ((TextView) v).setTypeface(font);
+                ((TextView) v).setTextSize(20);
+                return v;
+            }
+
+            public View getDropDownView(int position,  View convertView,  ViewGroup parent) {
+                View v = super.getDropDownView(position, convertView, parent);
+
+                Typeface externalFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+                ((TextView) v).setTypeface(externalFont);
+                ((TextView) v).setTextSize(20);
+                return v;
+            }
+        };
+        tickets.setAdapter(spinnerArrayAdapter);
 
         radioGroup = (RadioGroup)getView().findViewById(R.id.populate_vehicle_choices_hold);
         radioGroup.clearCheck();
@@ -113,6 +154,8 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton rb = (RadioButton) group.findViewById(checkedId);
                 if(rb != null && checkedId > -1){
+                    Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+                    rb.setTypeface(font);
                     getImage(User.vehicles.get(checkedId).getId());
                     holdBtn.setId(User.vehicles.get(checkedId).getId());
                 }
@@ -120,6 +163,7 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
         });
 
         coords = (TextView) getView().findViewById(R.id.showCoords);
+        coords.setTypeface(font);
         if (User.myLocation != null)
             coords.setText("COORDINATES ARE " + Double.toString(User.myLocation.latitude) + " " + Double.toString(User              .myLocation.longitude));
 
@@ -214,6 +258,7 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
     @Override
     public void processFinish(String output) throws JSONException {
 
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
         JSONArray jsonArray = new JSONArray(output);
 
         if (!User.vehicles.isEmpty()) {
@@ -247,10 +292,10 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
                 System.out.println("Year: " + User.vehicles.get(i).getYear());
                 System.out.println("ID: " + i);
 
-
                 RadioButton rb = new RadioButton(getContext());
                 rb.setId(i);
                 rb.setText(User.vehicles.get(i).getMake() + " " + User.vehicles.get(i).getModel() + " " + User.vehicles.get(i).getYear());
+                rb.setTypeface(font);
                 radioGroup.addView(rb);
             }
         }

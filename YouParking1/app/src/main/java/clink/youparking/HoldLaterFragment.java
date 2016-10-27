@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,11 +13,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,6 +30,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
@@ -45,9 +52,13 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
     private String mParam1;
     private String mParam2;
 
-    Button holdSpotLaterBtn;
+    TextView holdLaterTitle, holdLaterDepartTime, timeText, additionalCommentsText,
+            selectVehicleText;
+    EditText holdSpotLaterComments;
+    Button holdSpotLaterBtn, timeBtn;
     ImageView vehicleImage;
     RadioGroup radioGroup;
+    Spinner tickets;
 
     private OnFragmentInteractionListener mListener;
 
@@ -98,8 +109,52 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        vehicleImage = (ImageView)getView().findViewById(R.id.imageVehicleChoice);
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+        selectVehicleText = (TextView)getView().findViewById(R.id.selectVehicleText);
+        selectVehicleText.setTypeface(font);
+        additionalCommentsText = (TextView)getView().findViewById(R.id.additionalCommentsText);
+        additionalCommentsText.setTypeface(font);
+        timeText = (TextView)getView().findViewById(R.id.timeText);
+        timeText.setText("12:00 AM"); //TODO: Travis Clinkscales - SET DEFAULT TIME 2 HOURS EXACTLY
+        timeText.setTypeface(font);
+        holdLaterDepartTime = (TextView)getView().findViewById(R.id.holdLaterDepartTime);
+        holdLaterDepartTime.setTypeface(font);
+        holdLaterTitle = (TextView)getView().findViewById(R.id.holdLaterTitle);
+        holdLaterTitle.setTypeface(font, Typeface.BOLD);
+        holdSpotLaterComments = (EditText)getView().findViewById(R.id.holdSpotLaterComments);
+        holdSpotLaterComments.setTypeface(font);
+        timeBtn = (Button)getView().findViewById(R.id.timeBtn);
+        timeBtn.setTypeface(font);
         holdSpotLaterBtn = (Button)getView().findViewById(R.id.holdSpotLaterBtn);
+        holdSpotLaterBtn.setTypeface(font);
+        vehicleImage = (ImageView)getView().findViewById(R.id.imageVehicleChoice);
+
+        tickets = (Spinner)getView().findViewById(R.id.holdLaterPointsSpinner);
+        List<String> points = Arrays.asList(getResources().getStringArray(R.array.points_array));
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_spinner_dropdown_item, points)
+        {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent)
+            {
+                View v = super.getView(position, convertView, parent);
+
+                Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+                ((TextView) v).setTypeface(font);
+                ((TextView) v).setTextSize(20);
+                return v;
+            }
+
+            public View getDropDownView(int position,  View convertView,  ViewGroup parent) {
+                View v = super.getDropDownView(position, convertView, parent);
+
+                Typeface externalFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+                ((TextView) v).setTypeface(externalFont);
+                ((TextView) v).setTextSize(20);
+                return v;
+            }
+        };
+        tickets.setAdapter(spinnerArrayAdapter);
 
         radioGroup = (RadioGroup)getView().findViewById(R.id.populate_vehicle_choices_hold_later);
         radioGroup.clearCheck();
@@ -194,6 +249,7 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
 
     @Override
     public void processFinish(String output) throws JSONException {
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
         JSONArray jsonArray = new JSONArray(output);
 
         if (!User.vehicles.isEmpty()) {
@@ -227,10 +283,10 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
                 System.out.println("Year: " + User.vehicles.get(i).getYear());
                 System.out.println("ID: " + i);
 
-
                 RadioButton rb = new RadioButton(getContext());
                 rb.setId(i);
                 rb.setText(User.vehicles.get(i).getMake() + " " + User.vehicles.get(i).getModel() + " " + User.vehicles.get(i).getYear());
+                rb.setTypeface(font);
                 radioGroup.addView(rb);
             }
         }

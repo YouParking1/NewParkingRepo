@@ -1,13 +1,18 @@
 package clink.youparking;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class ProblemActivity extends AppCompatActivity {
 
     String transactionID, role;
+    TextView problemText;
+    Button problemBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +22,12 @@ public class ProblemActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         transactionID = extras.getString("transID");
         role = extras.getString("role");
+
+        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
+        problemText = (TextView) findViewById(R.id.problemText);
+        problemText.setTypeface(font);
+        problemBtn = (Button)findViewById(R.id.goHomeBtn);
+        problemBtn.setTypeface(font);
     }
 
     public void goToProblem(View view)

@@ -10,6 +10,7 @@ import android.text.SpannableString;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +22,7 @@ public class RegistrationActivity extends AppCompatActivity implements AsyncResp
     TextView FNameText, LNameText, UniversityText, EmailText, PasswordText, ConfirmText;
     EditText FName, LName, Email, Password, ConfirmPass;
     AutoCompleteTextView University;
+    Button continueBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,8 @@ public class RegistrationActivity extends AppCompatActivity implements AsyncResp
         PasswordText.setTypeface(sFont);
         ConfirmText = (TextView) findViewById(R.id.confirmText);
         ConfirmText.setTypeface(sFont);
+        continueBtn = (Button)findViewById(R.id.btnRegister);
+        continueBtn.setTypeface(sFont);
 
         FName = (EditText) findViewById(R.id.reg_first_name);
         FName.setTypeface(sFont);

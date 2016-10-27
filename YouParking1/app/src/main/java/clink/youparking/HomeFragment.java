@@ -46,7 +46,8 @@ public class HomeFragment extends Fragment implements AsyncResponse {
 
     TextView findNowSpotsAvailable, findLaterSpotsAvailable, welcomeMessage, statSpotsHeld,
             statPercentage, statsSpotsFound, achievement1Progress, achievement2Progress,
-            achievement3Progress, achievement1Goal, achievement2Goal, achievement3Goal;
+            achievement3Progress, slash1, slash2, slash3, achievement1Goal, achievement2Goal,
+            achievement3Goal;
     ImageButton unknownAchievement1, unknownAchievement2, unknownAchievement3, knownAchievement1,
             knownAchievement2, knownAchievement3;
 
@@ -183,18 +184,31 @@ public class HomeFragment extends Fragment implements AsyncResponse {
             alertText.setTypeface(font,Typeface.BOLD);
             continueHeld.setTypeface(font,Typeface.BOLD);
 
-//            achievement1Progress = (TextView) getView().findViewById(R.id.achievement1_progress);
-//            achievement2Progress = (TextView) getView().findViewById(R.id.achievement2_progress);
-//            achievement3Progress = (TextView) getView().findViewById(R.id.achievement3_progress);
-//            achievement1Goal = (TextView) getView().findViewById(R.id.achievement1_goal);
-//            achievement2Goal = (TextView) getView().findViewById(R.id.achievement2_goal);
-//            achievement3Goal = (TextView) getView().findViewById(R.id.achievement3_goal);
-//            unknownAchievement1 = (ImageButton) getView().findViewById(R.id.unknownAchievement1);
-//            unknownAchievement2 = (ImageButton) getView().findViewById(R.id.unknownAchievement2);
-//            unknownAchievement3 = (ImageButton) getView().findViewById(R.id.unknownAchievement3);
-//            knownAchievement1 = (ImageButton) getView().findViewById(R.id.knownAchievement1);
-//            knownAchievement2 = (ImageButton) getView().findViewById(R.id.knownAchievement2);
-//            knownAchievement3 = (ImageButton) getView().findViewById(R.id.knownAchievement3);
+            achievement1Progress = (TextView)getView().findViewById(R.id.achievement1_progress);
+            achievement2Progress = (TextView)getView().findViewById(R.id.achievement2_progress);
+            achievement3Progress = (TextView)getView().findViewById(R.id.achievement3_progress);
+            slash1 = (TextView)getView().findViewById(R.id.achievement1_slash);
+            slash2 = (TextView)getView().findViewById(R.id.achievement2_slash);
+            slash3 = (TextView)getView().findViewById(R.id.achievement3_slash);
+            achievement1Goal = (TextView)getView().findViewById(R.id.achievement1_goal);
+            achievement2Goal = (TextView)getView().findViewById(R.id.achievement2_goal);
+            achievement3Goal = (TextView)getView().findViewById(R.id.achievement3_goal);
+            unknownAchievement1 = (ImageButton)getView().findViewById(R.id.unknownAchievement1);
+            unknownAchievement2 = (ImageButton)getView().findViewById(R.id.unknownAchievement2);
+            unknownAchievement3 = (ImageButton)getView().findViewById(R.id.unknownAchievement3);
+            knownAchievement1 = (ImageButton)getView().findViewById(R.id.knownAchievement1);
+            knownAchievement2 = (ImageButton)getView().findViewById(R.id.knownAchievement2);
+            knownAchievement3 = (ImageButton)getView().findViewById(R.id.knownAchievement3);
+
+            achievement1Progress.setTypeface(font);
+            achievement2Progress.setTypeface(font);
+            achievement3Progress.setTypeface(font);
+            slash1.setTypeface(font);
+            slash2.setTypeface(font);
+            slash3.setTypeface(font);
+            achievement1Goal.setTypeface(font);
+            achievement2Goal.setTypeface(font);
+            achievement3Goal.setTypeface(font);
 
             JSONObject jsonObject = new JSONObject(output);
             int findNow = jsonObject.getInt("FindNow");
@@ -232,26 +246,26 @@ public class HomeFragment extends Fragment implements AsyncResponse {
             statPercentage.setText(Integer.toString(percent) + "%");
 
 
-//            achievement1Progress.setText(Integer.toString(spotsHeld));
-//            achievement2Progress.setText(Integer.toString(spotsFound));
-//            achievement3Progress.setText(Integer.toString(spotsHeld));
-//
-//            if (Integer.valueOf(achievement1Progress.getText().toString()) >= 5) {
-//                unknownAchievement1.setVisibility(View.GONE);
-//                knownAchievement1.setVisibility(View.VISIBLE);
-//                achievement1Progress.setText("5");
-//            }
-//            if (Integer.valueOf(achievement2Progress.getText().toString()) >= 5) {
-//                unknownAchievement2.setVisibility(View.GONE);
-//                knownAchievement2.setVisibility(View.VISIBLE);
-//                achievement2Progress.setText("5");
-//            }
-//            if (Integer.valueOf(achievement3Progress.getText().toString()) >= 10) {
-//                unknownAchievement3.setVisibility(View.GONE);
-//                knownAchievement3.setVisibility(View.VISIBLE);
-//                achievement3Progress.setText("10");
-//            }
-//
+            achievement1Progress.setText(Integer.toString(spotsHeld));
+            achievement2Progress.setText(Integer.toString(spotsFound));
+            achievement3Progress.setText(Integer.toString(spotsHeld));
+
+            if (Integer.valueOf(achievement1Progress.getText().toString()) >= 5) {
+                unknownAchievement1.setVisibility(View.GONE);
+                knownAchievement1.setVisibility(View.VISIBLE);
+                achievement1Progress.setText("5");
+            }
+            if (Integer.valueOf(achievement2Progress.getText().toString()) >= 5) {
+                unknownAchievement2.setVisibility(View.GONE);
+                knownAchievement2.setVisibility(View.VISIBLE);
+                achievement2Progress.setText("5");
+            }
+            if (Integer.valueOf(achievement3Progress.getText().toString()) >= 10) {
+                unknownAchievement3.setVisibility(View.GONE);
+                knownAchievement3.setVisibility(View.VISIBLE);
+                achievement3Progress.setText("10");
+            }
+
             operation = Operation.BIDS;
             BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
             backgroundWorker.delegate = this;

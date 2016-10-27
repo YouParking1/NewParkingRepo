@@ -52,14 +52,15 @@
                 android:hint="@string/login_password_hint" />
 
             <Button
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/login_btn"
                 android:textSize="17dp"
                 android:layout_marginTop="3dp"
                 android:background="@drawable/button_round"
                 android:id="@+id/btnLogin"
-                android:onClick="OnLogin"/>
+                android:onClick="OnLogin"
+                android:textColor="@color/white" />
 
             <TextView
                 android:layout_width="fill_parent"

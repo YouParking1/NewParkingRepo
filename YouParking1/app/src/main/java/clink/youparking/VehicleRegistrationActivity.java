@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,6 +12,7 @@ import org.json.JSONObject;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -20,6 +22,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,7 +33,6 @@ import android.widget.Toast;
 public class VehicleRegistrationActivity extends AppCompatActivity implements AsyncResponse {
 
     Spinner smake, smodel, syear, scolor;
-    Button scar;
     String MakeTxt, ModelTxt;
     TextView titleText, makeText, modelText, yearText, colorText;
     public String AssetJSONFile(String filename, Context context) throws IOException {
@@ -56,23 +58,50 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
         toolbar.setTitle(s);
         setSupportActionBar(toolbar);
 
-        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
         titleText = (TextView)findViewById(R.id.vehicleRegisterTitle);
         titleText.setTypeface(font);
-
-        Typeface sfont = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
         makeText = (TextView)findViewById(R.id.registerMakeText);
-        makeText.setTypeface(sfont);
+        makeText.setTypeface(font);
         modelText = (TextView)findViewById(R.id.registerModelText);
-        modelText.setTypeface(sfont);
+        modelText.setTypeface(font);
         yearText = (TextView)findViewById(R.id.registerYearText);
-        yearText.setTypeface(sfont);
+        yearText.setTypeface(font);
         colorText = (TextView)findViewById(R.id.registerColorText);
-        colorText.setTypeface(sfont);
+        colorText.setTypeface(font);
 
         smake = (Spinner)findViewById(R.id.sMake);
         smodel = (Spinner)findViewById(R.id.sModel);
         syear = (Spinner) findViewById(R.id.sYear);
+        scolor = (Spinner) findViewById(R.id.sColor);
+
+        List<String> colors = Arrays.asList(getResources().getStringArray(R.array.vehicleColor));
+
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_dropdown_item, colors)
+        {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent)
+            {
+                View v = super.getView(position, convertView, parent);
+
+                Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Handwriting.ttf");
+                ((TextView) v).setTypeface(font);
+                ((TextView) v).setTextSize(20);
+                return v;
+            }
+
+            public View getDropDownView(int position,  View convertView,  ViewGroup parent) {
+                View v = super.getDropDownView(position, convertView, parent);
+
+                Typeface externalFont = Typeface.createFromAsset(getAssets(), "fonts/Handwriting.ttf");
+                ((TextView) v).setTypeface(externalFont);
+                ((TextView) v).setTextSize(20);
+                return v;
+            }
+        };
+//        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        scolor.setAdapter(spinnerArrayAdapter);
 
         //ArrayList<HashMap<String, String>> formList = new ArrayList<HashMap<String, String>>();
         try {
@@ -88,7 +117,29 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
                 strArr.add(m);
             }
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                    android.R.layout.simple_spinner_dropdown_item, strArr);
+                    android.R.layout.simple_spinner_dropdown_item, strArr)
+            {
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent)
+                {
+                    View v = super.getView(position, convertView, parent);
+
+                    Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Handwriting.ttf");
+                    ((TextView) v).setTypeface(font);
+                    ((TextView) v).setTextSize(20);
+                    return v;
+                }
+
+                public View getDropDownView(int position,  View convertView,  ViewGroup parent) {
+                    View v = super.getDropDownView(position, convertView, parent);
+
+                    Typeface externalFont = Typeface.createFromAsset(getAssets(), "fonts/Handwriting.ttf");
+                    ((TextView) v).setTypeface(externalFont);
+                    ((TextView) v).setTextSize(20);
+                    return v;
+                }
+            };
+
             smake.setAdapter(adapter);
 
             smake.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
@@ -153,7 +204,28 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
                 String model = jb2.getString("model");
                 strArr.add(model);
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                        android.R.layout.simple_spinner_dropdown_item, strArr);
+                        android.R.layout.simple_spinner_dropdown_item, strArr)
+                {
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent)
+                    {
+                        View v = super.getView(position, convertView, parent);
+
+                        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Handwriting.ttf");
+                        ((TextView) v).setTypeface(font);
+                        ((TextView) v).setTextSize(20);
+                        return v;
+                    }
+
+                    public View getDropDownView(int position,  View convertView,  ViewGroup parent) {
+                        View v = super.getDropDownView(position, convertView, parent);
+
+                        Typeface externalFont = Typeface.createFromAsset(getAssets(), "fonts/Handwriting.ttf");
+                        ((TextView) v).setTypeface(externalFont);
+                        ((TextView) v).setTextSize(20);
+                        return v;
+                    }
+                };
                 smodel.setAdapter(adapter);
             }
         } catch (IOException e) {
@@ -200,7 +272,28 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
                 String model = jb3.getInt("year") + "";
                 strArr.add(model);
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                        android.R.layout.simple_spinner_dropdown_item, strArr);
+                        android.R.layout.simple_spinner_dropdown_item, strArr)
+                {
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent)
+                    {
+                        View v = super.getView(position, convertView, parent);
+
+                        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Handwriting.ttf");
+                        ((TextView) v).setTypeface(font);
+                        ((TextView) v).setTextSize(20);
+                        return v;
+                    }
+
+                    public View getDropDownView(int position,  View convertView,  ViewGroup parent) {
+                        View v = super.getDropDownView(position, convertView, parent);
+
+                        Typeface externalFont = Typeface.createFromAsset(getAssets(), "fonts/Handwriting.ttf");
+                        ((TextView) v).setTypeface(externalFont);
+                        ((TextView) v).setTextSize(20);
+                        return v;
+                    }
+                };
                 syear.setAdapter(adapter);
             }
         } catch (IOException e) {

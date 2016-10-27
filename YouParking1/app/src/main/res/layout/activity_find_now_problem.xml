@@ -40,26 +40,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Problems while Finding?"
-                android:textSize="30sp"
-                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="casual"
+                android:textStyle="bold"
                 android:textAlignment="center"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
             <TextView
+                android:id="@+id/question1FindText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Was the holder at the specified location?"
                 android:textSize="20sp"
+                android:fontFamily="casual"
                 android:layout_marginBottom="10sp"
                 android:textAlignment="center"
-                android:textColor="@color/black"/>
+                android:textColor="@color/colorPrimary"/>
 
             <RadioGroup
                 android:id="@+id/question1Findgroup"
@@ -69,17 +73,22 @@
 
                 <RadioButton
                     android:id="@+id/findRadioBtn1Yes"
+                    android:paddingRight="20dp"
                     android:layout_width="wrap_content"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Yes"
-                    android:layout_marginRight="20sp"/>
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="casual"
+                    android:text="Yes" />
 
                 <RadioButton
                     android:id="@+id/findRadioBtn1No"
                     android:layout_width="wrap_content"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="No"
-                    android:layout_marginLeft="20sp"/>
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="casual"
+                    android:text="No" />
 
             </RadioGroup>
 
@@ -88,18 +97,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
             <TextView
+                android:id="@+id/question2FindText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Was he/she in the specified vehicle?"
                 android:textSize="20sp"
                 android:layout_marginBottom="10sp"
                 android:textAlignment="center"
-                android:textColor="@color/black"/>
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="casual"/>
 
             <RadioGroup
                 android:id="@+id/question2Findgroup"
@@ -110,16 +121,21 @@
                 <RadioButton
                     android:id="@+id/findRadioBtn2Yes"
                     android:layout_width="wrap_content"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Yes"
-                    android:layout_marginRight="20sp"/>
+                    android:paddingRight="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="casual"/>
 
                 <RadioButton
                     android:id="@+id/findRadioBtn2No"
                     android:layout_width="wrap_content"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="No"
-                    android:layout_marginLeft="20sp"/>
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="casual"/>
 
             </RadioGroup>
 
@@ -132,16 +148,24 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/findProblemCommentsText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Add any additional comments that pertain to the problem you had with the holder."
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="16dp"/>
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp"
+                android:textSize="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="casual" />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
+                android:maxLines="2"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="casual"
                 android:id="@+id/findProblemComments"
                 android:layout_gravity="center_horizontal"
                 android:hint="Additional Comments"
@@ -154,14 +178,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50sp">
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20dp">
 
             <Button
                 android:id="@+id/findThanksBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingRight="40dp"
+                android:paddingLeft="40dp"
+                android:layout_gravity="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
                 android:text="Thank you!"
-                android:onClick="goToMainFromFind"/>
+                android:onClick="goToMainFromFind"
+                android:background="@drawable/button_round2"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="casual"/>
 
         </LinearLayout>
 
