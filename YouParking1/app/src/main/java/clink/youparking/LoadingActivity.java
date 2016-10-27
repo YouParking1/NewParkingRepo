@@ -136,7 +136,6 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
         else if(operation == Operation.BIDOPEN) {
             if(output.contains("nospots"))
             {
-                System.out.println("NO SPOTS FOUND YO! *)(*()*()*)(*)(*)(*)(");
                 User.isLoggedIn = true;
                 User.bidOpen = false;
                 Intent intent = new Intent(this, MainActivity.class);

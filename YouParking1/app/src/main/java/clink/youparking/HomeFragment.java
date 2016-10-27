@@ -6,6 +6,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +39,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
 
     LinearLayout auctionend;
     enum Operation {
-        ACHIEVEMENT, BIDS, NONE
+        ACHIEVEMENT, BIDS, CURRENT, NONE
     }
 
     private Operation operation = Operation.NONE;
@@ -257,7 +259,10 @@ public class HomeFragment extends Fragment implements AsyncResponse {
         }
         else if (operation == Operation.BIDS) {
             if (output.equals("-1")) {
-
+                operation = Operation.CURRENT;
+                BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
+                backgroundWorker.delegate = this;
+                backgroundWorker.execute("findcurrentbid");
             }
             else {
                 JSONObject jsonObject = new JSONObject(output);
@@ -267,6 +272,30 @@ public class HomeFragment extends Fragment implements AsyncResponse {
                         jsonObject.getInt("Holder_Spots"), jsonObject.getInt("DepartTime"), jsonObject.getInt("Spot_ID"),
                         0, jsonObject.getString("Buyer"));
                 auctionend.setVisibility(View.VISIBLE);
+            }
+        }
+        else if (operation == Operation.CURRENT) {
+            if (output.equals("-1")) {
+
+            }
+            else {
+                JSONObject jsonObject = new JSONObject(output);
+                int spotid = jsonObject.getInt("Spot_ID");
+                int points = 0;
+                if (!jsonObject.getString("Points").equals("null")) {
+                    points = jsonObject.getInt("Points");
+                }
+
+
+                LinearLayout cancelSlider = (LinearLayout) getView().findViewById(R.id.slider_cancel_fragment);
+
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("ID", spotid);
+                bundle.putInt("POINTS", points);
+                Fragment fragment = new CancelAuctionFragment();
+                fragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().add(cancelSlider.getId(), fragment).commit();
             }
         }
     }

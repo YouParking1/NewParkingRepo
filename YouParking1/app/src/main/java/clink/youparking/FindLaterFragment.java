@@ -152,7 +152,7 @@ public class FindLaterFragment extends Fragment implements AsyncResponse {
                 String buyer = "NONE";
 
                 if (jsonObject.getString("Points").equals("null")) {
-                    System.out.println("&*&(&(*&(*&(*&(*&(*&(* " + jsonObject.get("Points").getClass());
+
                 }
                 else {
                     bidPoints = jsonObject.getInt("Points");

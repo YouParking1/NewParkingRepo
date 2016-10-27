@@ -13,6 +13,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -39,15 +40,18 @@ public class MainActivity extends AppCompatActivity
         HoldSpotFragment.OnFragmentInteractionListener, FindLaterFragment.OnFragmentInteractionListener, HoldLaterFragment.OnFragmentInteractionListener,
         SignOutFragment.OnFragmentInteractionListener, GMapFragment.OnFragmentInteractionListener, HoldSpotMapFragment.OnFragmentInteractionListener,
         MapInteraction, HoldLaterMapFragment.OnFragmentInteractionListener, DynamicSpot.OnFragmentInteractionListener, AchievementFragment.OnFragmentInteractionListener,
-        DynamicVehicle.OnFragmentInteractionListener, DynamicSpotBid.OnFragmentInteractionListener, AsyncResponse {
+        DynamicVehicle.OnFragmentInteractionListener, DynamicSpotBid.OnFragmentInteractionListener, AsyncResponse,
+        CancelAuctionFragment.OnFragmentInteractionListener{
 
     int bought_spot_id = -1;
 
-    public enum Operation { DELETE, HOLDSPOT, HOLDLATER, BUY, NUMVEHICLES, BID, NONE }
+    public enum Operation { DELETE, HOLDSPOT, HOLDLATER, BUY, NUMVEHICLES, CANCEL, BID, NONE }
     Operation operation = Operation.NONE;
 
     private boolean validHoldLaterTime = false;
     private static final int MY_PERMISSION_ACCESS_COARSE_LOCATION = 1;
+
+    private int auctionSpotId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,7 +108,6 @@ public class MainActivity extends AppCompatActivity
         TextView numTickets = (TextView)hView.findViewById(R.id.numTickets);
         numTickets.setText(Integer.toString(User.points));
         numTickets.setTypeface(font2);
-
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
                 PackageManager.PERMISSION_GRANTED) {
@@ -170,39 +173,40 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
         Class fragmentClass = null;
 
-        if (User.bidOpen || User.holdingSpot) {
+
+        if (id == R.id.nav_home) {
+            fragmentClass = HomeFragment.class;
+        } else if (id == R.id.nav_vehicles) {
+            fragmentClass = VehiclesFragment.class;
+        } else if (id == R.id.nav_my_bids) {
+            fragmentClass = MyBidsFragment.class;
+        } else if (id == R.id.nav_find_now && !User.bidOpen && !User.holdingSpot) {
+            fragmentClass = FindNowFragment.class;
+        } else if (id == R.id.nav_hold_spot && !User.bidOpen && !User.holdingSpot) {
+            fragmentClass = HoldSpotMapFragment.class;
+        } else if (id == R.id.nav_find_later && !User.bidOpen && !User.holdingSpot) {
+            fragmentClass = FindLaterFragment.class;
+        } else if (id == R.id.nav_hold_later && !User.bidOpen && !User.holdingSpot) {
+            fragmentClass = HoldLaterMapFragment.class;
+        } else if (id == R.id.nav_sign_out) {
+            fragmentClass = SignOutFragment.class;
+        }
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+        } catch (RuntimeException e) {
             int duration = Toast.LENGTH_LONG;
 
             Toast toast = Toast.makeText(this, "You're currently holding a spot open. Cancel" +
-                    " the spot to reopen full access!", duration);
+                    " the spot to reopen full access! Canceling an auction with active bids will hurt your " +
+                    "user rating!", duration);
             toast.show();
-        }
-        else {
-            if (id == R.id.nav_home) {
-                fragmentClass = HomeFragment.class;
-            } else if (id == R.id.nav_vehicles) {
-                fragmentClass = VehiclesFragment.class;
-            } else if (id == R.id.nav_my_bids) {
-                fragmentClass = MyBidsFragment.class;
-            } else if (id == R.id.nav_find_now) {
-                fragmentClass = FindNowFragment.class;
-            } else if (id == R.id.nav_hold_spot) {
-                fragmentClass = HoldSpotMapFragment.class;
-            } else if (id == R.id.nav_find_later) {
-                fragmentClass = FindLaterFragment.class;
-            } else if (id == R.id.nav_hold_later) {
-                fragmentClass = HoldLaterMapFragment.class;
-            } else if (id == R.id.nav_sign_out) {
-                fragmentClass = SignOutFragment.class;
-            }
-            try {
-                fragment = (Fragment) fragmentClass.newInstance();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
         }
 
 
@@ -425,6 +429,12 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         }
+        else if (operation == Operation.CANCEL) {
+            User.bidOpen = false;
+
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 
     /**
@@ -540,6 +550,15 @@ public class MainActivity extends AppCompatActivity
     public void joinHeldSpot(View view) {
         Intent intent = new Intent(this, BidClaimActivity.class);
         startActivity(intent);
+    }
+
+    public void cancelAuction(View view) {
+        auctionSpotId = view.getId();
+
+        operation = Operation.CANCEL;
+        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+        backgroundWorker.delegate = this;
+        backgroundWorker.execute("cancelauction", Integer.toString(auctionSpotId));
     }
 
 
