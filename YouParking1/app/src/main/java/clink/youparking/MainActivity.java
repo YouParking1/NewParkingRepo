@@ -440,6 +440,8 @@ public class MainActivity extends AppCompatActivity
             if (output.equals("200")) {
                 Toast toast = Toast.makeText(this, "You bid " + sPoints + "!", Toast.LENGTH_LONG);
                 toast.show();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.flContent, new MyBidsFragment()).commit();
             }
             else {
                 Toast toast = Toast.makeText(this, "Something went wrong. You may not have had enough points for this bid.", Toast.LENGTH_LONG);
