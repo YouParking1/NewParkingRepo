@@ -43,12 +43,6 @@ public class MainActivity extends AppCompatActivity
         DynamicVehicle.OnFragmentInteractionListener, DynamicSpotBid.OnFragmentInteractionListener, AsyncResponse,
         CancelAuctionFragment.OnFragmentInteractionListener{
 
-//TAKE OUT
-    String role;
-
-
-
-
     int bought_spot_id = -1;
 
     public enum Operation { DELETE, HOLDSPOT, HOLDLATER, BUY, NUMVEHICLES, CANCEL, BID, NONE }
@@ -276,24 +270,6 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.flContent, new HoldLaterMapFragment()).commit();
     }
-
-
-
-
-    public void goToProblem(View view)
-    {
-//            Intent intent = new Intent(this, FindNowProblemActivity.class);
-//            intent.putExtra("transID", "1");
-//            startActivity(intent);
-//
-            Intent intent = new Intent(this, HoldSpotProblemActivity.class);
-            intent.putExtra("transID", "1");
-            startActivity(intent);
-
-    }
-
-
-
 
     public void goToAchievements(View view)
     {
