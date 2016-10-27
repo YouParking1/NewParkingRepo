@@ -42,7 +42,7 @@
     <!-- Email Verification -->
     <string name="emailVerifyTitle"><u>Email Verification</u></string>
 
-    <!-- Home Page -->
+    <!-- Home Fragment -->
     <string name="home_welcome"><u>Welcome, User User</u></string>
     <string name="home_spots_text"><u>Spots On Campus:</u></string>
     <string name="home_spots_number">0</string>
@@ -60,6 +60,9 @@
 
     <!-- Hold Problem Activity -->
     <string name="problemHolding"><u>Problems while Holding?</u></string>
+
+    <!-- Vehicles Fragment -->
+    <string name="vehicleTitle"><u>My Vehicles</u></string>
 
     <!-- Map Strings -->
     <string name="title_activity_general_map">Map Location</string>

@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -80,9 +81,11 @@ public class VehiclesFragment extends Fragment implements AsyncResponse {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/college.ttf");
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
         TextView vehicleTitle = (TextView)getView().findViewById(R.id.vehiclesText);
-        vehicleTitle.setTypeface(font);
+        vehicleTitle.setTypeface(font, Typeface.BOLD);
+        Button addVehicle = (Button) getView().findViewById(R.id.addVehicleBtn);
+        addVehicle.setTypeface(font, Typeface.BOLD);
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(getActivity());
         backgroundWorker.delegate = this;
@@ -142,7 +145,6 @@ public class VehiclesFragment extends Fragment implements AsyncResponse {
                 bundle.putInt("YEAR", User.vehicles.get(i).getYear());
                 bundle.putString("COLOR", User.vehicles.get(i).getColor());
                 bundle.putInt("ID", i);
-
 
                 System.out.println("VehicleID: " + User.vehicles.get(i).getId());
                 System.out.println("Make: " + User.vehicles.get(i).getMake());

@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -36,7 +37,8 @@ public class DynamicVehicle extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    TextView vehicleMakeText, vehicleModelText, vehicleYearText, vehicleColorText;
+    TextView vehicleMakeText, vehicleModelText, vehicleYearText, vehicleColorText, vehicleMake,
+            vehicleModel, vehicleYear, vehicleColor;
     ImageView vehicleImage;
     Button vehicleBtn;
     private RequestHandler requestHandler;
@@ -89,21 +91,38 @@ public class DynamicVehicle extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
+        vehicleMake = (TextView)getView().findViewById(R.id.makeText);
+        vehicleMake.setTypeface(font, Typeface.BOLD);
+
         vehicleMakeText = (TextView)getView().findViewById(R.id.vehicleMake);
         String make = getArguments().getString("MAKE");
         vehicleMakeText.setText(make);
+        vehicleMakeText.setTypeface(font, Typeface.BOLD);
+
+        vehicleModel = (TextView)getView().findViewById(R.id.modelText);
+        vehicleModel.setTypeface(font, Typeface.BOLD);
 
         vehicleModelText = (TextView)getView().findViewById(R.id.vehicleModel);
         String model = getArguments().getString("MODEL");
         vehicleModelText.setText(model);
+        vehicleModelText.setTypeface(font, Typeface.BOLD);
+
+        vehicleYear = (TextView)getView().findViewById(R.id.yearText);
+        vehicleYear.setTypeface(font, Typeface.BOLD);
 
         vehicleYearText = (TextView)getView().findViewById(R.id.vehicleYear);
         int year = getArguments().getInt("YEAR");
         vehicleYearText.setText(Integer.toString(year));
+        vehicleYearText.setTypeface(font, Typeface.BOLD);
+
+        vehicleColor = (TextView)getView().findViewById(R.id.colorText);
+        vehicleColor.setTypeface(font, Typeface.BOLD);
 
         vehicleColorText = (TextView)getView().findViewById(R.id.vehicleColor);
         String color = getArguments().getString("COLOR");
         vehicleColorText.setText(color);
+        vehicleColorText.setTypeface(font, Typeface.BOLD);
 
         vehicleImage = (ImageView)getView().findViewById(R.id.vehicleImage);
         int vehicleid = getArguments().getInt("VEHICLEID");
@@ -111,6 +130,7 @@ public class DynamicVehicle extends Fragment {
 
         vehicleBtn = (Button)getView().findViewById(R.id.deleteVehicleBtn);
         vehicleBtn.setId(vehicleid);
+        vehicleBtn.setTypeface(font, Typeface.BOLD);
 
         LinearLayout linearLayout = (LinearLayout) getView().findViewById(R.id.vehiclesLayout);
         int id = getArguments().getInt("ID");

@@ -150,7 +150,7 @@ public class MyBidsFragment extends Fragment implements AsyncResponse {
 
 
 
-                String desc = ("Departs in " + hours + "Hours and " + minutes + " Minutes");
+                String desc = ("Departs in " + hours + " Hours and " + minutes + " Minutes");
                 textView.setText(desc);
                 textView.setTypeface(font, Typeface.BOLD);
                 textView.setTextColor(Color.parseColor("#3F51B5"));

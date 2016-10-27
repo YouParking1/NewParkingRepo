@@ -10,23 +10,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp">
+        android:layout_margin="20dp">
 
         <TextView
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:fontFamily="casual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Make: "
             android:id="@+id/makeText"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
         <TextView
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:fontFamily="casual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/vehicleMake"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
 
     </LinearLayout>
 
@@ -39,16 +41,22 @@
         android:layout_marginLeft="20dp">
 
         <TextView
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:fontFamily="casual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Model: "
             android:id="@+id/modelText"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
         <TextView
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:fontFamily="casual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/vehicleModel"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
 
     </LinearLayout>
 
@@ -60,20 +68,24 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp">
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:fontFamily="casual"
             android:text="Year: "
             android:id="@+id/yearText"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/vehicleYear"
-            android:textSize="30dp" />
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:textSize="20dp" />
 
     </LinearLayout>
 
@@ -89,34 +101,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Color: "
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:fontFamily="casual"
             android:id="@+id/colorText"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/vehicleColor"
-            android:textSize="30dp" />
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:textSize="20dp" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="gone"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Picture: "
-            android:layout_marginTop="30dp"
-            android:id="@+id/pictureText"
-            android:textSize="22sp" />
     </LinearLayout>
 
     <ImageView
@@ -130,10 +128,17 @@
         android:id="@+id/deleteVehicleBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
         android:layout_gravity="center"
+        android:textSize="20dp"
         android:text="Delete Vehicle"
-        android:onClick="deleteVehicle"/>
+        android:onClick="deleteVehicle"
+        android:background="@drawable/button_round2"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="casual"/>
 
 </LinearLayout>
 
