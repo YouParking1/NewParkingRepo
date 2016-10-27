@@ -302,7 +302,7 @@ public class MainActivity extends AppCompatActivity
         if (User.time != 0 && validHoldLaterTime) {
 
             operation = Operation.HOLDLATER;
-            Spinner spinner = (Spinner) findViewById(R.id.holdPointsSpinner);
+            Spinner spinner = (Spinner) findViewById(R.id.holdLaterPointsSpinner);
             String points = spinner.getSelectedItem().toString();
 
             EditText editText = (EditText) findViewById(R.id.holdSpotLaterComments);

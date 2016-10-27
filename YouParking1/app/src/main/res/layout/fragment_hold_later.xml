@@ -81,7 +81,6 @@
                 android:layout_height="50dp"
                 android:prompt="@string/points_prompt"
                 android:background="@android:drawable/btn_dropdown"
-                android:entries="@array/points_array"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp">
             </Spinner>
