@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity
 
     int bought_spot_id = -1;
 
-    public enum Operation { DELETE, HOLDSPOT, HOLDLATER, BUY, NUMVEHICLES, CANCEL, BID, SETBID, NONE }
+    public enum Operation { DELETE, HOLDSPOT, HOLDLATER, BUY, NUMVEHICLES, CANCEL, BID, SETBID, POINTS, NONE }
     Operation operation = Operation.NONE;
 
     private boolean validHoldLaterTime = false;
@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity
 
     private int auctionSpotId = 0;
     private String sPoints = "";
+
+    private View hView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,15 +102,15 @@ public class MainActivity extends AppCompatActivity
         }
 
         //This bit of code is for setting ticket icon in nav header.
-        View hView = navigationView.getHeaderView(0);
+        hView = navigationView.getHeaderView(0);
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/fontawesome-webfont.ttf");
         TextView text = (TextView) hView.findViewById(R.id.inMenu);
         text.setTypeface(font);
 
-        Typeface font2 = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
-        TextView numTickets = (TextView)hView.findViewById(R.id.numTickets);
-        numTickets.setText(Integer.toString(User.points));
-        numTickets.setTypeface(font2);
+        operation = Operation.POINTS;
+        BackgroundWorker pointsBackground = new BackgroundWorker(this);
+        pointsBackground.delegate = this;
+        pointsBackground.execute("getpoints");
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
                 PackageManager.PERMISSION_GRANTED) {
@@ -436,17 +438,23 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
-        if (operation == Operation.SETBID) {
+        else if (operation == Operation.SETBID) {
             if (output.equals("200")) {
                 Toast toast = Toast.makeText(this, "You bid " + sPoints + "!", Toast.LENGTH_LONG);
                 toast.show();
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.flContent, new MyBidsFragment()).commit();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
             }
             else {
                 Toast toast = Toast.makeText(this, "Something went wrong. You may not have had enough points for this bid.", Toast.LENGTH_LONG);
                 toast.show();
             }
+        }
+        else if (operation == Operation.POINTS) {
+            Typeface font2 = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
+            TextView numTickets = (TextView)hView.findViewById(R.id.numTickets);
+            numTickets.setText(output);
+            numTickets.setTypeface(font2);
         }
     }
 
