@@ -437,12 +437,12 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         }
         if (operation == Operation.SETBID) {
-            if (output.equals(200)) {
+            if (output.equals("200")) {
                 Toast toast = Toast.makeText(this, "You bid " + sPoints + "!", Toast.LENGTH_LONG);
                 toast.show();
             }
             else {
-                Toast toast = Toast.makeText(this, "Something went wrong. You may not have had enough points for this bid!", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(this, "Something went wrong. You may not have had enough points for this bid.", Toast.LENGTH_LONG);
                 toast.show();
             }
         }
