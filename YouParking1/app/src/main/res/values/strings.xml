@@ -54,6 +54,7 @@
     <string name="icon_marker">&#xf041;</string>
     <string name="icon_five">&#xf256;</string>
     <string name="icon_one">&#xf25a;</string>
+    <string name="icon_cancel">&#xf00d;</string>
 
 
     <!-- Navigation stuff -->

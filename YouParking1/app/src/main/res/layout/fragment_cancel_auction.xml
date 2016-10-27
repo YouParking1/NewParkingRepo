@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".DynamicSpot">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:background="#ff0000"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:id="@+id/dynamic_bottom"
+            android:orientation="vertical"
+            android:onClick="cancelAuction">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/cancel_icon_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40dp"
+                    android:text="@string/icon_cancel"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:text="cancel auction"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dynamic_front"
+            android:background="@color/compYellow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/open_auction_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You currently have an auction worth..."/>
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:id="@+id/open_auction_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Points!"/>
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/slide_cancel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Slide out to cancel auction. (Canceling a spot with an active bid will hurt your user rating)"/>
+
+
+        </LinearLayout>
+
+    </com.daimajia.swipe.SwipeLayout>
+
+</FrameLayout>
