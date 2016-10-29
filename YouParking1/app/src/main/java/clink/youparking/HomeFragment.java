@@ -6,8 +6,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -271,7 +269,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
         }
         else if (operation == Operation.CURRENT) {
             if (output.equals("-1")) {
-
+                //TODO: Aaron Martin - NEED TO DO SOMETHING IF YOU GET A -1
             }
             else {
                 User.bidOpen = true;
@@ -282,9 +280,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
                     points = jsonObject.getInt("Points");
                 }
 
-
                 LinearLayout cancelSlider = (LinearLayout) getView().findViewById(R.id.slider_cancel_fragment);
-
 
                 Bundle bundle = new Bundle();
                 bundle.putInt("ID", spotid);

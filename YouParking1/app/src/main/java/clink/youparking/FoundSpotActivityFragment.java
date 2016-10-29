@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 public class FoundSpotActivityFragment extends Fragment {
 
     public Fragment mapFrag;
-    public FloatingActionButton fab;
 
     public FoundSpotActivityFragment() {
     }
@@ -37,14 +36,5 @@ public class FoundSpotActivityFragment extends Fragment {
 
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.add(R.id.bought_spot_map, mapFrag).commit();
-
-//        fab = (FloatingActionButton)getView().findViewById(R.id.fab_details);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                VehicleDetailsDialog dialog = new VehicleDetailsDialog();
-//                dialog.show(getActivity().getFragmentManager(), "tag");
-//            }
-//        });
     }
 }

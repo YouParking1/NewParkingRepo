@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +14,6 @@ import android.widget.LinearLayout;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -38,9 +34,9 @@ public class FindNowFragment extends Fragment implements AsyncResponse {
 
     private OnFragmentInteractionListener mListener;
 
-    public ArrayList<com.daimajia.swipe.SwipeLayout> swipeLayouts = new ArrayList<>();
-    public ArrayList<LinearLayout> linearLayouts = new ArrayList<>();
-    public ArrayList<LinearLayout> innerLayouts = new ArrayList<>();
+//    public ArrayList<com.daimajia.swipe.SwipeLayout> swipeLayouts = new ArrayList<>();
+//    public ArrayList<LinearLayout> linearLayouts = new ArrayList<>();
+//    public ArrayList<LinearLayout> innerLayouts = new ArrayList<>();
 
     // Fragment for google maps.
     private Fragment mapFrag;
@@ -124,15 +120,15 @@ public class FindNowFragment extends Fragment implements AsyncResponse {
         Bundle bundle = new Bundle();
         bundle.putString("TYPE", "FIND");
 
-        //ArrayList<Spot> User.spots = new ArrayList<>();
-        ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
+//        ArrayList<Spot> User.spots = new ArrayList<>();
+//        ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
 
         if (!User.spots.isEmpty()) {
             User.spots.clear();
         }
 
         if (output.equals("-1")) {
-
+            //TODO: Aaron Martin - NEED TO DO SOMETHING IF YOU GET A -1
         }
         else {
 

@@ -7,9 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.json.JSONException;
 
 public class ProblemActivity extends AppCompatActivity {
 
@@ -28,9 +25,9 @@ public class ProblemActivity extends AppCompatActivity {
 
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
         problemText = (TextView) findViewById(R.id.problemText);
-        problemText.setTypeface(font);
+        problemText.setTypeface(font, Typeface.BOLD);
         problemBtn = (Button)findViewById(R.id.goHomeBtn);
-        problemBtn.setTypeface(font);
+        problemBtn.setTypeface(font, Typeface.BOLD);
     }
 
     public void goToProblem(View view)

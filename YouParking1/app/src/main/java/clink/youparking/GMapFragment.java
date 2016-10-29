@@ -26,15 +26,12 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import com.github.nkzawa.emitter.Emitter;
-import com.github.nkzawa.socketio.client.Socket;
 import com.github.nkzawa.socketio.client.IO;
 import com.google.android.gms.maps.model.PolylineOptions;
 
@@ -279,7 +276,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
         View view =  inflater.inflate(R.layout.fragment_gmap, container, false);
         return view;
-
     }
 
     @Override
@@ -403,7 +399,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
         if (operation == Operation.CANCEL) {
             if (output.equals("0")) {
-
+                //TODO: Aaron Martin - NEED TO DO SOMETHING IF YOU GET A 0
             } else {
                 if (User.mSocket != null) {
                     if (User.mGoogleApiClient != null && User.mGoogleApiClient.isConnected()) {

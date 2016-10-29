@@ -15,11 +15,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -39,9 +34,9 @@ public class FindLaterFragment extends Fragment implements AsyncResponse {
 
     private OnFragmentInteractionListener mListener;
 
-    public ArrayList<com.daimajia.swipe.SwipeLayout> swipeLayouts = new ArrayList<>();
-    public ArrayList<LinearLayout> linearLayouts = new ArrayList<>();
-    public ArrayList<LinearLayout> innerLayouts = new ArrayList<>();
+//    public ArrayList<com.daimajia.swipe.SwipeLayout> swipeLayouts = new ArrayList<>();
+//    public ArrayList<LinearLayout> linearLayouts = new ArrayList<>();
+//    public ArrayList<LinearLayout> innerLayouts = new ArrayList<>();
 
     // Fragment for google maps.
     private Fragment mapFrag;
@@ -129,7 +124,7 @@ public class FindLaterFragment extends Fragment implements AsyncResponse {
         }
 
         if (output.equals("-1")) {
-
+            //TODO: Aaron Martin - NEED TO DO SOMETHING IF YOU GET A -1
         }
         else {
 
@@ -150,7 +145,7 @@ public class FindLaterFragment extends Fragment implements AsyncResponse {
                 String buyer = "NONE";
 
                 if (jsonObject.getString("Points").equals("null")) {
-
+                    //TODO: Aaron Martin - NEED TO DO SOMETHING IF YOU GET A NULL
                 }
                 else {
                     bidPoints = jsonObject.getInt("Points");

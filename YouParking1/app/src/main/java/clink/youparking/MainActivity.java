@@ -1,7 +1,6 @@
 package clink.youparking;
 
 import android.Manifest;
-import android.app.ActionBar;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,7 +12,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -23,7 +21,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.text.style.TypefaceSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -74,7 +71,7 @@ public class MainActivity extends AppCompatActivity
 
         if (savedInstanceState == null) {
             Fragment fragment = null;
-            Class fragmentClass = null;
+            Class fragmentClass;
             fragmentClass = HomeFragment.class;
             try {
                 fragment = (Fragment) fragmentClass.newInstance();
@@ -140,8 +137,6 @@ public class MainActivity extends AppCompatActivity
 
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-            //super.onBackPressed(); Disabled so the user cannot return to the login activity.
         }
     }
 
@@ -157,7 +152,7 @@ public class MainActivity extends AppCompatActivity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+//        int id = item.getItemId();
 
 //        //noinspection SimplifiableIfStatement
 //        if (id == R.id.action_settings) {
@@ -203,14 +198,13 @@ public class MainActivity extends AppCompatActivity
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
         } catch (RuntimeException e) {
-            int duration = Toast.LENGTH_LONG;
+            int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(this, "You're currently holding a spot open. Cancel" +
                     " the spot to reopen full access! Canceling an auction with active bids will hurt your " +
                     "user rating!", duration);
             toast.show();
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -346,7 +340,7 @@ public class MainActivity extends AppCompatActivity
         {
             if(output.contains("No"))
             {
-                Toast.makeText(this, "You must have at least one vehicle.", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "You must have at least one vehicle.", Toast.LENGTH_SHORT).show();
             }
             else
             {
@@ -403,7 +397,7 @@ public class MainActivity extends AppCompatActivity
             }
             else
             {
-                Toast.makeText(getApplicationContext(), "You have too many vehicles. Please delete one vehicle first.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "You have too many vehicles. Please delete one vehicle first.", Toast.LENGTH_SHORT).show();
             }
         }
         else if (operation == Operation.BID) {
@@ -413,12 +407,12 @@ public class MainActivity extends AppCompatActivity
                 fragmentManager.beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
             }
             else if (output.equals("-1")) {
-
+                //TODO: Aaron Martin - NEED TO DO SOMETHING IF YOU GET A -1
             }
         }
         else if (operation == Operation.HOLDLATER) {
             if (!output.equals("200")) {
-                Toast toast = Toast.makeText(this, "Spot failed... Try again or check your connection", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(this, "Spot failed... Try again or check your connection", Toast.LENGTH_SHORT);
                 toast.show();
             }
             else {
@@ -435,13 +429,13 @@ public class MainActivity extends AppCompatActivity
         }
         else if (operation == Operation.SETBID) {
             if (output.equals("200")) {
-                Toast toast = Toast.makeText(this, "You bid " + sPoints + "!", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(this, "You bid " + sPoints + "!", Toast.LENGTH_SHORT);
                 toast.show();
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
             }
             else {
-                Toast toast = Toast.makeText(this, "Something went wrong. You may not have had enough points for this bid.", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(this, "Something went wrong. You may not have had enough points for this bid.", Toast.LENGTH_SHORT);
                 toast.show();
             }
         }
@@ -474,7 +468,7 @@ public class MainActivity extends AppCompatActivity
 
         }
         else {
-            Toast toast = Toast.makeText(this, "Not Enough Points", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, "Not Enough Points", Toast.LENGTH_SHORT);
             toast.show();
         }
     }
@@ -534,12 +528,9 @@ public class MainActivity extends AppCompatActivity
             backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
         }
         else {
-            Toast toast = Toast.makeText(this, "Not Enough Points", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, "Not Enough Points", Toast.LENGTH_SHORT);
             toast.show();
         }
-
-
-
     }
 
     public void bidFive(View view) {
@@ -565,7 +556,7 @@ public class MainActivity extends AppCompatActivity
             backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
         }
         else {
-            Toast toast = Toast.makeText(this, "Not Enough Points", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, "Not Enough Points", Toast.LENGTH_SHORT);
             toast.show();
         }
     }

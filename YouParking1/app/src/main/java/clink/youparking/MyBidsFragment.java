@@ -87,7 +87,7 @@ public class MyBidsFragment extends Fragment implements AsyncResponse {
 
         TextView title = (TextView)getView().findViewById(R.id.activeBidsTitle);
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
-        title.setTypeface(font);
+        title.setTypeface(font, Typeface.BOLD);
     }
 
     public void onButtonPressed(Uri uri) {
@@ -128,8 +128,8 @@ public class MyBidsFragment extends Fragment implements AsyncResponse {
         else {
             JSONArray jsonArray = new JSONArray(output);
             int winningBids = jsonArray.length();
-            int[] pointArr = new int[winningBids];
-            long[] departs = new long[winningBids];
+//            int[] pointArr = new int[winningBids];
+//            long[] departs = new long[winningBids];
 
 
             for (int i = 0; i < winningBids; i++) {

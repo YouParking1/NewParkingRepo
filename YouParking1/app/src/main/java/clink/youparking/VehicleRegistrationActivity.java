@@ -11,10 +11,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +22,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,7 +32,6 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
     String MakeTxt, ModelTxt;
     TextView titleText, makeText, modelText, yearText, colorText;
     public String AssetJSONFile(String filename, Context context) throws IOException {
-        //AssetManager manager = context.getAssets();
         InputStream file = getAssets().open(filename);
         byte[] formArray = new byte[file.available()];
         file.read(formArray);
@@ -60,7 +55,7 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
 
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
         titleText = (TextView)findViewById(R.id.vehicleRegisterTitle);
-        titleText.setTypeface(font);
+        titleText.setTypeface(font, Typeface.BOLD);
         makeText = (TextView)findViewById(R.id.registerMakeText);
         makeText.setTypeface(font);
         modelText = (TextView)findViewById(R.id.registerModelText);
@@ -169,9 +164,7 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
 
                 }
             });
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
+        } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
 
@@ -228,9 +221,7 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
                 };
                 smodel.setAdapter(adapter);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
+        } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
     }
@@ -296,9 +287,7 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
                 };
                 syear.setAdapter(adapter);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
+        } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
     }
@@ -330,12 +319,7 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
         }
         else
         {
-            Context context = getApplicationContext();
-            CharSequence text = "Must select a choice for all fields!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
+            Toast.makeText(getApplicationContext(), "Must select a choice for all fields!", Toast.LENGTH_SHORT).show();
         }
     }
 

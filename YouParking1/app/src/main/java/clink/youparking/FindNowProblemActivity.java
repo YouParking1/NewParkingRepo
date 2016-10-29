@@ -1,6 +1,5 @@
 package clink.youparking;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +8,6 @@ import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -106,7 +104,7 @@ public class FindNowProblemActivity extends AppCompatActivity implements AsyncRe
 
         if(radioGroup1.getCheckedRadioButtonId() == -1 | radioGroup2.getCheckedRadioButtonId() == -1)
         {
-            Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -114,7 +112,7 @@ public class FindNowProblemActivity extends AppCompatActivity implements AsyncRe
             backgroundWorker.delegate = this;
             backgroundWorker.execute("saveFinderProblems", transactionID, comments, Integer.toString(score));
 
-            Toast.makeText(this, "Thank you for your input!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Thank you for your input!", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
@@ -129,7 +127,7 @@ public class FindNowProblemActivity extends AppCompatActivity implements AsyncRe
     @Override
     public void processFinish(String output) throws JSONException {
         if (output.contains("Error")) {
-            Toast.makeText(this, output, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, output, Toast.LENGTH_SHORT).show();
         }
     }
 }

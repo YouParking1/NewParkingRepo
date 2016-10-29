@@ -32,7 +32,7 @@ public class VerifyEmail extends AppCompatActivity implements AsyncResponse {
 
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
         TextView verifyTitle = (TextView)findViewById(R.id.verifyTitle);
-        verifyTitle.setTypeface(font);
+        verifyTitle.setTypeface(font, Typeface.BOLD);
         TextView description = (TextView)findViewById(R.id.verifyText);
         description.setTypeface(font, Typeface.BOLD);
         EditText verifyCode = (EditText)findViewById(R.id.verifyCode);

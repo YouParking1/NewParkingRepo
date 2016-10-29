@@ -1,29 +1,15 @@
 package clink.youparking;
 
-import android.Manifest;
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationListener;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -87,7 +73,6 @@ public class HoldSpotMapFragment extends Fragment implements GMapFragment.OnFrag
 
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.add(R.id.hold_map, mapFrag).commit();
-
     }
 
     @Override
@@ -101,7 +86,7 @@ public class HoldSpotMapFragment extends Fragment implements GMapFragment.OnFrag
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        FloatingActionButton fab = (FloatingActionButton) getView().findViewById(R.id.fab_confirm);
+//        FloatingActionButton fab = (FloatingActionButton) getView().findViewById(R.id.fab_confirm);
     }
 
     public void onButtonPressed(Uri uri) {
@@ -116,7 +101,7 @@ public class HoldSpotMapFragment extends Fragment implements GMapFragment.OnFrag
         try {
             mapInteraction = (MapInteraction) context;
         } catch (ClassCastException castException) {
-
+            castException.printStackTrace();
         }
 
         if (context instanceof OnFragmentInteractionListener) {

@@ -15,17 +15,17 @@ import java.util.Map;
 import javax.net.ssl.HttpsURLConnection;
 
 
-public class RequestHandler {
+class RequestHandler {
 
     private String id;
 
-    public RequestHandler(String id)
+    RequestHandler(String id)
     {
         this.id = id;
     }
 
-    public String sendPostRequest(String requestURL,
-                                  HashMap<String, String> postDataParams) {
+    String sendPostRequest(String requestURL,
+                           HashMap<String, String> postDataParams) {
 
         URL url;
         String response = "";
@@ -81,8 +81,6 @@ public class RequestHandler {
         result.append(URLEncoder.encode("id", "UTF-8"));
         result.append("=");
         result.append(URLEncoder.encode(id, "UTF-8"));
-
-
 
         return result.toString();
     }

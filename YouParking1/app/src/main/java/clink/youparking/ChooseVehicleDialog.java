@@ -23,12 +23,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-
-/**
- * Created by Clink on 10/15/2016.
- */
 
 public class ChooseVehicleDialog extends DialogFragment implements AsyncResponse {
 
@@ -50,7 +45,7 @@ public class ChooseVehicleDialog extends DialogFragment implements AsyncResponse
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(dialog.getContext(), rb.getText(), Toast.LENGTH_LONG).show();
+                Toast.makeText(dialog.getContext(), rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -118,13 +113,11 @@ public class ChooseVehicleDialog extends DialogFragment implements AsyncResponse
                 String id = params[0];
                 String add = "http://www.troyparking.com/getImage.php?id="+id;
 
-                URL url = null;
+                URL url;
                 Bitmap image = null;
                 try {
                     url = new URL(add);
                     image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -170,7 +163,6 @@ public class ChooseVehicleDialog extends DialogFragment implements AsyncResponse
 //                System.out.println("Model: " + User.vehicles.get(i).getModel());
 //                System.out.println("Year: " + User.vehicles.get(i).getYear());
 //                System.out.println("ID: " + i);
-
 
                 rb = new RadioButton(getActivity());
                 rb.setId(i);

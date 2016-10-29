@@ -14,7 +14,6 @@ import android.widget.Toast;
 public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
 
     final Calendar c = Calendar.getInstance();
-    private long phpTime = 0;
     final int twoHoursLater = 7200;
 
     @Override
@@ -45,7 +44,7 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         long nowTime = System.currentTimeMillis()/1000;
         long nowTimePlusTwo = nowTime + twoHoursLater;
 
-        phpTime = time/1000;
+        long phpTime = time / 1000;
         User.time = phpTime;
 
 //        System.out.println("Set Time: " + User.time);
@@ -67,7 +66,7 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         }
     }
 
-    public long getPhpTime() {
-        return phpTime;
-    }
+//    public long getPhpTime() {
+//        return phpTime;
+//    }
 }

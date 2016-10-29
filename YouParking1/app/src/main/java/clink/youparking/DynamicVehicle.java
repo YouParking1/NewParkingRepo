@@ -19,7 +19,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 
@@ -169,13 +168,11 @@ public class DynamicVehicle extends Fragment {
                 String id = params[0];
                 String add = "http://www.troyparking.com/getImage.php?id="+id;
 
-                URL url = null;
+                URL url;
                 Bitmap image = null;
                 try {
                     url = new URL(add);
                     image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

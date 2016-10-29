@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -13,7 +12,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -32,11 +30,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +54,7 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
     ImageView vehicleImage;
     TextView coords, additionalHoldCommentsText, ticketsForSpotText, currentVehicleText;
     RadioGroup radioGroup;
-    double mLat, mLong;
+//    double mLat, mLong;
     EditText comments;
     Spinner tickets;
     Button holdBtn;
@@ -120,6 +116,7 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
         vehicleImage = (ImageView)getView().findViewById(R.id.imageVehicleChoice);
         holdBtn = (Button)getView().findViewById(R.id.holdBtn);
         holdBtn.setTypeface(font, Typeface.BOLD);
+        holdBtn.setEnabled(false);
         tickets = (Spinner)getView().findViewById(R.id.holdPointsSpinner);
         List<String> points = Arrays.asList(getResources().getStringArray(R.array.points_array));
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getActivity(),
@@ -131,7 +128,7 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
                 View v = super.getView(position, convertView, parent);
 
                 Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
-                ((TextView) v).setTypeface(font, Typeface.BOLD);
+                ((TextView) v).setTypeface(font);
                 ((TextView) v).setTextSize(20);
                 return v;
             }
@@ -160,6 +157,7 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
                     rb.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.colorPrimary));
                     getImage(User.vehicles.get(checkedId).getId());
                     holdBtn.setId(User.vehicles.get(checkedId).getId());
+                    holdBtn.setEnabled(true);
                 }
             }
         });
@@ -205,13 +203,11 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
                 String id = params[0];
                 String add = "http://www.troyparking.com/getImage.php?id="+id;
 
-                URL url = null;
+                URL url;
                 Bitmap image = null;
                 try {
                     url = new URL(add);
                     image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -295,6 +291,7 @@ public class HoldSpotFragment extends Fragment implements AsyncResponse {
                 rb.setId(i);
                 rb.setText(User.vehicles.get(i).getMake() + " " + User.vehicles.get(i).getModel() + " " + User.vehicles.get(i).getYear());
                 rb.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.colorPrimary));
+                rb.setTextSize(20);
                 rb.setTypeface(font, Typeface.BOLD);
                 radioGroup.addView(rb);
             }

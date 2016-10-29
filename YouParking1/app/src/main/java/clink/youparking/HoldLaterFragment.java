@@ -34,7 +34,6 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -127,6 +126,7 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
         timeBtn.setTypeface(font, Typeface.BOLD);
         holdSpotLaterBtn = (Button)getView().findViewById(R.id.holdSpotLaterBtn);
         holdSpotLaterBtn.setTypeface(font, Typeface.BOLD);
+        holdSpotLaterBtn.setEnabled(false);
         vehicleImage = (ImageView)getView().findViewById(R.id.imageVehicleChoice);
 
         tickets = (Spinner)getView().findViewById(R.id.holdLaterPointsSpinner);
@@ -140,7 +140,7 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
                 View v = super.getView(position, convertView, parent);
 
                 Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
-                ((TextView) v).setTypeface(font, Typeface.BOLD);
+                ((TextView) v).setTypeface(font);
                 ((TextView) v).setTextSize(20);
                 return v;
             }
@@ -169,6 +169,7 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
                     rb.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.colorPrimary));
                     getImage(User.vehicles.get(checkedId).getId());
                     User.holderVehicleID = User.vehicles.get(checkedId).getId();
+                    holdSpotLaterBtn.setEnabled(true);
                 }
             }
         });
@@ -209,8 +210,6 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
                 try {
                     url = new URL(add);
                     image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -286,6 +285,7 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
                 rb.setId(i);
                 rb.setText(User.vehicles.get(i).getMake() + " " + User.vehicles.get(i).getModel() + " " + User.vehicles.get(i).getYear());
                 rb.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.colorPrimary));
+                rb.setTextSize(20);
                 rb.setTypeface(font, Typeface.BOLD);
                 radioGroup.addView(rb);
             }

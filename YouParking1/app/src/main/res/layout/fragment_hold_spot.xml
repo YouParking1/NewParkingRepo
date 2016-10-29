@@ -23,6 +23,7 @@
                 android:layout_height="wrap_content"
                 android:text="How many tickets for this spot?"
                 android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
                 android:fontFamily="casual"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -43,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="Add any additional comments that pertain to the spot.\nI.E. Faculty, Freshmen, Dorm Parking, etc..."
                 android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
                 android:fontFamily="casual"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -55,6 +57,7 @@
                 android:layout_gravity="center_horizontal"
                 android:hint="Additional Comments"
                 android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
                 android:fontFamily="casual"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"/>
@@ -65,7 +68,8 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:paddingTop="16dp"/>
+                android:paddingTop="16dp"
+                android:textSize="15dp"/>
 
             <TextView
                 android:id="@+id/currentVehicleText"
@@ -76,7 +80,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="16dp"
-                android:textSize="16dp"
+                android:textSize="20dp"
                 android:text="Please select your current vehicle:" />
 
             <RadioGroup

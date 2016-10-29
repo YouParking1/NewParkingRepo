@@ -1,6 +1,5 @@
 package clink.youparking;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 
@@ -14,20 +13,17 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-/**
- * Created by acous on 8/28/2016.
- */
-
 public class BackgroundWorker extends AsyncTask<String, Void, String> {
+    
     public AsyncResponse delegate = null;
-    private boolean showAlert = false;
+//    private boolean // showAlert = false;
 
     Context context;
-    AlertDialog alertDialog;
+//    AlertDialog alertDialog;
+    
     public BackgroundWorker(Context ctx) {
         context = ctx;
     }
@@ -37,7 +33,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
         String type = params[0];
         if (type.equals("login"))  {
             String login_url = "http://www.troyparking.com/login.php";
-            showAlert = true;
+            // showAlert = true;
             try {
                 String email = params[1];
                 String password = params[2];
@@ -65,22 +61,20 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("register"))  {
-            String login_url = "http://www.troyparking.com/register.php";
-            showAlert = true;
+            String register_url = "http://www.troyparking.com/register.php";
+            // showAlert = true;
             try {
                 String FName = params[1];
                 String LName = params[2];
                 String University = params[3];
                 String Email = params[4];
                 String Password = params[5];
-                URL url = new URL(login_url);
+                URL url = new URL(register_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -107,19 +101,17 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("verifyEmail"))  {
-            String login_url = "http://www.troyparking.com/verify.php";
-            showAlert = true;
+            String verify_email_url = "http://www.troyparking.com/verify.php";
+            // showAlert = true;
             try {
                 String email = User.email;
                 String usercode = params[1];
-                URL url = new URL(login_url);
+                URL url = new URL(verify_email_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -143,22 +135,20 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("vehicleRegister"))  {
-            showAlert = true;
+            // showAlert = true;
             try {
-                String login_url = "http://www.troyparking.com/vehicleregister.php";
+                String vehicle_register_url = "http://www.troyparking.com/vehicleregister.php";
                 String email = User.email;
                 String Make = params[1];
                 String Model = params[2];
                 String Year = params[3];
                 String Color = params[4];
-                URL url = new URL(login_url);
+                URL url = new URL(vehicle_register_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -185,19 +175,17 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
         else if (type.equals("getVehicles"))  {
-            showAlert = true;
+            // showAlert = true;
             try {
-                String getVehicle_url = "http://www.troyparking.com/getVehiclesInfo.php";
+                String get_vehicle_url = "http://www.troyparking.com/getVehiclesInfo.php";
                 String email = User.email;
-                URL url = new URL(getVehicle_url);
+                URL url = new URL(get_vehicle_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -220,19 +208,17 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
         else if (type.equals("numVehicles"))  {
-            showAlert = true;
+            // showAlert = true;
             try {
-                String numVehicle_url = "http://www.troyparking.com/numVehicles.php";
+                String num_vehicle_url = "http://www.troyparking.com/numVehicles.php";
                 String email = User.email;
-                URL url = new URL(numVehicle_url);
+                URL url = new URL(num_vehicle_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -255,20 +241,18 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
         else if (type.equals("deleteVehicle"))  {
-            showAlert = true;
+            // showAlert = true;
             try {
-                String getVehicle_url = "http://www.troyparking.com/deleteVehicle.php";
+                String delete_vehicle_url = "http://www.troyparking.com/deleteVehicle.php";
                 String email = User.email;
                 String id = params[1];
-                URL url = new URL(getVehicle_url);
+                URL url = new URL(delete_vehicle_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -292,15 +276,13 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
         else if (type.equals("uploadImage"))  {
-            showAlert = true;
+            // showAlert = true;
             try {
                 String upload_url = "http://www.troyparking.com/uploads.php";
                 String email = User.email;
@@ -331,8 +313,6 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -378,18 +358,16 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 httpURLConnection.disconnect();
 //                System.out.println("HEY IM IN HERE ");
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if(type.equals("home")) {
-            String login_url = "http://www.troyparking.com/home.php";
+            String home_url = "http://www.troyparking.com/home.php";
             try {
                 String school = User.school;
                 String email = User.email;
-                URL url = new URL(login_url);
+                URL url = new URL(home_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -413,16 +391,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("hold_later")) {
-            showAlert = true;
+            // showAlert = true;
             try {
-                String hold_url = "http://www.troyparking.com/holdlater.php";
+                String hold_later_url = "http://www.troyparking.com/holdlater.php";
                 String email = User.email;
                 String points = params[1];
                 String userDepartureTime = params[2];
@@ -431,7 +407,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 String longitude = params[5];
                 String comments = params[6];
                 String school = User.school;
-                URL url = new URL(hold_url);
+                URL url = new URL(hold_later_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -461,17 +437,15 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("findnow"))  {
-            String login_url = "http://www.troyparking.com/findnow.php";
+            String find_now_url = "http://www.troyparking.com/findnow.php";
             try {
                 String school = User.school;
-                URL url = new URL(login_url);
+                URL url = new URL(find_now_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -494,16 +468,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("findLater"))  {
-            String login_url = "http://www.troyparking.com/findlater.php";
+            String find_later_url = "http://www.troyparking.com/findlater.php";
             try {
-                URL url = new URL(login_url);
+                URL url = new URL(find_later_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -526,17 +498,15 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("holdingSpot"))  {
-            String login_url = "http://www.troyparking.com/holdingSpot.php";
+            String holding_spot_url = "http://www.troyparking.com/holdingSpot.php";
             try {
                 String email = User.email;
-                URL url = new URL(login_url);
+                URL url = new URL(holding_spot_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -559,17 +529,15 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("bidOpen"))  {
-            String login_url = "http://www.troyparking.com/bidOpen.php";
+            String bid_open_url = "http://www.troyparking.com/bidOpen.php";
             try {
                 String email = User.email;
-                URL url = new URL(login_url);
+                URL url = new URL(bid_open_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -592,20 +560,18 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("exchange"))  {
-            String login_url = "http://www.troyparking.com/exchange.php";
+            String exchange_url = "http://www.troyparking.com/exchange.php";
             try {
                 String email = User.email;
                 String holder_email = params[1];
                 String points_exchanged = params[2];
                 String time = params[3];
-                URL url = new URL(login_url);
+                URL url = new URL(exchange_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -631,21 +597,19 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
         else if (type.equals("saveHolderProblems"))  {
-            showAlert = true;
-            String numVehicle_url = "http://www.troyparking.com/saveHolderProblems.php";
+            // showAlert = true;
+            String save_holder_problems_url = "http://www.troyparking.com/saveHolderProblems.php";
             try {
                 String transactionID = params[1];
                 String comments = params[2];
                 String score = params[3];
-                URL url = new URL(numVehicle_url);
+                URL url = new URL(save_holder_problems_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -670,20 +634,18 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("saveFinderProblems"))  {
-            showAlert = true;
-            String numVehicle_url = "http://www.troyparking.com/saveFinderProblems.php";
+            // showAlert = true;
+            String save_finder_problems_url = "http://www.troyparking.com/saveFinderProblems.php";
             try {
                 String transactionID = params[1];
                 String comments = params[2];
                 String score = params[3];
-                URL url = new URL(numVehicle_url);
+                URL url = new URL(save_finder_problems_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -708,17 +670,15 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("BuyNowComplete"))  {
-            String login_url = "http://www.troyparking.com/completenow.php";
+            String buy_now_complete_url = "http://www.troyparking.com/completenow.php";
             try {
                 String transId = params[1];
-                URL url = new URL(login_url);
+                URL url = new URL(buy_now_complete_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -741,16 +701,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("cancelHold"))  {
-            String login_url = "http://www.troyparking.com/cancelhold.php";
+            String cancel_hold_url = "http://www.troyparking.com/cancelhold.php";
             try {
-                URL url = new URL(login_url);
+                URL url = new URL(cancel_hold_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -773,18 +731,16 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("getVehicleByID"))  {
-            showAlert = true;
+            // showAlert = true;
             try {
-                String login_url = "http://www.troyparking.com/getVehicleByID.php";
+                String get_vehicle_by_id_url = "http://www.troyparking.com/getVehicleByID.php";
                 String id = params[1];
-                URL url = new URL(login_url);
+                URL url = new URL(get_vehicle_by_id_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -807,19 +763,17 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("setBid"))  {
             try {
-                String login_url = "http://www.troyparking.com/bidding.php";
+                String set_bid_url = "http://www.troyparking.com/bidding.php";
                 String id = params[1];
                 String points_exchanged = params[2];
                 String carId = params[3];
-                URL url = new URL(login_url);
+                URL url = new URL(set_bid_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -845,16 +799,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("findbids"))  {
             try {
-                String login_url = "http://www.troyparking.com/checkbids.php";
-                URL url = new URL(login_url);
+                String find_bids_url = "http://www.troyparking.com/checkbids.php";
+                URL url = new URL(find_bids_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -877,16 +829,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("findclosingbids"))  {
             try {
-                String login_url = "http://www.troyparking.com/endingbid.php";
-                URL url = new URL(login_url);
+                String find_closing_bids_url = "http://www.troyparking.com/endingbid.php";
+                URL url = new URL(find_closing_bids_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -909,16 +859,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("BidClaimComplete"))  {
             try {
-                String login_url = "http://www.troyparking.com/bidclaimcomplete.php";
-                URL url = new URL(login_url);
+                String bid_claim_complete_url = "http://www.troyparking.com/bidclaimcomplete.php";
+                URL url = new URL(bid_claim_complete_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -941,16 +889,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("getvehiclefrombid"))  {
             try {
-                String login_url = "http://www.troyparking.com/getvehiclefrombid.php";
-                URL url = new URL(login_url);
+                String get_vehicle_from_bid_url = "http://www.troyparking.com/getvehiclefrombid.php";
+                URL url = new URL(get_vehicle_from_bid_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -973,16 +919,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("findcurrentbid"))  {
             try {
-                String login_url = "http://www.troyparking.com/findcurrentbid.php";
-                URL url = new URL(login_url);
+                String find_current_bid_url = "http://www.troyparking.com/findcurrentbid.php";
+                URL url = new URL(find_current_bid_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -1005,17 +949,15 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("cancelauction"))  {
             try {
-                String login_url = "http://www.troyparking.com/cancelauction.php";
+                String cancel_auction_url = "http://www.troyparking.com/cancelauction.php";
                 String id = params[1];
-                URL url = new URL(login_url);
+                URL url = new URL(cancel_auction_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -1038,16 +980,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("getpoints"))  {
             try {
-                String login_url = "http://www.troyparking.com/getpoints.php";
-                URL url = new URL(login_url);
+                String get_points_url = "http://www.troyparking.com/getpoints.php";
+                URL url = new URL(get_points_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -1070,16 +1010,14 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else if (type.equals("getip"))  {
             try {
-                String login_url = "http://www.troyparking.com/getip.php";
-                URL url = new URL(login_url);
+                String get_ip_url = "http://www.troyparking.com/getip.php";
+                URL url = new URL(get_ip_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -1102,8 +1040,6 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }

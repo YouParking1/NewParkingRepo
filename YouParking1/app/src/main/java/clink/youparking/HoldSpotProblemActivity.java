@@ -104,7 +104,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
 
         if(radioGroup1.getCheckedRadioButtonId() == -1 | radioGroup2.getCheckedRadioButtonId() == -1)
         {
-            Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -112,7 +112,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
             backgroundWorker.delegate = this;
             backgroundWorker.execute("saveHolderProblems", transactionID, comments, Integer.toString(score));
 
-            Toast.makeText(this, "Thank you for your input!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Thank you for your input!", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
@@ -127,7 +127,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
     @Override
     public void processFinish(String output) throws JSONException {
         if (output.contains("Error")) {
-            Toast.makeText(this, "Sorry there was a problem.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Sorry there was a problem.", Toast.LENGTH_SHORT).show();
         }
     }
 }

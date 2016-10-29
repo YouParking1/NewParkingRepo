@@ -1,16 +1,11 @@
 package clink.youparking;
 
-import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.model.LatLng;
 
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 
-/**
- * Created by acous on 8/28/2016.
- */
 public class User {
 
     public static String email = null; // Retrieve the logged user's email
@@ -21,18 +16,18 @@ public class User {
     public static boolean isLoggedIn = false;
     public static String finderVehicle = null;
     public static int finderVehicleID = 0;
-    public static String holderVehicle = null;
+//    public static String holderVehicle = null;
     public static int holderVehicleID = 0;
 
-    public static int percentage = 0;
-    public static int spotsHeld = 0;
+//    public static int percentage = 0;
+//    public static int spotsHeld = 0;
 
     public static LatLng myLocation = null;
 
     public static int points = 0;
 
-    public static boolean failedLogin = false;
-    public static ArrayList<LatLng> heldLocation = new ArrayList<>();
+//    public static boolean failedLogin = false;
+//    public static ArrayList<LatLng> heldLocation = new ArrayList<>();
 
     public static long time = 0;
 

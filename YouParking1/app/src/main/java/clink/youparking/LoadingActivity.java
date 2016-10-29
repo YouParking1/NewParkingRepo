@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -43,8 +41,6 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
     @Override
     public void processFinish(String output) throws JSONException {
 
-
-
         if (operation == Operation.IP) {
             if (output.equals("0")) {
                 Intent intent = new Intent(this, LoadingActivity.class);
@@ -67,9 +63,9 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
                     SharedPreferences preferences = getSharedPreferences("PREF_NAME", Context.MODE_PRIVATE);
                     String Username = preferences.getString("Username", "");
 
-                    String fName = preferences.getString("first_name", "");
-                    String lName = preferences.getString("last_name", "");
-                    String school = preferences.getString("University", "");
+//                    String fName = preferences.getString("first_name", "");
+//                    String lName = preferences.getString("last_name", "");
+//                    String school = preferences.getString("University", "");
                     String pass = preferences.getString("Password", "");
 
                     if (Username.length() != 0) {
@@ -88,10 +84,8 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
         }
         else if(operation == Operation.LOGIN)
         {
-            boolean failed = false;
             if(output.equals("0"))
             {
-                failed = true;
                 Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
             }
@@ -110,12 +104,12 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
                 String active = jsonObject.optString("Active");
 
                 if (active.equals("false")) {
-                    Toast.makeText(this, "Must verify your email. ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Must verify your email. ", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(this, VerifyEmail.class);
                     startActivity(intent);
                 } else if (User.numCars < 1) {
-                    Toast.makeText(this, "Must register your vehicle. ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Must register your vehicle. ", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(this, VehicleRegistrationActivity.class);
                     startActivity(intent);

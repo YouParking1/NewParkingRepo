@@ -34,7 +34,6 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
     String MakeTxt, ModelTxt;
     TextView titleText, makeText, modelText, yearText, colorText;
     public String AssetJSONFile(String filename, Context context) throws IOException {
-        //AssetManager manager = context.getAssets();
         InputStream file = getAssets().open(filename);
         byte[] formArray = new byte[file.available()];
         file.read(formArray);
@@ -58,7 +57,7 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
 
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/Handwriting.ttf");
         titleText = (TextView)findViewById(R.id.newVehicleTitle);
-        titleText.setTypeface(font);
+        titleText.setTypeface(font, Typeface.BOLD);
         makeText = (TextView)findViewById(R.id.newMakeText);
         makeText.setTypeface(font);
         modelText = (TextView)findViewById(R.id.newModelText);
@@ -68,7 +67,7 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
         colorText = (TextView)findViewById(R.id.newColorText);
         colorText.setTypeface(font);
         newVehicleBtn = (Button) findViewById(R.id.newVehicleBtn);
-        newVehicleBtn.setTypeface(font);
+        newVehicleBtn.setTypeface(font, Typeface.BOLD);
 
         smake = (Spinner)findViewById(R.id.sMake);
         smodel = (Spinner)findViewById(R.id.sModel);
@@ -170,9 +169,7 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
 
                 }
             });
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
+        } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
 
@@ -229,9 +226,7 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
                 };
                 smodel.setAdapter(adapter);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
+        } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
     }
@@ -297,9 +292,7 @@ public class AddNewVehicle extends AppCompatActivity implements AsyncResponse {
                 };
                 syear.setAdapter(adapter);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
+        } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
     }

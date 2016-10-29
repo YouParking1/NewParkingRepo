@@ -1,8 +1,5 @@
 package clink.youparking;
 
-/**
- * Created by Aaron on 9/26/2016.
- */
 public class Spot {
 
     protected double latitude;

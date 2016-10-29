@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -65,6 +64,10 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
             backgroundWorker.delegate = this;
             backgroundWorker.execute(type, email, password);
         }
+        else
+        {
+            Toast.makeText(this, "Please enter your email and password.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -75,7 +78,7 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
 
         if(output.equals("0"))
         {
-            Toast.makeText(this, "Wrong email. Please try again.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Wrong email or password. Please try again.", Toast.LENGTH_SHORT).show();
         }
 
         JSONObject jsonObject = new JSONObject(output);
@@ -105,14 +108,14 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse {
         editor.commit();
 
         if (active.equals("false")) {
-            Toast.makeText(this, "Must verify your email. ", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Please verify your email. ", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, VerifyEmail.class);
             startActivity(intent);
         }
         else if(User.numCars < 1)
         {
-            Toast.makeText(this, "Must register your vehicle. ", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Please register your vehicle. ", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, VehicleRegistrationActivity.class);
             startActivity(intent);

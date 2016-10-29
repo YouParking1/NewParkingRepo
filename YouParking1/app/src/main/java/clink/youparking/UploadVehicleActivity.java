@@ -8,7 +8,6 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.MediaStore;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,11 +42,11 @@ public class UploadVehicleActivity extends AppCompatActivity implements AsyncRes
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Handwriting.ttf");
         imageToUpload = (ImageView) findViewById(R.id.imageToUpload);
         btn1 = (Button)findViewById(R.id.buttonChoose);
-        btn1.setTypeface(font);
+        btn1.setTypeface(font, Typeface.BOLD);
         btn2 = (Button)findViewById(R.id.noImageBtn);
-        btn2.setTypeface(font);
+        btn2.setTypeface(font, Typeface.BOLD);
         btn3 = (Button)findViewById(R.id.bUploadImage);
-        btn3.setTypeface(font);
+        btn3.setTypeface(font, Typeface.BOLD);
     }
 
     public void choosePhoto(View view)
@@ -140,12 +139,12 @@ public class UploadVehicleActivity extends AppCompatActivity implements AsyncRes
                 if(s.contains("Error"))
                 {
                     loading.dismiss();
-                    Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
                     loading.dismiss();
-                    Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
 
                     if(!User.isLoggedIn)
                     {

@@ -1,16 +1,5 @@
 package clink.youparking;
 
-import java.text.DateFormat;
-import java.text.FieldPosition;
-import java.text.ParseException;
-import java.text.ParsePosition;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
-
-/**
- * Created by Aaron on 9/26/2016.
- */
 public class SpotLater extends Spot{
 
     private int spotId;

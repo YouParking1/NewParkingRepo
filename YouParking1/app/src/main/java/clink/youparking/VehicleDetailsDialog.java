@@ -16,12 +16,7 @@ import android.widget.ImageView;
 import org.json.JSONException;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-
-/**
- * Created by Clink on 10/18/2016.
- */
 
 public class VehicleDetailsDialog extends DialogFragment implements AsyncResponse {
 
@@ -98,13 +93,11 @@ public class VehicleDetailsDialog extends DialogFragment implements AsyncRespons
                 String id = params[0];
                 String add = "http://www.troyparking.com/getImage.php?id="+id;
 
-                URL url = null;
+                URL url;
                 Bitmap image = null;
                 try {
                     url = new URL(add);
                     image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

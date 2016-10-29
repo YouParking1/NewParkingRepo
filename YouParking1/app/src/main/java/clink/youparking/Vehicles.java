@@ -1,9 +1,5 @@
 package clink.youparking;
 
-/**
- * Created by Clink on 10/6/2016.
- */
-
 public class Vehicles {
 
     private int id;

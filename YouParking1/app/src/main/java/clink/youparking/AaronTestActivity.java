@@ -1,11 +1,7 @@
 package clink.youparking;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.AttributeSet;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -102,7 +98,7 @@ public class AaronTestActivity extends AppCompatActivity {
         try {
             loginInfo.put("email", User.email);
         } catch (JSONException e) {
-
+            e.printStackTrace();
         }
         mSocket.emit("login", User.email);
     }
