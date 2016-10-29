@@ -165,6 +165,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
             TextView percentText = (TextView) getView().findViewById(R.id.percentageText);
             TextView alertText = (TextView) getView().findViewById(R.id.alert_text);
             TextView continueHeld = (TextView) getView().findViewById(R.id.goto_held);
+            TextView achievementsText = (TextView)getView().findViewById(R.id.achievementText);
 
             findNowSpotsAvailable.setTypeface(font,Typeface.BOLD);
             findLaterSpotsAvailable.setTypeface(font,Typeface.BOLD);
@@ -180,6 +181,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
             percentText.setTypeface(font,Typeface.BOLD);
             alertText.setTypeface(font,Typeface.BOLD);
             continueHeld.setTypeface(font,Typeface.BOLD);
+            achievementsText.setTypeface(font, Typeface.BOLD);
 
             achievement1Progress = (TextView)getView().findViewById(R.id.achievement1_progress);
             achievement2Progress = (TextView)getView().findViewById(R.id.achievement2_progress);
