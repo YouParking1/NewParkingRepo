@@ -292,6 +292,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
 
             }
             else {
+                User.bidOpen = true;
                 JSONObject jsonObject = new JSONObject(output);
                 int spotid = jsonObject.getInt("Spot_ID");
                 int points = 0;

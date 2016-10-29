@@ -21,7 +21,7 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
 
     ImageView logo;
 
-    public enum Operation { LOGIN, HOLDINGSPOT, BIDOPEN, NONE }
+    public enum Operation { LOGIN, HOLDINGSPOT, BIDOPEN, IP, NONE }
     Operation operation = Operation.NONE;
 
     @Override
@@ -33,73 +33,101 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
         Animation animationFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadein);
         logo.startAnimation(animationFadeIn);
 
-        SharedPreferences preferences = getSharedPreferences("PREF_NAME", Context.MODE_PRIVATE);
-        String Username = preferences.getString("Username", "");
+        //TODO: INSERT BACKGROUND WORKER TO GET IP
+        operation = Operation.IP;
+        BackgroundWorker backgroundIP = new BackgroundWorker(this);
+        backgroundIP.delegate = this;
+        backgroundIP.execute("getip");
 
-        String fName = preferences.getString("first_name", "");
-        String lName = preferences.getString("last_name", "");
-        String school = preferences.getString("University", "");
-        String pass = preferences.getString("Password", "");
 
-        if (Username.length() != 0) {
-            operation = Operation.LOGIN;
-
-            BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-            backgroundWorker.delegate = this;
-            backgroundWorker.execute("login", Username, pass);
-        } else {
-
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
-        }
     }
 
     @Override
     public void processFinish(String output) throws JSONException {
 
-        boolean failed = false;
-        if(output.equals("0"))
-        {
-            failed = true;
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+
+
+        if (operation == Operation.IP) {
+            if (output.equals("0")) {
+                Intent intent = new Intent(this, LoadingActivity.class);
+                startActivity(intent);
+            }
+            else {
+                boolean failed = false;
+                try {
+                    JSONObject jsonObject = new JSONObject(output);
+                    User.currentIP = jsonObject.getString("address");
+                } catch (RuntimeException e) {
+                    failed = true;
+                }
+
+                if (failed) {
+                    Intent intent = new Intent(this, LoadingActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    SharedPreferences preferences = getSharedPreferences("PREF_NAME", Context.MODE_PRIVATE);
+                    String Username = preferences.getString("Username", "");
+
+                    String fName = preferences.getString("first_name", "");
+                    String lName = preferences.getString("last_name", "");
+                    String school = preferences.getString("University", "");
+                    String pass = preferences.getString("Password", "");
+
+                    if (Username.length() != 0) {
+                        operation = Operation.LOGIN;
+
+                        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+                        backgroundWorker.delegate = this;
+                        backgroundWorker.execute("login", Username, pass);
+                    } else {
+
+                        Intent intent = new Intent(this, LoginActivity.class);
+                        startActivity(intent);
+                    }
+                }
+            }
         }
-
-        if(operation == Operation.LOGIN && !failed)
+        else if(operation == Operation.LOGIN)
         {
-            JSONObject jsonObject = new JSONObject(output);
-            String strLoginID = jsonObject.optString("Email");
-            String strSchool = jsonObject.optString("University");
-            String strFName = jsonObject.optString("FName");
-            String strLName = jsonObject.optString("LName");
-            User.points = jsonObject.optInt("Points");
-            User.numCars = jsonObject.optInt("Num_of_Cars");
-            User.email = strLoginID;
-            User.school = strSchool;
-            User.fName = strFName;
-            User.lName = strLName;
-            String active = jsonObject.optString("Active");
-
-            if (active.equals("false")) {
-                Toast.makeText(this, "Must verify your email. ", Toast.LENGTH_LONG).show();
-
-                Intent intent = new Intent(this, VerifyEmail.class);
+            boolean failed = false;
+            if(output.equals("0"))
+            {
+                failed = true;
+                Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
             }
-            else if(User.numCars < 1)
-            {
-                Toast.makeText(this, "Must register your vehicle. ", Toast.LENGTH_LONG).show();
+            else {
+                JSONObject jsonObject = new JSONObject(output);
+                String strLoginID = jsonObject.optString("Email");
+                String strSchool = jsonObject.optString("University");
+                String strFName = jsonObject.optString("FName");
+                String strLName = jsonObject.optString("LName");
+                User.points = jsonObject.optInt("Points");
+                User.numCars = jsonObject.optInt("Num_of_Cars");
+                User.email = strLoginID;
+                User.school = strSchool;
+                User.fName = strFName;
+                User.lName = strLName;
+                String active = jsonObject.optString("Active");
 
-                Intent intent = new Intent(this, VehicleRegistrationActivity.class);
-                startActivity(intent);
-            }
-            else
-            {
-                operation = Operation.HOLDINGSPOT;
+                if (active.equals("false")) {
+                    Toast.makeText(this, "Must verify your email. ", Toast.LENGTH_LONG).show();
 
-                BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-                backgroundWorker.delegate = this;
-                backgroundWorker.execute("holdingSpot");
+                    Intent intent = new Intent(this, VerifyEmail.class);
+                    startActivity(intent);
+                } else if (User.numCars < 1) {
+                    Toast.makeText(this, "Must register your vehicle. ", Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(this, VehicleRegistrationActivity.class);
+                    startActivity(intent);
+                } else {
+                    operation = Operation.HOLDINGSPOT;
+
+                    BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+                    backgroundWorker.delegate = this;
+                    backgroundWorker.execute("holdingSpot");
+                }
             }
         }
         else if(operation == Operation.HOLDINGSPOT)
