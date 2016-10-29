@@ -451,6 +451,7 @@ public class MainActivity extends AppCompatActivity
             }
         }
         else if (operation == Operation.POINTS) {
+            User.points = Integer.parseInt(output);
             Typeface font2 = Typeface.createFromAsset(this.getAssets(), "fonts/college.ttf");
             TextView numTickets = (TextView)hView.findViewById(R.id.numTickets);
             numTickets.setText(output);
@@ -527,16 +528,21 @@ public class MainActivity extends AppCompatActivity
             currentBid++;
             sPoints = Integer.toString(currentBid);
         }
-        else if (startPoints <= 1){
+        else {
             sPoints = Integer.toString(startPoints);
         }
 
-        System.out.println("YOU WILL BE BIDDING " + sPoints + " *(*(*(*()*(*)*()*)(*)(*)(*)&*^*&^*&");
+        if (User.points >= Integer.parseInt(sPoints)) {
+            operation = Operation.SETBID;
+            BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+            backgroundWorker.delegate = this;
+            backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
+        }
+        else {
+            Toast toast = Toast.makeText(this, "Not Enough Points", Toast.LENGTH_LONG);
+            toast.show();
+        }
 
-        operation = Operation.SETBID;
-        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-        backgroundWorker.delegate = this;
-        backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
 
 
     }
@@ -557,10 +563,16 @@ public class MainActivity extends AppCompatActivity
             sPoints = Integer.toString(4 + startPoints);
         }
 
-        operation = Operation.SETBID;
-        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-        backgroundWorker.delegate = this;
-        backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
+        if (User.points >= Integer.parseInt(sPoints)) {
+            operation = Operation.SETBID;
+            BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+            backgroundWorker.delegate = this;
+            backgroundWorker.execute("setBid", spotId, sPoints, Integer.toString(User.finderVehicleID));
+        }
+        else {
+            Toast toast = Toast.makeText(this, "Not Enough Points", Toast.LENGTH_LONG);
+            toast.show();
+        }
     }
 
     public void setValidTime(Boolean bool) {
