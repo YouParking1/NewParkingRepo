@@ -49,4 +49,5 @@ public class User {
 
     public static SpotLater heldLater;
 
+    public static String currentIP;
 }
