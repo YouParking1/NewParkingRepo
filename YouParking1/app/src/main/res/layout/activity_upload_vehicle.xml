@@ -7,7 +7,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".UploadVehicleActivity">
+    tools:context=".UploadVehicleActivity"
+     android:background="@drawable/notebackground">
 
     <Button
         android:id="@+id/buttonChoose"
@@ -29,7 +30,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:id="@+id/imageToUpload" />
+        android:id="@+id/imageToUpload"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"

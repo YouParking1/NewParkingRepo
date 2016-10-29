@@ -26,6 +26,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
     Button holdThanksBtn;
     EditText commentsField;
     String transactionID;
+    int score = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,7 +73,10 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb1 = (RadioButton) group.findViewById(checkedId);
                 if(rb1 != null && checkedId > -1){
-                    //DO SOMETHING WITH THE GRADING
+                    if(rb1.getText().toString().equals("Yes"))
+                    {
+                        score += 1;
+                    }
                 }
             }
         });
@@ -84,7 +88,10 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb2 = (RadioButton) group.findViewById(checkedId);
                 if(rb2 != null && checkedId > -1){
-                    //DO SOMETHING WITH THE GRADING
+                    if(rb2.getText().toString().equals("Yes"))
+                    {
+                        score += 1;
+                    }
                 }
             }
         });
@@ -95,7 +102,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
         commentsField = (EditText)findViewById(R.id.holdProblemComments);
         String comments = commentsField.getText().toString();
 
-        if(comments.equals("") || radioGroup1.getCheckedRadioButtonId() == -1 | radioGroup2.getCheckedRadioButtonId() == -1)
+        if(radioGroup1.getCheckedRadioButtonId() == -1 | radioGroup2.getCheckedRadioButtonId() == -1)
         {
             Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_LONG).show();
         }
@@ -103,7 +110,7 @@ public class HoldSpotProblemActivity extends AppCompatActivity implements AsyncR
         {
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
             backgroundWorker.delegate = this;
-            backgroundWorker.execute("saveHolderProblems", transactionID, comments);
+            backgroundWorker.execute("saveHolderProblems", transactionID, comments, Integer.toString(score));
 
             Toast.makeText(this, "Thank you for your input!", Toast.LENGTH_LONG).show();
 

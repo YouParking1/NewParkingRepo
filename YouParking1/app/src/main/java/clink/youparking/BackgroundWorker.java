@@ -644,6 +644,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
             try {
                 String transactionID = params[1];
                 String comments = params[2];
+                String score = params[3];
                 URL url = new URL(numVehicle_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -652,7 +653,8 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String post_data = URLEncoder.encode("transactionID", "UTF-8")+"="+URLEncoder.encode(transactionID, "UTF-8")+"&"
-                        +URLEncoder.encode("comments", "UTF-8")+"="+URLEncoder.encode(comments, "UTF-8");
+                        +URLEncoder.encode("comments", "UTF-8")+"="+URLEncoder.encode(comments, "UTF-8")+"&"
+                        +URLEncoder.encode("score", "UTF-8")+"="+URLEncoder.encode(score, "UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -680,6 +682,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
             try {
                 String transactionID = params[1];
                 String comments = params[2];
+                String score = params[3];
                 URL url = new URL(numVehicle_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -688,7 +691,8 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String post_data = URLEncoder.encode("transactionID", "UTF-8")+"="+URLEncoder.encode(transactionID, "UTF-8")+"&"
-                        +URLEncoder.encode("comments", "UTF-8")+"="+URLEncoder.encode(comments, "UTF-8");
+                        +URLEncoder.encode("comments", "UTF-8")+"="+URLEncoder.encode(comments, "UTF-8")+"&"
+                        +URLEncoder.encode("score", "UTF-8")+"="+URLEncoder.encode(score, "UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -710,8 +714,6 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 e.printStackTrace();
             }
         }
-
-
         else if (type.equals("BuyNowComplete"))  {
             String login_url = "http://www.troyparking.com/completenow.php";
             try {

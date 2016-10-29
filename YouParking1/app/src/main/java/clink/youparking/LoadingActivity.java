@@ -38,8 +38,6 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
         BackgroundWorker backgroundIP = new BackgroundWorker(this);
         backgroundIP.delegate = this;
         backgroundIP.execute("getip");
-
-
     }
 
     @Override

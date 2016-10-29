@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONException;
 
 public class ProblemActivity extends AppCompatActivity {
 
@@ -49,8 +52,8 @@ public class ProblemActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {}
 
-    public void goToMainFromProblem(View view)
-    {
+    public void goToMainFromProblem(View view) {
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

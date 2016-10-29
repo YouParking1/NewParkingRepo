@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="clink.youparking.DynamicVehicle">
+    tools:context="clink.youparking.DynamicVehicle"
+    android:background="@drawable/border">
 
     <LinearLayout
         android:layout_width="match_parent"

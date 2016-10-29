@@ -100,9 +100,6 @@ public class HomeFragment extends Fragment implements AsyncResponse {
 
         auctionend = (LinearLayout) getView().findViewById(R.id.auction_hide_layout);
 
-        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Writing_Stuff.ttf");
-
-
 //        welcomeMessage = (TextView) getView().findViewById(R.id.welcomeText);
 //        welcomeMessage.setText("Welcome, " + User.fName + " " + User.lName);
 //        welcomeMessage.setTypeface(font);
@@ -119,7 +116,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
         operation = Operation.ACHIEVEMENT;
         BackgroundWorker backgroundWorker = new BackgroundWorker(getActivity());
         backgroundWorker.delegate = this;
-        backgroundWorker.execute("home", User.school);
+        backgroundWorker.execute("home");
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -101,7 +101,16 @@ public class ChooseVehicleDialog extends DialogFragment implements AsyncResponse
             protected void onPostExecute(Bitmap b) {
                 super.onPostExecute(b);
                 loading.dismiss();
-                vehicleImage2.setImageBitmap(b);
+
+                if(b == null)
+                {
+                    vehicleImage2.setVisibility(View.GONE);
+                }
+                else
+                {
+                    vehicleImage2.setImageBitmap(b);
+                    vehicleImage2.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
