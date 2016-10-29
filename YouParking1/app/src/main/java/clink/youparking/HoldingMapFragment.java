@@ -32,7 +32,7 @@ public class HoldingMapFragment extends Fragment {
         Bundle bundle = new Bundle();
         bundle.putString("TYPE", "HOLDING");
 
-        System.out.println("&*&*&*&*&*&*&*&* HOLDING");
+//        System.out.println("&*&*&*&*&*&*&*&* HOLDING");
 
         mapFrag = new GMapFragment();
         mapFrag.setArguments(bundle);
@@ -42,7 +42,6 @@ public class HoldingMapFragment extends Fragment {
     }
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

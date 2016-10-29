@@ -24,12 +24,11 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class DynamicSpot extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
+
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -47,7 +46,7 @@ public class DynamicSpot extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment DynamicSpot.
      */
-    // TODO: Rename and change types and number of parameters
+
     public static DynamicSpot newInstance(String param1, String param2) {
         DynamicSpot fragment = new DynamicSpot();
         Bundle args = new Bundle();
@@ -114,7 +113,6 @@ public class DynamicSpot extends Fragment {
         linearLayout2.setId(id2);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -149,7 +147,6 @@ public class DynamicSpot extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

@@ -28,12 +28,11 @@ import org.json.JSONObject;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment implements AsyncResponse {
-    // TODO: Rename parameter arguments, choose names that match
+
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -65,7 +64,7 @@ public class HomeFragment extends Fragment implements AsyncResponse {
      * @param param2 Parameter 2.
      * @return A new instance of fragment HomeFragment.
      */
-    // TODO: Rename and change types and number of parameters
+
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
@@ -95,23 +94,10 @@ public class HomeFragment extends Fragment implements AsyncResponse {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
-        //TODO:FIX THIS ASAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //TODO: Aaron Martin - FIX THIS ASAP!!!!
         super.onViewCreated(view, savedInstanceState);
 
         auctionend = (LinearLayout) getView().findViewById(R.id.auction_hide_layout);
-
-//        welcomeMessage = (TextView) getView().findViewById(R.id.welcomeText);
-//        welcomeMessage.setText("Welcome, " + User.fName + " " + User.lName);
-//        welcomeMessage.setTypeface(font);
-
-//        TextView spotsText = (TextView)getView().findViewById(R.id.spotsText);
-//        spotsText.setTypeface(font);
-
-//        TextView statsText = (TextView)getView().findViewById(R.id.statsText);
-//        statsText.setTypeface(font);
-
-//        TextView achievementsText = (TextView)getView().findViewById(R.id.achievementText);
-//        achievementsText.setTypeface(font);
 
         operation = Operation.ACHIEVEMENT;
         BackgroundWorker backgroundWorker = new BackgroundWorker(getActivity());
@@ -119,7 +105,6 @@ public class HomeFragment extends Fragment implements AsyncResponse {
         backgroundWorker.execute("home");
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -145,8 +130,6 @@ public class HomeFragment extends Fragment implements AsyncResponse {
 
     @Override
     public void processFinish(String output) throws JSONException {
-
-        //TODO: UNCOMMENT ALL OF THIS TOO!!!!!!!!!!!!!!!!!!!!!!!
 
         if (operation == Operation.ACHIEVEMENT) {
             Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Handwriting.ttf");
@@ -324,7 +307,6 @@ public class HomeFragment extends Fragment implements AsyncResponse {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 

@@ -315,7 +315,6 @@
                             android:text="@string/home_achievements_text"
                             android:textColor="@color/colorPrimary"
                             android:textSize="30dp"
-                            android:fontFamily="casual"
                             android:layout_gravity="center"
                             android:textStyle="bold" />
 

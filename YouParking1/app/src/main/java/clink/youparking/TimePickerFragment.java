@@ -34,8 +34,8 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         Calendar calendar = Calendar.getInstance();
         calendar.set(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH),
                 hourOfDay, minute, 0);
-        System.out.println(c.get(Calendar.YEAR) + " " + c.get(Calendar.MONTH) + " " + c.get(Calendar.DAY_OF_MONTH)
-                + " " + hourOfDay + " " + minute);
+//        System.out.println(c.get(Calendar.YEAR) + " " + c.get(Calendar.MONTH) + " " + c.get(Calendar.DAY_OF_MONTH)
+//                + " " + hourOfDay + " " + minute);
 
         long time = calendar.getTimeInMillis();
         int hour = hourOfDay % 12;
@@ -48,8 +48,8 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         phpTime = time/1000;
         User.time = phpTime;
 
-        System.out.println("Set Time: " + User.time);
-        System.out.println("Two Hours Later Time: " + nowTimePlusTwo);
+//        System.out.println("Set Time: " + User.time);
+//        System.out.println("Two Hours Later Time: " + nowTimePlusTwo);
 
         if (phpTime <= nowTimePlusTwo)
         {

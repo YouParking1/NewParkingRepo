@@ -376,7 +376,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 bufferedReader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
-                System.out.println("HEY IM IN HERE ");
+//                System.out.println("HEY IM IN HERE ");
                 return result;
             } catch (MalformedURLException e) {
                 e.printStackTrace();

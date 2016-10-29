@@ -123,8 +123,7 @@ public class MainActivity extends AppCompatActivity
             isHolding();
         }
         else if(User.bidOpen) {
-            //TODO: PERFORM SOME ACTION FOR USERS WHO HAVE BIDS OPEN
-
+            //TODO: Aaron Martin - PERFORM SOME ACTION FOR USERS WHO HAVE BIDS OPEN
         }
     }
 
@@ -342,10 +341,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void processFinish(String output) throws JSONException {
-        //outputFromProcess = output;
-
-        System.out.println("OUTPUT FOR PROCESS: " + output);
-
 
         if(operation == Operation.DELETE)
         {

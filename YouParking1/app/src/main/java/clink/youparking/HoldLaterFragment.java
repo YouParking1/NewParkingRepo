@@ -44,12 +44,10 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class HoldLaterFragment extends Fragment implements AsyncResponse {
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -75,7 +73,6 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
      * @param param2 Parameter 2.
      * @return A new instance of fragment HoldLaterFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static HoldLaterFragment newInstance(String param1, String param2) {
         HoldLaterFragment fragment = new HoldLaterFragment();
         Bundle args = new Bundle();
@@ -118,7 +115,7 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
         additionalCommentsText = (TextView)getView().findViewById(R.id.additionalCommentsText);
         additionalCommentsText.setTypeface(font, Typeface.BOLD);
         timeText = (TextView)getView().findViewById(R.id.timeText);
-        timeText.setText("12:00 AM"); //TODO: Travis Clinkscales - SET DEFAULT TIME 2 HOURS EXACTLY
+        timeText.setText("12:00 AM");
         timeText.setTypeface(font, Typeface.BOLD);
         holdLaterDepartTime = (TextView)getView().findViewById(R.id.holdLaterDepartTime);
         holdLaterDepartTime.setTypeface(font, Typeface.BOLD);
@@ -207,8 +204,6 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
                 String id = params[0];
                 String add = "http://www.troyparking.com/getImage.php?id="+id;
 
-                System.out.println("Link with id:" + add);
-
                 URL url = null;
                 Bitmap image = null;
                 try {
@@ -227,8 +222,6 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
         gi.execute(Integer.toString(id));
     }
 
-
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -283,11 +276,11 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
                 bundle.putInt("YEAR", User.vehicles.get(i).getYear());
                 bundle.putInt("ID", i);
 
-                System.out.println("VehicleID: " + User.vehicles.get(i).getId());
-                System.out.println("Make: " + User.vehicles.get(i).getMake());
-                System.out.println("Model: " + User.vehicles.get(i).getModel());
-                System.out.println("Year: " + User.vehicles.get(i).getYear());
-                System.out.println("ID: " + i);
+//                System.out.println("VehicleID: " + User.vehicles.get(i).getId());
+//                System.out.println("Make: " + User.vehicles.get(i).getMake());
+//                System.out.println("Model: " + User.vehicles.get(i).getModel());
+//                System.out.println("Year: " + User.vehicles.get(i).getYear());
+//                System.out.println("ID: " + i);
 
                 RadioButton rb = new RadioButton(getContext());
                 rb.setId(i);
@@ -310,7 +303,6 @@ public class HoldLaterFragment extends Fragment implements AsyncResponse {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

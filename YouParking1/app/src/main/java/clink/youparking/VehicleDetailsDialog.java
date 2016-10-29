@@ -98,8 +98,6 @@ public class VehicleDetailsDialog extends DialogFragment implements AsyncRespons
                 String id = params[0];
                 String add = "http://www.troyparking.com/getImage.php?id="+id;
 
-                System.out.println("Link with id:" + add);
-
                 URL url = null;
                 Bitmap image = null;
                 try {

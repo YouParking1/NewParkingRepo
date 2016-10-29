@@ -29,7 +29,7 @@ public class BidClaimActivity extends AppCompatActivity implements AsyncResponse
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        System.out.println("HELD LATER: " + User.heldLater.getHolder_car());
+//        System.out.println("HELD LATER: " + User.heldLater.getHolder_car());
 
         if (User.heldLater.getHolder_email().equals(User.email)) {
             role = "HOLDER";

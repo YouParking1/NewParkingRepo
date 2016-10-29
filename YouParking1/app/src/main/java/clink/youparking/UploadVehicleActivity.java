@@ -24,8 +24,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 
-// TODO: Travis Clinkscales - NEED TO ADD ALERT DIALOG TO NEWLY REGISTERED IN BACKGROUND
-
 public class UploadVehicleActivity extends AppCompatActivity implements AsyncResponse {
     public static final String UPLOAD_URL = "http://www.troyparking.com/uploads.php";
     public static final String UPLOAD_KEY = "image";

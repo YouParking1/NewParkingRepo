@@ -109,12 +109,10 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
         }
     }
 
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -132,7 +130,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
      * @param param2 Parameter 2.
      * @return A new instance of fragment GMapFragment.
      */
-    // TODO: Rename and change types and number of parameters
+
     public static GMapFragment newInstance(String param1, String param2) {
         GMapFragment fragment = new GMapFragment();
         Bundle args = new Bundle();
@@ -259,9 +257,8 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
             waiting.show();
         }
         else {
-            // TODO: ADD CODE FOR FINDING SCHOOLS LOCATION AND SETTING CENTRAL VIEW TO THOSE COORDINATES
+            // TODO: Aaron Martin - ADD CODE FOR FINDING SCHOOLS LOCATION AND SETTING CENTRAL VIEW TO THOSE COORDINATES
         }
-
     }
 
     private void cancelHold() {
@@ -281,7 +278,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                              Bundle savedInstanceState) {
 
         View view =  inflater.inflate(R.layout.fragment_gmap, container, false);
-
         return view;
 
     }
@@ -294,7 +290,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
         fragment.getMapAsync(this);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -330,7 +325,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
         myLat = mLastLocation.getLatitude();
         myLong = mLastLocation.getLongitude();
         if (mapType.equals("BOUGHT") || mapType.equals("HOLDING") || mapType.equals("BIDCLAIM")) {
-            //IF BOUGHT OR HOLDING, DON'T DISABLE LOCATION UPDATES
+            //TODO: - Aaron Martin - IF BOUGHT OR HOLDING, DON'T DISABLE LOCATION UPDATES
         }
         else {
             LocationServices.FusedLocationApi.removeLocationUpdates(User.mGoogleApiClient, this);
@@ -350,8 +345,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-
-
 
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
@@ -432,7 +425,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
     }
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 
@@ -479,14 +471,12 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
     public void onResume() {
         super.onResume();
 
-        //TODO: FIX LATER
+        //TODO: Aaron Martin - FIX LATER
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-
-
     }
 
     @Override
@@ -517,8 +507,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
     /**
      * Used to update locations of holder and buyer in real time.
-     *
-     *
      */
     private void realTimeMap(double newLat, double newLong) {
 
@@ -541,7 +529,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
         mPolylineOptions.color(Color.BLUE).width(10);
     }
 
-
     private Emitter.Listener onNewMessage = new Emitter.Listener() {
 
         @Override
@@ -553,7 +540,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                 public void run() {
                     JSONObject data = (JSONObject) arg;
 
-                    System.out.println(data.toString());
+//                    System.out.println(data.toString());
                     double newLat = 0;
                     double newLong = 0;
 
@@ -564,8 +551,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                             transId = data.getString("ID");
                             bVehicle = data.getInt("V");
                         }
-
-
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
                     }
@@ -575,7 +560,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
                         if (waiting != null && waiting.isShowing() && mapType.equals("HOLDING")) {
                             ((FoundSpotActivity)getActivity()).setTransactionID(transId);
-                            System.out.println(transId + " (*)(*()*)(*)(*)*)(*)");
+//                            System.out.println(transId + " (*)(*()*)(*)(*)*)(*)");
                             ((FoundSpotActivity)getActivity()).setBuyerVehicle(bVehicle);
                             waiting.dismiss();
                         }
@@ -587,7 +572,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                     if (mMap != null) {
                         realTimeMap(newLat, newLong);
                     }
-
                 }
             });
         }

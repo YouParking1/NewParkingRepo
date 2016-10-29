@@ -95,9 +95,10 @@
     <string name="title_activity_navigation_menu">NavigationMenu</string>
     <string name="title_activity_find_now">Map</string>
     <string name="title_activity_maps">Map</string>
-
+    <string name="title_activity_found_spot">FoundSpotActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_bid_claim">BidClaim</string>
     <string name="bids_title"><u>Active Bids:</u></string>
-
 
     <!-- Register University API -->
     <string-array name="universities">
@@ -7898,10 +7899,4 @@
 
         <item>Husson University</item>
     </string-array>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_found_spot">FoundSpotActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_bid_claim">BidClaim</string>
 </resources>

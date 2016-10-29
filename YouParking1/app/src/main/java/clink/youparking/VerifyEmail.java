@@ -48,7 +48,7 @@ public class VerifyEmail extends AppCompatActivity implements AsyncResponse {
         String user_code = code.getText().toString();
         String type = "verifyEmail";
 
-        System.out.println("User code is : " + user_code);
+//        System.out.println("User code is : " + user_code);
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.delegate = this;

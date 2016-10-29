@@ -25,7 +25,7 @@ import org.json.JSONObject;
  * create an instance of this fragment.
  */
 public class AchievementFragment extends Fragment implements AsyncResponse {
-    // TODO: Rename parameter arguments, choose names that match
+
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -36,7 +36,6 @@ public class AchievementFragment extends Fragment implements AsyncResponse {
     ImageButton unknownAchievement1, unknownAchievement2, unknownAchievement3, knownAchievement1,
             knownAchievement2, knownAchievement3;
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -54,7 +53,7 @@ public class AchievementFragment extends Fragment implements AsyncResponse {
      * @param param2 Parameter 2.
      * @return A new instance of fragment AchievementFragment.
      */
-    // TODO: Rename and change types and number of parameters
+
     public static AchievementFragment newInstance(String param1, String param2) {
         AchievementFragment fragment = new AchievementFragment();
         Bundle args = new Bundle();
@@ -93,7 +92,6 @@ public class AchievementFragment extends Fragment implements AsyncResponse {
         backgroundWorker.execute("home", User.school);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -157,8 +155,8 @@ public class AchievementFragment extends Fragment implements AsyncResponse {
         int spotsHeld = jsonObject.getInt("SpotsHeld");
         int spotsFound = jsonObject.getInt("SpotsFound");
 
-        System.out.println("SPOTS HELD: " + spotsHeld);
-        System.out.println("SPOTS FOUND: " + spotsFound);
+//        System.out.println("SPOTS HELD: " + spotsHeld);
+//        System.out.println("SPOTS FOUND: " + spotsFound);
 
         achievement1Progress.setText(Integer.toString(spotsHeld));
         achievement2Progress.setText(Integer.toString(spotsFound));
@@ -194,7 +192,6 @@ public class AchievementFragment extends Fragment implements AsyncResponse {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

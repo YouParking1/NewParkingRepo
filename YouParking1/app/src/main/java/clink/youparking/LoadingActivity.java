@@ -33,7 +33,7 @@ public class LoadingActivity extends AppCompatActivity implements AsyncResponse 
         Animation animationFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadein);
         logo.startAnimation(animationFadeIn);
 
-        //TODO: INSERT BACKGROUND WORKER TO GET IP
+        //TODO: Aaron Martin - INSERT BACKGROUND WORKER TO GET IP
         operation = Operation.IP;
         BackgroundWorker backgroundIP = new BackgroundWorker(this);
         backgroundIP.delegate = this;

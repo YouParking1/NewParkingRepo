@@ -118,8 +118,6 @@ public class ChooseVehicleDialog extends DialogFragment implements AsyncResponse
                 String id = params[0];
                 String add = "http://www.troyparking.com/getImage.php?id="+id;
 
-                System.out.println("Link with id:" + add);
-
                 URL url = null;
                 Bitmap image = null;
                 try {
@@ -167,11 +165,11 @@ public class ChooseVehicleDialog extends DialogFragment implements AsyncResponse
                 bundle.putInt("YEAR", User.vehicles.get(i).getYear());
                 bundle.putInt("ID", i);
 
-                System.out.println("VehicleID: " + User.vehicles.get(i).getId());
-                System.out.println("Make: " + User.vehicles.get(i).getMake());
-                System.out.println("Model: " + User.vehicles.get(i).getModel());
-                System.out.println("Year: " + User.vehicles.get(i).getYear());
-                System.out.println("ID: " + i);
+//                System.out.println("VehicleID: " + User.vehicles.get(i).getId());
+//                System.out.println("Make: " + User.vehicles.get(i).getMake());
+//                System.out.println("Model: " + User.vehicles.get(i).getModel());
+//                System.out.println("Year: " + User.vehicles.get(i).getYear());
+//                System.out.println("ID: " + i);
 
 
                 rb = new RadioButton(getActivity());

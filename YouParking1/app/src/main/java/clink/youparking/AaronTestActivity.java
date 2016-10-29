@@ -76,7 +76,7 @@ public class AaronTestActivity extends AppCompatActivity {
         if (extras != null) {
             room = extras.getString("ROOM");
         }
-        System.out.println(room);
+//        System.out.println(room);
 
         mSocket.connect();
         mSocket.on("message", onNewMessage);
