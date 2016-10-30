@@ -353,7 +353,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
             }
             User.holdingSpot = false;
             User.bidOpen = false;
-            Intent intent = new Intent(getActivity(), MainActivity.class);
+            Intent intent = new Intent(getActivity(), LoadingActivity.class);
             startActivity(intent);
         }
     }
@@ -559,7 +559,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                 }
                 User.holdingSpot = false;
                 User.bidOpen = false;
-                Intent intent = new Intent(getActivity(), MainActivity.class);
+                Intent intent = new Intent(getActivity(), LoadingActivity.class);
                 startActivity(intent);
             }
         }
