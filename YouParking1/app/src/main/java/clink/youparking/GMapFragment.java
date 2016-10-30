@@ -15,9 +15,11 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -89,15 +91,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
     enum Operation { CANCEL, NONE }
     Operation operation = Operation.NONE;
 
-//    private Socket mSocket;
-//    {
-//            try {
-//                mSocket = IO.socket("http://108.167.99.14:88");
-//            } catch (URISyntaxException e) {
-//                throw new RuntimeException(e);
-//            }
-//    }
-
     {
         try {
             User.mSocket = IO.socket(User.currentIP);
@@ -106,7 +99,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
         }
     }
 
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -116,7 +108,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
     private OnFragmentInteractionListener mListener;
 
     public GMapFragment() {
-        // Required empty public constructor
+
     }
 
     /**
@@ -147,27 +139,27 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
         mapType = getArguments().getString("TYPE");
 
-        if (mapType.equals("HOLD")) { //IF USER IS HOLDING A SPOT
-            //if (User.mGoogleApiClient == null) {
+        if (mapType.equals("HOLD")) {
+
                 User.mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
                         .addConnectionCallbacks(this)
                         .addOnConnectionFailedListener(this)
                         .addApi(LocationServices.API)
                         .build();
-            //}
+
             mLocationRequest = LocationRequest.create()
                     .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                     .setInterval(10 * 1000)
                     .setFastestInterval(1 * 1000);
         }
         else if (mapType.equals("BOUGHT")) {
-            //if (User.mGoogleApiClient == null) {
+
                 User.mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
                         .addConnectionCallbacks(this)
                         .addOnConnectionFailedListener(this)
                         .addApi(LocationServices.API)
                         .build();
-            //}
+
             mLocationRequest = LocationRequest.create()
                     .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                     .setInterval(10 * 1000)
@@ -189,13 +181,13 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
         }
         else if (mapType.equals("HOLDING")) {
-            //if (User.mGoogleApiClient == null) {
+
                 User.mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
                         .addConnectionCallbacks(this)
                         .addOnConnectionFailedListener(this)
                         .addApi(LocationServices.API)
                         .build();
-            //}
+
             mLocationRequest = LocationRequest.create()
                     .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                     .setInterval(10 * 1000)
@@ -311,22 +303,50 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
-        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) !=
-                PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(getActivity(), new String[] {Manifest.permission.ACCESS_FINE_LOCATION},
-                    MY_PERMISSION_ACCESS_COARSE_LOCATION);
+        try {
+            if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) !=
+                    PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSION_ACCESS_COARSE_LOCATION);
+            }
+            LocationServices.FusedLocationApi.requestLocationUpdates(User.mGoogleApiClient, mLocationRequest, this);
+            mLastLocation = LocationServices.FusedLocationApi.getLastLocation(User.mGoogleApiClient);
+            myLat = mLastLocation.getLatitude();
+            myLong = mLastLocation.getLongitude();
+            if (mapType.equals("BOUGHT") || mapType.equals("HOLDING") || mapType.equals("BIDCLAIM")) {
+                //TODO: - Aaron Martin - IF BOUGHT OR HOLDING, DON'T DISABLE LOCATION UPDATES
+            } else {
+                LocationServices.FusedLocationApi.removeLocationUpdates(User.mGoogleApiClient, this);
+            }
+            setCurrentLoc();
+        } catch (RuntimeException e){
+            if (mapType.equals("BOUGHT")) {
+                Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen." +
+                        " Points will be returned for this transaction", Toast.LENGTH_LONG);
+                toast.show();
+                User.points += User.spots.get(spotID).getPoints();
+                BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
+                backgroundWorker.delegate = this;
+                backgroundWorker.execute("errorpoints", Integer.toString(User.spots.get(spotID).getPoints()));
+            }
+            else if (mapType.equals("BIDCLAIM")) {
+                Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen." +
+                        " Points will be returned to the buyer of this transaction", Toast.LENGTH_LONG);
+                toast.show();
+                if (User.email.equals(User.heldLater.getBuyer())) {
+                    User.points += User.heldLater.getPoints();
+                    BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
+                    backgroundWorker.delegate = this;
+                    backgroundWorker.execute("errorpoints", Integer.toString(User.heldLater.getPoints()));
+                }
+            }
+            else {
+                Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen.", Toast.LENGTH_LONG);
+                toast.show();
+            }
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
         }
-        LocationServices.FusedLocationApi.requestLocationUpdates(User.mGoogleApiClient, mLocationRequest, this);
-        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(User.mGoogleApiClient);
-        myLat = mLastLocation.getLatitude();
-        myLong = mLastLocation.getLongitude();
-        if (mapType.equals("BOUGHT") || mapType.equals("HOLDING") || mapType.equals("BIDCLAIM")) {
-            //TODO: - Aaron Martin - IF BOUGHT OR HOLDING, DON'T DISABLE LOCATION UPDATES
-        }
-        else {
-            LocationServices.FusedLocationApi.removeLocationUpdates(User.mGoogleApiClient, this);
-        }
-        setCurrentLoc();
     }
 
     @Override
@@ -410,12 +430,10 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                     User.mSocket.disconnect();
                     User.mSocket.off();
                     User.mSocket = null;
-                    //User.mSocket.off("new message", onNewMessage);
                 }
 
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
-                //getActivity().finish();
             }
         }
     }
@@ -536,7 +554,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                 public void run() {
                     JSONObject data = (JSONObject) arg;
 
-//                    System.out.println(data.toString());
                     double newLat = 0;
                     double newLong = 0;
 
@@ -556,7 +573,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
 
                         if (waiting != null && waiting.isShowing() && mapType.equals("HOLDING")) {
                             ((FoundSpotActivity)getActivity()).setTransactionID(transId);
-//                            System.out.println(transId + " (*)(*()*)(*)(*)*)(*)");
                             ((FoundSpotActivity)getActivity()).setBuyerVehicle(bVehicle);
                             waiting.dismiss();
                         }
