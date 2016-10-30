@@ -521,9 +521,47 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                 throw new RuntimeException(e);
             }
 
-            currentLoc = new LatLng(newLat, newLong);
+            try {
+                currentLoc = new LatLng(newLat, newLong);
 
-            User.mSocket.emit("message", jsonSend);
+                User.mSocket.emit("message", jsonSend);
+            } catch (RuntimeException e) {
+                if (mapType.equals("BOUGHT")) {
+                    Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen." +
+                            " Points will be returned for this transaction", Toast.LENGTH_LONG);
+                    toast.show();
+                    User.points += User.spots.get(spotID).getPoints();
+                    BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
+                    backgroundWorker.delegate = this;
+                    backgroundWorker.execute("errorpoints", Integer.toString(User.spots.get(spotID).getPoints()), User.email);
+                }
+                else if (mapType.equals("BIDCLAIM")) {
+                    Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen." +
+                            " Points will be returned to the buyer of this transaction", Toast.LENGTH_LONG);
+                    toast.show();
+                    if (User.email.equals(User.heldLater.getBuyer())) {
+                        User.points += User.heldLater.getPoints();
+                        BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
+                        backgroundWorker.delegate = this;
+                        backgroundWorker.execute("errorpoints", Integer.toString(User.heldLater.getPoints()), User.heldLater.getBuyer());
+                    }
+                }
+                else if (mapType.equals("HOLDING")){
+                    Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen.", Toast.LENGTH_LONG);
+                    toast.show();
+                    BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
+                    backgroundWorker.delegate = this;
+                    backgroundWorker.execute("errorpointshold");
+                }
+                else {
+                    Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen.", Toast.LENGTH_LONG);
+                    toast.show();
+                }
+                User.holdingSpot = false;
+                User.bidOpen = false;
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+            }
         }
     }
 
