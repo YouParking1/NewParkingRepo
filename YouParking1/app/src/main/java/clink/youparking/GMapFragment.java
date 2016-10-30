@@ -327,7 +327,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                 User.points += User.spots.get(spotID).getPoints();
                 BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
                 backgroundWorker.delegate = this;
-                backgroundWorker.execute("errorpoints", Integer.toString(User.spots.get(spotID).getPoints()));
+                backgroundWorker.execute("errorpoints", Integer.toString(User.spots.get(spotID).getPoints()), User.email);
             }
             else if (mapType.equals("BIDCLAIM")) {
                 Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen." +
@@ -337,8 +337,15 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                     User.points += User.heldLater.getPoints();
                     BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
                     backgroundWorker.delegate = this;
-                    backgroundWorker.execute("errorpoints", Integer.toString(User.heldLater.getPoints()));
+                    backgroundWorker.execute("errorpoints", Integer.toString(User.heldLater.getPoints()), User.heldLater.getBuyer());
                 }
+            }
+            else if (mapType.equals("HOLDING")){
+                Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen.", Toast.LENGTH_LONG);
+                toast.show();
+                BackgroundWorker backgroundWorker = new BackgroundWorker(getContext());
+                backgroundWorker.delegate = this;
+                backgroundWorker.execute("errorpointshold");
             }
             else {
                 Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen.", Toast.LENGTH_LONG);
