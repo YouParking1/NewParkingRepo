@@ -127,7 +127,7 @@ public class FindNowProblemActivity extends AppCompatActivity implements AsyncRe
     @Override
     public void processFinish(String output) throws JSONException {
         if (output.contains("Error")) {
-            Toast.makeText(this, output, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, output, Toast.LENGTH_SHORT).show();
         }
     }
 }

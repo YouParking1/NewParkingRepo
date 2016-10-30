@@ -45,7 +45,7 @@ public class ChooseVehicleDialog extends DialogFragment implements AsyncResponse
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(dialog.getContext(), rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(dialog.getContext(), rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
 

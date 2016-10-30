@@ -139,12 +139,12 @@ public class UploadVehicleActivity extends AppCompatActivity implements AsyncRes
                 if(s.contains("Error"))
                 {
                     loading.dismiss();
-                    Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
                     loading.dismiss();
-                    Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
 
                     if(!User.isLoggedIn)
                     {

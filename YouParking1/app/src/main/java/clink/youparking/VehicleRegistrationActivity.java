@@ -319,7 +319,7 @@ public class VehicleRegistrationActivity extends AppCompatActivity implements As
         }
         else
         {
-            Toast.makeText(getApplicationContext(), "Must select a choice for all fields!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Must select a choice for all fields!", Toast.LENGTH_SHORT).show();
         }
     }
 
