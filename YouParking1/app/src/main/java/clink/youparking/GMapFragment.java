@@ -344,6 +344,8 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback, Google
                 Toast toast = Toast.makeText(getContext(), "An error has occurred. Returning to the home screen.", Toast.LENGTH_LONG);
                 toast.show();
             }
+            User.holdingSpot = false;
+            User.bidOpen = false;
             Intent intent = new Intent(getActivity(), MainActivity.class);
             startActivity(intent);
         }
